@@ -4,14 +4,10 @@ import styled from "styled-components";
 const Categorybars = styled.div`
   position: fixed;
   top: 60px;
-  /* left: 250px; */
   left: 14.468%;
-  /* width: 1472px; */
   width: 85.6%;
   height: 56px;
   background-color: #212121;
-
-  /* background: red; */
 `;
 
 const CategoryContainer = styled.div`
