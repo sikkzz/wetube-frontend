@@ -4,7 +4,9 @@ import { AiOutlineHome } from "react-icons/ai";
 
 const SideBarContainer = styled.nav`
   background-color: #212121;
-  width: 250px;
+  /* width: 250px; */
+  width: 14.468%;
+  /* width: 13.021vw; */
   display: flex;
   justify-content: center;
   position: fixed;
@@ -26,17 +28,19 @@ const SideListMenu = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding: 0 12px;
 `;
 
 const SideListItem = styled.li`
   display: flex;
   justify-content: start;
   list-style: none;
-  padding: 1rem 2.8rem;
+  padding: 10px 12px;
   color: #fff;
   align-items: center;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 24px;
 `;
 
 const SideListItemBox = styled.div`

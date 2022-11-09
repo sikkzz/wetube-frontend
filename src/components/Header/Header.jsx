@@ -11,12 +11,14 @@ const Headers = styled.div`
   height: 60px;
   justify-content: center;
   width: 100%;
-  border-bottom: 1px solid #eee;
+  /* border-bottom: 1px solid #eee; */
   position: fixed;
+  background-color: #212121;
+
 `;
 
 const HeaderContainer = styled.div`
-  width: 1590px;
+  width: 98%;
   height: 60px;
   display: flex;
   flex-direction: row;
@@ -34,6 +36,7 @@ const Logo = styled.div`
   margin-left: 20px;
   cursor: pointer;
   font-size: 1.6rem;
+  color: #fff;
 `;
 
 const HeaderCenter = styled.div`
@@ -42,12 +45,20 @@ const HeaderCenter = styled.div`
 `;
 
 const SearchBox = styled.div`
-  width: 600px;
   height: 40px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border: 1px solid #000;
+`;
+
+const SearchContainer = styled.div`
+  height: 40px;
+  display: flex;
+  align-items: center;
+  border: 1px solid #fff;
+  border-right: none;
+  border-radius: 40px 0 0 40px;
+  background-color: #212121;
 `;
 
 const SearchForm = styled.form`
@@ -58,7 +69,9 @@ const SearchInput = styled.input`
   border: none;
   height: 30px;
   width: 500px;
-  color: #000;
+  color: #fff;
+  background-color: #212121;
+
   outline: none;
   padding: 2px 6px;
 `;
@@ -69,9 +82,9 @@ const SearchIcon = styled.div`
   align-items: center;
   width: 60px;
   height: 40px;
-  background: #eee;
-  border: 1px solid #000;
-  border-right: none;
+  color: #eee;
+  border: 1px solid #fff;
+  border-radius: 0 40px 40px 0;
 `;
 
 const HeaderRight = styled.div``;
@@ -81,15 +94,17 @@ const Header = () => {
     <Headers>
       <HeaderContainer>
         <HeaderStart>
-          <FaBars size={24} />
+          <FaBars size={24} color="#fff"/>
           <Logo href="/">Logo</Logo>
         </HeaderStart>
 
         <HeaderCenter>
           <SearchBox>
-            <SearchForm>
-              <SearchInput type="text" placeholder="검색"></SearchInput>
-            </SearchForm>
+            <SearchContainer>
+              <SearchForm>
+                <SearchInput type="text" placeholder="검색"></SearchInput>
+              </SearchForm>
+            </SearchContainer>
             <SearchIcon>
               <BsSearch size={18} />
             </SearchIcon>
