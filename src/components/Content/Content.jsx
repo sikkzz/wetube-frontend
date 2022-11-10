@@ -22,8 +22,6 @@ const GridContainer = styled.div`
 const CardBox = styled.div`
   width: 350px;
   height: 320px;
-  /* margin: 0 8px;
-margin-bottom: 40px; */
   display: flex;
   flex-direction: row;
   background: aqua;

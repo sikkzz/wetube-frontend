@@ -4,7 +4,6 @@ import styled from "styled-components";
 
 import { BsSearch } from "react-icons/bs";
 import { FaBars } from "react-icons/fa";
-import { GrChannel } from "react-icons/gr";
 import { MdOutlineContactPage } from "react-icons/md";
 import { RiVideoAddLine } from "react-icons/ri";
 
