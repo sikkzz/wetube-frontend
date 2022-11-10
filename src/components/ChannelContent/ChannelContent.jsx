@@ -3,7 +3,7 @@ import "./ChannelContent.scss";
 
 const ChannelContent = () => {
   return (
-    <div className="header">
+    <div className="headers">
       <div className="profile">
         <div className="profile_container"></div>
       </div>

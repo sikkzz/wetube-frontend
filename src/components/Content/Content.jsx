@@ -4,10 +4,10 @@ import styled from "styled-components";
 import Image from "../../assets/test.jpg";
 
 const ContentContainer = styled.div`
-  position: absolute;
-  top: 116px;
-  left: 14.468%;
-  width: 85.6%;
+  /* position: absolute; */
+  /* top: 116px;
+  left: 14.468%; */
+  /* width: 100%; */
 `;
 
 const GridContainer = styled.div`

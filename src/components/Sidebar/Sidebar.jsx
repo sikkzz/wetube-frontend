@@ -10,8 +10,8 @@ const SideBarContainer = styled.nav`
   display: flex;
   justify-content: center;
   position: fixed;
-  left: 0;
-  top: 60px;
+  /* left: 0;
+  top: 60px; */
 `;
 
 const SideList = styled.ul`

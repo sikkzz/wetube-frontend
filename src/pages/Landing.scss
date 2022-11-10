@@ -1,0 +1,45 @@
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: #212121;
+}
+
+.headers_container {
+    display: flex;
+    width: 100vw;
+    height: 60px;
+}
+
+.contents_container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    margin-top: 60px;
+}
+
+.sidebar_container {
+    display: flex;
+    width: 250px;
+    height: 100vh;
+    // background: red;
+}
+
+.mains_container {
+    display: flex;
+    flex-direction: column;
+    width: 1478px;
+    height: 100vh;
+    // background: aqua;
+}
+
+.category_container{
+    width: 1478px;
+    height: 56px;
+}
+
+.detail_container{
+    width: 1478px;
+    height: 100vh;
+}

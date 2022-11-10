@@ -10,8 +10,7 @@ function App() {
   return (
     <>
     <Routes>
-      {/* <Route exact path="/" element={<Landing />} /> */}
-      <Route exact path="/" element={<LandingTest />} />
+      <Route exact path="/" element={<Landing />} />
 
       <Route exact path="/channel" element={<Channel />} />
       <Route exact path="/studio" element={<Studio />} />

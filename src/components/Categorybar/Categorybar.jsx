@@ -3,8 +3,8 @@ import styled from "styled-components";
 
 const Categorybars = styled.div`
   position: fixed;
-  top: 60px;
-  left: 14.468%;
+  /* top: 60px;
+  left: 14.468%; */
   width: 85.6%;
   height: 56px;
   background-color: #212121;
