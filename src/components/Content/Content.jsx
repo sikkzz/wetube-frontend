@@ -13,7 +13,7 @@ const ContentContainer = styled.div`
 const GridContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(4, auto);
-  grid-template-rows: repeat(4, 200px);
+  grid-template-rows: repeat(4, auto);
   background: red;
   background-color: #212121;
   padding: 0 20px;
@@ -30,23 +30,11 @@ margin-bottom: 40px; */
   background-color: #212121;
 `;
 
-const CardContainer = styled.div`
-  /* width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  flex-direction: column; */
-`;
+const CardContainer = styled.div``;
 
 const CardProfile = styled.img`
   width: 100%;
   border-radius: 12px;
-  /* padding-top: 56.25%;
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-    overflow: hidden;
-    display: block; */
 `;
 
 const CardDetailBox = styled.div`
@@ -69,7 +57,6 @@ const CardDetailProfileBox = styled.div`
   width: 36px;
   height: 36px;
   object-fit: cover;
-
   border-radius: 50%;
   background-color: transparent;
   overflow: hidden;
@@ -79,21 +66,14 @@ const CardDetailProfileImage = styled.img`
   display: block;
   width: 100%;
   height: 100%;
-  /* width: 48px; */
-  /* margin-left: var(--yt-img-margin-left, auto); */
-  /* margin-right: var(--yt-img-margin-right, auto); */
-  /* max-height: var(--yt-img-max-height, none); */
-  /* max-width: var(--yt-img-max-width, 100%); */
-  /* border-radius: var(--yt-img-border-radius, none); */
 `;
 
 const CardDetailContentBox = styled.div`
   overflow-x: hidden;
-  padding-right: 24px;
 `;
 
 const CardDetailContentTitleBox = styled.h3`
-  color: var(--yt-spec-text-primary);
+  color: #fff;
   margin: 12px 0 4px 0;
 `;
 
@@ -103,67 +83,87 @@ const CardDetailContentTitle = styled.a`
   cursor: pointer;
 `;
 
-const CardDetailContent = styled.p`
-  color: var(--yt-spec-text-primary);
+const CardDetailContentTitleText = styled.p`
+  color: #fff;
   font-family: "Roboto", "Arial", sans-serif;
-  font-size: 1.6rem;
-  line-height: 2.2rem;
+  font-size: 1rem;
+  line-height: 1.2rem;
   font-weight: 500;
-  max-height: 4.4rem;
   overflow: hidden;
   display: block;
   -webkit-line-clamp: 2;
-  display: box;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
   text-overflow: ellipsis;
   white-space: normal;
-`
+`;
+
+const CardDetailContentMetaBox = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+const CardDetailContentMetaTitle = styled.div`
+  color: #fff;
+  font-size: 1rem;
+`;
+
+const CardDetailContentMetaDataBox = styled.div`
+  display: flex;
+  flex-direction: row;
+`;
+
+const CardDetailContentMetaView = styled.div`
+  color: #fff;
+  font-size: 1rem;
+`;
+
+const CardDetailContentMetaDate = styled.div`
+  color: #fff;
+  padding-left: 1rem;
+  font-size: 1rem;
+`;
 
 const Content = () => {
+  const count = [1, 2, 3, 4];
   return (
     <>
       <ContentContainer>
         <GridContainer>
-          <CardBox>
-            <CardContainer>
-              <CardProfile src={Image} />
-
-              <CardDetailBox>
-                <CardDetailProfile>
-                  <CardDetailProfileBox>
-                    <CardDetailProfileImage src={Image} />
-                  </CardDetailProfileBox>
-                </CardDetailProfile>
-              </CardDetailBox>
-
-              <CardDetailContentBox>
-                <CardDetailContentTitleBox>
-                  <CardDetailContentTitle>
-                    <CardDetailContent>
-                      팝송 명곡 100곡 베스트 모두 해석해버리기| PlayList
-                    </CardDetailContent>
-                  </CardDetailContentTitle>
-                </CardDetailContentTitleBox>
-              </CardDetailContentBox>
-            </CardContainer>
-          </CardBox>
-
-          <CardBox>
-            <CardContainer>
-              <CardProfile src={Image} />
-            </CardContainer>
-          </CardBox>
-          <CardBox>
-            <CardContainer>
-              <CardProfile src={Image} />
-            </CardContainer>
-          </CardBox>
-          <CardBox>
-            <CardContainer>
-              <CardProfile src={Image} />
-            </CardContainer>
-          </CardBox>
+          {count.map(() => (
+            <CardBox>
+              <CardContainer>
+                <CardProfile src={Image} />
+                <CardDetailBox>
+                  <CardDetailProfile>
+                    <CardDetailProfileBox>
+                      <CardDetailProfileImage src={Image} />
+                    </CardDetailProfileBox>
+                  </CardDetailProfile>
+                  <CardDetailContentBox>
+                    <CardDetailContentTitleBox>
+                      <CardDetailContentTitle>
+                        <CardDetailContentTitleText>
+                          팝송 명곡 100곡 베스트 모두 해석해버리기| PlayList
+                        </CardDetailContentTitleText>
+                      </CardDetailContentTitle>
+                    </CardDetailContentTitleBox>
+                    <CardDetailContentMetaBox>
+                      <CardDetailContentMetaTitle>
+                        H녀
+                      </CardDetailContentMetaTitle>
+                      <CardDetailContentMetaDataBox>
+                        <CardDetailContentMetaView>
+                          조회수 398만회
+                        </CardDetailContentMetaView>
+                        <CardDetailContentMetaDate>
+                          1년전
+                        </CardDetailContentMetaDate>
+                      </CardDetailContentMetaDataBox>
+                    </CardDetailContentMetaBox>
+                  </CardDetailContentBox>
+                </CardDetailBox>
+              </CardContainer>
+            </CardBox>
+          ))}
         </GridContainer>
       </ContentContainer>
     </>

@@ -1,8 +1,12 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 
 import { BsSearch } from "react-icons/bs";
 import { FaBars } from "react-icons/fa";
+import { GrChannel } from "react-icons/gr";
+import { MdOutlineContactPage } from "react-icons/md";
+import { RiVideoAddLine } from "react-icons/ri";
 
 import GoogleButton from "../GoogleButton";
 
@@ -14,7 +18,6 @@ const Headers = styled.div`
   /* border-bottom: 1px solid #eee; */
   position: fixed;
   background-color: #212121;
-
 `;
 
 const HeaderContainer = styled.div`
@@ -87,15 +90,34 @@ const SearchIcon = styled.div`
   border-radius: 0 40px 40px 0;
 `;
 
-const HeaderRight = styled.div``;
+const HeaderRight = styled.div`
+  display: flex;
+  width: 260px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+`;
 
 const Header = () => {
+  const navigate = useNavigate();
+
+  const onLogoClick = () => {
+    navigate("/");
+  };
+
+  const onStudioClick = () => {
+    navigate("/studio")
+  }
+  
+  const onChannelClick = () => {
+    navigate("/channel")
+  }
   return (
     <Headers>
       <HeaderContainer>
         <HeaderStart>
-          <FaBars size={24} color="#fff"/>
-          <Logo href="/">Logo</Logo>
+          <FaBars size={24} color="#fff" />
+          <Logo onClick={onLogoClick}>Logo</Logo>
         </HeaderStart>
 
         <HeaderCenter>
@@ -112,6 +134,8 @@ const Header = () => {
         </HeaderCenter>
 
         <HeaderRight>
+          <RiVideoAddLine size={30} color="#fff" onClick={onStudioClick}/>
+          <MdOutlineContactPage size={30} color="#fff" onClick={onChannelClick}/>
           <GoogleButton />
         </HeaderRight>
       </HeaderContainer>
