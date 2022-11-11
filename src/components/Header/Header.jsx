@@ -24,6 +24,10 @@ const Header = () => {
     navigate("/channel");
   };
 
+  const onDialogClick = () => {
+    
+  }
+
   return (
     <div className="header">
       <div className="header_container">
@@ -52,6 +56,11 @@ const Header = () => {
         </div>
 
         <div className="header_right">
+        <MdOutlineContactPage
+            size={30}
+            color="#fff"
+            onClick={onDialogClick}
+          />
           <RiVideoAddLine size={30} color="#fff" onClick={onStudioClick} />
           <MdOutlineContactPage
             size={30}

@@ -3,6 +3,7 @@ import {Routes, Route} from 'react-router-dom'
 import Landing from "./pages/Landing";
 import Channel from "./pages/Channel";
 import Studio from './pages/Studio'
+import Upload from './components/Upload/Upload'
 import LandingTest from "./pages/LandingTest";
 import Test from "./pages/Test";
 
@@ -14,6 +15,7 @@ function App() {
 
       <Route exact path="/channel" element={<Channel />} />
       <Route exact path="/studio" element={<Studio />} />
+      <Route exact path="/upload" element={<Upload />} />
     </Routes>
       {/* <Test /> */}
       {/* <Landing /> */}
