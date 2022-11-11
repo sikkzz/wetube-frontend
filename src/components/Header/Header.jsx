@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { BsSearch } from "react-icons/bs";
 import { FaBars } from "react-icons/fa";
@@ -7,10 +7,14 @@ import { RiVideoAddLine } from "react-icons/ri";
 
 import GoogleButton from "../GoogleButton";
 
+import Upload from "../Upload/Upload";
+
 import "./Header.scss";
 
 const Header = () => {
   const navigate = useNavigate();
+
+  const [toogle, setToggle] = useState();
 
   const onLogoClick = () => {
     navigate("/");
@@ -24,53 +28,54 @@ const Header = () => {
     navigate("/channel");
   };
 
-  const onDialogClick = () => {
-    
-  }
+  const onUploadClick = () => {};
 
   return (
-    <div className="header">
-      <div className="header_container">
-        <div className="header_left">
-          <FaBars size={24} color="#fff" />
-          <div className="header_logo" onClick={onLogoClick}>
-            WeTube
-          </div>
-        </div>
-
-        <div className="header_center">
-          <div className="search_box">
-            <div className="search_container">
-              <form className="search_form">
-                <input
-                  className="search_input"
-                  type="text"
-                  placeholder="검색"
-                />
-              </form>
-            </div>
-            <div className="search_icon">
-              <BsSearch size={18} />
+    <>
+      <div className="header">
+        <div className="header_container">
+          <div className="header_left">
+            <FaBars size={24} color="#fff" />
+            <div className="header_logo" onClick={onLogoClick}>
+              WeTube
             </div>
           </div>
-        </div>
 
-        <div className="header_right">
-        <MdOutlineContactPage
-            size={30}
-            color="#fff"
-            onClick={onDialogClick}
-          />
-          <RiVideoAddLine size={30} color="#fff" onClick={onStudioClick} />
-          <MdOutlineContactPage
-            size={30}
-            color="#fff"
-            onClick={onChannelClick}
-          />
-          <GoogleButton />
+          <div className="header_center">
+            <div className="search_box">
+              <div className="search_container">
+                <form className="search_form">
+                  <input
+                    className="search_input"
+                    type="text"
+                    placeholder="검색"
+                  />
+                </form>
+              </div>
+              <div className="search_icon">
+                <BsSearch size={18} />
+              </div>
+            </div>
+          </div>
+
+          <div className="header_right">
+            <MdOutlineContactPage
+              size={30}
+              color="#fff"
+              onClick={onUploadClick}
+            />
+            <RiVideoAddLine size={30} color="#fff" onClick={onStudioClick} />
+            <MdOutlineContactPage
+              size={30}
+              color="#fff"
+              onClick={onChannelClick}
+            />
+            <GoogleButton />
+          </div>
         </div>
       </div>
-    </div>
+      <Upload />
+    </>
   );
 };
 

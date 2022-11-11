@@ -27,7 +27,7 @@ const Upload = () => {
             <div className="upload_content_icon_container">
               <div className="upload_content_icon_box">
                 <div className="upload_content_icon">
-                  <MdUpload size="30" color="#fff" />
+                  <MdUpload size={50} color="#fff" />
                 </div>
               </div>
             </div>

@@ -49,6 +49,7 @@
         background: aqua;
         background: #212121;
         margin-bottom: 10px;
+        color: #fff;
         // flex: 1;
 
         &_container {
@@ -58,6 +59,80 @@
             justify-content: center;
             // min-height: 370px;
             padding: 16px 50px 0;
+            margin-top: 200px;
+        }
+
+        &_icon {
+            position: absolute;
+            top: 43px;
+            left: 43px;
+
+            &_box {
+                width: 136px;
+                height: 136px;
+                border-radius: 50%;
+                background: rgba(15, 15, 15, 0.5);
+                position: relative;
+            }
+
+        }
+
+        &_title_container {
+            margin-top: 23px;
+            font-size: 15px;
+            line-height: 24px;
+        }
+
+        &_subtitle_container {
+            margin-top: 2px;
+            font-size: 13px;
+            color: #aaa;
+            line-height: 20px;
+        }
+
+        &_button {
+            display: flex;
+            color: #0d0d0d;
+            background: #3ea6ff;
+            padding: 0 8px;
+            padding-left: 16px;
+            padding-right: 16px;
+            border-radius: 2px;
+            height: 36px;
+            text-align: center;
+            align-items: center;
+            font-size: 14px;
+            line-height: 20px;
+
+            &_container {
+                margin-top: 26px;
+                margin-bottom: 200px;
+            }
+        }
+
+        &_info_container {
+            font-family: "Roboto", "Noto", sans-serif;
+            font-weight: 400;
+            -webkit-font-smoothing: antialiased;
+            letter-spacing: 0.011em;
+            font-size: 12px;
+            line-height: 16px;
+            color: #aaa;
+            text-align: center;
+            line-height: 24px;
+        }
+
+        &_subinfo_container {
+            font-family: "Roboto", "Noto", sans-serif;
+            font-weight: 400;
+            -webkit-font-smoothing: antialiased;
+            letter-spacing: 0.011em;
+            font-size: 12px;
+            line-height: 16px;
+            color: #aaa;
+            text-align: center;
+            line-height: 24px;
+            margin-bottom: 4px;
         }
     }
 }
