@@ -1,15 +1,51 @@
 import React from "react";
 import "./ChannelContent.scss";
+import Image from "../../assets/test.jpg";
 
 const ChannelContent = () => {
   return (
-    <div className="headers">
-      <div className="profile">
-        <div className="profile_container"></div>
+    <div className="channel">
+      <div className="channel_headers">
+        <div className="channel_profile">
+          <div className="channel_profile_container">
+            <div className="channel_profile_image_container">
+              <img
+                className="channel_profile_image"
+                src={Image}
+                alt="channel_profile_image"
+              />
+            </div>
+            <div className="channel_profile_content_container">
+              <div className="channel_profile_content_meta">
+                <div className="channel_profile_content_name">Test</div>
+                <div className="channel_profile_content_sub">구독자 없음</div>
+              </div>
+
+              <div className="channel_profile_content_button_container">
+                <div className="channel_profile_content_button">
+                  채널 맞춤설정
+                </div>
+                <div className="channel_profile_content_button">
+                  동영상 관리
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="channel_tab">
+            <div className="channel_tab_container">
+              <div className="channel_tab_inner_container">
+                <div className="channel_tab_item">홈</div>
+                <div className="channel_tab_item">재생목록</div>
+                <div className="channel_tab_item">채널</div>
+                <div className="channel_tab_item">정보</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr />
       </div>
-      <div className="tab">
-        <div className="tab_container"></div>
-      </div>
+
+      <div className="channel_content"></div>
     </div>
   );
 };

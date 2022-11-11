@@ -1,3 +1,7 @@
+.container{
+    background: #212121;
+}
+
 .channel_sidebars_container {
     display: flex;
     width: 250px;
@@ -12,6 +16,6 @@
     margin-top: 60px;
 }
 
-.channel_mains_container{
+.channel_mains_container {
     margin-top: -60px;
 }

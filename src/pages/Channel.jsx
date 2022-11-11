@@ -1,9 +1,9 @@
-import React from 'react'
-import Header from '../components/Header/Header'
-import Sidebar from '../components/Sidebar/Sidebar'
-import ChannelContent from '../components/ChannelContent/ChannelContent'
+import React from "react";
+import Header from "../components/Header/Header";
+import Sidebar from "../components/Sidebar/Sidebar";
+import ChannelContent from "../components/ChannelContent/ChannelContent";
 
-import './Channel.scss'
+import "./Channel.scss";
 
 const Channel = () => {
   return (
@@ -24,7 +24,7 @@ const Channel = () => {
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default Channel
+export default Channel;
