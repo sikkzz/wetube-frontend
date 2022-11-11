@@ -1,146 +1,32 @@
 import React from "react";
-import styled from "styled-components";
 import { AiOutlineHome } from "react-icons/ai";
 
-const SideBarContainer = styled.nav`
-  background-color: #212121;
-  /* width: 250px; */
-  width: 14.468%;
-  /* width: 13.021vw; */
-  display: flex;
-  justify-content: center;
-  position: fixed;
-  /* left: 0;
-  top: 60px; */
-`;
+import "./Sidebars.scss";
 
-const SideList = styled.ul`
-  margin: 0;
-  padding: 0;
-  width: 100%;
-`;
-
-const SideLine = styled.div`
-  border-bottom: 1px solid #fff;
-`;
-
-const SideListMenu = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 0 12px;
-`;
-
-const SideListItem = styled.li`
-  display: flex;
-  justify-content: start;
-  list-style: none;
-  padding: 10px 12px;
-  color: #fff;
-  align-items: center;
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 24px;
-`;
-
-const SideListItemBox = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-`;
-
-const ItemContent = styled.div`
-  margin-left: 20px;
-  font-size: 1.2rem;
-`;
-
-const Sidebar = () => {
+const Sidebars = () => {
+  const count = [1, 2, 3, 4];
+  const count2 = [1, 2, 3];
   return (
-    <SideBarContainer>
-      <SideList>
-        <SideLine>
-          <SideListMenu>
-            <SideListItem>
-              <SideListItemBox>
-                <AiOutlineHome size={24} />
-                <ItemContent>Content</ItemContent>
-              </SideListItemBox>
-            </SideListItem>
-            <SideListItem>
-              <SideListItemBox>
-                <AiOutlineHome size={24} />
-                <ItemContent>Content</ItemContent>
-              </SideListItemBox>
-            </SideListItem>
-            <SideListItem>
-              <SideListItemBox>
-                <AiOutlineHome size={24} />
-                <ItemContent>Content</ItemContent>
-              </SideListItemBox>
-            </SideListItem>
-          </SideListMenu>
-        </SideLine>
-
-        <SideLine>
-          <SideListMenu>
-            <SideListItem>
-              <SideListItemBox>
-                <AiOutlineHome size={24} />
-                <ItemContent>Text</ItemContent>
-              </SideListItemBox>
-            </SideListItem>
-            <SideListItem>
-              <SideListItemBox>
-                <AiOutlineHome size={24} />
-                <ItemContent>Text</ItemContent>
-              </SideListItemBox>
-            </SideListItem>
-            <SideListItem>
-              <SideListItemBox>
-                <AiOutlineHome size={24} />
-                <ItemContent>Text</ItemContent>
-              </SideListItemBox>
-            </SideListItem>
-            <SideListItem>
-              <SideListItemBox>
-                <AiOutlineHome size={24} />
-                <ItemContent>Text</ItemContent>
-              </SideListItemBox>
-            </SideListItem>
-          </SideListMenu>
-        </SideLine>
-
-        <SideLine>
-          <SideListMenu>
-            <SideListItem>
-              <SideListItemBox>
-                <AiOutlineHome size={24} />
-                <ItemContent>Service</ItemContent>
-              </SideListItemBox>
-            </SideListItem>
-            <SideListItem>
-              <SideListItemBox>
-                <AiOutlineHome size={24} />
-                <ItemContent>Service</ItemContent>
-              </SideListItemBox>
-            </SideListItem>
-            <SideListItem>
-              <SideListItemBox>
-                <AiOutlineHome size={24} />
-                <ItemContent>Service</ItemContent>
-              </SideListItemBox>
-            </SideListItem>
-            <SideListItem>
-              <SideListItemBox>
-                <AiOutlineHome size={24} />
-                <ItemContent>Service</ItemContent>
-              </SideListItemBox>
-            </SideListItem>
-          </SideListMenu>
-        </SideLine>
-      </SideList>
-    </SideBarContainer>
+    <nav className="sidebar">
+      <ul className="sidebar_list">
+        {count2.map(() => (
+          <>
+            <div className="sidebar_list_menu">
+              {count.map(() => (
+                <li className="sidebar_list_item">
+                  <div className="sidebar_list_item_box">
+                    <AiOutlineHome size={24} />
+                    <div className="sidebar_list_item_content">Content</div>
+                  </div>
+                </li>
+              ))}
+            </div>
+            <hr className="sidebar_list_menu_line" />
+          </>
+        ))}
+      </ul>
+    </nav>
   );
 };
 
-export default Sidebar;
+export default Sidebars;

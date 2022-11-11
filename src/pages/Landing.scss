@@ -1,4 +1,4 @@
-.container {
+.containers {
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -19,7 +19,7 @@
     margin-top: 60px;
 }
 
-.sidebar_container {
+.sidebars_container {
     display: flex;
     width: 250px;
     height: 100vh;
@@ -34,12 +34,12 @@
     // background: aqua;
 }
 
-.category_container{
+.categorys_container{
     width: 1478px;
     height: 56px;
 }
 
-.detail_container{
+.details_container{
     width: 1478px;
     height: 100vh;
 }
