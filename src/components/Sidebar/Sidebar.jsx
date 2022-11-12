@@ -1,9 +1,9 @@
 import React from "react";
 import { AiOutlineHome } from "react-icons/ai";
 
-import "./Sidebars.scss";
+import "./Sidebar.scss";
 
-const Sidebars = () => {
+const Sidebar = () => {
   const count = [1, 2, 3, 4];
   const count2 = [1, 2, 3];
   return (
@@ -29,4 +29,4 @@ const Sidebars = () => {
   );
 };
 
-export default Sidebars;
+export default Sidebar;

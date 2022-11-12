@@ -1,0 +1,94 @@
+.studio_header {
+    display: flex;
+    height: 64px;
+    justify-content: center;
+    width: 100vw;
+    position: fixed;
+    background-color: #282828;
+    box-shadow: 0px 1px 4px 1px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+
+    &_container {
+        width: 98vw;
+        height: 64px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &_left {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    &_nav_button{
+        cursor: pointer;
+    }
+
+    &_logo {
+        margin-left: 20px;
+        cursor: pointer;
+        font-size: 1.6rem;
+        color: #fff;
+    }
+
+    &_center {
+        display: flex;
+        flex-direction: row;
+    }
+
+    &_right {
+        display: flex;
+        width: 260px;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.search {
+    &_box {
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &_container {
+        height: 40px;
+        display: flex;
+        align-items: center;
+        border: 1px solid #fff;
+        border-right: none;
+        border-radius: 40px 0 0 40px;
+        background-color: #282828;
+    }
+
+    &_form {
+        margin-left: 10px;
+
+    }
+
+    &_input {
+        border: none;
+        height: 30px;
+        width: 500px;
+        color: #fff;
+        background-color: #282828;
+        outline: none;
+        padding: 2px 6px;
+    }
+
+    &_icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 60px;
+        height: 40px;
+        color: #eee;
+        border: 1px solid #fff;
+        border-radius: 0 40px 40px 0;
+    }
+}
