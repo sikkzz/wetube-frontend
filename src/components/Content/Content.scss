@@ -1,5 +1,6 @@
 .content {
     width: 100%;
+    margin-top: 56px;
     &_grid {
         display: grid;
         grid-template-columns: repeat(4, auto);
@@ -7,6 +8,8 @@
         background: red;
         background-color: #212121;
         padding: 0 20px;
+        padding-top: 24px;
+
     }
 
     &_box {

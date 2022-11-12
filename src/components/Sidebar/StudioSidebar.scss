@@ -1,19 +1,14 @@
 .studio_sidebar {
     // margin-top: 1px;
     background-color: #282828;
-    width: 250px;
+    width: 256px;
     // width: 14.468%;
     /* width: 13.021vw; */
     display: flex;
     justify-content: center;
+    flex-direction: column;
     position: fixed;
     border-right: 1px solid rgba(255, 255, 255, 0.1);
-
-    &_list {
-        margin: 0;
-        padding: 0;
-        width: 100%;
-    }
 
     &_profile {
         display: flex;
@@ -24,7 +19,6 @@
         // background-color: red;
 
         &_image {
-
             width: 112px;
             height: 112px;
             border-radius: 50%;
@@ -58,6 +52,37 @@
                 text-overflow: ellipsis;
                 color: #aaa;
                 padding-top: 2px;
+            }
+        }
+    }
+
+    &_list {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        padding: 0 20px 0 16px;
+        cursor: pointer;
+        list-style: none;
+
+        &_item {
+            &_box {
+                font-weight: 600;
+                font-size: 15px;
+                line-height: 24px;
+                min-height: 48px;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                color: #fff;
+            }
+
+            &_icon {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                width: 24px;
+                margin-left: 8px;
+                margin-right: 24px;
             }
         }
     }

@@ -8,7 +8,7 @@ import { RiVideoAddLine } from "react-icons/ri";
 
 const Contents = () => {
   const navigate = useNavigate()
-  const count = [1, 2, 3, 4];
+  const count = [1, 2, 3, 4,5,6,7,8,9,10,11,12,13];
 
   const onTest = () => {
     navigate("/upload")
