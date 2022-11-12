@@ -1,4 +1,4 @@
-.containers {
+.landing_containers {
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -12,21 +12,21 @@
     height: 60px;
 }
 
-.contents_container {
+.landing_contents_container {
     display: flex;
     width: 100vw;
     height: 100vh;
     margin-top: 60px;
 }
 
-.sidebars_container {
+.landing_sidebars_container {
     display: flex;
     width: 250px;
     height: 100vh;
     // background: red;
 }
 
-.mains_container {
+.landing_mains_container {
     display: flex;
     flex-direction: column;
     width: 1478px;
@@ -34,12 +34,12 @@
     // background: aqua;
 }
 
-.categorys_container{
+.landing_categorys_container{
     width: 1478px;
     height: 56px;
 }
 
-.details_container{
+.landing_details_container{
     width: 1478px;
     height: 100vh;
 }

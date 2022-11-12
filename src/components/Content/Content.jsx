@@ -4,6 +4,7 @@ import Image from "../../assets/test.jpg";
 
 const Contents = () => {
   const count = [1, 2, 3, 4];
+
   return (
     <>
       <div className="content">

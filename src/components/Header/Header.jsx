@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { useNavigate } from "react-router-dom";
 import { BsSearch } from "react-icons/bs";
 import { FaBars } from "react-icons/fa";
@@ -7,14 +7,10 @@ import { RiVideoAddLine } from "react-icons/ri";
 
 import GoogleButton from "../GoogleButton";
 
-import Upload from "../Upload/Upload";
-
 import "./Header.scss";
 
 const Header = () => {
   const navigate = useNavigate();
-
-  const [toogle, setToggle] = useState();
 
   const onLogoClick = () => {
     navigate("/");
@@ -27,8 +23,6 @@ const Header = () => {
   const onChannelClick = () => {
     navigate("/channel");
   };
-
-  const onUploadClick = () => {};
 
   return (
     <>
@@ -59,11 +53,6 @@ const Header = () => {
           </div>
 
           <div className="header_right">
-            <MdOutlineContactPage
-              size={30}
-              color="#fff"
-              onClick={onUploadClick}
-            />
             <RiVideoAddLine size={30} color="#fff" onClick={onStudioClick} />
             <MdOutlineContactPage
               size={30}
@@ -74,7 +63,6 @@ const Header = () => {
           </div>
         </div>
       </div>
-      <Upload />
     </>
   );
 };
