@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { BsSearch } from "react-icons/bs";
 import { FaBars } from "react-icons/fa";
@@ -11,6 +11,7 @@ import "./Header.scss";
 
 const Header = () => {
   const navigate = useNavigate();
+  const [toggle, setToggle] = useState(false);
 
   const onLogoClick = () => {
     navigate("/");
@@ -24,12 +25,18 @@ const Header = () => {
     navigate("/channel");
   };
 
+  const onNavClick = () => {
+    setToggle(true)
+  };
+
   return (
     <>
       <div className="header">
         <div className="header_container">
           <div className="header_left">
-            <FaBars size={24} color="#fff" />
+            <div className="header_nav_button">
+              <FaBars size={20} color="#fff" onClick={onNavClick} />
+            </div>
             <div className="header_logo" onClick={onLogoClick}>
               WeTube
             </div>

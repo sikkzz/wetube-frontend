@@ -2,6 +2,8 @@ import React from "react";
 import Header from "../../components/Header/Header";
 import "./Detail.scss";
 
+import Video from "../../assets/videos/test1.mp4";
+
 const Detail = () => {
   return (
     <>
@@ -10,7 +12,17 @@ const Detail = () => {
           <Header />
         </div>
         <div className="detail_contents_container">
-
+          <div className="test">
+            <video
+              src={Video}
+              autoPlay
+              loop
+              controls
+              muted
+              type="video/mp4"
+              className="test_video"
+            />
+          </div>
         </div>
       </div>
     </>
