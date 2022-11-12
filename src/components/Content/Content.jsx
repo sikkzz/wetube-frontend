@@ -1,9 +1,18 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./Content.scss";
 import Image from "../../assets/test.jpg";
 
+import { RiVideoAddLine } from "react-icons/ri";
+
+
 const Contents = () => {
+  const navigate = useNavigate()
   const count = [1, 2, 3, 4];
+
+  const onTest = () => {
+    navigate("/upload")
+  }
 
   return (
     <>
@@ -31,12 +40,13 @@ const Contents = () => {
                     <h3 className="content_detail_meta_title_container">
                       <a className="content_detail_meta_title" href="#!">
                         <p className="content_detail_meta_title_text">
-                          팝송 명곡 100곡 베스트 모두 해석해버리기| PlayList
+                          {/* 팝송 명곡 100곡 베스트 모두 해석해버리기| PlayList */}
+                          Test
                         </p>
                       </a>
                     </h3>
                     <div className="content_detail_meta_body_container">
-                      <div className="content_detail_meta_body_sub">H녀</div>
+                      <div className="content_detail_meta_body_sub">김준식</div>
                       <div className="content_detail_meta_body_data">
                         <div className="content_detail_meta_body_view">
                           조회수 398만회
@@ -51,6 +61,8 @@ const Contents = () => {
               </div>
             </div>
           ))}
+          <RiVideoAddLine size={30} color="#fff" onClick={onTest} />
+
         </div>
       </div>
     </>

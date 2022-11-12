@@ -25,17 +25,13 @@ const Header = () => {
     navigate("/channel");
   };
 
-  const onNavClick = () => {
-    setToggle(true)
-  };
-
   return (
     <>
       <div className="header">
         <div className="header_container">
           <div className="header_left">
             <div className="header_nav_button">
-              <FaBars size={20} color="#fff" onClick={onNavClick} />
+              <FaBars size={20} color="#fff" />
             </div>
             <div className="header_logo" onClick={onLogoClick}>
               WeTube

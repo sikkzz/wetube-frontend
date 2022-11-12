@@ -18,7 +18,7 @@ function App() {
       <Route exact path="/" element={<Landing />} />
       <Route exact path="/channel" element={<Channel />} />
       <Route exact path="/studio" element={<Studio />} />
-      <Route exact path="/upload" element={<UploadPage />} />
+      <Route exact path="/upload" element={<Upload />} />
       <Route exact path="/detail" element={<Detail />} />
     </Routes>
       {/* <Test /> */}

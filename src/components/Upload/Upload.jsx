@@ -1,11 +1,47 @@
-import React from "react";
+import React, { useState, useRef, useMemo } from "react";
 import "./Upload.scss";
 
 import { AiOutlineClose } from "react-icons/ai";
 import { AiOutlineInfoCircle } from "react-icons/ai";
 import { MdUpload } from "react-icons/md";
 
+import Image from "../../assets/test2.jpg";
+
 const Upload = () => {
+  const fileInputRef = useRef(null);
+  const [imageFile, setImageFile] = useState(null);
+
+  const handleClickFileInput = () => {
+    fileInputRef.current?.click();
+  };
+
+  const uploadProfile = (e) => {
+    const fileList = e.target.files;
+    if (fileList && fileList[0]) {
+      const url = URL.createObjectURL(fileList[0]);
+
+      setImageFile({
+        file: fileList[0],
+        thumbnail: url,
+        type: fileList[0].type.slice(0, 5),
+      });
+    }
+  };
+
+  const showImage = useMemo(() => {
+    if (!imageFile && imageFile == null) {
+      return <img src={Image} alt="프로필" style={{ width: "100px" }} />;
+    }
+    return (
+      <img
+        src={imageFile.thumbnail}
+        alt={imageFile.type}
+        onClick={handleClickFileInput}
+        style={{ width: "100px" }}
+      />
+    );
+  }, [imageFile]);
+
   return (
     <>
       <div className="upload">
@@ -45,7 +81,22 @@ const Upload = () => {
             </div>
 
             <div className="upload_content_button_container">
-              <div className="upload_content_button">파일 선택</div>
+              <label className="upload_content_button">
+                파일 선택
+                <input
+                  type="file"
+                  id="file"
+                  onChange={uploadProfile}
+                  ref={fileInputRef}
+                  multiple="multiple"
+                  className="upload_content_button1"
+                  style={{ display: "none" }}
+                />
+              </label>
+              {showImage}
+              <button type="button" onClick={handleClickFileInput}>
+                업로드 버튼
+              </button>
             </div>
 
             <div className="upload_content_info_container">
