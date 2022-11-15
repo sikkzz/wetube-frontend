@@ -4,7 +4,6 @@ import Sidebar from "../../components/Sidebar/Sidebar";
 import Categorybar from "../../components/Categorybar/Categorybar";
 import Content from "../../components/Content/Content";
 
-
 import "./Landing.scss";
 
 const Landing = () => {

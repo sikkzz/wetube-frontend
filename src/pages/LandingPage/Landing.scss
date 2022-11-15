@@ -20,8 +20,9 @@
 }
 
 .landing_sidebars_container {
-    display: flex;
+    // display: flex;
     width: 250px;
+    // width: 14.72%;
     height: 100vh;
     // background: red;
 }
@@ -29,17 +30,20 @@
 .landing_mains_container {
     display: flex;
     flex-direction: column;
-    width: 1478px;
+    width: 1462px;
+    width: 85.3972%;
     height: 100vh;
     // background: aqua;
 }
 
 .landing_categorys_container{
     width: 1478px;
+    width: 85.3972%;
     height: 56px;
 }
 
 .landing_details_container{
     width: 1478px;
+    width: 85.3972%;
     height: 100vh;
 }
