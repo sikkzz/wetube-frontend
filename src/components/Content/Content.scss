@@ -7,13 +7,13 @@
         grid-template-rows: repeat(4, auto);
         background: red;
         background-color: #212121;
-        padding: 0 20px;
+        padding: 20px;
         padding-top: 24px;
 
     }
 
     &_box {
-        width: 350px;
+        width: 340px;
         height: 320px;
         display: flex;
         flex-direction: row;

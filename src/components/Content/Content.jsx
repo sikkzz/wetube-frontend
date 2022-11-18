@@ -40,7 +40,6 @@ const Contents = () => {
                     <h3 className="content_detail_meta_title_container">
                       <a className="content_detail_meta_title" href="#!">
                         <p className="content_detail_meta_title_text">
-                          {/* 팝송 명곡 100곡 베스트 모두 해석해버리기| PlayList */}
                           Test
                         </p>
                       </a>
