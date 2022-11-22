@@ -1,8 +1,6 @@
 .sidebar {
     background-color: #212121;
     width: 250px;
-    // width: 14.468%;
-    /* width: 13.021vw; */
     display: flex;
     justify-content: center;
     position: fixed;
@@ -44,11 +42,12 @@
             }
 
             &_content {
+                width: 132px;
                 margin-left: 20px;
-                font-size: 1.2rem;
-                // line-height: 1.2rem;
-                // display: flex;
-                // align-items: center;
+                font-size: 0.8rem;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
             }
         }
 

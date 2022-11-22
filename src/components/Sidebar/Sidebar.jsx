@@ -26,6 +26,7 @@ const Sidebar = () => {
             <>
               <li className="sidebar_list_item" key={index}>
                 <div className="sidebar_list_item_box">
+                  {item.icon}
                   <div className="sidebar_list_item_content">{item.title}</div>
                 </div>
               </li>
