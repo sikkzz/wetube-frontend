@@ -9,7 +9,7 @@ import { AiOutlineClockCircle } from "react-icons/ai";
 import { AiOutlineLike } from "react-icons/ai";
 import { RiPlayList2Fill } from "react-icons/ri";
 
-const size = 20
+const size = 24
 
 export const SidebarData1 = [
   {

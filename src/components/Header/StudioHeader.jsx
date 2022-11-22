@@ -39,17 +39,17 @@ const StudioHeader = () => {
           </div>
 
           <div className="studio_header_center">
-            <div className="search_box">
-              <div className="search_container">
-                <form className="search_form">
+            <div className="studio_search_box">
+              <div className="studio_search_container">
+                <form className="studio_search_form">
                   <input
-                    className="search_input"
+                    className="studio_search_input"
                     type="text"
                     placeholder="검색"
                   />
                 </form>
               </div>
-              <div className="search_icon">
+              <div className="studio_search_icon">
                 <BsSearch size={18} />
               </div>
             </div>

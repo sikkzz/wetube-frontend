@@ -1,11 +1,13 @@
+@import '../../styles/common.scss';
+
 .channel {
     height: 100vh;
-    background-color: #212121;
+    background-color: var(--main-background);
     display: flex;
     flex-direction: column;
 
     &_headers {
-        background: #212121;
+        background: var(--main-background);
 
         hr {
             background: rgba(255, 255, 255, 0.1);
@@ -16,8 +18,7 @@
 
     &_content {
         height: 400px;
-        background: yellow;
-        background: #212121;
+        background: var(--main-background);
     }
 
     &_profile {

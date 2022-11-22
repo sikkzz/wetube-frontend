@@ -1,8 +1,10 @@
+@import '../../styles/common.scss';
+
 .category {
     position: fixed;
     width: 85.3972%;
     height: 56px;
-    background-color: #212121;
+    background-color: var(--main-background);
     z-index: 100;
 
     &_container {

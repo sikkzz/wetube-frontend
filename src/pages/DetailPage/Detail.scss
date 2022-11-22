@@ -1,6 +1,8 @@
+@import '../../styles/common.scss';
+
 .detail {
     &_containers {
-        background: #212121;
+        background: var(--main-background);
     }
 
     // &_contents_container {

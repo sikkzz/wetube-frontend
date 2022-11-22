@@ -1,5 +1,8 @@
+@import '../../styles/common.scss';
+
+
 .channel_containers{
-    background: #212121;
+    background: var(--main-background);
 }
 
 .channel_sidebars_container {

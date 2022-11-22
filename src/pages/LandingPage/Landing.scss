@@ -1,9 +1,11 @@
+@import '../../styles/common.scss';
+
 .landing_containers {
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
-    background: #212121;
+    background: var(--main-background);
 }
 
 .headers_container {
