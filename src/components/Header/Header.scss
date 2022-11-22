@@ -27,7 +27,7 @@
         align-items: center;
     }
 
-    &_nav_button{
+    &_nav_button {
         display: flex;
         align-items: center;
         cursor: pointer;
@@ -68,10 +68,11 @@
         height: 40px;
         display: flex;
         align-items: center;
-        border: 1px solid #fff;
+        border: 1px solid var(--searchbar-border-color);
         border-right: none;
         border-radius: 40px 0 0 40px;
-        background-color: var(--main-background);;
+        background-color: var(--main-background);
+        ;
     }
 
     &_form {
@@ -93,10 +94,15 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 60px;
+        width: 64px;
         height: 40px;
         color: #eee;
-        border: 1px solid #fff;
+        border: 1px solid var(--searchbar-border-color);
         border-radius: 0 40px 40px 0;
+        background: var(--searchbar-button-color);
     }
+}
+
+input::-webkit-input-placeholder {
+    font-size: 16px;
 }

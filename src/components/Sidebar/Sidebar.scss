@@ -1,3 +1,5 @@
+@import '../../styles/common.scss';
+
 .sidebar {
     background-color: #0f0f0f;
     width: 250px;
@@ -19,7 +21,9 @@
 
             &_line {
                 border: none;
-                border-bottom: 1px solid #fff;
+                width: 250px;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                margin: 14px 0;
             }
         }
 
@@ -27,32 +31,33 @@
             display: flex;
             justify-content: flex-start;
             list-style: none;
-            // padding: 10px 12px;
             color: #fff;
             align-items: center;
             font-size: 12px;
             font-weight: 400;
             padding: 0 12px;
 
-            &:hover {
+            &:first-of-type{
                 border-radius: 10px;
-                background: #000;
+                background: rgba(255,255,255,0.1);
             }
 
-            // line-height: 20px;
+            &:hover {
+                border-radius: 10px;
+                background: rgba(255,255,255,0.1);
+            }
 
             &_box {
                 display: flex;
                 flex-direction: row;
                 align-items: center;
                 height: 40px;
-
             }
 
             &_content {
                 width: 132px;
                 margin-left: 25px;
-                font-size: 0.8rem;
+                font-size: 0.9rem;
                 overflow: hidden;
                 white-space: nowrap;
                 text-overflow: ellipsis;
@@ -60,4 +65,9 @@
             }
         }
     }
+}
+
+.active{
+    border-radius: 10px;
+    background: rgba(255,255,255,0.1);
 }

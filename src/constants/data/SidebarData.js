@@ -9,9 +9,9 @@ import { AiOutlineClockCircle } from "react-icons/ai";
 import { AiOutlineLike } from "react-icons/ai";
 import { RiPlayList2Fill } from "react-icons/ri";
 
-const size = 24
+const size = 22
 
-export const SidebarData1 = [
+export const SidebarData = [
   {
     icon: <AiOutlineHome size={size} />,
     title: "홈",
@@ -24,9 +24,6 @@ export const SidebarData1 = [
     icon: <BsFillCollectionPlayFill size={size} />,
     title: "구독",
   },
-];
-
-export const SidebarData2 = [
   {
     icon: <MdOutlineVideoLibrary size={size} />,
     title: "보관함",
