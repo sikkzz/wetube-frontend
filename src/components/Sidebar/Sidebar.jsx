@@ -17,7 +17,7 @@ const Sidebar = () => {
               <div
                 key={index}
                 onClick={() => setActive(item)}
-                className={`sidebar_list_item ${active === item && "active"}`}
+                className={`sidebar_list_item ${active === item && "sidebar_list_item_active"}`}
               >
                 <div className="sidebar_list_item_box">
                   {item.icon}

@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import "./ChannelContent.scss";
 import Image from "../../assets/test.jpg";
 
+import { ChannelTabData } from "../../constants/data/ChannelTabData";
+
 const ChannelContent = () => {
+  const [active, setActive] = useState();
+
   return (
     <div className="channel">
       <div className="channel_headers">
@@ -34,10 +38,19 @@ const ChannelContent = () => {
           <div className="channel_tab">
             <div className="channel_tab_container">
               <div className="channel_tab_inner_container">
-                <div className="channel_tab_item">홈</div>
-                <div className="channel_tab_item">재생목록</div>
-                <div className="channel_tab_item">채널</div>
-                <div className="channel_tab_item">정보</div>
+                {ChannelTabData.map((item, index) => (
+                  <>
+                    <div
+                      key={index}
+                      className={`channel_tab_item ${
+                        active === item && "channel_tab_item_active"
+                      }`}
+                      onClick={() => setActive(item)}
+                    >
+                      {item.title}
+                    </div>
+                  </>
+                ))}
               </div>
             </div>
           </div>
