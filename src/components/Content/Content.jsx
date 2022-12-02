@@ -14,7 +14,6 @@ const Content = () => {
     navigate("/upload");
   };
 
-
   const handleOnMouseOver = (e) => {
     e.currentTarget.play();
   }
@@ -32,7 +31,6 @@ const Content = () => {
               <div className="content_container">
                 <video
                   loop
-                  // preload="none"
                   muted
                   onMouseOver={handleOnMouseOver}
                   onMouseOut={handleOnMouseOut}
