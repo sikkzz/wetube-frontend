@@ -17,12 +17,18 @@ const Sidebar = () => {
               <div
                 key={index}
                 onClick={() => setActive(item)}
-                className={`sidebar_list_item ${active === item && "sidebar_list_item_active"}`}
+                className={`sidebar_list_item ${
+                  active === item && "sidebar_list_item_active"
+                }`}
               >
-                <div className="sidebar_list_item_box">
-                  {item.icon}
-                  <div className="sidebar_list_item_content">{item.title}</div>
-                </div>
+                <a href={item.link}>
+                  <div className="sidebar_list_item_box">
+                    {item.icon}
+                    <div className="sidebar_list_item_content">
+                      {item.title}
+                    </div>
+                  </div>
+                </a>
               </div>
             </>
           ))}

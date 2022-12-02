@@ -1,7 +1,5 @@
 import React from "react";
 import Header from "../../components/Header/Header";
-import "./Detail.scss";
-
 import Video from "../../assets/videos/test1.mp4";
 
 const Detail = () => {

@@ -1,8 +1,9 @@
 @import '../../styles/common.scss';
 
 .content {
-    width: 100%;
-    margin-top: 56px;
+    width: 85.3972%;
+    margin-left: 250px;
+    padding-top: 116px;
     &_grid {
         display: grid;
         grid-template-columns: repeat(4, auto);

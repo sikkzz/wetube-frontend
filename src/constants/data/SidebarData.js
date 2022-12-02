@@ -15,10 +15,12 @@ export const SidebarData = [
   {
     icon: <AiOutlineHome size={size} />,
     title: "홈",
+    link: '/'
   },
   {
     icon: <ImPlay2 size={size} />,
     title: "Shorts",
+    link: '/shorts'
   },
   {
     icon: <BsFillCollectionPlayFill size={size} />,
