@@ -5,12 +5,12 @@
     margin-left: 250px;
     padding-top: 60px;
     height: 100vh;
-    background-color: var(--main-background);
+    background-color: var(--main-bg);
     display: flex;
     flex-direction: column;
 
     &_headers {
-        background: var(--main-background);
+        background: var(--main-bg);
 
         hr {
             background: rgba(255, 255, 255, 0.1);
@@ -21,7 +21,7 @@
 
     &_content {
         height: 400px;
-        background: var(--main-background);
+        background: var(--main-bg);
     }
 
     &_profile {

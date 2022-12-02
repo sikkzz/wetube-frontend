@@ -1,7 +1,7 @@
 @import '../../styles/common.scss';
 
 .sidebar {
-    background-color: #0f0f0f;
+    background-color: var(--main-bg);
     width: 250px;
     display: flex;
     justify-content: center;
@@ -42,10 +42,10 @@
                 color: inherit;
             }
 
-            &:first-of-type{
-                border-radius: 10px;
-                background: rgba(255,255,255,0.1);
-            }
+            // &:first-of-type{
+            //     border-radius: 10px;
+            //     background: rgba(255,255,255,0.1);
+            // }
 
             &:hover {
                 border-radius: 10px;

@@ -18,8 +18,8 @@ const Content = () => {
     <>
       <div className="content">
         <div className="content_grid">
-          {count.map(() => (
-            <div className="content_box">
+          {count.map((index) => (
+            <div className="content_box" key={index}>
               <div className="content_container">
                 <img
                   className="content_profile_image"

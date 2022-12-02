@@ -7,7 +7,7 @@
     justify-content: center;
     width: 100%;
     position: fixed;
-    background-color: #282828;
+    background-color: var(--studio-bg);
     box-shadow: 0px 1px 4px 1px rgba(0, 0, 0, 0.2);
     z-index: 100;
 
@@ -70,7 +70,7 @@
         border: 1px solid #fff;
         border-right: none;
         border-radius: 40px 0 0 40px;
-        background-color: #282828;
+        background-color: var(--studio-bg);
     }
 
     &_form {
@@ -83,7 +83,7 @@
         height: 30px;
         width: 500px;
         color: #fff;
-        background-color: #282828;
+        background-color: var(--studio-bg);
         outline: none;
         padding: 2px 6px;
     }
