@@ -1,17 +1,26 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Content.scss";
 import Image from "../../assets/test.jpg";
+import Video from "../../assets/videos/test1.mp4";
 
 import { RiVideoAddLine } from "react-icons/ri";
 
-
 const Content = () => {
-  const navigate = useNavigate()
-  const count = [1, 2, 3, 4,5,6,7,8,9,10,11,12,13];
+  const navigate = useNavigate();
+  const count = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
 
   const onTest = () => {
-    navigate("/upload")
+    navigate("/upload");
+  };
+
+
+  const handleOnMouseOver = (e) => {
+    e.currentTarget.play();
+  }
+
+  const handleOnMouseOut = (e) => {
+    e.currentTarget.pause();
   }
 
   return (
@@ -21,10 +30,14 @@ const Content = () => {
           {count.map((index) => (
             <div className="content_box" key={index}>
               <div className="content_container">
-                <img
-                  className="content_profile_image"
-                  src={Image}
-                  alt="content_profile"
+                <video
+                  loop
+                  // preload="none"
+                  muted
+                  onMouseOver={handleOnMouseOver}
+                  onMouseOut={handleOnMouseOut}
+                  className="content_profile_video"
+                  src={Video}
                 />
                 <div className="content_detail_container">
                   <a className="content_detail_profile_box" href="#!">
@@ -39,9 +52,7 @@ const Content = () => {
                   <div className="content_detail_meta_container">
                     <h3 className="content_detail_meta_title_container">
                       <a className="content_detail_meta_title" href="#!">
-                        <p className="content_detail_meta_title_text">
-                          Test
-                        </p>
+                        <p className="content_detail_meta_title_text">Test</p>
                       </a>
                     </h3>
                     <div className="content_detail_meta_body_container">
@@ -61,7 +72,6 @@ const Content = () => {
             </div>
           ))}
           <RiVideoAddLine size={30} color="#fff" onClick={onTest} />
-
         </div>
       </div>
     </>

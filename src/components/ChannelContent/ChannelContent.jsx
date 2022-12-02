@@ -6,6 +6,19 @@ import { ChannelTabData } from "../../constants/data/ChannelTabData";
 
 const ChannelContent = () => {
   const [active, setActive] = useState();
+  const [tabMode, setTabMode] = useState("home");
+
+  const onTabClick = (e) => {
+    if (e.target.id === "home") {
+      setTabMode("home");
+    } else if (e.target.id === "playlist") {
+      setTabMode("playlist");
+    } else if (e.target.id === "channel") {
+      setTabMode("channel");
+    } else if (e.target.id === "info") {
+      setTabMode("info");
+    }
+  };
 
   return (
     <div className="channel">
@@ -39,17 +52,16 @@ const ChannelContent = () => {
             <div className="channel_tab_container">
               <div className="channel_tab_inner_container">
                 {ChannelTabData.map((item, index) => (
-                  <>
-                    <div
-                      key={index}
-                      className={`channel_tab_item ${
-                        active === item && "channel_tab_item_active"
-                      }`}
-                      onClick={() => setActive(item)}
-                    >
-                      {item.title}
-                    </div>
-                  </>
+                  <div
+                    key={index}
+                    className={`channel_tab_item ${
+                      tabMode === item.id && "channel_tab_item_active"
+                    }`}
+                    onClick={onTabClick}
+                    id={item.id}
+                  >
+                    {item.title}
+                  </div>
                 ))}
               </div>
             </div>

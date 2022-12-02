@@ -9,7 +9,7 @@ const Sidebar = () => {
   const [active, setActive] = useState();
 
   const location = useLocation();
-  console.log(location.pathname);
+  // console.log(location.pathname);
 
   return (
     <nav className="sidebar">
@@ -19,7 +19,7 @@ const Sidebar = () => {
             // {index === 3 ? <hr className="sidebar_list_menu_line" /> : ""}
             <div
               key={index}
-              onClick={() => setActive(item)}
+              // onClick={() => setActive(item)}
               className={`sidebar_list_item ${
                 item.link === location.pathname && "sidebar_list_item_active"
               }`}
