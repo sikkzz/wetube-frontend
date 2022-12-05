@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./Content.scss";
 import Image from "../../assets/test.jpg";
@@ -16,19 +16,19 @@ const Content = () => {
 
   const handleOnMouseOver = (e) => {
     e.currentTarget.play();
-  }
+  };
 
   const handleOnMouseOut = (e) => {
     e.currentTarget.pause();
-  }
+  };
 
   return (
     <>
       <div className="content">
         <div className="content_grid">
           {count.map((index) => (
-            <div className="content_box" key={index}>
-              <div className="content_container">
+            <div className="grid_container" key={index}>
+              <div className="grid_card">
                 <video
                   loop
                   muted
@@ -38,30 +38,25 @@ const Content = () => {
                   src={Video}
                 />
                 <div className="content_detail_container">
-                  <a className="content_detail_profile_box" href="#!">
+                  <a href="#!" className="content_detail_profile_link">
                     <div className="content_detail_profile_container">
-                      <img
-                        className="content_detail_profile_image"
-                        src={Image}
-                        alt="detail_profile_image"
-                      />
+                      <img src={Image} alt="detail_profile_image" />
                     </div>
                   </a>
                   <div className="content_detail_meta_container">
-                    <h3 className="content_detail_meta_title_container">
-                      <a className="content_detail_meta_title" href="#!">
-                        <p className="content_detail_meta_title_text">Test</p>
-                      </a>
-                    </h3>
-                    <div className="content_detail_meta_body_container">
-                      <div className="content_detail_meta_body_sub">김준식</div>
+                    <div className="content_detail_meta_title">
+                      <h3>
+                        <a href="#!">
+                          <p>Test</p>
+                        </a>
+                      </h3>
+                    </div>
+
+                    <div className="content_detail_meta_body">
+                      <h3>김준식</h3>
                       <div className="content_detail_meta_body_data">
-                        <div className="content_detail_meta_body_view">
-                          조회수 398만회
-                        </div>
-                        <div className="content_detail_meta_body_date">
-                          1년전
-                        </div>
+                        <p>조회수 398만회</p>
+                        <p>1년전</p>
                       </div>
                     </div>
                   </div>

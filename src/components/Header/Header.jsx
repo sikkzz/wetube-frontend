@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { useNavigate } from "react-router-dom";
 import { BsSearch } from "react-icons/bs";
 import { FaBars } from "react-icons/fa";
@@ -11,7 +11,6 @@ import "./Header.scss";
 
 const Header = () => {
   const navigate = useNavigate();
-  const [toggle, setToggle] = useState(false);
 
   const onLogoClick = () => {
     navigate("/");
@@ -41,9 +40,8 @@ const Header = () => {
           <div className="header_center">
             <div className="search_box">
               <div className="search_container">
-                <form className="search_form">
+                <form>
                   <input
-                    className="search_input"
                     type="text"
                     placeholder="검색"
                   />

@@ -1,136 +1,120 @@
 @import '../../styles/common.scss';
 
+
 .content {
     width: 85.3972%;
     margin-left: 250px;
     padding-top: 116px;
+}
 
-    &_grid {
-        display: grid;
-        grid-template-columns: repeat(4, auto);
-        grid-template-rows: repeat(4, auto);
-        background: red;
-        background-color: var(--main-bg);
-        padding: 20px;
-        padding-top: 24px;
-    }
+.content_grid {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: repeat(4, auto);
+    background-color: var(--main-bg);
+    padding: 20px;
+    padding-top: 24px;
+}
 
-    &_container{
-        // position: relative;
-    }
+.grid_container {
+    width: 340px;
+    height: 320px;
+    display: flex;
+    flex-direction: row;
+    background: aqua;
+    background-color: var(--main-bg);
+}
 
-    &_box {
-        width: 340px;
-        height: 320px;
-        display: flex;
-        flex-direction: row;
-        background: aqua;
-        background-color: var(--main-bg);
-        
-    }
-
-    &_profile_video {
+.grid_card {
+    video {
         width: 100%;
         border-radius: 12px;
-        &:hover{
+
+        &:hover {
             position: absolute;
             width: 500px;
             z-index: 10;
         }
     }
+}
 
-    &_detail {
-        &_container {
-            position: relative;
-            cursor: pointer;
-            margin: 0 12px;
-            flex: auto;
-            display: flex;
-            flex-direction: row;
-        }
+.content_detail_container {
+    position: relative;
+    cursor: pointer;
+    margin: 0 12px;
+    flex: auto;
+    display: flex;
+    flex-direction: row;
+}
 
-        &_profile {
-            &_box {
-                height: 36px;
-                margin-top: 12px;
-                margin-right: 12px;
-            }
+.content_detail_profile_link {
+    height: 36px;
+    margin-top: 12px;
+    margin-right: 12px;
+}
 
-            &_container {
-                background-color: var(--yt-spec-10-percent-layer) !important;
-                width: 36px;
-                height: 36px;
-                object-fit: cover;
-                border-radius: 50%;
-                background-color: transparent;
-                overflow: hidden;
-            }
+.content_detail_profile_container {
+    width: 36px;
+    height: 36px;
+    object-fit: cover;
+    border-radius: 50%;
+    background-color: transparent;
+    overflow: hidden;
 
-            &_image {
-                display: block;
-                width: 100%;
-                height: 100%;
-            }
-        }
+    img {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+}
 
-        &_meta {
-            &_container {
-                overflow-x: hidden;
+.content_detail_meta_title {
+    h3 {
+        color: #fff;
+        margin: 12px 0 4px 0;
+    }
 
-            }
+    a {
+        display: block;
+        text-decoration: none;
+        cursor: pointer;
+    }
 
-            &_title {
-                display: block;
-                text-decoration: none;
-                cursor: pointer;
+    p {
+        color: #fff;
+        font-family: "Roboto", "Arial", sans-serif;
+        font-size: 1rem;
+        line-height: 1.2rem;
+        font-weight: 500;
+        overflow: hidden;
+        display: block;
+        -webkit-line-clamp: 2;
+        text-overflow: ellipsis;
+        white-space: normal;
+    }
+}
 
-                &_container {
-                    color: #fff;
-                    margin: 12px 0 4px 0;
-                }
+.content_detail_meta_body {
+    display: flex;
+    flex-direction: column;
 
-                &_text {
-                    color: #fff;
-                    font-family: "Roboto", "Arial", sans-serif;
-                    font-size: 1rem;
-                    line-height: 1.2rem;
-                    font-weight: 500;
-                    overflow: hidden;
-                    display: block;
-                    -webkit-line-clamp: 2;
-                    text-overflow: ellipsis;
-                    white-space: normal;
-                }
-            }
+    h3 {
+        font-weight: normal;
+        color: #fff;
+        font-size: 1rem;
+    }
+}
 
-            &_body {
-                &_container {
-                    display: flex;
-                    flex-direction: column;
-                }
+.content_detail_meta_body_data {
+    display: flex;
+    flex-direction: row;
 
-                &_sub {
-                    color: #fff;
-                    font-size: 1rem;
-                }
+    p {
+        color: #fff;
+        font-size: 1rem;
 
-                &_data {
-                    display: flex;
-                    flex-direction: row;
-                }
-
-                &_view {
-                    color: #fff;
-                    font-size: 1rem;
-                }
-
-                &_date {
-                    color: #fff;
-                    padding-left: 1rem;
-                    font-size: 1rem;
-                }
-            }
-
+        &:first-child {
+            padding-right: 1rem;
         }
     }
 }

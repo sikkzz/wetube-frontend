@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { useNavigate } from "react-router-dom";
 import { BsSearch } from "react-icons/bs";
 import { FaBars } from "react-icons/fa";
@@ -11,7 +11,6 @@ import "./StudioHeader.scss";
 
 const StudioHeader = () => {
   const navigate = useNavigate();
-  const [toggle, setToggle] = useState(false);
 
   const onLogoClick = () => {
     navigate("/");
@@ -41,12 +40,8 @@ const StudioHeader = () => {
           <div className="studio_header_center">
             <div className="studio_search_box">
               <div className="studio_search_container">
-                <form className="studio_search_form">
-                  <input
-                    className="studio_search_input"
-                    type="text"
-                    placeholder="검색"
-                  />
+                <form>
+                  <input type="text" placeholder="검색" />
                 </form>
               </div>
               <div className="studio_search_icon">

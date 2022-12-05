@@ -1,6 +1,5 @@
 @import '../../styles/common.scss';
 
-
 .studio_header {
     display: flex;
     height: 64px;
@@ -10,35 +9,23 @@
     background-color: var(--studio-bg);
     box-shadow: 0px 1px 4px 1px rgba(0, 0, 0, 0.2);
     z-index: 100;
+}
 
-    &_container {
-        width: 100%;
-        height: 64px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 0 16px;
-        align-items: center;
-    }
+.studio_header_container {
+    width: 100%;
+    height: 64px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 16px;
+    align-items: center;
+}
 
+.studio_header {
     &_left {
         display: flex;
         flex-direction: row;
         align-items: center;
-    }
-
-    &_nav_button{
-        display: flex;
-        align-items: center;
-        cursor: pointer;
-        padding: 8px;
-    }
-
-    &_logo {
-        cursor: pointer;
-        font-size: 24px;
-        color: #fff;
-        padding: 16px 18px 14px;
     }
 
     &_center {
@@ -55,47 +42,58 @@
     }
 }
 
-.studio_search {
-    &_box {
-        height: 40px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
+.studio_header_nav_button {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 8px;
+}
 
-    &_container {
-        height: 40px;
-        display: flex;
-        align-items: center;
-        border: 1px solid #fff;
-        border-right: none;
-        border-radius: 40px 0 0 40px;
-        background-color: var(--studio-bg);
-    }
+.studio_header_logo {
+    cursor: pointer;
+    font-size: 24px;
+    color: #fff;
+    padding: 16px 18px 14px;
+}
 
-    &_form {
+.studio_search_box {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.studio_search_container {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    border: 1px solid #fff;
+    border-right: none;
+    border-radius: 40px 0 0 40px;
+    background-color: var(--studio-bg);
+
+    form {
         margin-left: 10px;
-
     }
 
-    &_input {
+    input {
         border: none;
         height: 30px;
         width: 500px;
         color: #fff;
-        background-color: var(--studio-bg);
+        background-color: var(--main-background);
         outline: none;
         padding: 2px 6px;
     }
+}
 
-    &_icon {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 60px;
-        height: 40px;
-        color: #eee;
-        border: 1px solid #fff;
-        border-radius: 0 40px 40px 0;
-    }
+.studio_search_icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 40px;
+    color: #eee;
+    border: 1px solid #fff;
+    border-radius: 0 40px 40px 0;
 }

@@ -25,10 +25,7 @@ const ChannelContent = () => {
         <div className="channel_profile">
           <div className="channel_profile_container">
             <div className="channel_profile_image_container">
-              <img
-                src={Image}
-                alt="channel_profile_image"
-              />
+              <img src={Image} alt="channel_profile_image" />
             </div>
 
             <div className="channel_profile_content_container">
@@ -50,7 +47,7 @@ const ChannelContent = () => {
                 {ChannelTabData.map((item, index) => (
                   <div
                     key={index}
-                    className={`channel_tab_item ${
+                    className={`${
                       tabMode === item.id && "channel_tab_item_active"
                     }`}
                     onClick={onTabClick}
@@ -63,7 +60,6 @@ const ChannelContent = () => {
             </div>
           </div>
         </div>
-
         <hr />
       </div>
 

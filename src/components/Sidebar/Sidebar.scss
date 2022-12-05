@@ -13,66 +13,60 @@
         padding: 0;
         width: 100%;
 
-        &_menu {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            padding: 0 10px;
-
-            &_line {
-                border: none;
-                width: 250px;
-                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-                margin: 14px 0;
-            }
-        }
-
-        &_item {
-            display: flex;
-            justify-content: flex-start;
-            list-style: none;
-            color: #fff;
-            align-items: center;
-            font-size: 12px;
-            font-weight: 400;
-            padding: 0 12px;
-
-            a{
-                text-decoration: none;
-                color: inherit;
-            }
-
-            // &:first-of-type{
-            //     border-radius: 10px;
-            //     background: rgba(255,255,255,0.1);
-            // }
-
-            &:hover {
-                border-radius: 10px;
-                background: var(--sidebar-bt-bg);
-            }
-
-            &_box {
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                height: 40px;
-            }
-
-            &_content {
-                width: 132px;
-                margin-left: 25px;
-                font-size: 0.9rem;
-                overflow: hidden;
-                white-space: nowrap;
-                text-overflow: ellipsis;
-                // line-height: 20px;
-            }
+        hr {
+            border: none;
+            width: 250px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            margin: 14px 0;
         }
     }
 }
 
-.sidebar_list_item_active{
+.sidebar_list_menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 10px;
+}
+
+.sidebar_list_item {
+    display: flex;
+    justify-content: flex-start;
+    list-style: none;
+    color: #fff;
+    align-items: center;
+    font-size: 12px;
+    font-weight: 400;
+    padding: 0 12px;
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    &:hover {
+        border-radius: 10px;
+        background: var(--sidebar-bt-bg);
+    }
+}
+
+.sidebar_list_item_box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 40px;
+
+    div {
+        width: 132px;
+        margin-left: 25px;
+        font-size: 0.9rem;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+}
+
+.sidebar_list_item_active {
     border-radius: 10px;
     background: var(--sidebar-bt-bg);
 }
