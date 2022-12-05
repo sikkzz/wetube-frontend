@@ -5,7 +5,6 @@ import Image from "../../assets/test.jpg";
 import { ChannelTabData } from "../../constants/data/ChannelTabData";
 
 const ChannelContent = () => {
-  const [active, setActive] = useState();
   const [tabMode, setTabMode] = useState("home");
 
   const onTabClick = (e) => {
@@ -22,16 +21,16 @@ const ChannelContent = () => {
 
   return (
     <div className="channel">
-      <div className="channel_headers">
+      <div className="channel_header">
         <div className="channel_profile">
           <div className="channel_profile_container">
             <div className="channel_profile_image_container">
               <img
-                className="channel_profile_image"
                 src={Image}
                 alt="channel_profile_image"
               />
             </div>
+
             <div className="channel_profile_content_container">
               <div className="channel_profile_content_meta">
                 <div className="channel_profile_content_name">Test</div>
@@ -39,18 +38,15 @@ const ChannelContent = () => {
               </div>
 
               <div className="channel_profile_content_button_container">
-                <div className="channel_profile_content_button">
-                  채널 맞춤설정
-                </div>
-                <div className="channel_profile_content_button">
-                  동영상 관리
-                </div>
+                <div>채널 맞춤설정</div>
+                <div>동영상 관리</div>
               </div>
             </div>
           </div>
+
           <div className="channel_tab">
             <div className="channel_tab_container">
-              <div className="channel_tab_inner_container">
+              <div className="channel_tab_item_container">
                 {ChannelTabData.map((item, index) => (
                   <div
                     key={index}
@@ -67,6 +63,7 @@ const ChannelContent = () => {
             </div>
           </div>
         </div>
+
         <hr />
       </div>
 
