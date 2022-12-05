@@ -3,7 +3,7 @@ import StudioHeader from '../../components/Header/StudioHeader'
 import StudioSidebar from '../../components/Sidebar/StudioSidebar'
 
 
-const Studio = () => {
+const StudioPage = () => {
   return (
     <>
       <StudioHeader/>
@@ -12,4 +12,4 @@ const Studio = () => {
   )
 }
 
-export default Studio
+export default StudioPage

@@ -3,7 +3,7 @@ import Header from "../../components/Header/Header";
 import Sidebar from "../../components/Sidebar/Sidebar";
 import ChannelContent from "../../components/ChannelContent/ChannelContent";
 
-const Channel = () => {
+const ChannelPage = () => {
   return (
     <>
       <Header />
@@ -13,4 +13,4 @@ const Channel = () => {
   );
 };
 
-export default Channel;
+export default ChannelPage;
