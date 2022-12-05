@@ -26,6 +26,7 @@ import { RiThumbUpLine } from "react-icons/ri";
 import { RiThumbDownLine } from "react-icons/ri";
 import { SlActionRedo } from "react-icons/sl";
 import { TfiDownload } from "react-icons/tfi";
+import { AiOutlineEllipsis } from "react-icons/ai";
 
 const exportIcons = {
   BsSearch,
@@ -52,7 +53,8 @@ const exportIcons = {
   RiThumbUpLine,
   RiThumbDownLine,
   SlActionRedo,
-  TfiDownload
+  TfiDownload,
+  AiOutlineEllipsis,
 };
 
 export default exportIcons;

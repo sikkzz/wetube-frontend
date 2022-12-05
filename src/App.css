@@ -4,6 +4,15 @@
   box-sizing: border-box;
 }
 
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+li{
+  list-style: none;
+}
+
 ::-webkit-scrollbar {
   width: 16px;
   height: 8px;

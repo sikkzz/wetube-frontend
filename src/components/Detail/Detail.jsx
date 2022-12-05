@@ -19,9 +19,9 @@ const Detail = () => {
 
             <div className="detail_content_title">
               <div className="detail_content_title_tag_container">
-                <a href="#!">#tag1</a>
-                <a href="#!">#tag2</a>
-                <a href="#!">#tag3</a>
+                <a href="#!">#팝송명곡</a>
+                <a href="#!">#인기팝송</a>
+                <a href="#!">#플레이리스트</a>
               </div>
               <div className="detail_content_title_container">
                 <h1>팝송 명곡 베스트 100곡 모두 해석해버리기 | PLAYLIST</h1>
@@ -39,7 +39,7 @@ const Detail = () => {
                   </a>
                   <div className="profile_owner_channel_info">
                     <div className="profile_owner_channel_name">
-                      H녀
+                      <a href="#!">H녀</a>
                     </div>
                     <div className="profile_owner_channel_sub">
                       구독자 57.2만명
@@ -59,13 +59,21 @@ const Detail = () => {
                 <div className="detail_content_profile_action_menu">
                   <div className="detail_content_profile_action_button_up">
                       <Icons.RiThumbUpLine size={22} color="#fff" />
-                      2.8만
+                      <p>2.8만</p>
                   </div>
                   <div className="detail_content_profile_action_button_down">
                     <Icons.RiThumbDownLine size={22} color="#fff" />
                   </div>
                   <div className="detail_content_profile_action_button_share">
                     <Icons.SlActionRedo size={22} color="#fff" />
+                    <p>공유</p>
+                  </div>
+                  <div className="detail_content_profile_action_button_save">
+                    <Icons.TfiDownload size={18} color="#fff" />
+                    <p>오프라인 저장</p>
+                  </div>
+                  <div className="detail_content_profile_action_button_more">
+                    <Icons.AiOutlineEllipsis size={22} color="#fff"/>
                   </div>
                 </div>
               </div>
