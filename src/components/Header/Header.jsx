@@ -1,12 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { BsSearch } from "react-icons/bs";
-import { FaBars } from "react-icons/fa";
-import { MdOutlineContactPage } from "react-icons/md";
-import { RiVideoAddLine } from "react-icons/ri";
-
+import Icons  from "../../constants/icon"
 import GoogleButton from "../GoogleButton";
-
 import "./Header.scss";
 
 const Header = () => {
@@ -30,7 +25,7 @@ const Header = () => {
         <div className="header_container">
           <div className="header_left">
             <div className="header_nav_button">
-              <FaBars size={20} color="#fff" />
+              <Icons.FaBars size={20} color="#fff" />
             </div>
             <div className="header_logo" onClick={onLogoClick}>
               WeTube
@@ -48,14 +43,14 @@ const Header = () => {
                 </form>
               </div>
               <div className="search_icon">
-                <BsSearch size={18} />
+                <Icons.BsSearch size={18} />
               </div>
             </div>
           </div>
 
           <div className="header_right">
-            <RiVideoAddLine size={30} color="#fff" onClick={onStudioClick} />
-            <MdOutlineContactPage
+            <Icons.RiVideoAddLine size={30} color="#fff" onClick={onStudioClick} />
+            <Icons.MdOutlineContactPage
               size={30}
               color="#fff"
               onClick={onChannelClick}

@@ -4,7 +4,7 @@ import "./Content.scss";
 import Image from "../../assets/test.jpg";
 import Video from "../../assets/videos/test1.mp4";
 
-import { RiVideoAddLine } from "react-icons/ri";
+import Icons from "../../constants/icon";
 
 const Content = () => {
   const navigate = useNavigate();
@@ -64,7 +64,7 @@ const Content = () => {
               </div>
             </div>
           ))}
-          <RiVideoAddLine size={30} color="#fff" onClick={onTest} />
+          <Icons.RiVideoAddLine size={30} color="#fff" onClick={onTest} />
         </div>
       </div>
     </>

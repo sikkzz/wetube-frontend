@@ -8,6 +8,7 @@ import "./Sidebar.scss";
 const Sidebar = () => {
   const location = useLocation();
 
+
   return (
     <nav className="sidebar">
       <div className="sidebar_list">
