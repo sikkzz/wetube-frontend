@@ -1,6 +1,4 @@
 import React from "react";
-import { AiOutlineHome } from "react-icons/ai";
-
 import Img from "../../assets/test2.jpg";
 
 import { StudioSidebarData } from "../../constants/data/StudioSidebarData";
@@ -8,7 +6,6 @@ import { StudioSidebarData } from "../../constants/data/StudioSidebarData";
 import "./StudioSidebar.scss";
 
 const StudioSidebar = () => {
-  const count = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   return (
     <nav className="studio_sidebar">
       <div className="studio_sidebar_profile">
@@ -24,10 +21,10 @@ const StudioSidebar = () => {
       
       <ul className="studio_sidebar_list">
         {StudioSidebarData.map((item, index) => (
-          <li className="studio_sidebar_list_item">
+          <li className="studio_sidebar_list_item" key={index}>
             <div className="studio_sidebar_list_item_box">
               <div className="studio_sidebar_list_item_icon">
-                {<AiOutlineHome size={24} color="#fff" />}
+                {item.icon}
               </div>
               <div className="studio_sidebar_list_item_text">{item.title}</div>
             </div>

@@ -4,7 +4,6 @@ import "./Content.scss";
 import Image from "../../assets/test.jpg";
 import Video from "../../assets/videos/test1.mp4";
 
-import Icons from "../../constants/icon";
 
 const Content = () => {
   const navigate = useNavigate();
@@ -64,7 +63,7 @@ const Content = () => {
               </div>
             </div>
           ))}
-          <Icons.RiVideoAddLine size={30} color="#fff" onClick={onTest} />
+          <button onClick={onTest}>업로드 테스트</button>
         </div>
       </div>
     </>

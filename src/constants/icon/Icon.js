@@ -1,5 +1,3 @@
-import React from "react";
-
 import { BsSearch } from "react-icons/bs";
 import { FaBars } from "react-icons/fa";
 import { MdOutlineContactPage } from "react-icons/md";

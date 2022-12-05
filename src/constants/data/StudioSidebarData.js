@@ -33,7 +33,7 @@ export const StudioSidebarData = [
     title: "저작권",
   },
   {
-    icon: <Icons.AiOBiDollarutlineLike size={size} />,
+    icon: <Icons.BiDollar size={size} />,
     title: "수익 창출",
   },
   {
