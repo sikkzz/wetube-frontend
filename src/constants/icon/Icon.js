@@ -3,7 +3,6 @@ import { FaBars } from "react-icons/fa";
 import { MdOutlineContactPage } from "react-icons/md";
 import { RiVideoAddLine } from "react-icons/ri";
 
-
 import { AiOutlineHome } from "react-icons/ai";
 import { ImPlay2 } from "react-icons/im";
 import { BsFillCollectionPlayFill } from "react-icons/bs";
@@ -22,6 +21,11 @@ import { AiOutlineCopyrightCircle } from "react-icons/ai"; //저작권
 import { BiDollar } from "react-icons/bi"; // 수익 창출
 import { HiOutlinePencil } from "react-icons/hi"; //맞춤 설정
 import { MdOutlineLibraryMusic } from "react-icons/md"; // 오디오 보관함
+
+import { RiThumbUpLine } from "react-icons/ri";
+import { RiThumbDownLine } from "react-icons/ri";
+import { SlActionRedo } from "react-icons/sl";
+import { TfiDownload } from "react-icons/tfi";
 
 const exportIcons = {
   BsSearch,
@@ -45,6 +49,10 @@ const exportIcons = {
   BiDollar,
   HiOutlinePencil,
   MdOutlineLibraryMusic,
+  RiThumbUpLine,
+  RiThumbDownLine,
+  SlActionRedo,
+  TfiDownload
 };
 
 export default exportIcons;
