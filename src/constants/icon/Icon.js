@@ -28,6 +28,8 @@ import { SlActionRedo } from "react-icons/sl";
 import { TfiDownload } from "react-icons/tfi";
 import { AiOutlineEllipsis } from "react-icons/ai";
 
+import { MdOutlineSort } from "react-icons/md";
+
 const exportIcons = {
   BsSearch,
   FaBars,
@@ -55,6 +57,7 @@ const exportIcons = {
   SlActionRedo,
   TfiDownload,
   AiOutlineEllipsis,
+  MdOutlineSort,
 };
 
 export default exportIcons;

@@ -16,7 +16,6 @@ const Detail = () => {
           </div>
 
           <div className="detail_content_info_container">
-
             <div className="detail_content_title">
               <div className="detail_content_title_tag_container">
                 <a href="#!">#팝송명곡</a>
@@ -26,7 +25,6 @@ const Detail = () => {
               <div className="detail_content_title_container">
                 <h1>팝송 명곡 베스트 100곡 모두 해석해버리기 | PLAYLIST</h1>
               </div>
-
             </div>
 
             <div className="detail_content_profile_container">
@@ -34,7 +32,7 @@ const Detail = () => {
                 <div className="detail_content_profile_owner_wrapper">
                   <a href="#!" className="profile_owner_link">
                     <div className="profile_owner_image_container">
-                      <img src={Image} alt="owner_image"/>
+                      <img src={Image} alt="owner_image" />
                     </div>
                   </a>
                   <div className="profile_owner_channel_info">
@@ -47,19 +45,19 @@ const Detail = () => {
                   </div>
                 </div>
 
-                <div id="subscribe-button" className="detail_content_sub_button_container">
-                  <div className="detail_content_sub_button">
-                    구독
-                  </div>
+                <div
+                  id="subscribe-button"
+                  className="detail_content_sub_button_container"
+                >
+                  <div className="detail_content_sub_button">구독</div>
                 </div>
-
               </div>
 
               <div className="detail_content_profile_action">
                 <div className="detail_content_profile_action_menu">
                   <div className="detail_content_profile_action_button_up">
-                      <Icons.RiThumbUpLine size={22} color="#fff" />
-                      <p>2.8만</p>
+                    <Icons.RiThumbUpLine size={22} color="#fff" />
+                    <p>2.8만</p>
                   </div>
                   <div className="detail_content_profile_action_button_down">
                     <Icons.RiThumbDownLine size={22} color="#fff" />
@@ -73,11 +71,10 @@ const Detail = () => {
                     <p>오프라인 저장</p>
                   </div>
                   <div className="detail_content_profile_action_button_more">
-                    <Icons.AiOutlineEllipsis size={22} color="#fff"/>
+                    <Icons.AiOutlineEllipsis size={22} color="#fff" />
                   </div>
                 </div>
               </div>
-
             </div>
 
             <div className="detail_content_description_container">
@@ -92,7 +89,10 @@ const Detail = () => {
 
                 <div className="detail_content_description_snippet_container">
                   <div className="detail_content_description_snippet_data">
-                    <span>[👍구독] [🔔알림] [❤️좋아요] [↪공유] [💬댓글] 큰 힘이 됩니다</span>
+                    <span>
+                      [👍구독] [🔔알림] [❤️좋아요] [↪공유] [💬댓글] 큰 힘이
+                      됩니다
+                    </span>
                   </div>
                   <div className="detail_content_description_snippet_tag">
                     <a href="#!">#팝송명곡</a>
@@ -101,13 +101,22 @@ const Detail = () => {
                     <a href="#!">더보기</a>
                   </div>
                 </div>
-
               </div>
             </div>
-
           </div>
 
-          <div className="detail_content_comment_container"></div>
+          <div className="detail_content_comment_container">
+            <div className="detail_content_comment_header">
+              <div className="detail_content_comment_header_title">
+                <h2>
+                  <span>댓글 </span>
+                  <span>191</span>
+                  <span>개</span>
+                </h2>
+              </div>
+            </div>
+            <div className="detail_content_comment_main"></div>
+          </div>
         </div>
         <div className="detail_playlist_container"></div>
       </div>

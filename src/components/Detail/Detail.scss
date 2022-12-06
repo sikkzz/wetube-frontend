@@ -23,6 +23,10 @@
     }
 }
 
+.detail_content_info_container{
+    margin-bottom: 24px;
+}
+
 .detail_content_title {
     padding-top: 5px;
 
@@ -232,7 +236,7 @@
     margin-bottom: 4px;
 }
 
-.detail_content_description_snippet_container{
+.detail_content_description_snippet_container {
     line-height: 1.4rem;
 }
 
@@ -250,6 +254,32 @@
         &:last-child {
             color: var(--text-primary);
         }
+    }
+}
+
+.detail_content_comment_container{
+    width: 1250px;
+    height: 200px;
+    background: blue;
+}
+
+.detail_content_comment_header{
+    margin-bottom: 32px;
+    display: flex;
+    flex-direction: column;
+}
+
+.detail_content_comment_header_title{
+    margin-bottom: 24px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    h2{
+        margin-right: 32px;
+        color: var(--text-primary);
+        font-size: 18px;
+        font-weight: 400;
     }
 }
 
