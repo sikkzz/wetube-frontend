@@ -38,7 +38,7 @@
 
 .detail_content_title_container {
     h1 {
-        color: #fff;
+        color: var(--text-primary);
         font-size: 20px;
     }
 }
@@ -48,7 +48,7 @@
     flex-direction: row;
     justify-content: flex-start;
     width: 1250px;
-    color: #fff;
+    color: var(--text-primary);
 }
 
 .detail_content_profile_owner_container {
@@ -95,12 +95,12 @@
 
 .profile_owner_channel_sub {
     font-size: 12px;
-    color: #aaa;
+    color: var(--text-gray);
 }
 
 .detail_content_sub_button_container {
-    color: #0f0f0f;
-    background: #f1f1f1;
+    color: var(--text-black);
+    background: var(--bg-primary);
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -132,8 +132,8 @@
         padding: 0 16px;
         height: 36px;
         font-size: 14px;
-        color: #f1f1f1;
-        background: rgba(255, 255, 255, 0.1);
+        color: var(--text-primary);
+        background: var(--white-alpha-10);
         position: relative;
 
         p {
@@ -142,7 +142,7 @@
 
         &::after {
             content: "";
-            background: rgba(255, 255, 255, 0.1);
+            background: var(--white-alpha-10);
             position: absolute;
             right: 0;
             top: 6px;
@@ -158,8 +158,8 @@
         padding: 0 16px;
         height: 36px;
         font-size: 14px;
-        color: #f1f1f1;
-        background: rgba(255, 255, 255, 0.1);
+        color: var(--text-primary);
+        background: var(--white-alpha-10);
         margin-right: 8px;
     }
 
@@ -170,8 +170,8 @@
         padding: 0 16px;
         height: 36px;
         font-size: 14px;
-        color: #f1f1f1;
-        background: rgba(255, 255, 255, 0.1);
+        color: var(--text-primary);
+        background: var(--white-alpha-10);
         margin-right: 8px;
 
         p{
@@ -186,8 +186,8 @@
         padding: 0 16px;
         height: 36px;
         font-size: 14px;
-        color: #f1f1f1;
-        background: rgba(255, 255, 255, 0.1);
+        color: var(--text-primary);
+        background: var(--white-alpha-10);
         margin-right: 8px;
 
         p{
@@ -202,9 +202,30 @@
         padding: 0 7px;
         height: 36px;
         font-size: 14px;
-        color: #f1f1f1;
-        background: rgba(255, 255, 255, 0.1);
+        color: var(--text-primary);
+        background: var(--white-alpha-10);
     }
+}
+
+.detail_content_description_container{
+    display: flex;
+    width: 1250px;
+    background: blue;
+    height: 200px;
+    margin-top: 12px;
+    margin-right: 12px;
+    border-radius: 12px;
+}
+
+.detail_content_description_inner{
+    margin: 12px;
+}
+
+.detail_content_description_info_data{
+    color: var(--text-primary);
+    font-size: 14px;
+    line-height: 2rem;
+    font-weight: 400;
 }
 
 

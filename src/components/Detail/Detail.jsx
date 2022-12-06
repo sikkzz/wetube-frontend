@@ -80,8 +80,16 @@ const Detail = () => {
 
             </div>
 
-            <div className="detail_content_meta_container">
-
+            <div className="detail_content_description_container">
+              <div className="detail_content_description_inner">
+                <div className="detail_content_description_info_container">
+                  <div className="detail_content_description_info_data">
+                    <span>조회수 522,501회</span>
+                    <span> </span>
+                    <span>2022. 12. 06.</span>
+                  </div>
+                </div>
+              </div>
             </div>
 
           </div>
