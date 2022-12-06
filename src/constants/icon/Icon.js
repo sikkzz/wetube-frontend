@@ -22,6 +22,12 @@ import { BiDollar } from "react-icons/bi"; // 수익 창출
 import { HiOutlinePencil } from "react-icons/hi"; //맞춤 설정
 import { MdOutlineLibraryMusic } from "react-icons/md"; // 오디오 보관함
 
+import { RiThumbUpLine } from "react-icons/ri";
+import { RiThumbDownLine } from "react-icons/ri";
+import { SlActionRedo } from "react-icons/sl";
+import { TfiDownload } from "react-icons/tfi";
+import { AiOutlineEllipsis } from "react-icons/ai";
+
 const exportIcons = {
   BsSearch,
   FaBars,
@@ -44,6 +50,11 @@ const exportIcons = {
   BiDollar,
   HiOutlinePencil,
   MdOutlineLibraryMusic,
+  RiThumbUpLine,
+  RiThumbDownLine,
+  SlActionRedo,
+  TfiDownload,
+  AiOutlineEllipsis,
 };
 
 export default exportIcons;

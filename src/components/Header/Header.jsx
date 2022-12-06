@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import Icons  from "../../constants/icon"
+import Icons from "../../constants/icon";
 import GoogleButton from "../GoogleButton";
 import "./Header.scss";
 
@@ -36,10 +36,7 @@ const Header = () => {
             <div className="search_box">
               <div className="search_container">
                 <form>
-                  <input
-                    type="text"
-                    placeholder="검색"
-                  />
+                  <input type="text" placeholder="검색" />
                 </form>
               </div>
               <div className="search_icon">
@@ -49,7 +46,11 @@ const Header = () => {
           </div>
 
           <div className="header_right">
-            <Icons.RiVideoAddLine size={30} color="#fff" onClick={onStudioClick} />
+            <Icons.RiVideoAddLine
+              size={30}
+              color="#fff"
+              onClick={onStudioClick}
+            />
             <Icons.MdOutlineContactPage
               size={30}
               color="#fff"

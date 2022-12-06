@@ -29,10 +29,11 @@
     video {
         width: 100%;
         border-radius: 12px;
+        cursor: pointer;
 
         &:hover {
-            position: absolute;
-            width: 500px;
+            // position: absolute;
+            width: 120%;
             z-index: 10;
         }
     }

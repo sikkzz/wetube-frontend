@@ -1,16 +1,18 @@
 import React from "react";
 import Icons from "../icon";
 
-const size = 22;
+const size = 24;
 
 export const StudioSidebarData = [
   {
     icon: <Icons.RiDashboardLine size={size} />,
     title: "대시보드",
+    id: "dashboard",
   },
   {
     icon: <Icons.MdOutlineVideoLibrary size={size} />,
     title: "콘텐츠",
+    id: "contents"
   },
   {
     icon: <Icons.RiPlayList2Fill size={size} />,
