@@ -89,6 +89,19 @@ const Detail = () => {
                     <span>2022. 12. 06.</span>
                   </div>
                 </div>
+
+                <div className="detail_content_description_snippet_container">
+                  <div className="detail_content_description_snippet_data">
+                    <span>[👍구독] [🔔알림] [❤️좋아요] [↪공유] [💬댓글] 큰 힘이 됩니다</span>
+                  </div>
+                  <div className="detail_content_description_snippet_tag">
+                    <a href="#!">#팝송명곡</a>
+                    <a href="#!">#인기팝송</a>
+                    <a href="#!">#플레이리스트</a>
+                    <a href="#!">더보기</a>
+                  </div>
+                </div>
+
               </div>
             </div>
 
