@@ -94,9 +94,9 @@ const Upload = () => {
                 />
               </label>
               {showImage}
-              <button type="button" onClick={handleClickFileInput}>
+              {/* <button type="button" onClick={handleClickFileInput}>
                 업로드 버튼
-              </button>
+              </button> */}
             </div>
 
             <div className="upload_content_info_container">
