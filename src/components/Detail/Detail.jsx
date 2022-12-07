@@ -15,6 +15,10 @@ const Detail = () => {
 
   const [replyActive, setReplyActive] = useState(false);
 
+  const [prevClick, setPrevClick] = useState(false)
+
+  const [nextClick, setNextClick] = useState(false)
+
   const onSortClick = () => {
     setSortActive(!sortActive);
   };
@@ -38,6 +42,16 @@ const Detail = () => {
   const onReplyClick = () => {
     setReplyActive(!replyActive);
   };
+
+  const onPrevClick = () => {
+    
+  }
+
+  const onNextClick = () => {
+    setNextClick(true);
+  }
+
+
 
   return (
     <>
@@ -487,8 +501,72 @@ const Detail = () => {
             </div>
           </div>
         </div>
+        
+        <div className="detail_playlist_container">
+          <div className="detail_playlist_box">
+            <div className="detail_playlist_tag_container">
+              <div className="detail_playlist_tag_content">
+                <div className="detail_playlist_tag_wrapper">
 
-        <div className="detail_playlist_container"></div>
+                  <div className="detail_playlist_tag_left_arrow">
+                    <div className="detail_playlist_tag_left_arrow_button">
+                      <div className="detail_playlist_tag_left_arrow_button_box">
+                      <div className="left_arrow_button" onClick={onPrevClick}>
+                          <Icons.MdArrowBackIosNew size={24} color="#f1f1f1"/>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="detail_playlist_tag_item_container" style={{transform : nextClick ? "translateX(-50px)" : ""}}>
+                    <div className="detail_playlist_tag_item_box">
+                      <div className="detail_playlist_tag_item detail_playlist_tag_item_active">
+                        <p>모두</p>
+                      </div>
+                    </div>
+
+                    <div className="detail_playlist_tag_item_box">
+                      <div className="detail_playlist_tag_item">
+                        <p>관련 콘텐츠</p>
+                      </div>
+                    </div>
+
+                    <div className="detail_playlist_tag_item_box">
+                      <div className="detail_playlist_tag_item">
+                        <p>실시간</p>
+                      </div>
+                    </div>
+
+                    <div className="detail_playlist_tag_item_box">
+                      <div className="detail_playlist_tag_item">
+                        <p>최근에 업로드된 동영상</p>
+                      </div>
+                    </div>
+
+                    <div className="detail_playlist_tag_item_box">
+                      <div className="detail_playlist_tag_item">
+                        <p>감상한 동영상</p>
+                      </div>
+                    </div>
+
+
+                  </div>
+
+                  <div className="detail_playlist_tag_right_arrow">
+                    <div className="detail_playlist_tag_right_arrow_button">
+                      <div className="detail_playlist_tag_right_arrow_button_box">
+                      <div className="right_arrow_button" onClick={onNextClick}>
+                          <Icons.MdArrowForwardIos size={24} color="#f1f1f1"/>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </>
   );

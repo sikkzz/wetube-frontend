@@ -33,6 +33,9 @@ import { AiOutlineMore } from "react-icons/ai";
 import { AiFillCaretDown } from "react-icons/ai";
 import { AiFillCaretUp } from "react-icons/ai";
 
+import { MdArrowForwardIos } from "react-icons/md";
+import { MdArrowBackIosNew } from "react-icons/md";
+
 const exportIcons = {
   BsSearch,
   FaBars,
@@ -64,6 +67,8 @@ const exportIcons = {
   AiOutlineMore,
   AiFillCaretDown,
   AiFillCaretUp,
+  MdArrowForwardIos,
+  MdArrowBackIosNew,
 };
 
 export default exportIcons;
