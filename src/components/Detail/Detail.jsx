@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Video from "../../assets/videos/test.mp4";
 import Image from "../../assets/test.jpg";
 
@@ -7,6 +7,22 @@ import Icons from "../../constants/icon";
 import "./Detail.scss";
 
 const Detail = () => {
+  const [sortActive, setSortActive] = useState(false);
+
+  const [inputActive, setInputActive] = useState(false);
+
+  const onSortClick = () => {
+    setSortActive(!sortActive);
+  };
+
+  const onInputClick = () => {
+    setInputActive(true);
+  };
+
+  const onCancelClick = () => {
+    setInputActive(false);
+  };
+
   return (
     <>
       <div className="detail_container">
@@ -113,11 +129,81 @@ const Detail = () => {
                   <span>191</span>
                   <span>개</span>
                 </h2>
+                <div className="detail_content_comment_header_title_sort">
+                  <div
+                    className="detail_content_comment_header_title_sort_container"
+                    onClick={onSortClick}
+                  >
+                    <div className="detail_content_comment_header_title_sort_icon">
+                      <Icons.MdOutlineSort size={28} />
+                    </div>
+                    <div className="detail_content_comment_header_title_sort_label">
+                      정렬 기준
+                    </div>
+                  </div>
+
+                  <div
+                    className="detail_content_comment_header_title_sort_dropdown_container"
+                    style={{ display: sortActive ? "block" : "none" }}
+                  >
+                    <div className="detail_content_comment_header_title_sort_dropdown_wrapper">
+                      <div className="detail_content_comment_header_title_sort_dropdown_list">
+                        <div className="detail_content_comment_header_title_sort_dropdown_list_item sort_dropdown_list_acitve">
+                          <a href="#!">인기 댓글순</a>
+                        </div>
+                        <div className="detail_content_comment_header_title_sort_dropdown_list_item">
+                          <a href="#!">최신순</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="detail_content_comment_header_input">
+                <div className="detail_content_comment_header_input_box">
+                  <div className="detail_content_comment_header_input_thumbnail">
+                    <img src={Image} alt="thumbnail_img" />
+                  </div>
+
+                  <div className="detail_content_comment_header_input_main">
+                    <div className="detail_content_comment_header_input_creation_container">
+                      <div className="detail_content_comment_header_input_creation_box">
+                        <form>
+                          <input
+                            type="text"
+                            placeholder="댓글 추가..."
+                            onClick={onInputClick}
+                          />
+                        </form>
+                      </div>
+                    </div>
+
+                    <div
+                      className="detail_content_comment_header_input_footer_container"
+                      style={{ visibility: inputActive ? "visible" : "hidden" }}
+                    >
+                      <div className="detail_content_comment_header_input_footer_button_container">
+                        <div className="detail_content_comment_header_input_footer_button_cancel">
+                          <button onClick={onCancelClick}>취소</button>
+                        </div>
+                        <div className="detail_content_comment_header_input_footer_button_submit">
+                          <button>댓글</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-            <div className="detail_content_comment_main"></div>
+
+            <div className="detail_content_comment_main">
+
+            </div>
           </div>
         </div>
+
+        
         <div className="detail_playlist_container"></div>
       </div>
     </>
