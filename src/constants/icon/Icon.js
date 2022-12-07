@@ -29,6 +29,9 @@ import { TfiDownload } from "react-icons/tfi";
 import { AiOutlineEllipsis } from "react-icons/ai";
 
 import { MdOutlineSort } from "react-icons/md";
+import { AiOutlineMore } from "react-icons/ai";
+import { AiFillCaretDown } from "react-icons/ai";
+import { AiFillCaretUp } from "react-icons/ai";
 
 const exportIcons = {
   BsSearch,
@@ -58,6 +61,9 @@ const exportIcons = {
   TfiDownload,
   AiOutlineEllipsis,
   MdOutlineSort,
+  AiOutlineMore,
+  AiFillCaretDown,
+  AiFillCaretUp,
 };
 
 export default exportIcons;

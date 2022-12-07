@@ -11,6 +11,10 @@ const Detail = () => {
 
   const [inputActive, setInputActive] = useState(false);
 
+  const [menuHover, setMenuHover] = useState(false);
+
+  const [replyActive, setReplyActive] = useState(false);
+
   const onSortClick = () => {
     setSortActive(!sortActive);
   };
@@ -21,6 +25,18 @@ const Detail = () => {
 
   const onCancelClick = () => {
     setInputActive(false);
+  };
+
+  const handleOnMouseOver = () => {
+    setMenuHover(true);
+  };
+
+  const handleOnMouseOut = () => {
+    setMenuHover(false);
+  };
+
+  const onReplyClick = () => {
+    setReplyActive(!replyActive);
   };
 
   return (
@@ -162,8 +178,10 @@ const Detail = () => {
 
               <div className="detail_content_comment_header_input">
                 <div className="detail_content_comment_header_input_box">
-                  <div className="detail_content_comment_header_input_thumbnail">
-                    <img src={Image} alt="thumbnail_img" />
+                  <div className="detail_content_comment_header_input_profile">
+                    <a href="#!">
+                      <img src={Image} alt="profile_img" />
+                    </a>
                   </div>
 
                   <div className="detail_content_comment_header_input_main">
@@ -198,12 +216,278 @@ const Detail = () => {
             </div>
 
             <div className="detail_content_comment_main">
+              <div className="detail_content_comment_container">
+                <div className="detail_content_comment_box">
+                  <div
+                    className="detail_content_comment_body"
+                    onMouseOver={handleOnMouseOver}
+                    onMouseOut={handleOnMouseOut}
+                  >
+                    <div className="detail_content_comment_body_profile_container">
+                      <a href="#!">
+                        <div className="detail_content_comment_body_profile">
+                          <img src={Image} alt="comment_profile_img" />
+                        </div>
+                      </a>
+                    </div>
 
+                    <div className="detail_content_comment_body_text_container">
+                      <div className="detail_content_comment_body_text_header">
+                        <div className="detail_content_comment_body_text_header_author">
+                          <h3 className="detail_content_comment_body_text_header_author_title">
+                            <a href="#!">
+                              <span>@sling0623</span>
+                            </a>
+                          </h3>
+                          <p>
+                            <a href="#!">3주 전(수정됨)</a>
+                          </p>
+                        </div>
+                      </div>
+
+                      <div className="detail_content_comment_body_text_content_container">
+                        <div className="detail_content_comment_body_text_expander">
+                          <div className="detail_content_comment_body_text_content">
+                            <a href="#!">0:00 </a>
+                            <span>Start now text</span>
+                            <br />
+                            <a href="#!">0:00 </a>
+                            <span>Start now text</span>
+                            <br />
+                            <a href="#!">0:00 </a>
+                            <span>Start now text</span>
+                            <br />
+                          </div>
+                          <div className="detail_content_comment_body_text_more">
+                            <span>자세히 보기</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className="detail_content_comment_body_text_action_container">
+                        <div className="detail_content_comment_body_text_action_toolbar">
+                          <div className="detail_content_comment_body_text_action_up">
+                            <Icons.RiThumbUpLine size={22} color="#f1f1f1" />
+                          </div>
+                          <span className="detail_content_comment_body_text_action_up_count">
+                            93
+                          </span>
+                          <div className="detail_content_comment_body_text_action_down">
+                            <Icons.RiThumbDownLine size={22} color="#f1f1f1" />
+                          </div>
+                          <div className="detail_content_comment_body_text_action_reply">
+                            <div className="detail_content_comment_body_text_action_reply_box">
+                              <button>답글</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="detail_content_comment_body_menu_container">
+                      <div className="detail_content_comment_body_menu_box">
+                        <div
+                          className="detail_content_comment_body_more_button"
+                          style={{ display: menuHover ? "flex" : "none" }}
+                        >
+                          <Icons.AiOutlineMore size={24} color="#f1f1f1" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="detail_content_comment_reply_container">
+                  <div className="detail_content_comment_reply_box">
+                    <div className="detail_content_comment_reply_expander">
+                      <div className="detail_content_comment_reply_expander_header">
+                        <div
+                          className="detail_content_comment_reply_expander_more"
+                          style={{ display: replyActive ? "none" : "flex" }}
+                        >
+                          <div
+                            className="detail_content_comment_reply_expander_more_button_container"
+                            onClick={onReplyClick}
+                          >
+                            <div className="detail_content_comment_reply_expander_more_button">
+                              <div className="detail_content_comment_reply_expander_more_button_icon">
+                                <Icons.AiFillCaretDown
+                                  size={18}
+                                  color="#3ea6ff"
+                                />
+                              </div>
+                              <div className="detail_content_comment_reply_expander_more_button_text">
+                                <span>답글 1개</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div
+                          className="detail_content_comment_reply_expander_less"
+                          style={{ display: replyActive ? "flex" : "none" }}
+                        >
+                          <div
+                            className="detail_content_comment_reply_expander_less_button_container"
+                            onClick={onReplyClick}
+                          >
+                            <div className="detail_content_comment_reply_expander_less_button">
+                              <div className="detail_content_comment_reply_expander_less_button_icon">
+                                <Icons.AiFillCaretUp
+                                  size={18}
+                                  color="#3ea6ff"
+                                />
+                              </div>
+                              <div className="detail_content_comment_reply_expander_less_button_text">
+                                <span>답글 1개</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className="detail_content_comment_reply_expander_content"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="detail_content_comment_container">
+                <div className="detail_content_comment_box">
+                  <div
+                    className="detail_content_comment_body"
+                    onMouseOver={handleOnMouseOver}
+                    onMouseOut={handleOnMouseOut}
+                  >
+                    <div className="detail_content_comment_body_profile_container">
+                      <a href="#!">
+                        <div className="detail_content_comment_body_profile">
+                          <img src={Image} alt="comment_profile_img" />
+                        </div>
+                      </a>
+                    </div>
+
+                    <div className="detail_content_comment_body_text_container">
+                      <div className="detail_content_comment_body_text_header">
+                        <div className="detail_content_comment_body_text_header_author">
+                          <h3 className="detail_content_comment_body_text_header_author_title">
+                            <a href="#!">
+                              <span>@sling0623</span>
+                            </a>
+                          </h3>
+                          <p>
+                            <a href="#!">3주 전(수정됨)</a>
+                          </p>
+                        </div>
+                      </div>
+
+                      <div className="detail_content_comment_body_text_content_container">
+                        <div className="detail_content_comment_body_text_expander">
+                          <div className="detail_content_comment_body_text_content">
+                            <a href="#!">0:00 </a>
+                            <span>Start now text</span>
+                            <br />
+                            <a href="#!">0:00 </a>
+                            <span>Start now text</span>
+                            <br />
+                            <a href="#!">0:00 </a>
+                            <span>Start now text</span>
+                            <br />
+                          </div>
+                          <div className="detail_content_comment_body_text_more">
+                            <span>자세히 보기</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className="detail_content_comment_body_text_action_container">
+                        <div className="detail_content_comment_body_text_action_toolbar">
+                          <div className="detail_content_comment_body_text_action_up">
+                            <Icons.RiThumbUpLine size={22} color="#f1f1f1" />
+                          </div>
+                          <span className="detail_content_comment_body_text_action_up_count">
+                            93
+                          </span>
+                          <div className="detail_content_comment_body_text_action_down">
+                            <Icons.RiThumbDownLine size={22} color="#f1f1f1" />
+                          </div>
+                          <div className="detail_content_comment_body_text_action_reply">
+                            <div className="detail_content_comment_body_text_action_reply_box">
+                              <button>답글</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="detail_content_comment_body_menu_container">
+                      <div className="detail_content_comment_body_menu_box">
+                        <div
+                          className="detail_content_comment_body_more_button"
+                          style={{ display: menuHover ? "flex" : "none" }}
+                        >
+                          <Icons.AiOutlineMore size={24} color="#f1f1f1" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="detail_content_comment_reply_container">
+                  <div className="detail_content_comment_reply_box">
+                    <div className="detail_content_comment_reply_expander">
+                      <div className="detail_content_comment_reply_expander_header">
+                        <div
+                          className="detail_content_comment_reply_expander_more"
+                          style={{ display: replyActive ? "none" : "flex" }}
+                        >
+                          <div
+                            className="detail_content_comment_reply_expander_more_button_container"
+                            onClick={onReplyClick}
+                          >
+                            <div className="detail_content_comment_reply_expander_more_button">
+                              <div className="detail_content_comment_reply_expander_more_button_icon">
+                                <Icons.AiFillCaretDown
+                                  size={18}
+                                  color="#3ea6ff"
+                                />
+                              </div>
+                              <div className="detail_content_comment_reply_expander_more_button_text">
+                                <span>답글 1개</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div
+                          className="detail_content_comment_reply_expander_less"
+                          style={{ display: replyActive ? "flex" : "none" }}
+                        >
+                          <div
+                            className="detail_content_comment_reply_expander_less_button_container"
+                            onClick={onReplyClick}
+                          >
+                            <div className="detail_content_comment_reply_expander_less_button">
+                              <div className="detail_content_comment_reply_expander_less_button_icon">
+                                <Icons.AiFillCaretUp
+                                  size={18}
+                                  color="#3ea6ff"
+                                />
+                              </div>
+                              <div className="detail_content_comment_reply_expander_less_button_text">
+                                <span>답글 1개</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className="detail_content_comment_reply_expander_content"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
-        
         <div className="detail_playlist_container"></div>
       </div>
     </>
