@@ -11,8 +11,8 @@ const Detail = () => {
   const [inputActive, setInputActive] = useState(false);
   const [menuHover, setMenuHover] = useState(false);
   const [replyActive, setReplyActive] = useState(false);
-  const listRef = useRef()
-  const [count, setCount] = useState(50)
+  const listRef = useRef();
+  const [count, setCount] = useState(50);
 
   const onSortClick = () => {
     setSortActive(!sortActive);
@@ -38,16 +38,13 @@ const Detail = () => {
     setReplyActive(!replyActive);
   };
 
-  const onPrevClick = () => {
-    
-  }
+  const onPrevClick = () => {};
 
   const onNextClick = () => {
-    setCount(count+50)
-    console.log(count)
+    setCount(count + 50);
+    console.log(count);
     listRef.current.style.transform = `translateX(-${count}px)`;
-  }
-
+  };
 
   return (
     <>
@@ -497,67 +494,176 @@ const Detail = () => {
             </div>
           </div>
         </div>
-        
+
         <div className="detail_playlist_container">
           <div className="detail_playlist_box">
             <div className="detail_playlist_tag_container">
               <div className="detail_playlist_tag_content">
                 <div className="detail_playlist_tag_wrapper">
-
                   <div className="detail_playlist_tag_left_arrow">
                     <div className="detail_playlist_tag_left_arrow_button">
                       <div className="detail_playlist_tag_left_arrow_button_box">
-                      <div className="left_arrow_button" onClick={onPrevClick}>
-                          <Icons.MdArrowBackIosNew size={24} color="#f1f1f1"/>
+                        <div
+                          className="left_arrow_button"
+                          onClick={onPrevClick}
+                        >
+                          <Icons.MdArrowBackIosNew size={24} color="#f1f1f1" />
                         </div>
                       </div>
                     </div>
                   </div>
-
-                  <div className="detail_playlist_tag_item_container" ref={listRef}>
+                  <div
+                    className="detail_playlist_tag_item_container"
+                    ref={listRef}
+                  >
                     <div className="detail_playlist_tag_item_box">
                       <div className="detail_playlist_tag_item detail_playlist_tag_item_active">
                         <p>모두</p>
                       </div>
                     </div>
-
                     <div className="detail_playlist_tag_item_box">
                       <div className="detail_playlist_tag_item">
                         <p>관련 콘텐츠</p>
                       </div>
                     </div>
-
                     <div className="detail_playlist_tag_item_box">
                       <div className="detail_playlist_tag_item">
                         <p>실시간</p>
                       </div>
                     </div>
-
                     <div className="detail_playlist_tag_item_box">
                       <div className="detail_playlist_tag_item">
                         <p>최근에 업로드된 동영상</p>
                       </div>
                     </div>
-
                     <div className="detail_playlist_tag_item_box">
                       <div className="detail_playlist_tag_item">
                         <p>감상한 동영상</p>
                       </div>
                     </div>
-
-
                   </div>
-
                   <div className="detail_playlist_tag_right_arrow">
                     <div className="detail_playlist_tag_right_arrow_button">
                       <div className="detail_playlist_tag_right_arrow_button_box">
-                      <div className="right_arrow_button" onClick={onNextClick}>
-                          <Icons.MdArrowForwardIos size={24} color="#f1f1f1"/>
+                        <div
+                          className="right_arrow_button"
+                          onClick={onNextClick}
+                        >
+                          <Icons.MdArrowForwardIos size={24} color="#f1f1f1" />
                         </div>
                       </div>
                     </div>
                   </div>
+                </div>
+              </div>
+            </div>
 
+            <div className="detail_playlist_content_container">
+              <div className="detail_playlist_content_list">
+                <div className="detail_playlist_content_list_item_container">
+                  <div className="detail_playlist_content_list_item_box">
+                    <div className="detail_playlist_content_list_item_profile">
+                      <a
+                        href="#!"
+                        className="detail_playlist_content_list_item_profile_link"
+                      >
+                        <div className="detail_playlist_content_list_item_image_container">
+                          <img src={Image} alt="list_image" />
+                        </div>
+                        <div className="detail_playlist_content_list_item_overlay_container">
+                          <div className="detail_playlist_content_item_progress_container">
+                            <div className="detail_playlist_content_item_progress"></div>
+                          </div>
+                          <div className="detail_playlist_content_item_time_container">
+                            <span> 3:09:18 </span>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+
+                    <div className="detail_playlist_content_list_item_meta">
+                      <div className="detail_playlist_content_list_item_meta_data">
+                        <a href="#!">
+                          <h3>
+                            <span>
+                              ⭐️3시간 DJ아스터⭐️2022클럽에서 유행하는 노래 /
+                              페스티벌 / 탑골EDM / 미친텐션클럽음악 (광고없음)
+                            </span>
+                          </h3>
+                          <div className="detail_playlist_content_list_item_meta_sub_container">
+                            <div className="detail_playlist_content_list_item_meta_sub_box">
+                              <div className="detail_playlist_content_list_item_meta_sub_title">
+                                <div className="detail_playlist_content_list_item_meta_sub_channel">
+                                  <div className="detail_playlist_content_list_item_meta_sub_channel_name">
+                                    <p>ASTER MUSIC</p>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div className="detail_playlist_content_list_item_meta_sub_info">
+                                <span>조회수 197만회</span>
+                                <span className="detail_playlist_content_list_item_meta_sub_date">
+                                  8개월 전
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="detail_playlist_content_list_item_box">
+                    <div className="detail_playlist_content_list_item_profile">
+                      <a
+                        href="#!"
+                        className="detail_playlist_content_list_item_profile_link"
+                      >
+                        <div className="detail_playlist_content_list_item_image_container">
+                          <img src={Image} alt="list_image" />
+                        </div>
+                        <div className="detail_playlist_content_list_item_overlay_container">
+                          <div className="detail_playlist_content_item_progress_container">
+                            <div className="detail_playlist_content_item_progress"></div>
+                          </div>
+                          <div className="detail_playlist_content_item_time_container">
+                            <span> 3:09:18 </span>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+
+                    <div className="detail_playlist_content_list_item_meta">
+                      <div className="detail_playlist_content_list_item_meta_data">
+                        <a href="#!">
+                          <h3>
+                            <span>
+                              ⭐️3시간 DJ아스터⭐️2022클럽에서 유행하는 노래 /
+                              페스티벌 / 탑골EDM / 미친텐션클럽음악 (광고없음)
+                            </span>
+                          </h3>
+                          <div className="detail_playlist_content_list_item_meta_sub_container">
+                            <div className="detail_playlist_content_list_item_meta_sub_box">
+                              <div className="detail_playlist_content_list_item_meta_sub_title">
+                                <div className="detail_playlist_content_list_item_meta_sub_channel">
+                                  <div className="detail_playlist_content_list_item_meta_sub_channel_name">
+                                    <p>ASTER MUSIC</p>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div className="detail_playlist_content_list_item_meta_sub_info">
+                                <span>조회수 197만회</span>
+                                <span className="detail_playlist_content_list_item_meta_sub_date">
+                                  8개월 전
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
