@@ -761,7 +761,10 @@
 
 .detail_playlist_tag_item_container {
     white-space: nowrap;
-    overflow: hidden;
+    // overflow: hidden;
+    width: 100%;
+      transform: translateX();
+      transition: all ease 1s;
     // transform: translateX(-100px);
 }
 

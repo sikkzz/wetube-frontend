@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import Video from "../../assets/videos/test.mp4";
 import Image from "../../assets/test.jpg";
 
@@ -8,16 +8,11 @@ import "./Detail.scss";
 
 const Detail = () => {
   const [sortActive, setSortActive] = useState(false);
-
   const [inputActive, setInputActive] = useState(false);
-
   const [menuHover, setMenuHover] = useState(false);
-
   const [replyActive, setReplyActive] = useState(false);
-
-  const [prevClick, setPrevClick] = useState(false)
-
-  const [nextClick, setNextClick] = useState(false)
+  const listRef = useRef()
+  const [count, setCount] = useState(50)
 
   const onSortClick = () => {
     setSortActive(!sortActive);
@@ -48,9 +43,10 @@ const Detail = () => {
   }
 
   const onNextClick = () => {
-    setNextClick(true);
+    setCount(count+50)
+    console.log(count)
+    listRef.current.style.transform = `translateX(-${count}px)`;
   }
-
 
 
   return (
@@ -518,7 +514,7 @@ const Detail = () => {
                     </div>
                   </div>
 
-                  <div className="detail_playlist_tag_item_container" style={{transform : nextClick ? "translateX(-50px)" : ""}}>
+                  <div className="detail_playlist_tag_item_container" ref={listRef}>
                     <div className="detail_playlist_tag_item_box">
                       <div className="detail_playlist_tag_item detail_playlist_tag_item_active">
                         <p>모두</p>
