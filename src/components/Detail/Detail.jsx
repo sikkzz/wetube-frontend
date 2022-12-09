@@ -1,12 +1,17 @@
 import React, { useState, useRef } from "react";
-import Video from "../../assets/videos/test.mp4";
+import Video from "../../assets/videos/test2.mp4";
 import Image from "../../assets/test.jpg";
+
+import Controls from "../Video/Controls";
 
 import Icons from "../../constants/icon";
 
 import "./Detail.scss";
 
 const Detail = () => {
+  const controllerRef = useRef(null);
+  const containerRef = useRef(null);
+  const videoRef = useRef(null);
   const [sortActive, setSortActive] = useState(false);
   const [inputActive, setInputActive] = useState(false);
   const [menuHover, setMenuHover] = useState(false);
@@ -46,12 +51,50 @@ const Detail = () => {
     listRef.current.style.transform = `translateX(-${count}px)`;
   };
 
+  const containerProps = {
+    ref: containerRef,
+    tabIndex: 0,
+    onKeyDown: (e) => {
+      if (controllerRef.current) controllerRef.current.handleKeyDown(e);
+    },
+    onMouseEnter: () => {
+      if (controllerRef.current) controllerRef.current.handleMouseIn();
+    },
+    onMouseLeave: () => {
+      if (controllerRef.current) controllerRef.current.handleMouseLeave();
+    },
+    onMouseMove: (e) => {
+      if (controllerRef.current) controllerRef.current.handleMouseMove(e);
+    },
+  };
+
+  const controlProps = {
+    ref: controllerRef,
+    containerRef: containerRef,
+    videoRef: videoRef,
+  };
+
+  const videoProps = {
+    ref: videoRef,
+    width: "100%",
+    controls: false,
+    onTimeUpdate: () => {
+      if (controllerRef.current) controllerRef.current.handleTimeUpdate();
+    },
+    onClick: () => {
+      if (controllerRef.current) controllerRef.current.handleVideoClick();
+    },
+  };
+
   return (
     <>
       <div className="detail_container">
         <div className="detail_content_container">
-          <div className="detail_content_video_container">
-            <video src={Video} loop controls muted type="video/mp4" />
+          <div className="detail_content_video_container" {...containerProps}>
+            <video {...videoProps}>
+              <source src={Video} type="video/mp4" />
+            </video>
+            <Controls {...controlProps} />
           </div>
 
           <div className="detail_content_info_container">

@@ -36,6 +36,20 @@ import { AiFillCaretUp } from "react-icons/ai";
 import { MdArrowForwardIos } from "react-icons/md";
 import { MdArrowBackIosNew } from "react-icons/md";
 
+import { BsSkipStart } from "react-icons/bs";
+import { BsSkipEnd } from "react-icons/bs";
+import { RiArrowGoBackFill } from "react-icons/ri";
+import { RiArrowGoForwardFill } from "react-icons/ri";
+
+import { BsPlay } from "react-icons/bs";
+import { BsPause } from "react-icons/bs";
+
+import { GiSpeaker } from "react-icons/gi";
+import { GiSpeakerOff } from "react-icons/gi";
+
+import { AiOutlineFullscreenExit } from "react-icons/ai";
+import { BsFullscreen } from "react-icons/bs";
+
 const exportIcons = {
   BsSearch,
   FaBars,
@@ -69,6 +83,16 @@ const exportIcons = {
   AiFillCaretUp,
   MdArrowForwardIos,
   MdArrowBackIosNew,
+  BsSkipStart,
+  BsSkipEnd,
+  RiArrowGoBackFill,
+  RiArrowGoForwardFill,
+  BsPlay,
+  BsPause,
+  GiSpeaker,
+  GiSpeakerOff,
+  AiOutlineFullscreenExit,
+  BsFullscreen,
 };
 
 export default exportIcons;

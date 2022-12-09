@@ -16,11 +16,69 @@
 
 .detail_content_video_container {
     width: 1250px;
+    position: relative;
+    outline: none;
+    border: none;
 
     video {
         width: 100%;
     }
 }
+
+.detail_content_video_control_container {
+    width: 100%;
+    padding: 0 20px;
+    padding-top: 10px;
+    background: #00000061;
+    position: absolute;
+    bottom: 1px;
+
+}
+
+.detail_content_video_control_range {
+    width: 100%;
+    outline: none;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.detail_content_video_control_box {
+    display: flex;
+    justify-content: space-between;
+}
+
+.detail_content_video_control_box2 {
+    display: flex;
+}
+
+.detail_content_video_control_button1 {
+    background: #000;
+    border: none;
+    outline: none;
+}
+
+.detail_content_video_control_time {
+    color: #fff;
+    font-weight: 600;
+}
+
+.detail_content_video_control_sound_toggle_container {
+    display: inline-block;
+    padding: 5px;
+    border-radius: 10px;
+    background: #717171ce;
+}
+
+.detail_content_video_control_sound_toggle_range {
+    width: 100px;
+}
+
+
+
+
+
 
 .detail_content_info_container {
     margin-bottom: 24px;
