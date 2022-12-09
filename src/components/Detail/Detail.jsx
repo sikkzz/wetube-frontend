@@ -1,5 +1,6 @@
 import React, { useState, useRef } from "react";
 import Video from "../../assets/videos/test2.mp4";
+import AdVideo from '../../assets/videos/test.mp4';
 import Image from "../../assets/test.jpg";
 
 import Controls from "../Video/Controls";
@@ -9,15 +10,17 @@ import Icons from "../../constants/icon";
 import "./Detail.scss";
 
 const Detail = () => {
-  const controllerRef = useRef(null);
-  const containerRef = useRef(null);
-  const videoRef = useRef(null);
   const [sortActive, setSortActive] = useState(false);
   const [inputActive, setInputActive] = useState(false);
   const [menuHover, setMenuHover] = useState(false);
   const [replyActive, setReplyActive] = useState(false);
   const listRef = useRef();
   const [count, setCount] = useState(50);
+
+  const controllerRef = useRef(null);
+  const containerRef = useRef(null);
+  const videoRef = useRef(null);
+  const srcRef = useRef(null);
 
   const onSortClick = () => {
     setSortActive(!sortActive);
@@ -68,12 +71,6 @@ const Detail = () => {
     },
   };
 
-  const controlProps = {
-    ref: controllerRef,
-    containerRef: containerRef,
-    videoRef: videoRef,
-  };
-
   const videoProps = {
     ref: videoRef,
     width: "100%",
@@ -86,13 +83,20 @@ const Detail = () => {
     },
   };
 
+  const controlProps = {
+    ref: controllerRef,
+    containerRef: containerRef,
+    videoRef: videoRef,
+    srcRef: srcRef,
+  };
+
   return (
     <>
       <div className="detail_container">
         <div className="detail_content_container">
           <div className="detail_content_video_container" {...containerProps}>
             <video {...videoProps}>
-              <source src={Video} type="video/mp4" />
+              <source ref={srcRef} src={Video} type="video/mp4" />
             </video>
             <Controls {...controlProps} />
           </div>
