@@ -13,7 +13,7 @@
         background: var(--main-bg);
 
         hr {
-            background: rgba(255, 255, 255, 0.1);
+            background: var(--white-alpha-10);
             height: 1px;
             border: none;
         }
@@ -55,7 +55,7 @@
 
     &_meta {
         width: 958px;
-        color: #fff;
+        color: var(--text-primary);
     }
 
     &_name {
@@ -75,10 +75,10 @@
         width: 110px;
         font-size: 14px;
         padding: 10px;
-        background: #3ea6ff;
+        background: var(--bg-sub-blue);
         border-radius: 24px;
         text-align: center;
-        color: #000;
+        color: var(--bg-black);
         font-weight: 500;
         margin-right: 5px;
     }
@@ -93,7 +93,7 @@
     width: 1284px;
     display: flex;
     align-items: center;
-    color: rgba(255, 255, 255, 0.3);
+    color: var(--white-alpha-30);
 
 
     &:first-child {
@@ -106,7 +106,7 @@
         text-align: center;
 
         &:hover {
-            color: #fff;
+            color: var(--text-primary);
         }
     }
 }
@@ -117,6 +117,6 @@
 }
 
 .channel_tab_item_active {
-    border-bottom: 3px solid #eee;
-    color: #fff;
+    border-bottom: 3px solid var(--tab-active-border);
+    color: var(--text-primary);
 }
