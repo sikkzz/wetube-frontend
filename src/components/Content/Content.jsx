@@ -19,10 +19,6 @@ const Content = () => {
 
   const handleOnMouseOut = (e) => {
     e.currentTarget.pause();
-<<<<<<< HEAD
-    console.log("a+b+c")
-=======
->>>>>>> 52e2696 ([Modify] main layout grid css)
   };
 
   return (
