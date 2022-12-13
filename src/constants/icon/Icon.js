@@ -50,6 +50,9 @@ import { GiSpeakerOff } from "react-icons/gi";
 import { AiOutlineFullscreenExit } from "react-icons/ai";
 import { BsFullscreen } from "react-icons/bs";
 
+import { TbPlayerTrackPrev } from "react-icons/tb";
+import { TbPlayerTrackNext } from "react-icons/tb";
+
 const exportIcons = {
   BsSearch,
   FaBars,
@@ -93,6 +96,8 @@ const exportIcons = {
   GiSpeakerOff,
   AiOutlineFullscreenExit,
   BsFullscreen,
+  TbPlayerTrackPrev,
+  TbPlayerTrackNext,
 };
 
 export default exportIcons;

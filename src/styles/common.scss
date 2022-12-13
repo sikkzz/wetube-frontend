@@ -15,9 +15,10 @@
     --text-black: #0f0f0f;
     --text-secondary: #aaa;
     --text-sub-blue: #3ea6ff;
-    --text-tag-blue : #3ea6ff;
-    --black-alpha-20: rgba(0,0,0,0.2);
+    --text-tag-blue: #3ea6ff;
+    --black-alpha-20: rgba(0, 0, 0, 0.2);
     --white-alpha-10: rgba(255, 255, 255, 0.1);
+    --white-alpha-20: rgba(255, 255, 255, 0.2);
     --white-alpha-30: rgba(255, 255, 255, 0.3);
     --tab-active-border: #eee;
     --logo-color: #f1f1f1;
@@ -25,7 +26,7 @@
     --white: #fff;
     --black: #000;
 
-    --comment-sort-bg: rgba(33,33,33,0.98);
+    --comment-sort-bg: rgba(33, 33, 33, 0.98);
     --comment-bt-text-disabled: #717171;
 
     --text-disabled: #717171;
@@ -34,4 +35,6 @@
     --static-brand-white: #fff;
 
     ---static-overlay-background-heavy: rgba(0, 0, 0, 0.8);
+
+    --player-control-time-text: #ddd;
 }
