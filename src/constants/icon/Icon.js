@@ -53,6 +53,11 @@ import { BsFullscreen } from "react-icons/bs";
 import { TbPlayerTrackPrev } from "react-icons/tb";
 import { TbPlayerTrackNext } from "react-icons/tb";
 
+//upload page 아이콘
+import { AiOutlineClose } from "react-icons/ai";
+import { AiOutlineInfoCircle } from "react-icons/ai";
+import { MdUpload } from "react-icons/md";
+
 const exportIcons = {
   BsSearch,
   FaBars,
@@ -98,6 +103,9 @@ const exportIcons = {
   BsFullscreen,
   TbPlayerTrackPrev,
   TbPlayerTrackNext,
+  AiOutlineClose,
+  AiOutlineInfoCircle,
+  MdUpload,
 };
 
 export default exportIcons;

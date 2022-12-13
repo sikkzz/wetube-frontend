@@ -1,13 +1,14 @@
-import React, { useState, useRef, useMemo } from "react";
+import React, { useState, useRef, useMemo, useEffect } from "react";
 import "./Upload.scss";
+import { useNavigate } from "react-router-dom";
 
-import { AiOutlineClose } from "react-icons/ai";
-import { AiOutlineInfoCircle } from "react-icons/ai";
-import { MdUpload } from "react-icons/md";
+import Icons from "../../constants/icon";
 
 import Image from "../../assets/test2.jpg";
 
+
 const Upload = () => {
+  const navigate = useNavigate()
   const fileInputRef = useRef(null);
   const [imageFile, setImageFile] = useState(null);
 
@@ -30,7 +31,7 @@ const Upload = () => {
 
   const showImage = useMemo(() => {
     if (!imageFile && imageFile == null) {
-      return <img src={Image} alt="프로필" style={{ width: "100px" }} />;
+      return null;
     }
     return (
       <img
@@ -42,28 +43,37 @@ const Upload = () => {
     );
   }, [imageFile]);
 
+  useEffect(() => {
+    if(imageFile){
+      navigate("/upload2")
+    }
+  },[imageFile])
+
   return (
     <>
       <div className="upload">
         <div className="upload_title">
+
           <div className="upload_title_container">
             <div className="upload_title_text">동영상 업로드</div>
             <div className="upload_title_button_container">
               <div className="upload_title_button">
-                <AiOutlineInfoCircle size={24} color="#fff" />
+                <Icons.AiOutlineInfoCircle size={24} color="#fff" />
               </div>
               <div className="upload_title_button">
-                <AiOutlineClose size={24} color="#fff" />
+                <Icons.AiOutlineClose size={24} color="#fff" />
               </div>
             </div>
           </div>
+
+
         </div>
         <div className="upload_content">
           <div className="upload_content_container">
             <div className="upload_content_icon_container">
               <div className="upload_content_icon_box">
                 <div className="upload_content_icon">
-                  <MdUpload size={50} color="#fff" />
+                  <Icons.MdUpload size={50} color="#fff" />
                 </div>
               </div>
             </div>
@@ -93,7 +103,7 @@ const Upload = () => {
                   style={{ display: "none" }}
                 />
               </label>
-              {showImage}
+              {/* {showImage} */}
               {/* <button type="button" onClick={handleClickFileInput}>
                 업로드 버튼
               </button> */}
