@@ -57,6 +57,10 @@ import { TbPlayerTrackNext } from "react-icons/tb";
 import { AiOutlineClose } from "react-icons/ai";
 import { AiOutlineInfoCircle } from "react-icons/ai";
 import { MdUpload } from "react-icons/md";
+import { AiOutlineCheck } from "react-icons/ai";
+import { AiOutlineExclamation } from "react-icons/ai";
+import { AiOutlineQuestionCircle } from "react-icons/ai";
+import { MdOutlineAddPhotoAlternate } from "react-icons/md";
 
 const exportIcons = {
   BsSearch,
@@ -106,6 +110,10 @@ const exportIcons = {
   AiOutlineClose,
   AiOutlineInfoCircle,
   MdUpload,
+  AiOutlineCheck,
+  AiOutlineExclamation,
+  AiOutlineQuestionCircle,
+  MdOutlineAddPhotoAlternate,
 };
 
 export default exportIcons;
