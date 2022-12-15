@@ -216,6 +216,20 @@ const UploadSetting = () => {
                       </div>
                     </div>
                   </div>
+
+                  <div className="upload_setting_content_detail_playlist">
+                    <div className="upload_setting_content_detail_playlist_title">
+                      재생목록
+                    </div>
+                    <div className="upload_setting_content_detail_playlist_sub_label">
+                    동영상을 1개 이상의 재생목록에 추가하세요. 시청자가 내 콘텐츠를 더 빨리 발견하는 데 도움이 될 수 있습니다.<a href="#!">자세히 알아보기</a>
+                    </div>
+                    <div className="upload_setting_content_detail_playlist_select">
+                      <div className="upload_setting_content_detail_playlist_select_col">
+                        
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

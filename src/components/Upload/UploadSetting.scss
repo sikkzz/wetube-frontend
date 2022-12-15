@@ -436,6 +436,8 @@
             #image_inner {
                 border-radius: 2px;
                 background: #0d0d0d;
+                width: 127px;
+                height: 70px;
 
                 img {
                     display: block;
@@ -446,4 +448,37 @@
             }
         }
     }
+}
+
+.upload_setting_content_detail_playlist{
+    margin-bottom: 24px;
+    width: 536px;
+}
+
+.upload_setting_content_detail_playlist_title{
+    font-size: 15px;
+    line-height: 24px;
+    color: var(--text-primary);
+    padding-bottom: 8px;
+}
+
+.upload_setting_content_detail_playlist_sub_label{
+    font-size: 13px;
+    line-height: 20px;
+    color: var(--text-secondary);
+    padding-bottom: 8px;
+
+    a {
+        padding-left: 5px;
+        color: var(--text-sub-blue);
+    }
+}
+
+.upload_setting_content_detail_playlist_select{
+    display: flex;
+}
+
+.upload_setting_content_detail_playlist_select_col{
+    display: flex;
+    flex: 1;
 }
