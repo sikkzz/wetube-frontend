@@ -21,31 +21,29 @@ const Header = () => {
 
   return (
     <>
-      <div className="header">
-        <div className="header_container">
-          <div className="header_left">
-            <div className="header_nav_button">
+      <wt-head class="header">
+        <div id="container" className="wt-head">
+          <div id="left" className="wt-head">
+            <wt-icon-button id="nav-button" class="wt-head">
               <Icons.FaBars size={20} color="#fff" />
-            </div>
-            <div className="header_logo" onClick={onLogoClick}>
-              WeTube
-            </div>
+            </wt-icon-button>
+            <wt-logo onClick={onLogoClick}>WeTube</wt-logo>
           </div>
 
-          <div className="header_center">
-            <div className="search_box">
-              <div className="search_container">
+          <div id="center" className="wt-head">
+            <wt-searchbox class="wt-head">
+              <wt-searchbox id="search" class="wt-head">
                 <form>
                   <input type="text" placeholder="검색" />
                 </form>
-              </div>
-              <div className="search_icon">
+              </wt-searchbox>
+              <wt-icon-button id="search-icon" class="wt-head">
                 <Icons.BsSearch size={18} />
-              </div>
-            </div>
+              </wt-icon-button>
+            </wt-searchbox>
           </div>
 
-          <div className="header_right">
+          <div id="right" className="wt-head">
             <Icons.RiVideoAddLine
               size={30}
               color="#fff"
@@ -59,7 +57,7 @@ const Header = () => {
             <GoogleButton />
           </div>
         </div>
-      </div>
+      </wt-head>
     </>
   );
 };

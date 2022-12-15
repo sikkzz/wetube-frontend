@@ -1,17 +1,11 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
 import "./Content.scss";
 import Image from "../../assets/test.jpg";
 import Video from "../../assets/videos/test.mp4";
 
 const Content = () => {
-  const navigate = useNavigate();
   const count = [1, 2, 3, 4];
   const count2 = [1, 2, 3, 4];
-
-  const onTest = () => {
-    navigate("/upload");
-  };
 
   const handleOnMouseOver = (e) => {
     e.currentTarget.play();
@@ -79,7 +73,6 @@ const Content = () => {
             ))}
           </div>
         </div>
-        {/* <button onClick={onTest}>업로드 테스트</button> */}
       </div>
     </>
   );

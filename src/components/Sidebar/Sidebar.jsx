@@ -8,30 +8,29 @@ import "./Sidebar.scss";
 const Sidebar = () => {
   const location = useLocation();
 
-
   return (
-    <nav className="sidebar">
-      <div className="sidebar_list">
-        <div className="sidebar_list_menu">
+    <wt-side>
+      <wt-side-list>
+        <wt-side-menu class="wt-side">
           {SidebarData.map((item, index) => (
-            <div
+            <wt-side-item
               key={index}
-              className={`sidebar_list_item ${
-                item.link === location.pathname && "sidebar_list_item_active"
+              class={`wt-side ${
+                item.link === location.pathname && "wt-side-active"
               }`}
             >
               <a href={item.link}>
-                <div className="sidebar_list_item_box">
+                <wt-side-item-wrapper class="wt-side">
                   {item.icon}
                   <div>{item.title}</div>
-                </div>
+                </wt-side-item-wrapper>
               </a>
-            </div>
+            </wt-side-item>
           ))}
-        </div>
+        </wt-side-menu>
         <hr />
-      </div>
-    </nav>
+      </wt-side-list>
+    </wt-side>
   );
 };
 

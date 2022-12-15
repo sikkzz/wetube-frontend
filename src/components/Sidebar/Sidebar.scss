@@ -1,40 +1,36 @@
 @import '../../styles/common.scss';
 
-.sidebar {
+wt-side {
     background-color: var(--main-bg);
     width: 250px;
-    display: flex;
-    justify-content: center;
     position: fixed;
     margin-top: 60px;
+}
 
-    &_list {
-        margin: 0;
-        padding: 0;
-        width: 100%;
+wt-side-list {
+    margin: 0;
+    padding: 0;
+    width: 100%;
 
-        hr {
-            border: none;
-            width: 250px;
-            border-bottom: 1px solid var(--white-alpha-10);
-            margin: 14px 0;
-        }
+
+    hr {
+        border: none;
+        width: 250px;
+        border-bottom: 1px solid var(--white-alpha-10);
+        margin: 14px 0;
     }
 }
 
-.sidebar_list_menu {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+wt-side-menu {
     padding: 0 10px;
+    flex-direction: column;
+
 }
 
-.sidebar_list_item {
-    display: flex;
+wt-side-item {
     justify-content: flex-start;
     list-style: none;
     color: var(--white);
-    align-items: center;
     font-size: 12px;
     font-weight: 400;
     padding: 0 12px;
@@ -50,9 +46,7 @@
     }
 }
 
-.sidebar_list_item_box {
-    display: flex;
-    flex-direction: row;
+wt-side-item-wrapper {
     align-items: center;
     height: 40px;
 
@@ -66,7 +60,13 @@
     }
 }
 
-.sidebar_list_item_active {
+.wt-side {
+    display: flex;
+    // justify-content: center;
+    // align-items: center;
+}
+
+.wt-side-active {
     border-radius: 10px;
     background: var(--sidebar-bt-bg);
 }
