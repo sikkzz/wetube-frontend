@@ -65,6 +65,10 @@ import { AiOutlineExclamationCircle } from "react-icons/ai";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import { MdOutlineKeyboardArrowUp } from "react-icons/md";
 import { MdContentCopy } from "react-icons/md";
+import { TbArrowBarUp } from "react-icons/tb";
+import { RiHdLine } from "react-icons/ri";
+import { AiOutlineCheckCircle } from "react-icons/ai";
+import {RiCheckboxMultipleBlankLine} from 'react-icons/ri'
 
 const exportIcons = {
   BsSearch,
@@ -122,6 +126,10 @@ const exportIcons = {
   MdOutlineKeyboardArrowDown,
   MdOutlineKeyboardArrowUp,
   MdContentCopy,
+  TbArrowBarUp,
+  RiHdLine,
+  AiOutlineCheckCircle,
+  RiCheckboxMultipleBlankLine
 };
 
 export default exportIcons;

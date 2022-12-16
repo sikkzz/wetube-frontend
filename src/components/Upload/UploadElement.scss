@@ -1,0 +1,85 @@
+wt-upload-video-element {
+    color: var(--text-primary);
+    display: flex;
+    flex-direction: column;
+    padding: 8px 48px 24px;
+    width: 960px;
+    height: 643px;
+}
+
+h1.wt-upload-video-element {
+    font-size: 25px;
+    line-height: 32px;
+    margin-bottom: 5px;
+}
+
+.description.wt-upload-video-element {
+    font-size: 13px;
+    line-height: 20px;
+}
+
+a.wt-upload-video-element {
+    margin-left: 5px;
+    color: var(--text-sub-blue);
+}
+
+.container.wt-upload-video-element {
+    display: flex;
+    position: relative;
+    align-items: center;
+    margin-top: 24px;
+    padding: 18px 16px 18px 24px;
+    border-radius: 4px;
+    background-color: var(--wt-general-background-a);
+}
+
+.still-processing-scrim.wt-upload-video-element {
+    background-color: var(--wt-overlay-background-inverse);
+    height: 100%;
+    left: 0;
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+}
+
+.text-content.wt-upload-video-element {
+    display: flex;
+    flex-direction: column;
+    margin-right: auto;
+    margin-left: 32px;
+    max-width: 610px;
+}
+
+h3.wt-upload-video-element {
+    font-family: "Roboto", "Noto", sans-serif;
+    font-weight: 500;
+    -webkit-font-smoothing: antialiased;
+    font-size: 15px;
+    line-height: 24px;
+    color: var(--text-primary);
+    padding-bottom: 8px;
+}
+
+.section-sublabel.wt-upload-video-element {
+    font-family: "Roboto", "Noto", sans-serif;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    font-size: 13px;
+    line-height: 20px;
+    color: var(--text-secondary);
+    padding-bottom: 0;
+}
+
+.label.wt-button {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    flex: 1 1;
+    padding: 0 8px;
+}
+
+#import-from-video-button.wt-upload-video-element {
+    margin-right: 8px;
+}

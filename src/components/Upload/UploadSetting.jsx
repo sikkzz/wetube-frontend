@@ -5,6 +5,9 @@ import Icons from "../../constants/icon";
 import Image from "../../assets/test.jpg";
 import Video from "../../assets/videos/test2.mp4";
 
+import UploadElement from "./UploadElement";
+import UploadCheck from "./UploadCheck";
+
 import { UploadStepData } from "../../constants/data/UploadStepData";
 
 const UploadSetting = () => {
@@ -79,7 +82,7 @@ const UploadSetting = () => {
           </div>
         </div>
 
-        <div className="upload_setting_content">
+        {/* <div className="upload_setting_content">
           <div className="upload_setting_content_container">
             <div className="upload_setting_content_header">
               <h1>세부정보</h1>
@@ -365,6 +368,40 @@ const UploadSetting = () => {
                     </div>
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div> */}
+        {/* <div className="upload_setting_content">
+          <UploadElement />
+        </div> */}
+
+        <div className="upload_setting_content">
+          <UploadCheck />
+        </div>
+
+        <div className="upload_setting_footer">
+          <div className="upload_setting_footer_inner">
+            <div className="upload_setting_footer_left">
+              <div className="upload_setting_footer_left_inner">
+                <div className="upload_setting_footer_icon">
+                  <Icons.TbArrowBarUp size={24} color="#3ea6ff" />
+                </div>
+                <div className="upload_setting_footer_icon">
+                  <Icons.RiHdLine size={24} color="#3ea6ff" />
+                </div>
+                <div className="upload_setting_footer_icon">
+                  <Icons.AiOutlineCheckCircle size={24} color="#3ea6ff" />
+                </div>
+                <span>검사가 완료되었습니다. 발견된 문제가 없습니다.</span>
+              </div>
+            </div>
+            <div className="upload_setting_footer_right">
+              <div className="upload_setting_footer_prev_button">
+                <div className="upload_setting_footer_button_label">뒤로</div>
+              </div>
+              <div className="upload_setting_footer_next_button">
+                <div className="upload_setting_footer_button_label">다음</div>
               </div>
             </div>
           </div>
