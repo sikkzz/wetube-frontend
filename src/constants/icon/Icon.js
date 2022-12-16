@@ -61,6 +61,10 @@ import { AiOutlineCheck } from "react-icons/ai";
 import { AiOutlineExclamation } from "react-icons/ai";
 import { AiOutlineQuestionCircle } from "react-icons/ai";
 import { MdOutlineAddPhotoAlternate } from "react-icons/md";
+import { AiOutlineExclamationCircle } from "react-icons/ai";
+import { MdOutlineKeyboardArrowDown } from "react-icons/md";
+import { MdOutlineKeyboardArrowUp } from "react-icons/md";
+import { MdContentCopy } from "react-icons/md";
 
 const exportIcons = {
   BsSearch,
@@ -114,6 +118,10 @@ const exportIcons = {
   AiOutlineExclamation,
   AiOutlineQuestionCircle,
   MdOutlineAddPhotoAlternate,
+  AiOutlineExclamationCircle,
+  MdOutlineKeyboardArrowDown,
+  MdOutlineKeyboardArrowUp,
+  MdContentCopy,
 };
 
 export default exportIcons;

@@ -1,10 +1,12 @@
 .upload_setting {
     width: 920px;
-    height: 840px;
+    // height: 840px;
+    height: 100%;
     margin-top: 40px;
-    background: #212121;
+    background: #282828;
     display: flex;
     flex-direction: column;
+    // overflow: hidden;
 }
 
 .upload_setting_title {
@@ -13,7 +15,7 @@
         height: 64px;
         padding-left: 24px;
         padding-right: 16px;
-        background: #212121;
+        background: #282828;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -219,9 +221,11 @@
     display: flex;
     flex-direction: column;
     min-width: 536px;
+    // height: 100%;
+    // overflow-y: scroll;
 }
 
-.upload_setting_content_detail_left_container {
+.upload_setting_content_detail_left_data {
     display: flex;
     flex-direction: column;
 }
@@ -450,19 +454,19 @@
     }
 }
 
-.upload_setting_content_detail_playlist{
+.upload_setting_content_detail_playlist {
     margin-bottom: 24px;
     width: 536px;
 }
 
-.upload_setting_content_detail_playlist_title{
+.upload_setting_content_detail_playlist_title {
     font-size: 15px;
     line-height: 24px;
     color: var(--text-primary);
     padding-bottom: 8px;
 }
 
-.upload_setting_content_detail_playlist_sub_label{
+.upload_setting_content_detail_playlist_sub_label {
     font-size: 13px;
     line-height: 20px;
     color: var(--text-secondary);
@@ -474,11 +478,396 @@
     }
 }
 
-.upload_setting_content_detail_playlist_select{
+.upload_setting_content_detail_playlist_select {
     display: flex;
 }
 
-.upload_setting_content_detail_playlist_select_col{
+.upload_setting_content_detail_playlist_select_col {
     display: flex;
     flex: 1;
+}
+
+.upload_setting_content_detail_playlist_dropdown {
+    display: flex;
+    flex-direction: column;
+}
+
+.upload_setting_content_detail_playlist_dropdown_container {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    background: initial;
+    border: 1px solid var(--container-border);
+    border-radius: 4px;
+    padding: 0;
+    padding-left: 12px;
+    height: 48px;
+    width: 260px;
+    cursor: pointer;
+}
+
+.upload_setting_content_detail_playlist_dropdown_left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+    span {
+        color: var(--text-secondary);
+        font-size: 15px;
+        line-height: 24px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        padding-top: 11px;
+    }
+}
+
+.upload_setting_content_detail_playlist_dropdown_right_icon {
+    margin-left: 16px;
+    margin-right: 12px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+}
+
+.upload_setting_content_detail_kids {
+    width: 536px;
+}
+
+.upload_setting_content_detail_kids_title {
+    font-size: 15px;
+    line-height: 24px;
+    color: var(--text-primary);
+}
+
+.upload_setting_content_detail_kids_select {
+    display: flex;
+    flex-direction: column;
+}
+
+.upload_setting_content_detail_kids_select_title {
+    font-size: 13px;
+    line-height: 20px;
+    color: var(--text-primary);
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+
+.upload_setting_content_detail_kids_select_description {
+    font-size: 13px;
+    line-height: 20px;
+    color: var(--text-secondary);
+    padding-bottom: 8px;
+
+    a {
+        padding-left: 5px;
+        color: var(--text-sub-blue);
+    }
+}
+
+.upload_setting_content_detail_kids_select_info_box {
+    display: flex;
+    margin: 8px 0;
+    padding: 12px;
+    font-size: 12px;
+    line-height: 16px;
+    color: var(--text-secondary);
+    background: var(--general-bg);
+    border-radius: 4px;
+    align-items: center;
+}
+
+.upload_setting_content_detail_kids_select_info_icon {
+    width: 28px;
+    padding-right: 8px;
+    height: 20px;
+}
+
+.upload_setting_content_detail_kids_select_info_text {
+    font-family: "Roboto", "Noto", sans-serif;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    letter-spacing: 0.011em;
+    font-size: 12px;
+    line-height: 16px;
+    color: var(--text-secondary);
+
+    a {
+        padding-left: 5px;
+        color: var(--text-sub-blue);
+    }
+}
+
+.upload_setting_content_detail_kids_select_radio {
+    border: 1px solid #606060;
+    border-color: transparent;
+    margin-bottom: 8px;
+    margin-left: -8px;
+    padding: 8px;
+    position: relative;
+}
+
+.upload_setting_content_detail_kids_select_radio_box {
+    align-self: flex-start;
+    padding: 0;
+
+    #second {
+        margin-top: 10px;
+    }
+}
+
+.upload_setting_content_detail_kids_select_radio_button {
+    font-size: 15px;
+    line-height: 24px;
+    display: block;
+    min-height: 24px;
+    padding: 0;
+
+
+}
+
+.upload_setting_content_detail_kids_select_radio_container {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+
+    #off_radio {
+        border: 2px solid var(--text-secondary);
+        // border-color: var(--text-primary);
+        background-color: transparent;
+        transition: border-color 0.28s;
+        position: absolute;
+        box-sizing: border-box;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+    }
+
+    #on_radio {
+        transform: scale(0.5);
+        background-color: var(--text-primary);
+        position: absolute;
+        box-sizing: border-box;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        transition: transform ease 0.28s;
+        // display: none;
+    }
+}
+
+.upload_setting_container_detail_kids_select_radio_label {
+    line-height: normal;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px;
+    white-space: normal;
+    color: var(--text-primary);
+    font-size: 15px;
+}
+
+.upload_setting_content_detail_kids_button {
+    align-items: center;
+    display: flex;
+    height: 48px;
+
+    h3 {
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 24px;
+        color: var(--text-primary);
+        padding: 0;
+        margin-left: 8px;
+    }
+}
+
+.upload_setting_content_detail_kids_button_icon {
+    width: 24px;
+    height: 24px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    vertical-align: middle;
+}
+
+.upload_setting_content_detail_kids_button_icon2 {
+    width: 24px;
+    height: 24px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    vertical-align: middle;
+    display: none;
+}
+
+.upload_setting_content_detail_left_more {
+    margin-left: -8px;
+    padding-bottom: 24px;
+}
+
+.upload_setting_content_more_button {
+    display: inline-flex;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 2px;
+    min-width: 36px;
+    height: 36px;
+    padding: 0 8px;
+    margin: 0;
+    position: relative;
+    color: var(--text-sub-blue);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-transform: uppercase;
+    letter-spacing: 0.01em;
+    font-size: 14px;
+    line-height: 20px;
+    transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.upload_setting_content_more_text {
+    font-size: 13px;
+    line-height: 20px;
+    color: var(--text-secondary);
+    padding-bottom: 8px;
+    margin-left: 8px;
+}
+
+.upload_setting_content_detail_right {
+    align-self: flex-start;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 24px;
+    width: 352px;
+    padding-left: 24px;
+    display: flex;
+    flex-direction: column;
+}
+
+.upload_setting_content_detail_right_inner {
+    margin-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+}
+
+.upload_setting_content_detail_right_container {
+    border-radius: 4px;
+    background-color: var(--general-bg);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    width: 304px;
+    position: relative;
+    padding-bottom: 4px;
+}
+
+.upload_setting_content_detail_video_container {
+    margin-bottom: 4px;
+    width: 304px;
+    height: 171px;
+
+    video {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.upload_setting_content_detail_video_link_container {
+    display: flex;
+}
+
+.upload_setting_content_detail_video_link_text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.upload_setting_content_detail_video_link_label {
+    letter-spacing: 0.011em;
+    font-size: 12px;
+    line-height: 16px;
+    color: var(--text-secondary);
+    padding-left: 16px;
+    padding-right: 16px;
+    margin-top: 12px;
+}
+
+.upload_setting_content_detail_video_link_value {
+    font-size: 15px;
+    line-height: 24px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: var(--text-primary);
+    padding-bottom: 5px;
+    margin-left: 16px;
+    margin-right: 16px;
+
+    span {
+        a {
+            color: var(--text-sub-blue);
+        }
+    }
+}
+
+.upload_setting_content_detail_video_link_icon {
+    align-self: center;
+}
+
+.upload_setting_content_detail_video_link_icon_container {
+    margin-right: 8px;
+    width: 48px;
+    height: 40px;
+    padding: 8px;
+    display: inline-flex;
+    cursor: pointer;
+    position: relative;
+}
+
+.upload_setting_content_detail_video_link_icon_inner {
+    width: 100%;
+    height: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    vertical-align: middle;
+}
+
+.upload_setting_content_detail_video_name_container {
+    letter-spacing: 0.011em;
+    font-size: 12px;
+    line-height: 16px;
+    color: var(--text-secondary);
+    padding-left: 16px;
+    padding-right: 16px;
+    margin-top: 12px;
+}
+
+.upload_setting_content_detail_video_name_original {
+    font-size: 15px;
+    line-height: 24px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: var(--text-primary);
+    padding-bottom: 5px;
+    margin-left: 16px;
+    margin-right: 16px;
 }

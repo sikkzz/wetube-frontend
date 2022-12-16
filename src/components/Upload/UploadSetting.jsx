@@ -3,6 +3,7 @@ import "./UploadSetting.scss";
 import Icons from "../../constants/icon";
 
 import Image from "../../assets/test.jpg";
+import Video from "../../assets/videos/test2.mp4";
 
 import { UploadStepData } from "../../constants/data/UploadStepData";
 
@@ -89,7 +90,7 @@ const UploadSetting = () => {
 
             <div className="upload_setting_content_detail">
               <div className="upload_setting_content_detail_left">
-                <div className="upload_setting_content_detail_left_container">
+                <div className="upload_setting_content_detail_left_data">
                   <div className="upload_setting_content_detail_input_title">
                     <div className="upload_setting_content_detail_input_text_area">
                       <div className="upload_setting_content_detail_input_outer">
@@ -222,12 +223,145 @@ const UploadSetting = () => {
                       재생목록
                     </div>
                     <div className="upload_setting_content_detail_playlist_sub_label">
-                    동영상을 1개 이상의 재생목록에 추가하세요. 시청자가 내 콘텐츠를 더 빨리 발견하는 데 도움이 될 수 있습니다.<a href="#!">자세히 알아보기</a>
+                      동영상을 1개 이상의 재생목록에 추가하세요. 시청자가 내
+                      콘텐츠를 더 빨리 발견하는 데 도움이 될 수 있습니다.
+                      <a href="#!">자세히 알아보기</a>
                     </div>
                     <div className="upload_setting_content_detail_playlist_select">
                       <div className="upload_setting_content_detail_playlist_select_col">
-                        
+                        <div className="upload_setting_content_detail_playlist_dropdown">
+                          <div className="upload_setting_content_detail_playlist_dropdown_container">
+                            <div className="upload_setting_content_detail_playlist_dropdown_left">
+                              <span>선택</span>
+                            </div>
+                            <div className="upload_setting_content_detail_playlist_dropdown_right">
+                              <div className="upload_setting_content_detail_playlist_dropdown_right_icon">
+                                <Icons.AiFillCaretDown size={16} color="#aaa" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                       </div>
+                    </div>
+                  </div>
+
+                  <div className="upload_setting_content_detail_kids">
+                    <div className="upload_setting_content_detail_kids_title">
+                      시청자층
+                    </div>
+                    <div className="upload_setting_content_detail_kids_select">
+                      <div className="upload_setting_content_detail_kids_select_title">
+                        아동용 동영상인가요? (필수사항)
+                      </div>
+                      <div className="upload_setting_content_detail_kids_select_description">
+                        모든 크리에이터는 위치에 상관없이 아동 온라인 개인정보
+                        보호법(COPPA) 및 기타 법률을 준수해야 할 법적인 의무가
+                        있습니다. 아동용 동영상인지 여부는 크리에이터가 지정해야
+                        합니다.<a href="#!">아동용 콘텐츠란 무엇인가요?</a>
+                      </div>
+                      <div className="upload_setting_content_detail_kids_select_info">
+                        <div className="upload_setting_content_detail_kids_select_info_box">
+                          <div className="upload_setting_content_detail_kids_select_info_icon">
+                            <Icons.AiOutlineExclamationCircle
+                              size={20}
+                              color="#aaa"
+                            />
+                          </div>
+                          <div className="upload_setting_content_detail_kids_select_info_text">
+                            <span>
+                              아동용 동영상에서는 개인 맞춤 광고 및 알림 등의
+                              기능을 사용할 수 없습니다. 크리에이터가 아동용으로
+                              설정한 동영상은 다른 아동용 동영상과 함께 추천될
+                              가능성이 높습니다.
+                            </span>
+                            <a href="#!">자세히 알아보기</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="upload_setting_content_detail_kids_select_radio">
+                        <div className="upload_setting_content_detail_kids_select_radio_box">
+                          <div className="upload_setting_content_detail_kids_select_radio_button">
+                            <div className="upload_setting_content_detail_kids_select_radio_container">
+                              <div id="off_radio" />
+                              <div id="on_radio" />
+                            </div>
+                            <div className="upload_setting_container_detail_kids_select_radio_label">
+                              예, 아동용입니다.
+                            </div>
+                          </div>
+                          <div
+                            id="second"
+                            className="upload_setting_content_detail_kids_select_radio_button"
+                          >
+                            <div className="upload_setting_content_detail_kids_select_radio_container">
+                              <div id="off_radio" />
+                              <div id="on_radio" />
+                            </div>
+                            <div className="upload_setting_container_detail_kids_select_radio_label">
+                              아니요, 아동용이 아닙니다
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="upload_setting_content_detail_kids_button">
+                      <div className="upload_setting_content_detail_kids_button_icon">
+                        <Icons.MdOutlineKeyboardArrowDown
+                          size={24}
+                          color="#aaa"
+                        />
+                      </div>
+                      <div className="upload_setting_content_detail_kids_button_icon2">
+                        <Icons.MdOutlineKeyboardArrowUp
+                          size={24}
+                          color="#aaa"
+                        />
+                      </div>
+                      <h3>연령 제한(고급)</h3>
+                    </div>
+                  </div>
+                </div>
+                <div className="upload_setting_content_detail_left_more">
+                  <div className="upload_setting_content_more_button">
+                    자세히 보기
+                  </div>
+                  <div className="upload_setting_content_more_text">
+                    유료 프로모션, 태그, 자막 등
+                  </div>
+                </div>
+              </div>
+              <div className="upload_setting_content_detail_right">
+                <div className="upload_setting_content_detail_right_inner">
+                  <div className="upload_setting_content_detail_right_container">
+                    <div className="upload_setting_content_detail_video_container">
+                      <video controls>
+                        <source src={Video} type="video/mp4" />
+                      </video>
+                    </div>
+                    <div className="upload_setting_content_detail_video_link_container">
+                      <div className="upload_setting_content_detail_video_link_text">
+                        <div className="upload_setting_content_detail_video_link_label">
+                          동영상 링크
+                        </div>
+                        <div className="upload_setting_content_detail_video_link_value">
+                          <span>
+                            <a href="#!">https://youtu.be/3CmFUEOJvz8</a>
+                          </span>
+                        </div>
+                      </div>
+                      <div className="upload_setting_content_detail_video_link_icon">
+                        <div className="upload_setting_content_detail_video_link_icon_container">
+                          <div className="upload_setting_content_detail_video_link_icon_inner">
+                            <Icons.MdContentCopy size={24} color="#aaa" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="upload_setting_content_detail_video_name_container">
+                      파일 이름
+                    </div>
+                    <div className="upload_setting_content_detail_video_name_original">
+                      video.mp4 (파일이름)
                     </div>
                   </div>
                 </div>
