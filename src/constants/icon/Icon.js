@@ -28,6 +28,31 @@ import { SlActionRedo } from "react-icons/sl";
 import { TfiDownload } from "react-icons/tfi";
 import { AiOutlineEllipsis } from "react-icons/ai";
 
+import { MdOutlineSort } from "react-icons/md";
+import { AiOutlineMore } from "react-icons/ai";
+import { AiFillCaretDown } from "react-icons/ai";
+import { AiFillCaretUp } from "react-icons/ai";
+
+import { MdArrowForwardIos } from "react-icons/md";
+import { MdArrowBackIosNew } from "react-icons/md";
+
+import { BsSkipStart } from "react-icons/bs";
+import { BsSkipEnd } from "react-icons/bs";
+import { RiArrowGoBackFill } from "react-icons/ri";
+import { RiArrowGoForwardFill } from "react-icons/ri";
+
+import { BsPlay } from "react-icons/bs";
+import { BsPause } from "react-icons/bs";
+
+import { GiSpeaker } from "react-icons/gi";
+import { GiSpeakerOff } from "react-icons/gi";
+
+import { AiOutlineFullscreenExit } from "react-icons/ai";
+import { BsFullscreen } from "react-icons/bs";
+
+import { TbPlayerTrackPrev } from "react-icons/tb";
+import { TbPlayerTrackNext } from "react-icons/tb";
+
 const exportIcons = {
   BsSearch,
   FaBars,
@@ -55,6 +80,24 @@ const exportIcons = {
   SlActionRedo,
   TfiDownload,
   AiOutlineEllipsis,
+  MdOutlineSort,
+  AiOutlineMore,
+  AiFillCaretDown,
+  AiFillCaretUp,
+  MdArrowForwardIos,
+  MdArrowBackIosNew,
+  BsSkipStart,
+  BsSkipEnd,
+  RiArrowGoBackFill,
+  RiArrowGoForwardFill,
+  BsPlay,
+  BsPause,
+  GiSpeaker,
+  GiSpeakerOff,
+  AiOutlineFullscreenExit,
+  BsFullscreen,
+  TbPlayerTrackPrev,
+  TbPlayerTrackNext,
 };
 
 export default exportIcons;
