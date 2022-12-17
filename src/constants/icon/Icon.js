@@ -53,6 +53,23 @@ import { BsFullscreen } from "react-icons/bs";
 import { TbPlayerTrackPrev } from "react-icons/tb";
 import { TbPlayerTrackNext } from "react-icons/tb";
 
+//upload page 아이콘
+import { AiOutlineClose } from "react-icons/ai";
+import { AiOutlineInfoCircle } from "react-icons/ai";
+import { MdUpload } from "react-icons/md";
+import { AiOutlineCheck } from "react-icons/ai";
+import { AiOutlineExclamation } from "react-icons/ai";
+import { AiOutlineQuestionCircle } from "react-icons/ai";
+import { MdOutlineAddPhotoAlternate } from "react-icons/md";
+import { AiOutlineExclamationCircle } from "react-icons/ai";
+import { MdOutlineKeyboardArrowDown } from "react-icons/md";
+import { MdOutlineKeyboardArrowUp } from "react-icons/md";
+import { MdContentCopy } from "react-icons/md";
+import { TbArrowBarUp } from "react-icons/tb";
+import { RiHdLine } from "react-icons/ri";
+import { AiOutlineCheckCircle } from "react-icons/ai";
+import {RiCheckboxMultipleBlankLine} from 'react-icons/ri'
+
 const exportIcons = {
   BsSearch,
   FaBars,
@@ -98,6 +115,21 @@ const exportIcons = {
   BsFullscreen,
   TbPlayerTrackPrev,
   TbPlayerTrackNext,
+  AiOutlineClose,
+  AiOutlineInfoCircle,
+  MdUpload,
+  AiOutlineCheck,
+  AiOutlineExclamation,
+  AiOutlineQuestionCircle,
+  MdOutlineAddPhotoAlternate,
+  AiOutlineExclamationCircle,
+  MdOutlineKeyboardArrowDown,
+  MdOutlineKeyboardArrowUp,
+  MdContentCopy,
+  TbArrowBarUp,
+  RiHdLine,
+  AiOutlineCheckCircle,
+  RiCheckboxMultipleBlankLine
 };
 
 export default exportIcons;

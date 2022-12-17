@@ -1,0 +1,123 @@
+wt-upload-check {
+    color: var(--text-primary);
+    display: flex;
+    flex-direction: column;
+    padding: 8px 48px 24px;
+    width: 960px;
+    height: 643px;
+}
+
+.top-row.wt-upload-check {
+    flex-direction: column;
+    width: 536px;
+}
+
+h1.wt-upload-check {
+    white-space: initial;
+    overflow: initial;
+    text-overflow: initial;
+    font-family: "YouTube Sans", "Roboto", "Arial", sans-serif;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 32px;
+    margin-bottom: 5px;
+}
+
+.description.wt-upload-check {
+    font-family: "Roboto", "Noto", sans-serif;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    font-size: 13px;
+    line-height: 20px;
+
+    a {
+        margin-left: 5px;
+        color: var(--text-sub-blue);
+    }
+}
+
+wt-upload-check-status {
+    display: flex;
+    flex-direction: column;
+    color: var(--text-primary);
+}
+
+#content-wrapper.wt-upload-check-status {
+    min-width: 536px;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--wt-line-divider);
+}
+
+#content.wt-upload-check-status {
+    display: flex;
+    justify-content: space-between;
+}
+
+#status.wt-upload-check-status {
+    max-width: 536px;
+}
+
+#title.wt-upload-check-status {
+    font-family: "Roboto", "Noto", sans-serif;
+    font-weight: 500;
+    -webkit-font-smoothing: antialiased;
+    font-size: 15px;
+    line-height: 24px;
+    margin-bottom: 8px;
+}
+
+#icon-and-description.wt-upload-check-status {
+    display: flex;
+    align-items: center;
+}
+
+#results-container.wt-upload-check-status {
+    font-family: "Roboto", "Noto", sans-serif;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    font-size: 13px;
+    line-height: 20px;
+}
+
+#results-description.wt-upload-check-status {
+    margin-right: 3px;
+}
+
+#action.wt-upload-check-status {
+    display: flex;
+    align-items: center;
+}
+
+#success-icon.wt-upload-check-status {
+    margin-right: 16px;
+}
+
+#disclaimer.wt-upload-check {
+    font-family: "Roboto", "Noto", sans-serif;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    font-size: 13px;
+    line-height: 20px;
+    color: var(--text-secondary);
+    padding-bottom: 8px;
+    width: 500px;
+    margin-top: 16px;
+
+    a {
+        margin-left: 5px;
+        color: var(--text-sub-blue);
+    }
+}
+
+.feedback-text.wt-upload-check,
+wt-send-feedback-button.wt-upload-check {
+    font-family: "Roboto", "Noto", sans-serif;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    font-size: 13px;
+    line-height: 20px;
+    padding-bottom: 8px;
+    align-self: flex-end;
+    cursor: pointer;
+    color: var(--text-sub-blue);
+}
