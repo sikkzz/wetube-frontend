@@ -5,15 +5,15 @@ import { CategorybarData } from "../../constants/data/CategorybarData";
 const Categorybars = () => {
   return (
     <>
-      <div className="category">
-        <div className="category_container">
+      <wt-chips class="wt-chips">
+        <div id="container" className="wt-chips">
           {CategorybarData.map((item, index) => (
-            <div className="category_item_container" key={index}>
-              <div className="category_item">{item.title}</div>
-            </div>
+            <wt-chips-wrapper class="wt-chips" key={index}>
+              <div className="wt-chips-wrapper">{item.title}</div>
+            </wt-chips-wrapper>
           ))}
         </div>
-      </div>
+      </wt-chips>
     </>
   );
 };
