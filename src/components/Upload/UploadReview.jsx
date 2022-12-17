@@ -283,6 +283,26 @@ const UploadReview = () => {
                   </div>
                 </wt-video-player>
               </wt-html5-video-player>
+
+              <div className="video-title wt-video-info">video</div>
+
+              <div className="row wt-video-info">
+                <div className="left wt-video-info">
+                  <div className="label wt-video-info">동영상 링크</div>
+                  <div className="value wt-video-info">
+                    <span className="video-url wt-video-info">
+                      <a href="#!">https://youtu.be/xzfgWc-MMcI</a>
+                    </span>
+                  </div>
+                </div>
+                <div className="right wt-video-info">
+                  <wt-icon-button class="wt-video-info">
+                    <wt-iron-icon class="wt-icon-button">
+                      <Icons.MdContentCopy size={24} color="#aaa" />
+                    </wt-iron-icon>
+                  </wt-icon-button>
+                </div>
+              </div>
             </div>
           </wt-video-info>
         </div>
