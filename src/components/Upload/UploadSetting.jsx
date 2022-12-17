@@ -7,6 +7,7 @@ import Video from "../../assets/videos/test2.mp4";
 
 import UploadElement from "./UploadElement";
 import UploadCheck from "./UploadCheck";
+import UploadReview from "./UploadReview"
 
 import { UploadStepData } from "../../constants/data/UploadStepData";
 
@@ -372,12 +373,17 @@ const UploadSetting = () => {
             </div>
           </div>
         </div> */}
+        
         {/* <div className="upload_setting_content">
           <UploadElement />
         </div> */}
 
-        <div className="upload_setting_content">
+        {/* <div className="upload_setting_content">
           <UploadCheck />
+        </div> */}
+
+        <div className="upload_setting_content">
+          <UploadReview />
         </div>
 
         <div className="upload_setting_footer">

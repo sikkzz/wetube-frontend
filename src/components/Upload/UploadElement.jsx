@@ -43,7 +43,11 @@ const UploadElement = () => {
               동영상이 끝날 때 관련 콘텐츠를 홍보합니다.
             </div>
           </div>
-          <wt-button id="import-from-video-button" class="wt-upload-video-element" disabled>
+          <wt-button
+            id="import-from-video-button"
+            class="wt-upload-video-element"
+            disabled
+          >
             <div className="label wt-button">동영상에서 가져오기</div>
           </wt-button>
           <wt-button disabled>
