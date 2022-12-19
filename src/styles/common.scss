@@ -63,9 +63,15 @@
     --wt-container-border: 1px solid var(--container-border);
 
     --wt-standard-border-radius: 4px;
+    --wt-extended-border-radius: 6px;
     --radio-button-size: 20px;
     --wt-icon-inactive: #717171;
 
     --wt-video-metadata-info-player-width: 304px;
     --wt-video-metadata-info-player-height: 171px;
+
+    --wt-vertical-bumper-size: 48px;
+
+    --dialog-background-color: var(--studio-bg);
+    --dialog-color: var(var(--text-primary));
 }

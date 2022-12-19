@@ -45,7 +45,7 @@ const Upload = () => {
 
   useEffect(() => {
     if(imageFile){
-      navigate("/upload2")
+      navigate("/upload_setting")
     }
   },[imageFile])
 
