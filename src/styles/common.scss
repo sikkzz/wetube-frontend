@@ -50,6 +50,8 @@
 
     --wt-overlay-background-inverse: rgba(40, 40, 40, 0.6);
     --wt-general-background-a: #1f1f1f;
+    --wt-general-background-b: #161616;
+    --wt-general-background-c: #0d0d0d;
 
     --icon-standard-length: 24px;
     --icon-standard-padding: 8px;
@@ -60,6 +62,7 @@
     --wt-line-divider: rgba(255, 255, 255, 0.1);
 
     --wt-theme-green: #2ba640;
+    --wt-theme-red: #ff4e45;
     --wt-theme-blue-bg: #3ea6ff;
 
     --wt-container-border: 1px solid var(--container-border);
@@ -78,6 +81,22 @@
     --dialog-color: var(--text-primary);
 
     --header-title-row-height: 64px;
+    --row-height: 84px;
 
     --outgoing-curve: cubic-bezier(0.4, 0, 1, 1);
+    --incoming-curve: cubic-bezier(0, 0, 0.2, 1);
+
+    --wt-overlay-drop-shadow-app-header: rgba(0, 0, 0, 0.2);
+
+    --wt-thumbnails-border-radius: 2px;
+
+    --wt-static-overlay-background-heavy: rgba(0,0,0,0.8);
+
+
+    --common-duration-150: 150ms;
+    --common-duration-200: 200ms;
+    --common-duration-250: 250ms;
+    --common-duration-300: 300ms;
+    --common-duration-450: 450ms;
+    --common-duration-500: 500ms;
 }
