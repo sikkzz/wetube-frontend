@@ -113,6 +113,10 @@
     &:last-of-type {
         margin-bottom: 4px;
     }
+
+    a{
+        color: var(--text-sub-blue);
+    }
 }
 
 wt-dialog.wt-upload-dialog> {
