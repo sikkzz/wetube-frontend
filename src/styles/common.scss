@@ -13,6 +13,7 @@
     --searchbar-border-color: hsl(0, 0%, 18.82%);
     --searchbar-button-color: hsla(0, 0%, 100%, 0.08);
     --text-primary: #f1f1f1;
+    --text-primary-inverse: #0d0d0d;
     --text-black: #0f0f0f;
     --text-secondary: #aaa;
     --text-sub-blue: #3ea6ff;
@@ -59,6 +60,7 @@
     --wt-line-divider: rgba(255, 255, 255, 0.1);
 
     --wt-theme-green: #2ba640;
+    --wt-theme-blue-bg: #3ea6ff;
 
     --wt-container-border: 1px solid var(--container-border);
 
@@ -73,5 +75,9 @@
     --wt-vertical-bumper-size: 48px;
 
     --dialog-background-color: var(--studio-bg);
-    --dialog-color: var(var(--text-primary));
+    --dialog-color: var(--text-primary);
+
+    --header-title-row-height: 64px;
+
+    --outgoing-curve: cubic-bezier(0.4, 0, 1, 1);
 }
