@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import "./UploadSetting.scss";
 import Icons from "../../constants/icon";
 
@@ -12,6 +12,7 @@ import UploadReview from "./UploadReview"
 import { UploadStepData } from "../../constants/data/UploadStepData";
 
 const UploadSetting = () => {
+
   return (
     <>
       <div className="upload_setting">

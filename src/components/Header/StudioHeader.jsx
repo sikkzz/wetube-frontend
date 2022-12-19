@@ -1,12 +1,22 @@
-import React from "react";
+import React, { useState, useRef } from "react";
 
 import Icons from "../../constants/icon";
 import GoogleButton from "../GoogleButton";
+import Upload from "../Upload/Upload";
 
 import "./StudioHeader.scss";
 import HeaderSearchResults from "./HeaderSearchResults";
+import UploadSetting from "../Upload/UploadSetting";
 
 const StudioHeader = () => {
+  const uploadRef = useRef(null);
+  const uploadProps = {
+    ref: uploadRef,
+    onClick: () => {
+      if (uploadRef.current) uploadRef.current.onUploadClick();
+    },
+  };
+
   return (
     <>
       <wt-st-header class="wt-entity-page">
@@ -27,7 +37,6 @@ const StudioHeader = () => {
             </a>
           </wt-home-button>
           <wt-st-search id="st-search" class="wt-st-header" expanded>
-            {/* <wt-iron-overlay-backdrop class="wt-st-search" /> */}
             <div id="search-layer" className="wt-st-search">
               <wt-iron-icon class="search-icon wt-st-search">
                 <Icons.BsSearch size={20} color="#606060" />
@@ -73,6 +82,7 @@ const StudioHeader = () => {
               role="button"
               class="wt-st-header"
               type="filled"
+              {...uploadProps}
             >
               <wt-iron-icon class="inline wt-button">
                 <Icons.RiVideoAddLine size={24} color="ff4e45" />
@@ -83,6 +93,7 @@ const StudioHeader = () => {
           </div>
         </header>
       </wt-st-header>
+      <Upload {...uploadProps} />
     </>
   );
 };
