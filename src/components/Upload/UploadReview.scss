@@ -92,7 +92,8 @@ wt-radio-button.wt-video-visibility-select {
     line-height: 24px;
 }
 
-.wt-radio-button[style-target=container] {
+
+wt-radio-button wt-radio-button .wt-radio-button[style-target=container], .wt-radio-button[style-target=container] {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -415,7 +416,7 @@ wt-img-with-fallback {
 
 .container.wt-img-with-fallback {
     flex: 1;
-    background-color: var(--bg-primary-inverse);
+    background-color: var(--wt-general-background-c);
     max-width: 100%;
 }
 

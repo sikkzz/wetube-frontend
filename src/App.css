@@ -129,9 +129,7 @@ wt-icon-button {
 
 wt-icon-button {
   width: var(--icon-standard-length);
-  width: 40px;
   height: var(--icon-standard-length);
-  height: 40px;
   padding: var(--icon-standard-padding);
 }
 

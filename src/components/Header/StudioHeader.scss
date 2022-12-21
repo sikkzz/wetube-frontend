@@ -240,14 +240,9 @@ wt-img-with-fallback.wt-thumbnail {
 
 wt-img-with-fallback[rounded] #img-with-fallback.wt-img-with-fallback,
 wt-img-with-fallback[rounded] .container.wt-img-with-fallback {
-    border-radius: var(--wt-thumbnail-border-radius);
+    border-radius: var(--wt-thumbnails-border-radius);
 }
 
-.container.wt-img-with-fallback {
-    flex: 1;
-    background-color: var(--wt-general-background-c);
-    max-width: 100%;
-}
 
 .timestamp.wt-thumbnail {
     display: flex;
@@ -399,7 +394,7 @@ wt-iron-icon.inline.wt-button {
     height: 36px;
 }
 
-wt-button {
+wt-button.wt-st-header{
     .label.wt-button {
         padding-left: 6px;
     }

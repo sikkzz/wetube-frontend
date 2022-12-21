@@ -65,8 +65,10 @@
     --wt-theme-red: #ff4e45;
     --wt-theme-blue-bg: #3ea6ff;
     --wt-brand-background-solid: #282828;
+    --wt-brand-background-solid-inverse: #fff;
 
     --wt-container-border: 1px solid var(--container-border);
+    --wt-container-border-radius: var(--wt-standard-border-radius);
 
     --wt-standard-border-radius: 4px;
     --wt-extended-border-radius: 6px;
@@ -93,6 +95,9 @@
 
     --wt-static-overlay-background-heavy: rgba(0,0,0,0.8);
 
+    --wt-form-fields-gap: 24px;
+    --wt-form-field-horizontal-padding: 12px;
+
 
     --common-duration-150: 150ms;
     --common-duration-200: 200ms;
@@ -100,4 +105,10 @@
     --common-duration-300: 300ms;
     --common-duration-450: 450ms;
     --common-duration-500: 500ms;
+
+
+    --wt-font-caption1-baseline-top: 12px;
+    --wt-font-subheading-baseline-bottom: 7px;
+
+    --wt-thumbnails-border-radius: 2px;
 }
