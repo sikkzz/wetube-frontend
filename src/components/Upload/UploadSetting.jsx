@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./UploadSetting.scss";
+import './UploadReview.scss'
 
 import Video from "../../assets/videos/test.mp4";
 import Image from "../../assets/test.jpg";

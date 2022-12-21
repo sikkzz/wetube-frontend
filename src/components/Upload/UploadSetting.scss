@@ -385,24 +385,6 @@ wt-thumbnail-compact-editor-old {
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 wt-video-metadata-editor[floating-sidepanel] wt-video-metadata-editor-sidepanel.wt-video-metadata-editor {
     align-self: flex-start;
     position: sticky;
@@ -411,7 +393,6 @@ wt-video-metadata-editor[floating-sidepanel] wt-video-metadata-editor-sidepanel.
 
 wt-video-metadata-editor-sidepanel.wt-video-metadata-editor {
     width: 352px;
-    height: 200px;
     padding-left: 24px;
 }
 
@@ -855,23 +836,4 @@ wt-iron-icon.wt-video-upload-progress:not(:first-of-type) {
 
 wt-button[type=secondary] {
     color: var(--text-secondary);
-}
-
-wt-video-info {
-    display: flex;
-    flex-direction: column;
-    --player-width: var(--wt-video-metadata-info-player-width, 352px);
-    --player-height: var(--wt-video-metadata-info-player-height, 198px);
-}
-
-
-.container.wt-video-info {
-    border-radius: var(--wt-container-border-radius);
-    background-color: var(--wt-general-background-a);
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    width: var(--player-width);
-    position: relative;
-    padding-bottom: 4px;
 }
