@@ -125,3 +125,7 @@ wt-dialog.wt-upload-dialog> {
         padding: 0;
     }
 }
+
+wt-upload-dialog[workflow-step=SELECT_FILES] #scrollable-content.wt-upload-dialog, wt-upload-dialog[workflow-step=SELECT_FILES] .button-area.wt-upload-dialog {
+    display: none;
+}

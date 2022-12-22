@@ -2,11 +2,11 @@ import React, { useEffect, useState, useRef } from "react";
 
 import Icons from "../../constants/icon";
 
-const UploadFilePicker = () => {
+const UploadFilePicker = ({ setStep }) => {
   const [imageFile, setImageFile] = useState(null);
   const fileInputRef = useRef(null);
 
-  const [uploadStep, setUploadStep] = useState("file_picker");
+  // const [uploadStep, setUploadStep] = useState("DETAILS");
 
   //   const handleClickFileInput = () => {
   //     fileInputRef.current?.click();
@@ -41,16 +41,15 @@ const UploadFilePicker = () => {
 
   useEffect(() => {
     if (imageFile) {
-      setUploadStep("setting");
+      setStep("DETAILS");
     }
   }, [imageFile]);
-  
+
   return (
     <>
       <wt-upload-file-picker
         id="wt-upload-dialog-file-picker"
         class="wt-upload-dialog"
-        style={{ display: uploadStep === "file_picker" ? "flex" : "none" }}
       >
         <div
           id="content"

@@ -124,6 +124,8 @@ wt-icon-button {
   display: inline-flex;
   cursor: pointer;
   position: relative;
+  box-sizing: content-box;
+
 }
 
 

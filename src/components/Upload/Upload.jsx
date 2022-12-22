@@ -1,20 +1,31 @@
-import React, { useState, useImperativeHandle, forwardRef } from "react";
+import React, {
+  useState,
+  useImperativeHandle,
+  forwardRef,
+  useEffect,
+} from "react";
 import "./Upload.scss";
 
 import UploadFilePicker from "./UploadFilePicker";
-
-import Icons from "../../constants/icon";
+import UploadSetting from "./UploadSetting";
+import UploadElement from "./UploadElement";
+import UploadCheck from "./UploadCheck";
+import UploadReview from "./UploadReview";
+import UploadHeaderStep from "./UploadHeaderStep";
+import UploadFooter from "./UploadFooter";
+import UploadHeaderButton from "./UploadHeaderButton";
 
 const Upload = forwardRef(({ uploadRef }, ref) => {
   const [open, setOpen] = useState(false);
+  const [step, setStep] = useState("");
 
   const onUploadClick = () => {
     setOpen(true);
   };
 
-  const onCloseClick = () => {
-    setOpen(false);
-  };
+  useEffect(() => {
+    setStep("SELECT_FILES");
+  }, []);
 
   useImperativeHandle(ref, () => ({
     onUploadClick,
@@ -30,7 +41,7 @@ const Upload = forwardRef(({ uploadRef }, ref) => {
         }}
       />
       <wt-upload-dialog
-        workflow-step="SELECT_FILES"
+        workflow-step={step}
         ref={uploadRef}
         style={{ display: open ? "flex" : "none" }}
       >
@@ -44,44 +55,46 @@ const Upload = forwardRef(({ uploadRef }, ref) => {
             zIndex: "2202",
             position: "fixed",
             top: "24px",
-            left: "344px",
+            left: "22.917%",
           }}
         >
           <div className="dialog-content wt-upload-dialog">
             <div className="header wt-upload-dialog">
               <div className="title-row wt-upload-dialog">
                 <wt-animatable class="metadata-fade-in-section wt-upload-dialog">
-                  <div id="title" className="wt-upload-dialog">
-                    동영상 업로드
-                  </div>
-                </wt-animatable>
-                <div className="close-button-area wt-upload-dialog">
-                  <wt-send-feedback-button class="wt-upload-dialog">
-                    <wt-icon-button
-                      class="wt-upload-dialog"
-                      role="button"
-                      icon="icon:feedback"
+                  {step === "SELECT_FILES" ? (
+                    <div id="title" className="wt-upload-dialog">
+                      동영상 업로드
+                    </div>
+                  ) : (
+                    <div
+                      id="title"
+                      className="metadata-fade-in-section wt-upload-dialog"
                     >
-                      <wt-iron-icon class="wt-icon-button">
-                        <Icons.AiOutlineInfoCircle size={24} color="#aaa" />
-                      </wt-iron-icon>
-                    </wt-icon-button>
-                  </wt-send-feedback-button>
-                  <wt-icon-button
-                    id="close-button"
-                    icon="close"
-                    class="wt-upload-dialog"
-                    role="button"
-                    onClick={onCloseClick}
-                  >
-                    <wt-iron-icon class="wt-icon-button">
-                      <Icons.AiOutlineClose size={24} color="#aaa" />
-                    </wt-iron-icon>
-                  </wt-icon-button>
-                </div>
+                      video
+                    </div>
+                  )}
+                </wt-animatable>
+
+                <UploadHeaderButton setOpen={setOpen} />
               </div>
+
+              <wt-animatable class="metadata-fade-in-section stepper-animatable wt-upload-dialog">
+                {step === "SELECT_FILES" ? "" : <UploadHeaderStep />}
+              </wt-animatable>
             </div>
-            <UploadFilePicker />
+
+            {
+              {
+                SELECT_FILES: <UploadFilePicker setStep={setStep} />,
+                DETAILS: <UploadSetting />,
+                VIDEO_ELEMENTS: <UploadElement />,
+                CHECKS: <UploadCheck />,
+                REVIEW: <UploadReview />,
+              }[step]
+            }
+
+            <UploadFooter step={step} setStep={setStep} />
           </div>
         </wt-dialog>
       </wt-upload-dialog>
