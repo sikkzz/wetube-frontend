@@ -1,63 +1,99 @@
-import React from "react";
-import { useNavigate } from "react-router-dom";
-import Icons from "../../constants/icon";
+import React, { useState, useRef } from "react";
 
+import Icons from "../../constants/icon";
 import GoogleButton from "../GoogleButton";
+import Upload from "../Upload/Upload";
 
 import "./StudioHeader.scss";
+import HeaderSearchResults from "./HeaderSearchResults";
+import UploadSetting from "../Upload/UploadSetting";
 
 const StudioHeader = () => {
-  const navigate = useNavigate();
-
-  const onLogoClick = () => {
-    navigate("/");
-  };
-
-  const onStudioClick = () => {
-    navigate("/studio");
-  };
-
-  const onChannelClick = () => {
-    navigate("/channel");
+  const uploadRef = useRef(null);
+  const uploadProps = {
+    ref: uploadRef,
+    onClick: () => {
+      if (uploadRef.current) uploadRef.current.onUploadClick();
+    },
   };
 
   return (
     <>
-      <div className="studio_header">
-        <div className="studio_header_container">
-          <div className="studio_header_left">
-            <div className="studio_header_nav_button">
-              <Icons.FaBars size={20} color="#fff" />
-            </div>
-            <div className="studio_header_logo" onClick={onLogoClick}>
+      <wt-st-header class="wt-entity-page">
+        <header className="wt-st-header">
+          <wt-icon-button
+            id="nav-icon"
+            class="wt-st-header"
+            icon="menu"
+            role="button"
+          >
+            <wt-iron-icon class="wt-icon-button">
+              <Icons.FaBars size={24} color="#aaa" />
+            </wt-iron-icon>
+          </wt-icon-button>
+          <wt-home-button class="wt-st-header">
+            <a id="home-button" className="wt-home-button" href="/studio">
               WeTube
-            </div>
-          </div>
-
-          <div className="studio_header_center">
-            <div className="studio_search_box">
-              <div className="studio_search_container">
-                <form>
-                  <input type="text" placeholder="검색" />
+            </a>
+          </wt-home-button>
+          <wt-st-search id="st-search" class="wt-st-header" expanded>
+            <div id="search-layer" className="wt-st-search">
+              <wt-iron-icon class="search-icon wt-st-search">
+                <Icons.BsSearch size={20} color="#606060" />
+              </wt-iron-icon>
+              <wt-search-form class="wt-st-search">
+                <form name="searchForm" className="wt-st-search">
+                  <input
+                    id="query-input"
+                    className="wt-st-search"
+                    placeholder="채널에서 검색하기"
+                  />
                 </form>
-              </div>
-              <div className="studio_search_icon">
-                <Icons.BsSearch size={18} />
-              </div>
+              </wt-search-form>
+              <wt-icon-button
+                id="clear-icon"
+                icon="clear"
+                class="wt-st-search"
+                role="button"
+                hidden
+              >
+                <wt-iron-icon class="wt-icon-button">
+                  <Icons.AiOutlineClose size={20} color="#606060" />
+                </wt-iron-icon>
+              </wt-icon-button>
+              {/* <HeaderSearchResults /> */}
             </div>
-          </div>
-
-          <div className="studio_header_right">
-            <Icons.RiVideoAddLine size={30} color="#fff" onClick={onStudioClick} />
-            <Icons.MdOutlineContactPage
-              size={30}
-              color="#fff"
-              onClick={onChannelClick}
-            />
+          </wt-st-search>
+          <div className="right-section wt-st-header">
+            <wt-help id="help-widget" class="wt-st-header">
+              <wt-icon-button
+                id="help-icon"
+                icon="help-outline"
+                class="wt-st-header"
+                role="button"
+              >
+                <wt-iron-icon class="wt-icon-button">
+                  <Icons.AiOutlineQuestionCircle size={24} color="#aaa" />
+                </wt-iron-icon>
+              </wt-icon-button>
+            </wt-help>
+            <wt-button
+              id="create-icon"
+              role="button"
+              class="wt-st-header"
+              type="filled"
+              {...uploadProps}
+            >
+              <wt-iron-icon class="inline wt-button">
+                <Icons.RiVideoAddLine size={24} color="ff4e45" />
+              </wt-iron-icon>
+              <div className="label wt-button">만들기</div>
+            </wt-button>
             <GoogleButton />
           </div>
-        </div>
-      </div>
+        </header>
+      </wt-st-header>
+      <Upload {...uploadProps} />
     </>
   );
 };

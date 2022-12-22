@@ -3,8 +3,6 @@ wt-upload-video-element {
     display: flex;
     flex-direction: column;
     padding: 8px 48px 24px;
-    width: 960px;
-    height: 643px;
 }
 
 h1.wt-upload-video-element {
@@ -77,7 +75,8 @@ h3.wt-upload-video-element {
     text-overflow: ellipsis;
     display: block;
     flex: 1 1;
-    padding: 0 8px;
+    padding: 8px 0;
+    cursor: pointer;
 }
 
 #import-from-video-button.wt-upload-video-element {

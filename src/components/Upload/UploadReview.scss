@@ -5,8 +5,6 @@ wt-upload-review {
     flex-grow: 1;
     align-content: start;
     padding: 8px 48px 0 40px;
-    width: 960px;
-    height: 699px;
 }
 
 .top-row.wt-upload-review {
@@ -92,7 +90,8 @@ wt-radio-button.wt-video-visibility-select {
     line-height: 24px;
 }
 
-.wt-radio-button[style-target=container] {
+
+wt-radio-button wt-radio-button .wt-radio-button[style-target=container], .wt-radio-button[style-target=container] {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -415,7 +414,7 @@ wt-img-with-fallback {
 
 .container.wt-img-with-fallback {
     flex: 1;
-    background-color: var(--bg-primary-inverse);
+    background-color: var(--wt-general-background-c);
     max-width: 100%;
 }
 
@@ -500,8 +499,3 @@ wt-img-with-fallback {
     }
 }
 
-wt-icon-button {
-    width: var(--icon-standard-length);
-    height: var(--icon-standard-length);
-    padding: var(--icon-standard-padding);
-}
