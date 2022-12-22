@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 
 import Icons from "../../constants/icon";
 import GoogleButton from "../GoogleButton";
@@ -6,15 +6,15 @@ import Upload from "../Upload/Upload";
 
 import "./StudioHeader.scss";
 import HeaderSearchResults from "./HeaderSearchResults";
-import UploadSetting from "../Upload/UploadSetting";
+
+import ModalPortal from "../../Portal";
 
 const StudioHeader = () => {
-  const uploadRef = useRef(null);
-  const uploadProps = {
-    ref: uploadRef,
-    onClick: () => {
-      if (uploadRef.current) uploadRef.current.onUploadClick();
-    },
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const onUploadClick = () => {
+    setModalOpen(!modalOpen);
+    console.log(modalOpen);
   };
 
   return (
@@ -82,7 +82,7 @@ const StudioHeader = () => {
               role="button"
               class="wt-st-header"
               type="filled"
-              {...uploadProps}
+              onClick={onUploadClick}
             >
               <wt-iron-icon class="inline wt-button">
                 <Icons.RiVideoAddLine size={24} color="ff4e45" />
@@ -93,7 +93,9 @@ const StudioHeader = () => {
           </div>
         </header>
       </wt-st-header>
-      <Upload {...uploadProps} />
+      <ModalPortal>
+        <Upload modalOpen={modalOpen} />
+      </ModalPortal>
     </>
   );
 };
