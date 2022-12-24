@@ -18,7 +18,6 @@ const Content = () => {
 
   const handleOnMouseOut = (e) => {
     e.currentTarget.pause();
-    console.log("a & b")
   };
 
   return (
