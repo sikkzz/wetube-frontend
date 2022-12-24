@@ -14,7 +14,6 @@ const StudioHeader = () => {
 
   const onUploadClick = () => {
     setModalOpen(!modalOpen);
-    console.log(modalOpen);
   };
 
   return (
@@ -94,7 +93,7 @@ const StudioHeader = () => {
         </header>
       </wt-st-header>
       <ModalPortal>
-        <Upload modalOpen={modalOpen} />
+        <Upload modalOpen={modalOpen} setModalOpen={setModalOpen} />
       </ModalPortal>
     </>
   );

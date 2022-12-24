@@ -10,8 +10,8 @@ import UploadHeaderStep from "./UploadHeaderStep";
 import UploadFooter from "./UploadFooter";
 import UploadHeaderButton from "./UploadHeaderButton";
 
-const Upload = ({ modalOpen }) => {
-  const [open, setOpen] = useState(false);
+const Upload = ({ modalOpen, setModalOpen }) => {
+  const [open, setOpen] = useState(modalOpen);
   const [step, setStep] = useState("");
 
   useEffect(() => {
@@ -62,7 +62,10 @@ const Upload = ({ modalOpen }) => {
                   )}
                 </wt-animatable>
 
-                <UploadHeaderButton setOpen={setOpen} />
+                <UploadHeaderButton
+                  modalOpen={modalOpen}
+                  setModalOpen={setModalOpen}
+                />
               </div>
 
               <wt-animatable class="metadata-fade-in-section stepper-animatable wt-upload-dialog">
