@@ -1,9 +1,4 @@
-import React, {
-  useState,
-  useImperativeHandle,
-  forwardRef,
-  useEffect,
-} from "react";
+import React, { useState, useEffect } from "react";
 import "./Upload.scss";
 
 import UploadFilePicker from "./UploadFilePicker";
@@ -15,35 +10,26 @@ import UploadHeaderStep from "./UploadHeaderStep";
 import UploadFooter from "./UploadFooter";
 import UploadHeaderButton from "./UploadHeaderButton";
 
-const Upload = forwardRef(({ uploadRef }, ref) => {
-  const [open, setOpen] = useState(false);
+const Upload = ({ modalOpen, setModalOpen }) => {
+  const [open, setOpen] = useState(modalOpen);
   const [step, setStep] = useState("");
-
-  const onUploadClick = () => {
-    setOpen(true);
-  };
 
   useEffect(() => {
     setStep("SELECT_FILES");
   }, []);
-
-  useImperativeHandle(ref, () => ({
-    onUploadClick,
-  }));
 
   return (
     <>
       <wt-iron-overlay-backdrop
         class="wt-st-search"
         style={{
-          display: open ? "block" : "none",
-          opacity: open ? "0.6" : "0",
+          display: modalOpen ? "block" : "none",
+          opacity: modalOpen ? "0.6" : "0",
         }}
       />
       <wt-upload-dialog
         workflow-step={step}
-        ref={uploadRef}
-        style={{ display: open ? "flex" : "none" }}
+        style={{ display: modalOpen ? "flex" : "none" }}
       >
         <wt-dialog
           id="dialog"
@@ -76,7 +62,10 @@ const Upload = forwardRef(({ uploadRef }, ref) => {
                   )}
                 </wt-animatable>
 
-                <UploadHeaderButton setOpen={setOpen} />
+                <UploadHeaderButton
+                  modalOpen={modalOpen}
+                  setModalOpen={setModalOpen}
+                />
               </div>
 
               <wt-animatable class="metadata-fade-in-section stepper-animatable wt-upload-dialog">
@@ -100,6 +89,6 @@ const Upload = forwardRef(({ uploadRef }, ref) => {
       </wt-upload-dialog>
     </>
   );
-});
+};
 
 export default Upload;

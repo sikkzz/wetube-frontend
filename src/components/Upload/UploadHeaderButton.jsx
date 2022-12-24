@@ -2,9 +2,9 @@ import React from "react";
 
 import Icons from "../../constants/icon";
 
-const UploadHeaderButton = ({ setOpen }) => {
+const UploadHeaderButton = ({ modalOpen, setModalOpen }) => {
   const onCloseClick = () => {
-    setOpen(false);
+    setModalOpen(false);
   };
   return (
     <>
