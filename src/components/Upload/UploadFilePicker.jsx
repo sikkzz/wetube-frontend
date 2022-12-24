@@ -86,13 +86,6 @@ const UploadFilePicker = ({ setStep }) => {
                 multiple="multiple"
                 name="Filedata"
                 style={{
-                  // position: "absolute",
-                  // overflow: "hidden",
-                  // width: "0px",
-                  // height: "0px",
-                  // opacity: "0",
-                  // left: "0px",
-                  // top: "0px",
                   display: "none",
                 }}
               />
