@@ -8,7 +8,10 @@ const UploadFilePicker = ({ setStep }) => {
   const fileInputRef = useRef(null);
 
   const onUploadImage = useCallback(
+    
+
     async (e) => {
+      setStep("DETAILS")
       const api_url = `http://localhost:8080`;
       const file = e.target.files[0];
       const fileName = file.name;
