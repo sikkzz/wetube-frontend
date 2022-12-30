@@ -11,7 +11,6 @@ import UploadFooter from "./UploadFooter";
 import UploadHeaderButton from "./UploadHeaderButton";
 
 const Upload = ({ modalOpen, setModalOpen }) => {
-  // const [open, setOpen] = useState(modalOpen);
   const [step, setStep] = useState("");
 
   useEffect(() => {
