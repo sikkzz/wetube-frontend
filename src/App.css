@@ -194,6 +194,121 @@ wt-dialog {
   line-height: 20px;
 }
 
-/* [hidden]{
+[hidden]{
   display: none !important;
-} */
+}
+
+:root {
+  --main-bg: #0f0f0f;
+  --sidebar-bt-bg: rgba(255, 255, 255, 0.1);
+  --category-bt-bg: rgba(255, 255, 255, 0.1);
+  --studio-bg: #282828;
+  --bg-primary: #f1f1f1;
+  --bg-primary-inverse: #0d0d0d;
+  --bg-black: #0f0f0f;
+  --bg-gray: #aaa;
+  --bg-sub-blue: #3ea6ff;
+  --detail-tag-blue: #3ea6ff;
+  --search-icon-color: #eee;
+  --searchbar-border-color: hsl(0, 0%, 18.82%);
+  --searchbar-button-color: hsla(0, 0%, 100%, 0.08);
+  --text-primary: #f1f1f1;
+  --text-primary-inverse: #0d0d0d;
+  --text-black: #0f0f0f;
+  --text-secondary: #aaa;
+  --text-sub-blue: #3ea6ff;
+  --text-tag-blue: #3ea6ff;
+  --black-alpha-20: rgba(0, 0, 0, 0.2);
+  --white-alpha-10: rgba(255, 255, 255, 0.1);
+  --white-alpha-20: rgba(255, 255, 255, 0.2);
+  --white-alpha-30: rgba(255, 255, 255, 0.3);
+  --tab-active-border: #eee;
+  --logo-color: #f1f1f1;
+  --header-input-color: #f1f1f1;
+  --white: #fff;
+  --black: #000;
+
+  --comment-sort-bg: rgba(33, 33, 33, 0.98);
+  --comment-bt-text-disabled: #717171;
+
+  --text-disabled: #717171;
+
+  --static-brand-red: #f00;
+  --static-brand-white: #fff;
+
+  ---static-overlay-background-heavy: rgba(0, 0, 0, 0.8);
+
+  --player-control-time-text: #ddd;
+
+  --setting-button-hover: rgb(50, 65, 82);
+  --icon-disabled: #606060;
+  --icon-error-red: #ff4e45;
+
+  --container-border: #606060;
+
+  --general-bg: #1f1f1f;
+
+  --wt-overlay-background-inverse: rgba(40, 40, 40, 0.6);
+  --wt-general-background-a: #1f1f1f;
+  --wt-general-background-b: #161616;
+  --wt-general-background-c: #0d0d0d;
+
+  --icon-standard-length: 24px;
+  --icon-standard-padding: 8px;
+  --icon-compact-length: 20px;
+  --icon-color: #aaa;
+
+  --wt-text-disabled: #717171;
+  --wt-line-divider: rgba(255, 255, 255, 0.1);
+
+  --wt-theme-green: #2ba640;
+  --wt-theme-red: #ff4e45;
+  --wt-theme-blue-bg: #3ea6ff;
+  --wt-brand-background-solid: #282828;
+  --wt-brand-background-solid-inverse: #fff;
+
+  --wt-container-border: 1px solid var(--container-border);
+  --wt-container-border-radius: var(--wt-standard-border-radius);
+
+  --wt-standard-border-radius: 4px;
+  --wt-extended-border-radius: 6px;
+  --radio-button-size: 20px;
+  --wt-icon-inactive: #717171;
+
+  --wt-video-metadata-info-player-width: 304px;
+  --wt-video-metadata-info-player-height: 171px;
+
+  --wt-vertical-bumper-size: 48px;
+
+  --dialog-background-color: var(--studio-bg);
+  --dialog-color: var(--text-primary);
+
+  --header-title-row-height: 64px;
+  --row-height: 84px;
+
+  --outgoing-curve: cubic-bezier(0.4, 0, 1, 1);
+  --incoming-curve: cubic-bezier(0, 0, 0.2, 1);
+
+  --wt-overlay-drop-shadow-app-header: rgba(0, 0, 0, 0.2);
+
+  --wt-thumbnails-border-radius: 2px;
+
+  --wt-static-overlay-background-heavy: rgba(0,0,0,0.8);
+
+  --wt-form-fields-gap: 24px;
+  --wt-form-field-horizontal-padding: 12px;
+
+
+  --common-duration-150: 150ms;
+  --common-duration-200: 200ms;
+  --common-duration-250: 250ms;
+  --common-duration-300: 300ms;
+  --common-duration-450: 450ms;
+  --common-duration-500: 500ms;
+
+
+  --wt-font-caption1-baseline-top: 12px;
+  --wt-font-subheading-baseline-bottom: 7px;
+
+  --wt-thumbnails-border-radius: 2px;
+}
