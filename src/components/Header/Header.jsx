@@ -45,12 +45,12 @@ const Header = () => {
 
           <div id="right" className="wt-head">
             <Icons.RiVideoAddLine
-              size={30}
+              size={24}
               color="#fff"
               onClick={onStudioClick}
             />
             <Icons.MdOutlineContactPage
-              size={30}
+              size={24}
               color="#fff"
               onClick={onChannelClick}
             />
