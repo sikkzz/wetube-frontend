@@ -2,6 +2,7 @@ import React from "react";
 import "./StudioContent.scss";
 import testimages from "../../assets/test2.jpg";
 import { useRef } from "react";
+import { useState } from "react";
 
 const StudioContent = () => {
   const analysisdata = [
@@ -44,7 +45,7 @@ const StudioContent = () => {
   const RecentReveiw = [
     {
       profileImg: testimages,
-      nickname: "은서짱",
+      nickname: "은서",
       month: "2",
       reivew:
         "너무나 예쁜 브이로그에요 행복한 브이로그 앞으로도 많이 만들어줘요",
@@ -52,14 +53,14 @@ const StudioContent = () => {
     },
     {
       profileImg: testimages,
-      nickname: "차누짱",
+      nickname: "차누",
       month: "5",
       reivew: "필요한 정보너무감사합니다",
       Ssunail: testimages,
     },
     {
       profileImg: testimages,
-      nickname: "재민짱",
+      nickname: "재민",
       month: "7",
       reivew: "오늘부터 구독할게요",
       Ssunail: testimages,
@@ -74,25 +75,13 @@ const StudioContent = () => {
   ];
 
   const recentSubscribe = [
-    { profileImg: testimages, nickname: "은서짱", subtotal: "50" },
-    { profileImg: testimages, nickname: "차누짱", subtotal: "50" },
-    { profileImg: testimages, nickname: "재민짱", subtotal: "70" },
-    { profileImg: testimages, nickname: "준식짱", subtotal: "100" },
+    { profileImg: testimages, nickname: "은서", subtotal: "50" },
+    { profileImg: testimages, nickname: "차누", subtotal: "50" },
+    { profileImg: testimages, nickname: "재민", subtotal: "70" },
+    { profileImg: testimages, nickname: "준식", subtotal: "100" },
   ];
 
-  const changeMenu = (e) => {
-    const childsome = e.currentTarget.querySelector(".someout");
-    const childsometurn = e.currentTarget.querySelector(".somehover");
-    childsome.style.display = "none";
-    childsometurn.style.display = "flex";
-  };
-
-  const retrunMenu = (e) => {
-    const childsome = e.currentTarget.querySelector(".someout");
-    const childsometurn = e.currentTarget.querySelector(".somehover");
-    childsome.style.display = "flex";
-    childsometurn.style.display = "none";
-  };
+  const [active, setactive] = useState();
 
   return (
     <>
@@ -160,10 +149,13 @@ const StudioContent = () => {
 
                       <div
                         className={`introduce_container ${i}`}
-                        onMouseOver={(e) => changeMenu(e)}
-                        onMouseOut={(e) => retrunMenu(e)}
+                        onMouseOver={() => setactive(i)}
+                        onMouseOut={() => setactive("")}
                       >
-                        <div className="someout">
+                        <div
+                          className="someout"
+                          style={{ display: active === i ? "none" : "flex" }}
+                        >
                           <div className="title">{x.title}</div>
                           <div className="some">
                             <div className="part view">🔼 {x.view}</div>
@@ -172,7 +164,10 @@ const StudioContent = () => {
                           </div>
                         </div>
 
-                        <div className="somehover">
+                        <div
+                          className="somehover"
+                          style={{ display: active === i ? "flex" : "none" }}
+                        >
                           <div className="part view">🔼 {x.view}</div>
                           <div className="part review">📄 {x.reivew}</div>
                           <div className="part good">👍 {x.good}</div>
@@ -325,7 +320,24 @@ const StudioContent = () => {
               </div>
             </div>
           </div>
-          <div className="analysis_column"></div>
+          <div className="analysis_column">
+            <div className="newsBox">
+              <div className="newsHeader">뉴스</div>
+              <div>
+                <div>
+                  <img className="newsTumnail" src={testimages} alt="" />
+                </div>
+                <div className="newstitle">이제 핸들을 사용할 수 있습니다.</div>
+                <div className="newsdescription">
+                  YouTube에서 핸들이 표시되기 시작합니다. 핸들을 시청자와
+                  공유하여 내 채널의 고유한 식별 정보를 널리 알리세요.
+                </div>
+              </div>
+              <div>
+                <a href="/">자세히 알아보기</a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </>

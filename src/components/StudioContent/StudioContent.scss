@@ -490,6 +490,42 @@
                 padding: 8px 0;
             }
         }
+
+        .newsBox{
+            padding: 23px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 0.2rem;
+            background-color: #282828;
+            font-size: 13px;
+            
+            
+            .newsHeader{
+                font-size: 18px;
+                padding-bottom: 14px;
+            }
+            .newsTumnail{
+                width: 100%;
+
+            }
+            .newstitle{
+                font-size: 15px;
+                color: #FFFFFF;
+                padding-top: 11px;
+            }
+            .newsdescription{
+                color: #AAAAAA;
+                padding-top: 5px;
+                padding-bottom: 14px;
+            }
+
+            a{
+                font-size: 14px;
+                color: #3EA6FF;
+                padding-top: 8px;
+                display: inline-block;
+                
+            }
+        }
     }
 
 }
