@@ -36,7 +36,11 @@
     --static-brand-red: #f00;
     --static-brand-white: #fff;
 
-    ---static-overlay-background-heavy: rgba(0, 0, 0, 0.8);
+    --wt-static-overlay-text-primary: #fff;
+    --wt-static-overlay-text-secondary: rgba(255, 255, 255, 0.7);
+    --wt-static-overlay-text-disabled: rgba(255, 255, 255, 0.3);
+
+
 
     --player-control-time-text: #ddd;
 
@@ -94,6 +98,7 @@
     --wt-thumbnails-border-radius: 2px;
 
     --wt-static-overlay-background-heavy: rgba(0,0,0,0.8);
+    --wt-static-overlay-background-medium: rgba(0, 0, 0, 0.6);
 
     --wt-form-fields-gap: 24px;
     --wt-form-field-horizontal-padding: 12px;

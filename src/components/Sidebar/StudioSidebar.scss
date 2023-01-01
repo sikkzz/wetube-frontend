@@ -86,3 +86,270 @@
         }
     }
 }
+
+
+
+wt-side-st.wt-page {
+    flex: none;
+    background-color: var(--wt-brand-background-solid);
+}
+
+wt-side-st {
+    display: flex;
+    flex-direction: column;
+    --thumbnail-top-section-gap: 12px;
+    --thumbnail-height: 112px;
+    --thumbnail-top-padding: 24px;
+    --thumbnail-wrapper-expanded-height: 208px;
+    --navigation-drawer-expanded-width: 256px;
+    --navigation-drawer-collapsed-width: var(--collapsed-nav-width, 72px);
+    --theme-transition: background-color 250ms linear;
+    --paper-item-icon-width: 24px;
+    --paper-item-icon-margin-left: 8px;
+    --paper-item-icon-margin-right: 24px;
+    --collapsed-nav-width: 72px;
+    background-color: var(--wt-brand-background-solid);
+    color: var(--text-primary);
+    width: var(--navigation-drawer-expanded-width);
+}
+
+wt-page {
+    --collapsed-nav-width: 72px;
+    --top-banner-expand-transition: 417ms var(--incoming-curve);
+    color: var(--text-primary);
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+}
+
+nav.wt-side-st {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    border-right: 1px solid var(--wt-line-divider);
+    overflow: hidden;
+}
+
+.thumbnail-wrapper.wt-side-st {
+    display: flex;
+    flex: 0 0 auto;
+    position: relative;
+    height: var(--thumbnail-wrapper-expanded-height);
+    overflow: hidden;
+}
+
+.thumbnail-overlay.wt-side-st {
+    top: var(--thumbnail-top-padding);
+}
+
+.image-thumbnail.wt-side-st {
+    --icon-height: 24px;
+    --icon-width: 24px;
+    border-radius: 50%;
+    background-color: transparent;
+    overflow: hidden;
+}
+
+.image-thumbnail.wt-side-st,
+.icon-thumbnail.wt-side-st,
+.square-image-thumbnail.wt-side-st {
+    position: absolute;
+    top: var(--thumbnail-top-padding);
+    left: calc((var(--navigation-drawer-expanded-width) - 112px)/2);
+    height: 112px;
+    width: 112px;
+}
+
+wt-overlay-with-link {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    --icon-height: 36px;
+    --icon-width: 36px;
+}
+
+.overlay-container.wt-overlay-with-link {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 10;
+}
+
+.overlay-with-link.wt-overlay-with-link,
+.grey-overlay.wt-overlay-with-link,
+.overlay-link.wt-overlay-with-link {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.grey-overlay.wt-overlay-with-link {
+    background-color: var(--wt-static-overlay-background-medium);
+}
+
+.overlay-link.wt-overlay-with-link {
+    display: flex;
+    text-overflow: ellipsis;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+}
+
+#overlay-icon.wt-overlay-with-link {
+    color: var(--static-brand-white);
+    width: var(--icon-width);
+    height: var(--icon-height);
+}
+
+wt-icon-button[overlay] {
+    --color-regular: var(--wt-static-overlay-text-secondary);
+    --color-focus: var(--wt-static-overlay-text-primary);
+    --color-disabled: var(--wt-static-overlay-text-disabled);
+}
+
+wt-side-st #entity-label-container.wt-side-st {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#entity-label-container.wt-side-st {
+    box-sizing: border-box;
+    padding: 0 24px;
+    position: absolute;
+    top: calc(var(--thumbnail-height) + var(--thumbnail-top-padding));
+    width: calc(var(--navigation-drawer-expanded-width) - 1px);
+}
+
+.entity-type.wt-side-st {
+    white-space: initial;
+    overflow: initial;
+    text-overflow: initial;
+    font-family: "YouTube Sans", "Roboto", "Arial", sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 24px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: var(--text-primary);
+    max-width: calc(var(--navigation-drawer-expanded-width) - 49px);
+    padding-top: 14px;
+}
+
+.entity-name.wt-side-st,
+.asset-id.ytcp-navigation-drawer {
+    font-family: "Roboto", "Noto", sans-serif;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    letter-spacing: 0.011em;
+    font-size: 12px;
+    line-height: 16px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: var(--text-secondary);
+    max-width: calc(var(--navigation-drawer-expanded-width) - 49px);
+    padding-top: calc(21px - var(--wt-font-caption1-baseline-top) - 7px);
+}
+
+.top-section.wt-side-st {
+    overflow-x: hidden;
+    overflow-y: auto;
+    flex: 1 1 auto;
+}
+
+#main-menu.wt-side-st,
+#back-button.wt-side-st,
+#bottom-section.wt-side-st {
+    width: calc(var(--navigation-drawer-expanded-width) - 1px);
+}
+
+.menu-item-link.wt-side-st {
+    display: block;
+    outline: none;
+    text-decoration: none;
+}
+
+wt-icon-item.iron-selected.wt-side-st,
+wt-icon-item.iron-selected.wt-side-st wt-iron-icon.wt-side-st {
+    color: var(--wt-theme-red);
+}
+
+wt-icon-item.iron-selected.wt-side-st {
+    background: var(--wt-general-background-a);
+}
+
+wt-icon-item.wt-side-st {
+    color: var(--text-secondary);
+    padding: 0 20px 0 16px;
+    cursor: pointer;
+}
+
+wt-item.wt-side-st,
+wt-icon-item.wt-side-st {
+    white-space: initial;
+    overflow: initial;
+    text-overflow: initial;
+    font-family: "YouTube Sans", "Roboto", "Arial", sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 24px;
+    min-height: 48px;
+}
+
+wt-icon-item,
+.wt-item.wt-icon-item {
+    display: block;
+    position: relative;
+    min-height: var(--paper-item-min-height, 48px);
+    padding: 0px 16px;
+}
+
+wt-icon-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    min-height: 48px;
+}
+
+.content-icon.wt-icon-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: var(--paper-item-icon-width, 56px);
+    margin-left: var(--paper-item-icon-margin-left);
+    margin-right: var(--paper-item-icon-margin-right);
+}
+
+wt-icon-item.wt-side-st wt-iron-icon.wt-side-st {
+    color: var(--wt-icon-inactive);
+}
+
+.nav-item-text.wt-side-st{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+wt-icon-item.iron-selected.wt-side-st::after{
+    opacity: 1;
+}
+
+wt-icon-item.wt-side-st::after{
+    position: absolute;
+    content: "";
+    left: 0;
+    height: 100%;
+    width: 4px;
+    background-color: var(--wt-theme-red);
+    opacity: 0;
+}

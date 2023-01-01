@@ -1,7 +1,6 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 a {
@@ -124,8 +123,6 @@ wt-icon-button {
   display: inline-flex;
   cursor: pointer;
   position: relative;
-  box-sizing: content-box;
-
 }
 
 
