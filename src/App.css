@@ -211,7 +211,7 @@ wt-dialog {
   --searchbar-border-color: hsl(0, 0%, 18.82%);
   --searchbar-button-color: hsla(0, 0%, 100%, 0.08);
   --text-primary: #f1f1f1;
-  --text-primary-inverse: #0d0d0d;
+  --text-primary-inverse: #0f0f0f;
   --text-black: #0f0f0f;
   --text-secondary: #aaa;
   --text-sub-blue: #3ea6ff;
@@ -313,4 +313,13 @@ wt-dialog {
   --wt-font-subheading-baseline-bottom: 7px;
 
   --wt-thumbnails-border-radius: 2px;
+
+
+  --wt-margin-3x: 12px;
+
+
+  --wt-user-comment-font-size: 1.4rem;
+  --wt-user-comment-font-weight: 400;
+  --wt-user-comment-line-height: 2rem;
 }
+
