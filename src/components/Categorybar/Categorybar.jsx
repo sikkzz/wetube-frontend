@@ -13,14 +13,20 @@ const Categorybar = () => {
               <iron-selector id="chips" role="tablist" class="wt-chip-bar">
                 {CategorybarData.map((item, index) => (
                   <wt-chip
-                    class={`wt-chip-bar${item.title === chip ? " selected" : ""}`}
+                    class={`wt-chip-bar${
+                      item.title === chip ? " selected" : ""
+                    }`}
                     role="tab"
                     key={index}
                     onClick={() => {
                       setChip(item.title);
                     }}
                   >
-                    <wt-formatted-string id="text" class="wt-chip">
+                    <wt-formatted-string
+                      id="text"
+                      class="wt-chip"
+                      ellipsis-style
+                    >
                       {item.title}
                     </wt-formatted-string>
                   </wt-chip>

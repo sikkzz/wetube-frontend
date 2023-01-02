@@ -4,9 +4,8 @@
 #header.wt-grid-render {
     width: 100%;
     display: flex;
+    z-index: 100;
 }
-
-
 
 #chips-wrapper.wt-chip-bar {
     background-color: var(--main-bg);

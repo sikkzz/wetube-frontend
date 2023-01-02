@@ -385,14 +385,14 @@ wt-chip {
   color: var(--text-primary);
 }
 
-wt-formatted-string {
+wt-formatted-string[ellipsis-style] {
   display: block;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
 }
 
-wt-grid-media{
+wt-grid-media {
   --wt-button-compact-background-color: var(var(--white-alpha-10));
   --wt-button-compact-text-color: var(var(--text-secondary));
   width: 100%;
@@ -402,8 +402,45 @@ wt-grid-media{
   position: relative;
 }
 
-wtd-thumbnail{
+wtd-thumbnail {
   display: block;
   position: relative;
   flex: none;
+}
+
+wtd-thumbnail-overlay-time-status-render {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 4px;
+  color: var(--static-brand-white);
+  background-color: var(--wt-static-overlay-background-heavy);
+  padding: 3px 4px;
+  height: 12px;
+  border-radius: 2px;
+  font-size: var(--yt-badge-font-size, 0.8rem);
+  font-weight: var(--yt-badge-font-weight, 500);
+  line-height: var(--yt-badge-line-height-size, 1.2rem);
+  letter-spacing: var(--yt-badge-letter-spacing, 0.5px);
+  flex-direction: row;
+  align-items: center;
+  display: inline-flex;
+}
+
+wt-img-shadow {
+  display: inline-block;
+  opacity: 0;
+  transition: opacity 0.2s;
+  flex: none;
+}
+
+wtd-video-meta-block {
+  display: flex;
+  flex-direction: column;
+}
+
+wtd-channel-name {
+  z-index: 300;
+  display: flex;
+  align-self: flex-start;
 }
