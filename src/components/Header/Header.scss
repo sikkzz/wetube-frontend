@@ -21,10 +21,10 @@ wt-head {
         align-items: baseline;
     }
 
-    #right {
-        width: 260px;
-        justify-content: space-between;
-    }
+    // #right {
+    //     width: 260px;
+    //     justify-content: space-between;
+    // }
 
     #nav-button {
         cursor: pointer;
@@ -78,6 +78,58 @@ wt-icon-button#search-icon {
     flex-direction: row;
     align-items: center;
 }
+
+
+#right.wt-head{
+    min-width: 225px;
+    align-items: center;
+    justify-content: flex-end;
+    display: flex;
+    flex-direction: row;
+}
+
+#buttons.wt-head{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#buttons.wt-head{
+    .wt-head{
+        display: flex;
+    }
+
+    .wt-head:not(:last-child){
+        margin-right: 8px;
+    }
+}
+
+button.wt-head-menu-button {
+    background: none;
+    border: none;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1px 6px;
+}
+
+wt-img-shadow.wt-head-menu-button {
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    margin: 0 8px;
+    border-radius: 50%;
+    background-color: transparent;
+    overflow: hidden;
+    opacity: 1;
+    transition: none;
+}
+
+
+
+
+
 
 input::-webkit-input-placeholder {
     font-size: 16px;

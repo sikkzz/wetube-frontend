@@ -2,7 +2,10 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import Icons from "../../constants/icon";
 import GoogleButton from "../GoogleButton";
+import GoogleLogin from "./GoogleLogin";
 import "./Header.scss";
+
+import Img from '../../assets/test.jpg'
 
 const Header = () => {
   const navigate = useNavigate();
@@ -44,17 +47,41 @@ const Header = () => {
           </div>
 
           <div id="right" className="wt-head">
-            <Icons.RiVideoAddLine
-              size={24}
-              color="#fff"
-              onClick={onStudioClick}
-            />
-            <Icons.MdOutlineContactPage
-              size={24}
-              color="#fff"
-              onClick={onChannelClick}
-            />
-            <GoogleButton />
+            <div id="buttons" className="wt-head">
+              <wt-head-menu-button class="wt-head">
+                <div id="button" className="wt-head-menu-button">
+                  <wt-icon-button id="button" class="wt-head-menu-button">
+                    <Icons.RiVideoAddLine
+                      size={24}
+                      color="#fff"
+                      onClick={onStudioClick}
+                    />
+                  </wt-icon-button>
+                </div>
+              </wt-head-menu-button>
+              <wt-head-menu-button class="wt-head">
+                <div id="button" className="wt-head-menu-button">
+                  <wt-icon-button id="button" class="wt-head-menu-button">
+                    <Icons.MdOutlineContactPage
+                      size={24}
+                      color="#fff"
+                      onClick={onChannelClick}
+                    />
+                  </wt-icon-button>
+                </div>
+              </wt-head-menu-button>
+              <wt-head-menu-button class="wt-head">
+                <button id="profile_btn" className="wt-head-menu-button">
+                  <wt-img-shadow class="wt-head-menu-button">
+                    {/* <img src={Img} className="wt-img-shadow" alt="google_img" /> */}
+                    <GoogleLogin />
+                  </wt-img-shadow>
+                </button>
+              </wt-head-menu-button>
+            {/* <GoogleLogin /> */}
+
+            </div>
+
           </div>
         </div>
       </wt-head>
