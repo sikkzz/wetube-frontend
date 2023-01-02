@@ -211,7 +211,7 @@ wt-dialog {
   --searchbar-border-color: hsl(0, 0%, 18.82%);
   --searchbar-button-color: hsla(0, 0%, 100%, 0.08);
   --text-primary: #f1f1f1;
-  --text-primary-inverse: #0d0d0d;
+  --text-primary-inverse: #0f0f0f;
   --text-black: #0f0f0f;
   --text-secondary: #aaa;
   --text-sub-blue: #3ea6ff;
@@ -313,4 +313,134 @@ wt-dialog {
   --wt-font-subheading-baseline-bottom: 7px;
 
   --wt-thumbnails-border-radius: 2px;
+
+
+  --wt-margin-3x: 12px;
+
+
+  --wt-user-comment-font-size: 1.4rem;
+  --wt-user-comment-font-weight: 400;
+  --wt-user-comment-line-height: 2rem;
+
+
+  --wt-grid-item-margin: 16px;
+  --wt-grid-item-min-width: 320px;
+  --wt-grid-item-max-width: 360px;
+}
+
+wt-grid-render {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 60px;
+  left: 250px;
+  width: 85.3972%;
+}
+
+wt-grid-row {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+wt-item-render {
+  position: relative;
+  margin-left: calc(var(--wt-grid-item-margin)/2);
+  margin-right: calc(var(--wt-grid-item-margin)/2);
+  margin-bottom: 40px;
+  width: calc(100%/var(--wt-grid-item-row) - var(--wt-grid-item-margin) - 0.01px);
+}
+
+wt-chip-bar {
+  --wt-grid-chip-bar-width: 100%;
+  --wt-grid-chip-bar-top: 56px;
+  width: 100%;
+  height: 56px;
+  display: flex;
+}
+
+wt-chip {
+  height: 32px;
+  min-width: 12px;
+  padding: 0 10px;
+  border-radius: 16px;
+  box-sizing: border-box;
+  outline: none;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  flex-direction: row;
+  align-items: center;
+  display: inline-flex;
+  font-size: 0.8rem;
+  font-weight: var(--wt-user-comment-font-weight);
+  line-height: var(--wt-user-comment-line-height);
+}
+
+wt-chip {
+  border-radius: 8px;
+  border: none;
+  background-color: var(--white-alpha-10);
+  color: var(--text-primary);
+}
+
+wt-formatted-string[ellipsis-style] {
+  display: block;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+wt-grid-media {
+  --wt-button-compact-background-color: var(var(--white-alpha-10));
+  --wt-button-compact-text-color: var(var(--text-secondary));
+  width: 100%;
+  margin: 0;
+  display: block;
+  max-width: var(--wt-grid-item-max-width);
+  position: relative;
+}
+
+wtd-thumbnail {
+  display: block;
+  position: relative;
+  flex: none;
+}
+
+wtd-thumbnail-overlay-time-status-render {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 4px;
+  color: var(--static-brand-white);
+  background-color: var(--wt-static-overlay-background-heavy);
+  padding: 3px 4px;
+  height: 12px;
+  border-radius: 2px;
+  font-size: var(--yt-badge-font-size, 0.8rem);
+  font-weight: var(--yt-badge-font-weight, 500);
+  line-height: var(--yt-badge-line-height-size, 1.2rem);
+  letter-spacing: var(--yt-badge-letter-spacing, 0.5px);
+  flex-direction: row;
+  align-items: center;
+  display: inline-flex;
+}
+
+wt-img-shadow {
+  display: inline-block;
+  opacity: 0;
+  transition: opacity 0.2s;
+  flex: none;
+}
+
+wtd-video-meta-block {
+  display: flex;
+  flex-direction: column;
+}
+
+wtd-channel-name {
+  /* z-index: 300; */
+  display: flex;
+  align-self: flex-start;
 }
