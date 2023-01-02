@@ -1,17 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Categorybar.scss";
 import { CategorybarData } from "../../constants/data/CategorybarData";
 
-const Categorybars = () => {
+const Categorybar = () => {
+  const [chip, setChip] = useState("전체");
   return (
     <>
-      <div id="header" className="wt-grid-renderer">
-        <wt-chip-bar class="wt-grid-renderer">
+      <div id="header" className="wt-grid-render">
+        <wt-chip-bar class="wt-grid-render">
           <div id="chips-wrapper" className="wt-chip-bar">
             <div id="scroll-container" className="wt-chip-bar">
               <iron-selector id="chips" role="tablist" class="wt-chip-bar">
                 {CategorybarData.map((item, index) => (
-                  <wt-chip class="wt-chip-bar" role="tab">
+                  <wt-chip
+                    class={`wt-chip-bar${item.title === chip ? " selected" : ""}`}
+                    role="tab"
+                    key={index}
+                    onClick={() => {
+                      setChip(item.title);
+                    }}
+                  >
                     <wt-formatted-string id="text" class="wt-chip">
                       {item.title}
                     </wt-formatted-string>
@@ -22,18 +30,8 @@ const Categorybars = () => {
           </div>
         </wt-chip-bar>
       </div>
-
-      {/* <wt-chips class="wt-chips">
-        <div id="container" className="wt-chips">
-          {CategorybarData.map((item, index) => (
-            <wt-chips-wrapper class="wt-chips" key={index}>
-              <div className="wt-chips-wrapper">{item.title}</div>
-            </wt-chips-wrapper>
-          ))}
-        </div>
-      </wt-chips> */}
     </>
   );
 };
 
-export default Categorybars;
+export default Categorybar;

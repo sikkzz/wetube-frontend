@@ -1,68 +1,19 @@
 @import '../../styles/common.scss';
 
 
-// wt-chips {
-//     position: fixed;
-//     width: 85.3972%;
-//     height: 56px;
-//     background-color: var(--main-bg);
-//     margin: 60px 0 0 250px;
-//     z-index: 100;
-
-//     #container {
-//         width: 70%;
-//         height: 56px;
-//     }
-
-// }
-
-// wt-chips-wrapper {
-//     white-space: nowrap;
-//     font-size: 0.8rem;
-//     margin: 8px;
-//     height: 32px;
-//     padding: 0 15px;
-//     border-radius: 8px;
-//     overflow: hidden;
-//     cursor: pointer;
-//     background: var(--category-bt-bg);
-//     color: var(--text-primary);
-
-//     .wt-chips-wrapper {
-//         max-width: 20rem;
-//         display: block;
-//         text-overflow: ellipsis;
-//         overflow: hidden;
-//         white-space: nowrap;
-//     }
-// }
-
-// .wt-chips {
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-// }
-
-
-#header.wt-grid-renderer {
+#header.wt-grid-render {
     width: 100%;
     display: flex;
 }
 
-wt-chip-bar {
-    --wt-grid-chip-bar-width: 100%;
-    --wt-grid-chip-bar-top: 56px;
-    width: 100%;
-    height: 56px;
-    display: flex;
-}
+
 
 #chips-wrapper.wt-chip-bar {
     background-color: var(--main-bg);
     border-top: none;
     border-bottom: none;
     position: fixed;
-    top: var(--wt-grid-chip-bar-top);
+    // top: var(--wt-grid-chip-bar-top);
     width: var(--wt-grid-chip-bar-width);
     display: flex;
     justify-content: flex-start;
@@ -79,49 +30,28 @@ wt-chip.wt-chip-bar:first-of-type {
     margin-left: 24px;
 }
 
-wt-chip {
-    height: 32px;
-    min-width: 12px;
-    padding: 0 10px;
-    border-radius: 16px;
-    box-sizing: border-box;
-    outline: none;
-    overflow: hidden;
-    cursor: pointer;
-    position: relative;
-    flex-direction: row;
-    align-items: center;
-    display: inline-flex;
-    font-size: 0.8rem;
-    font-weight: var(--wt-user-comment-font-weight);
-    line-height: var(--wt-user-comment-line-height);
-}
 
-wt-chip {
-    border-radius: 8px;
-    border: none;
-    background-color: var(--white-alpha-10);
-    color: var(--text-primary);
-}
 
-wt-chip[selected] {
+wt-chip.wt-chip-bar.selected {
     background-color: var(--text-primary);
     color: var(--text-primary-inverse);
+
+    &:hover {
+        background-color: var(--text-primary);
+    }
 }
 
 wt-chip.wt-chip-bar {
     margin: 12px;
     margin-left: 0;
     padding: 0 var(--wt-margin-3x);
+
+    &:hover {
+        background-color: var(--white-alpha-20);
+    }
 }
+
 
 #text.wt-chip {
     max-width: 20rem;
-}
-
-wt-formatted-string {
-    display: block;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
 }

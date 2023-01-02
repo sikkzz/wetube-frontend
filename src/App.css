@@ -321,5 +321,89 @@ wt-dialog {
   --wt-user-comment-font-size: 1.4rem;
   --wt-user-comment-font-weight: 400;
   --wt-user-comment-line-height: 2rem;
+
+
+  --wt-grid-item-margin: 16px;
+  --wt-grid-item-min-width: 320px;
+  --wt-grid-item-max-width: 360px;
 }
 
+wt-grid-render {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 60px;
+  left: 250px;
+  width: 85.3972%;
+}
+
+wt-grid-row {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+wt-item-render {
+  position: relative;
+  margin-left: calc(var(--wt-grid-item-margin)/2);
+  margin-right: calc(var(--wt-grid-item-margin)/2);
+  margin-bottom: 40px;
+  width: calc(100%/var(--wt-grid-item-row) - var(--wt-grid-item-margin) - 0.01px);
+}
+
+wt-chip-bar {
+  --wt-grid-chip-bar-width: 100%;
+  --wt-grid-chip-bar-top: 56px;
+  width: 100%;
+  height: 56px;
+  display: flex;
+}
+
+wt-chip {
+  height: 32px;
+  min-width: 12px;
+  padding: 0 10px;
+  border-radius: 16px;
+  box-sizing: border-box;
+  outline: none;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  flex-direction: row;
+  align-items: center;
+  display: inline-flex;
+  font-size: 0.8rem;
+  font-weight: var(--wt-user-comment-font-weight);
+  line-height: var(--wt-user-comment-line-height);
+}
+
+wt-chip {
+  border-radius: 8px;
+  border: none;
+  background-color: var(--white-alpha-10);
+  color: var(--text-primary);
+}
+
+wt-formatted-string {
+  display: block;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+wt-grid-media{
+  --wt-button-compact-background-color: var(var(--white-alpha-10));
+  --wt-button-compact-text-color: var(var(--text-secondary));
+  width: 100%;
+  margin: 0;
+  display: block;
+  max-width: var(--wt-grid-item-max-width);
+  position: relative;
+}
+
+wtd-thumbnail{
+  display: block;
+  position: relative;
+  flex: none;
+}
