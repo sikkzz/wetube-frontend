@@ -1,20 +1,15 @@
-import { useRef, useState, useEffect } from "react";
+import { useRef} from "react";
 import useScript from "../../hooks/useScript";
 import jwt_decode from "jwt-decode";
 import { postLoginToken } from "../../utils/postLoginToken";
 
-const GoogleLogin = ({ text = "signin_with" }) => {
-  const [isLogin, setIsLogin] = useState(false);
-  const [userImg, setUserImg] = useState();
+const GoogleLogin = ({ isLogin, setIsLogin, userImg, setUserImg }) => {
   const googleSignInButton = useRef(null);
   const onGoogleSignIn = async (res) => {
     const { credential } = res;
-    // const results = await postLoginToken(credential, setIsLogin)
-    console.log(res);
-    console.log(res.credential);
-    setIsLogin(true);
+    const results = await postLoginToken(credential, setIsLogin);
+    setIsLogin(results);
     var userObject = jwt_decode(res.credential);
-    console.log(userObject);
     setUserImg(userObject.picture);
   };
 
@@ -27,20 +22,11 @@ const GoogleLogin = ({ text = "signin_with" }) => {
     window.google.accounts.id.renderButton(googleSignInButton.current, {
       theme: "outline",
       size: "large",
-      text,
       width: "100",
     });
   });
 
-  return (
-    <>
-      {isLogin ? (
-        <img src={userImg} className="wt-img-shadow" alt="user_picture" />
-      ) : (
-        <div ref={googleSignInButton}></div>
-      )}
-    </>
-  );
+  return <div ref={googleSignInButton}></div>;
 };
 
 export default GoogleLogin;

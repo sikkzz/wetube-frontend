@@ -71,6 +71,7 @@ import { AiOutlineCheckCircle } from "react-icons/ai";
 import {RiCheckboxMultipleBlankLine} from 'react-icons/ri'
 
 import {BsBoxArrowUpRight} from 'react-icons/bs'
+import {BsPersonCircle} from 'react-icons/bs'
 
 const exportIcons = {
   BsSearch,
@@ -132,7 +133,8 @@ const exportIcons = {
   RiHdLine,
   AiOutlineCheckCircle,
   RiCheckboxMultipleBlankLine,
-  BsBoxArrowUpRight
+  BsBoxArrowUpRight,
+  BsPersonCircle
 };
 
 export default exportIcons;
