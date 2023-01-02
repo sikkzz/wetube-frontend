@@ -440,7 +440,7 @@ wtd-video-meta-block {
 }
 
 wtd-channel-name {
-  z-index: 300;
+  /* z-index: 300; */
   display: flex;
   align-self: flex-start;
 }
