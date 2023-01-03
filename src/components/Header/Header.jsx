@@ -1,7 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import Icons from "../../constants/icon";
-import GoogleButton from "../GoogleButton";
 import "./Header.scss";
 
 const Header = () => {
@@ -54,7 +53,6 @@ const Header = () => {
               color="#fff"
               onClick={onChannelClick}
             />
-            <GoogleButton />
           </div>
         </div>
       </wt-head>

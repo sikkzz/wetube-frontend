@@ -315,7 +315,23 @@ wt-dialog {
   --wt-thumbnails-border-radius: 2px;
 
 
+  --wt-margin-2x: 8px;
   --wt-margin-3x: 12px;
+  --wt-margin-4x: 16px;
+  --wt-margin-5x: 20px;
+  --wt-margin-6x: 24px;
+  --wt-margin-7x: 28px;
+  --wt-margin-8x: 32px;
+  --wt-margin-9x: 36px;
+  --wt-margin-10x: 40px;
+  --wt-margin-11x: 44px;
+  --wt-margin-12x: 48px;
+  --wt-margin-14x: 56px;
+  --wt-margin-16x: 64px;
+  --wt-margin-17x: 68px;
+  --wt-margin-24x: 96px;
+  --wt-margin-25x: 100px;
+  --wt-margin-35x: 140px;
 
 
   --wt-user-comment-font-size: 1.4rem;
@@ -443,4 +459,12 @@ wtd-channel-name {
   /* z-index: 300; */
   display: flex;
   align-self: flex-start;
+}
+
+wtd-watch-flexy {
+  --wt-watch-flexy-sidebar-width: 402px;
+  --wt-watch-flexy-sidebar-min-width: 300px;
+  --wt-watch-flexy-masthead-height: 56px;
+  min-width: 0;
+  padding-top: 60px;
 }

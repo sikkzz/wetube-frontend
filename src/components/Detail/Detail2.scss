@@ -1,0 +1,170 @@
+wtd-watch-flexy.wtd-page-manager {
+    --wt-watch-flexy-width-ratio: 16;
+    --wt-watch-flexy-height-ratio: 9;
+    --wt-watch-flexy-space-below-player: 136px;
+    --wt-watch-flexy-non-player-height: calc(var(--wt-watch-flexy-masthead-height) + var(--wt-margin-6x) + var(--wt-watch-flexy-space-below-player));
+    --wt-watch-flexy-non-player-width: calc(var(--wt-watch-flexy-sidebar-width) + (3 * var(--wt-margin-6x)));
+    --wt-watch-flexy-min-player-height: 240px;
+    --wt-watch-flexy-min-player-width: calc(var(--wt-watch-flexy-min-player-height) * (var(--wt-watch-flexy-width-ratio) / var(--wt-watch-flexy-height-ratio)));
+    --wt-watch-flexy-max-player-height: calc(100vh - (var(--wt-watch-flexy-masthead-height) + var(--wt-margin-6x) + var(--wt-watch-flexy-space-below-player)));
+    --wt-watch-flexy-max-player-width: calc((100vh - (var(--wt-watch-flexy-masthead-height) + var(--wt-margin-6x) + var(--wt-watch-flexy-space-below-player))) * (var(--wt-watch-flexy-width-ratio) / var(--wt-watch-flexy-height-ratio)));
+}
+
+wtd-watch-flexy.wtd-page-manager {
+    --wt-watch-flexy-scrollbar-width: 0px;
+    --wt-watch-flexy-space-below-player: 136px;
+    --wt-watch-flexy-panel-max-height: 388px;
+    --wt-watch-flexy-chat-max-height: 388px;
+    --wt-watch-flexy-structured-description-max-height: 388px;
+    --wt-watch-flexy-comments-panel-max-height: 388px;
+    --wt-watch-flexy-min-player-height: 360px;
+}
+
+#columns.wtd-watch-flexy {
+    min-width: calc(var(--wt-watch-flexy-min-player-height) * var(--wt-watch-flexy-width-ratio)/var(--wt-watch-flexy-height-ratio) + 3 * var(--wt-margin-6x) + var(--wt-watch-flexy-sidebar-min-width));
+    justify-content: center;
+    max-width: calc(1280px + var(--wt-watch-flexy-sidebar-width) + 3 * var(--wt-margin-6x));
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+}
+
+#primary.wtd-watch-flexy {
+    max-width: var(--wt-watch-flexy-max-player-width);
+    min-width: var(--wt-watch-flexy-min-player-width);
+    padding-top: var(--wt-margin-6x);
+    margin-left: var(--ytd-margin-6x);
+    flex: 1;
+    flex-basis: 1e-9px;
+    padding-right: var(--ytd-margin-6x);
+}
+
+#player.wtd-watch-flexy {
+    position: relative;
+}
+
+#player-container-outer.wtd-watch-flexy {
+    max-width: var(--wt-watch-flexy-max-player-width);
+    min-width: var(--wt-watch-flexy-min-player-width);
+    margin: 0 auto;
+}
+
+#player-container-inner.wtd-watch-flexy {
+    position: relative;
+    // padding-top: calc(var(--wt-watch-flexy-height-ratio)/var(--wt-watch-flexy-width-ratio) * 100%);
+}
+
+wtd-player,
+#container.wtd-player {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.video-player {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+    outline: none;
+    font-family: "YouTube Noto", Roboto, Arial, Helvetica, sans-serif;
+    color: #eee;
+    text-align: left;
+    font-size: 11px;
+    line-height: 1.3;
+}
+
+.video-container {
+    z-index: 10;
+    position: relative;
+}
+
+.video-stream {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.video-control {
+    bottom: 0;
+    height: 48px;
+    width: 100%;
+    padding-top: 3px;
+    text-align: left;
+    position: absolute;
+}
+
+.wt-progress-bar-container {
+    cursor: pointer;
+    display: block;
+    position: absolute;
+    width: 100%;
+    bottom: 47px;
+    height: 5px;
+}
+
+.wt-progress-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 31;
+    outline: none;
+}
+
+.wt-chapters-container,
+.wt-chapter-hover-container {
+    width: 100%;
+    z-index: 32;
+    position: relative;
+    left: 0;
+    height: 100%;
+}
+
+.wt-chapter-hover-container {
+    float: left;
+    width: 100%;
+}
+
+.wt-progress-list {
+    z-index: 39;
+    background: rgba(255, 255, 255, 0.2);
+    height: 100%;
+    transform: scaleY(0.6);
+    transition: transform .1s cubic-bezier(0.4, 0, 1, 1), -webkit-transform .1s cubic-bezier(0.4, 0, 1, 1);
+    position: relative;
+}
+
+.wt-play-progress {
+    z-index: 34;
+}
+
+.wt-progress-linear-live-buffer,
+.wt-ad-progress,
+.wt-load-progress,
+.wt-play-progress,
+.wt-hover-progress {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    transform-origin: 0 0;
+}
+
+.wt-swatch-background-color{
+    background-color: #f00;
+}
+
+.wt-progress-linear-live-buffer{
+    z-index: 45;
+    background: #c00;
+    opacity: 0;
+}
+
+.wt-load-progress{
+    z-index: 33;
+    background: rgba(255,255,255,0.4);
+}
