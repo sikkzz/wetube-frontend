@@ -468,3 +468,27 @@ wtd-watch-flexy {
   min-width: 0;
   padding-top: 60px;
 }
+
+wtd-watch-metadata{
+  display: block;
+  color: var(--text-primary);
+}
+
+wtd-video-owner-render{
+  min-width: 0;
+  display: flex;
+  flex-direction: row;
+}
+
+wtd-subscribe-button-render{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  --wt-formatted-string-deemphasize-color: var(--static-brand-white);
+}
+
+wt-button-shape{
+  display: flex;
+  flex: 1;
+  flex-basis: 1e-9px;
+}
