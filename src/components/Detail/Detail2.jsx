@@ -3,6 +3,7 @@ import Video from "../../assets/videos/test.mp4";
 import Img from "../../assets/test.jpg";
 
 import Icons from "../../constants/icon";
+import Comment from "./Comment";
 
 import "./Detail2.scss";
 
@@ -318,16 +319,84 @@ const Detail2 = () => {
                                 </wt-button-shape>
                               </wtd-button-render>
                             </div>
-                            <wt-button-shpae id="button-shape" class="wtd-menu-render">
-                              
-                            </wt-button-shpae>
+                            <wt-button-shape
+                              id="button-shape"
+                              class="wtd-menu-render"
+                            >
+                              <button className="wt-button-shape-next more-button">
+                                <div className="wt-button-shape-next-icon">
+                                  <wt-icon
+                                    style={{
+                                      width: "24px",
+                                      height: "24px",
+                                    }}
+                                  >
+                                    <Icons.AiOutlineEllipsis
+                                      size={22}
+                                      color="#fff"
+                                    />
+                                  </wt-icon>
+                                </div>
+                              </button>
+                            </wt-button-shape>
                           </wtd-menu-render>
                         </div>
                       </div>
                     </div>
                   </div>
+                  <div id="bottom-row" className="wtd-watch-metadata">
+                    <div id="description" className="item wtd-watch-metadata">
+                      <div
+                        id="description-inner"
+                        className="wtd-watch-metadata"
+                      >
+                        <div id="info-container" className="wtd-watch-metadata">
+                          <wt-formatted-string
+                            id="info"
+                            class="wtd-watch-metadata"
+                          >
+                            <span className="wt-formatted-string">
+                              조회수 48만회
+                            </span>
+                            <span className="wt-formatted-string"> </span>
+                            <span className="wt-formatted-string">
+                              10개월 전
+                            </span>
+                          </wt-formatted-string>
+                        </div>
+                        <wtd-text-inline-expander
+                          id="description-inline-expander"
+                          class="wtd-watch-metadata"
+                        >
+                          <div
+                            id="snippet"
+                            className="wtd-text-inline-expander"
+                          >
+                            <span
+                              id="snippet-text"
+                              className="wtd-text-inline-expander"
+                            >
+                              <wt-attributed-string
+                                id="attributed-snippet-text"
+                                class="wtd-text-inline-expander"
+                              >
+                                <span className="wt-attributed-string">
+                                  수익 창출 ❌<br />
+                                  유튜브 정책상 영상 중간 광고가 노출되며 모든
+                                  수익은 가수에게 갑니다
+                                  <br />
+                                  영상 아래 👍좋아요는 큰 도움이 됩니다
+                                </span>
+                              </wt-attributed-string>
+                            </span>
+                          </div>
+                        </wtd-text-inline-expander>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </wtd-watch-metadata>
+              <Comment />
             </div>
           </div>
         </div>
