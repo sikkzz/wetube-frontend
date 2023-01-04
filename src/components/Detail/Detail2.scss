@@ -394,3 +394,85 @@ wt-button-shape.wtd-subscribe-button-render {
     overflow: hidden;
     white-space: nowrap;
 }
+
+#actions.wtd-watch-metadata {
+    flex: 1 1 auto;
+    min-width: calc(50% - 6px);
+    align-items: center;
+    margin-right: 0;
+    display: flex;
+    flex-direction: row;
+}
+
+#actions-inner.wtd-watch-metadata {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#menu.wtd-watch-metadata {
+    --wt-button-icon-size: 36px;
+}
+
+wtd-menu-render.wtd-watch-metadata {
+    justify-content: flex-end;
+}
+
+#top-level-button.wtd-menu-render {
+    display: flex;
+    flex-direction: row;
+}
+
+.wt-button-shape-next.like-button {
+    color: var(--text-primary);
+    background-color: var(--white-alpha-10);
+    border-radius: 18px 0 0 18px;
+
+    &:hover {
+        background-color: var(--white-alpha-20);
+    }
+}
+
+.wt-button-shape-next-icon {
+    margin-right: 6px;
+    margin-left: -6px;
+    width: 24px;
+    height: 24px;
+}
+
+.wt-button-shape-next.like-button::after {
+    content: "";
+    background: var(--white-alpha-10);
+    position: absolute;
+    right: 0;
+    top: 6px;
+    height: 24px;
+    width: 1px;
+}
+
+.wt-button-shape-next.dislike-button {
+    padding: 0 16px;
+    width: 52px;
+    color: var(--text-primary);
+    background-color: var(--white-alpha-10);
+    border-radius: 0 18px 18px 0;
+
+    &:hover {
+        background-color: var(--white-alpha-20);
+    }
+}
+
+wtd-button-render.wtd-menu-render {
+    margin-left: 8px;
+    display: inline-block;
+}
+
+.wt-button-shape-next.share-button {
+    color: var(--text-primary);
+    background-color: var(--white-alpha-10);
+
+    &:hover {
+        background-color: var(--white-alpha-20);
+    }
+}
+

@@ -337,6 +337,10 @@ wt-dialog {
   --wt-user-comment-font-size: 1.4rem;
   --wt-user-comment-font-weight: 400;
   --wt-user-comment-line-height: 2rem;
+  --wt-tab-system-font-size: 1.4rem;
+  --wt-tab-system-font-weight: 500;
+  --wt-tab-system-letter-spacing: 0.007px;
+  --wt-tab-system-text-transform: uppercase;
 
 
   --wt-grid-item-margin: 16px;
@@ -469,26 +473,75 @@ wtd-watch-flexy {
   padding-top: 60px;
 }
 
-wtd-watch-metadata{
+wtd-watch-metadata {
   display: block;
   color: var(--text-primary);
 }
 
-wtd-video-owner-render{
+wtd-video-owner-render {
   min-width: 0;
   display: flex;
   flex-direction: row;
 }
 
-wtd-subscribe-button-render{
+wtd-subscribe-button-render {
   display: flex;
   flex-direction: row;
   align-items: center;
   --wt-formatted-string-deemphasize-color: var(--static-brand-white);
 }
 
-wt-button-shape{
+wt-button-shape {
   display: flex;
   flex: 1;
   flex-basis: 1e-9px;
+}
+
+wtd-menu-render {
+  display: flex;
+  flex-direction: row;
+}
+
+wtd-like-dislike-button-render {
+  display: flex;
+}
+
+wtd-toggle-button-render {
+  display: inline-block;
+  --paper-button-ink-color: var(--wt-icon-inactive);
+  --wt-button-padding: 10px 16px;
+  --wt-button-margin: 0;
+  --wt-button-padding-minus-border: 9px 15px;
+  vertical-align: middle;
+  font-size: var(--wt-tab-system-font-size);
+  font-weight: var(--wt-tab-system-font-weight);
+  letter-spacing: var(--wt-tab-system-letter-spacing);
+  text-transform: var(--wt-tab-system-text-transform);
+}
+
+wt-icon {
+  /* display: inline-flex; */
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  vertical-align: middle;
+}
+
+wt-animated-icon{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+wtd-button-render{
+  --paper-button-ink-color: var(--icon-disabled);
+  --wt-formatted-string-deemphasize-color: var(--static-brand-white);
+  vertical-align: middle;
+  white-space: nowrap;
+  font-size: var(--wt-tab-system-font-size);
+  font-weight: var(--wt-tab-system-font-weight);
+  letter-spacing: var(--wt-tab-system-letter-spacing);
+  text-transform: var(--wt-tab-system-text-transform);
 }

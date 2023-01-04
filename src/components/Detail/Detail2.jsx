@@ -230,8 +230,100 @@ const Detail2 = () => {
                         </wtd-subscribe-button-render>
                       </div>
                     </div>
-                    <div id="actions" className="wtd-watch-metadata">
-                      
+                    <div id="actions" className="item wtd-watch-metadata">
+                      <div id="actions-inner" className="wtd-watch-metadata">
+                        <div id="menu" className="wtd-watch-metadata">
+                          <wtd-menu-render class="wtd-watch-metadata">
+                            <div
+                              id="top-level-button"
+                              className="wtd-menu-render"
+                            >
+                              <wtd-like-dislike-button-render class="wtd-menu-render">
+                                <div
+                                  id="like-button"
+                                  className="wtd-like-dislike-button-render"
+                                >
+                                  <wtd-toggle-button-render class="wtd-like-dislike-button-render">
+                                    <wt-button-shape>
+                                      <button className="wt-button-shape-next like-button">
+                                        <div className="wt-button-shape-next-icon">
+                                          <wt-icon
+                                            style={{
+                                              width: "24px",
+                                              height: "24px",
+                                            }}
+                                          >
+                                            <wt-animated-icon class="wt-icon">
+                                              <Icons.RiThumbUpLine
+                                                size={22}
+                                                color="#fff"
+                                              />
+                                            </wt-animated-icon>
+                                          </wt-icon>
+                                        </div>
+                                        <div className="cbox wt-button-shape">
+                                          <span>4.6천</span>
+                                        </div>
+                                      </button>
+                                    </wt-button-shape>
+                                  </wtd-toggle-button-render>
+                                </div>
+                                <div
+                                  id="dislike-button"
+                                  className="wtd-like-dislike-button-render"
+                                >
+                                  <wtd-toggle-button-render class="wtd-like-dislike-button-render">
+                                    <wt-button-shape>
+                                      <button className="wt-button-shape-next dislike-button">
+                                        <div className="wt-button-shape-next-icon">
+                                          <wt-icon
+                                            style={{
+                                              width: "24px",
+                                              height: "24px",
+                                            }}
+                                          >
+                                            <wt-animated-icon class="wt-icon">
+                                              <Icons.RiThumbDownLine
+                                                size={22}
+                                                color="#fff"
+                                              />
+                                            </wt-animated-icon>
+                                          </wt-icon>
+                                        </div>
+                                      </button>
+                                    </wt-button-shape>
+                                  </wtd-toggle-button-render>
+                                </div>
+                              </wtd-like-dislike-button-render>
+                              <wtd-button-render class="wtd-menu-render">
+                                <wt-button-shape>
+                                  <button className="wt-button-shape-next share-button">
+                                    <div className="wt-button-shape-next-icon">
+                                      <wt-icon
+                                        style={{
+                                          width: "24px",
+                                          height: "24px",
+                                        }}
+                                      >
+                                        <Icons.SlActionRedo
+                                          size={22}
+                                          color="#fff"
+                                        />
+                                      </wt-icon>
+                                    </div>
+                                    <div className="cbox wt-button-shape">
+                                      <span>공유</span>
+                                    </div>
+                                  </button>
+                                </wt-button-shape>
+                              </wtd-button-render>
+                            </div>
+                            <wt-button-shpae id="button-shape" class="wtd-menu-render">
+                              
+                            </wt-button-shpae>
+                          </wtd-menu-render>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
