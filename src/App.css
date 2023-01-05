@@ -589,7 +589,7 @@ wt-menu-button {
   outline: none;
 }
 
-wt-paper-button{
+wt-paper-button {
   align-items: center;
   justify-content: center;
   position: relative;
@@ -599,14 +599,14 @@ wt-paper-button{
   cursor: pointer;
 }
 
-wt-listbox{
+wt-listbox {
   display: block;
   padding: 8px 0;
   background: var(--wt-listbox-background-color);
   color: var(--wt-listbox-color);
 }
 
-wt-paper-item{
+wt-paper-item {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -620,9 +620,37 @@ wt-paper-item{
   padding: 0 16px;
 }
 
-wt-paper-item-body{
+wt-paper-item-body {
   overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+wtd-comment-simplebox-render {
+  margin-right: 16px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+wtd-comment-thread-render {
+  display: block;
+  margin-bottom: 16px;
+}
+
+wtd-comment-render {
+  --wt-comment-thumb-dimension: 32px;
+  --wt-pinned-comment-badge-margin-left: -2px;
+  display: block;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  position: relative;
+  --wt-endpoint-word-wrap: break-word;
+  --wt-endpoint-word-break: break-word;
+}
+
+wtd-expander{
+  display: block;
 }
