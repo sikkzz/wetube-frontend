@@ -3,24 +3,15 @@ import React, { useState } from "react";
 import "./Comment.scss";
 
 import Icons from "../../constants/icon";
-import Img from "../../assets/test.jpg";
 
 import CommentContent from "./CommentContent";
+import CommentInput from "./CommentInput";
 
 const Comment = () => {
   const [sortActive, setSortActive] = useState(false);
-  const [inputActive, setInputActive] = useState(false);
 
   const onSortClick = () => {
     setSortActive(!sortActive);
-  };
-
-  const onInputClick = () => {
-    setInputActive(true);
-  };
-
-  const onCancelClick = () => {
-    setInputActive(false);
   };
 
   return (
@@ -89,66 +80,7 @@ const Comment = () => {
             </div>
             <div id="simple-box" className="wtd-comments-header">
               <wtd-comment-simplebox-render class="wtd-comments-header">
-                <wt-img-shadow
-                  id="author-thumbnail"
-                  class="wtd-comment-simplebox-render"
-                >
-                  <img
-                    id="img"
-                    className="wt-img-shadow"
-                    alt="author_profile"
-                    src={Img}
-                  />
-                </wt-img-shadow>
-                <div
-                  id="placeholder-area"
-                  className="wtd-comment-simplebox-render"
-                >
-                  <div id="input-box" className="wtd-comment-simplebox-render">
-                    <form>
-                      <input
-                        type="text"
-                        placeholder="댓글 추가..."
-                        onClick={onInputClick}
-                      />
-                    </form>
-                  </div>
-                  <div
-                    id="footer"
-                    className="wtd-comment-simplebox-render"
-                    style={{ display: inputActive ? "flex" : "none" }}
-                  >
-                    <div id="buttons" className="wtd-comment-simplebox-render">
-                      <wtd-button-render
-                        id="cancel-button"
-                        class="wtd-comment-simplebox-render"
-                      >
-                        <wt-button-shape>
-                          <button
-                            className="wt-button-shape-next cancel-button"
-                            onClick={onCancelClick}
-                          >
-                            <div className="cbox wt-button-shape">
-                              <span>취소</span>
-                            </div>
-                          </button>
-                        </wt-button-shape>
-                      </wtd-button-render>
-                      <wtd-button-render
-                        id="submit-button"
-                        class="wtd-comment-simplebox-render"
-                      >
-                        <wt-button-shape>
-                          <button className="wt-button-shape-next submit-button">
-                            <div className="cbox wt-button-shape">
-                              <span>댓글</span>
-                            </div>
-                          </button>
-                        </wt-button-shape>
-                      </wtd-button-render>
-                    </div>
-                  </div>
-                </div>
+                <CommentInput reply={false} />
               </wtd-comment-simplebox-render>
             </div>
           </wtd-comments-header>

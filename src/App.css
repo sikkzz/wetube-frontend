@@ -303,6 +303,9 @@ wt-dialog {
   --wt-form-fields-gap: 24px;
   --wt-form-field-horizontal-padding: 12px;
 
+  --wt-icon-width: 40px;
+  --wt-icon-height: 40px;
+
 
   --common-duration-150: 150ms;
   --common-duration-200: 200ms;
@@ -651,6 +654,37 @@ wtd-comment-render {
   --wt-endpoint-word-break: break-word;
 }
 
-wtd-expander{
+wtd-expander {
   display: block;
+}
+
+wtd-comment-action-button-render {
+  display: block;
+  color: var(--text-secondary);
+  min-height: 16px;
+}
+
+wtd-comment-reply-dialog-render {
+  --paper-input-container-input-align: baseline;
+  --wt-basic-foreground-title-color: var(--text-secondary);
+}
+
+wtd-commentbox {
+  display: flex;
+  flex-direction: column;
+}
+
+wtd-icon-button {
+  display: inline-block;
+  position: relative;
+  width: 24px;
+  height: 24px;
+  box-sizing: border-box;
+  font-size: 0;
+}
+
+wtd-comment-replies-render {
+  --wt-next-continuation-button-margin-left: -8px;
+  display: block;
+  margin-left: 56px;
 }
