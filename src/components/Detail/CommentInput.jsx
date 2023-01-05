@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import Img from "../../assets/test.jpg";
 
-const CommentInput = ({ reply, setReplyOpen }) => {
+const CommentInput = ({ reply, setReplyOpen, setReplySecondOpen }) => {
   const [inputActive, setInputActive] = useState(false);
 
   const onInputClick = () => {
@@ -12,8 +12,9 @@ const CommentInput = ({ reply, setReplyOpen }) => {
   const onCancelClick = () => {
     setInputActive(false);
     setReplyOpen(false);
+    setReplySecondOpen(false);
   };
-  
+
   return (
     <>
       <wt-img-shadow

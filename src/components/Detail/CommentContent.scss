@@ -266,4 +266,24 @@ button.wtd-icon-button{
 .wt-button-shape-next.reply-more-button{
     margin-left: -10px;
     color: var(--text-sub-blue);
+    background: transparent;
+
+    &:hover{
+        background: rgb(42, 56, 78);
+    }
+}
+
+.reply-more-button #reply-more.wt-button-shape-next-icon{
+    margin-right: 6px;
+    margin-left: -6px;
+}
+
+#contents.wtd-comment-replies-render{
+    display: flex;
+    flex-direction: column;
+}
+
+wt-img-shadow.wtd-comment-render.reply{
+    width: 24px;
+    height: 24px;
 }
