@@ -688,3 +688,34 @@ wtd-comment-replies-render {
   display: block;
   margin-left: 56px;
 }
+
+wtd-guide-render {
+  --wt-endpoint-color: var(--text-primary);
+  display: block;
+}
+
+wtd-guide-section-render{
+  --paper-item-min-height: 40px;
+  display: block;
+}
+
+wtd-guide-entry-render{
+  border-radius: 10px;
+  width: calc(100% - 12px);
+  display: block;
+  position: relative;
+}
+
+wt-app-drawer{
+  --app-drawer-width: 240px;
+  z-index: 1;
+  position: fixed;
+  top: -120px;
+  right: 0;
+  bottom: -120px;
+  left: 0;
+}
+
+wtd-guide-section-entry-render{
+  display: block;
+}
