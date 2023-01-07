@@ -91,11 +91,6 @@ wt-button {
   line-height: 20px;
 }
 
-/* 
-wt-button.label.wt-button{
-  cursor: pointer;
-} */
-
 button.remove-default-style {
   background: none;
   border: none;

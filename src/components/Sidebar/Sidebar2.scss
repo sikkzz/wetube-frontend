@@ -1,13 +1,17 @@
 #guide.wtd-app {
-    z-index: 2005;
     position: fixed;
     width: var(--app-drawer-width, 256px);
+    height: 100%;
+    overflow-y: auto;
+}
+
+#guide.wtd-app::-webkit-scrollbar{
+    display: none;
 }
 
 #guide-wrapper.wtd-app {
     display: flex;
     flex-direction: column;
-    height: 100%;
     width: 240px;
 }
 
@@ -16,10 +20,7 @@
 }
 
 #guide-inner-content.wtd-app {
-    overflow: hidden;
     flex: 1;
-    flex-basis: 1e-9px;
-    overflow-y: auto;
 }
 
 wtd-guide-render.wtd-app {
@@ -103,3 +104,4 @@ wtd-guide-section-entry-render.wtd-guide-section-render:not(:first-child){
     font-weight: 400;
     color: var(--text-primary); 
 }
+
