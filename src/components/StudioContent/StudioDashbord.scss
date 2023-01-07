@@ -112,7 +112,6 @@
                 font-size: 13px;
                 height: 32px;
 
-
                 .rank_detail {
                     display: flex;
                     flex-direction: row;
@@ -183,30 +182,26 @@
                             flex-direction: column;
 
                             .some {
+                                display: flex;
+                                flex-direction: row;
                                 color: #AAAAAA;
+
+                                .part {
+                                    margin-right: 8px;
+                                }
                             }
                         }
 
-                        .some {
-                            display: flex;
+                        .somehover {
+                            display: none;
                             flex-direction: row;
-                            color: #AAAAAA;
+                            justify-content: center;
+                            align-items: center;
+                            font-size: 15px;
 
                             .part {
                                 margin-right: 8px;
                             }
-                        }
-                    }
-
-                    .somehover {
-                        display: none;
-                        flex-direction: row;
-                        justify-content: center;
-                        align-items: center;
-                        font-size: 15px;
-
-                        .part {
-                            margin-right: 8px;
                         }
                     }
                 }
@@ -238,8 +233,6 @@
                 justify-content: center;
                 align-items: center;
 
-
-
                 .emoticon {
                     width: 50px;
                     height: 50px;
@@ -258,9 +251,6 @@
                         color: #AAAAAA;
                     }
                 }
-
-
-
             }
 
             .ShowAnalysis {
@@ -414,13 +404,10 @@
                     }
                 }
 
-
                 .Ssumnail {
                     width: 64px;
                     height: 36px;
                 }
-
-
             }
 
             .reviewHr {
@@ -526,9 +513,7 @@
                 color: #3EA6FF;
                 padding-top: 8px;
                 display: inline-block;
-
             }
         }
     }
-
 }

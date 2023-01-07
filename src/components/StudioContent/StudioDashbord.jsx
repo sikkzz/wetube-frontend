@@ -1,86 +1,10 @@
 import React from "react";
 import "./StudioDashbord.scss";
 import testimages from "../../assets/test2.jpg";
-import { useRef } from "react";
+import { StudioDashboardData } from "../../constants/data/StudioDashboardData";
 import { useState } from "react";
 
 const StudioDashbord = () => {
-  const analysisdata = [
-    { title: "조회수 순위", analysis: "3/10", emoticon: "🔥" },
-    { title: "조회수", analysis: "557", emoticon: "✔️" },
-    { title: "노출 클릭률", analysis: "5.1%", emoticon: "✔️" },
-    { title: "평균 시청 지속 시간", analysis: "1:20", emoticon: "🔽" },
-  ];
-
-  const releasedData = [
-    {
-      title: "찬우의 Vlog",
-      view: 254,
-      reivew: 254,
-      good: 22,
-      image: testimages,
-    },
-    { title: "은서의 Vlog", view: 154, reivew: 4, good: 20, image: testimages },
-    { title: "은진의 Vlog", view: 5, reivew: 2, good: 12, image: testimages },
-    { title: "준식의 Vlog", view: 2, reivew: 3, good: 52, image: testimages },
-  ];
-
-  const ChannelAnalysis = {
-    subscribeData: {
-      member: 5000,
-      increase: 25,
-    },
-    summary: [
-      { title: "조회수", analysis: "2.5천", emoticon: "✔️" },
-      { title: "시청시간(단위:시간)", analysis: "98.5", emoticon: "🔽" },
-      { title: "예상수익", analysis: "3.20", emoticon: "⏹️" },
-    ],
-    popularVideos: [
-      { title: "은서의 vlog", analysis: "96" },
-      { title: "찬우의 vlog", analysis: "26" },
-      { title: "준식의 vlog", analysis: "18" },
-    ],
-  };
-
-  const RecentReveiw = [
-    {
-      profileImg: testimages,
-      nickname: "은서",
-      month: "2",
-      reivew:
-        "너무나 예쁜 브이로그에요 행복한 브이로그 앞으로도 많이 만들어줘요",
-      Ssunail: testimages,
-    },
-    {
-      profileImg: testimages,
-      nickname: "차누",
-      month: "5",
-      reivew: "필요한 정보너무감사합니다",
-      Ssunail: testimages,
-    },
-    {
-      profileImg: testimages,
-      nickname: "재민",
-      month: "7",
-      reivew: "오늘부터 구독할게요",
-      Ssunail: testimages,
-    },
-    {
-      profileImg: testimages,
-      nickname: "준식",
-      month: "10",
-      reivew: "확실히 제대로 알게되네요",
-      Ssunail: testimages,
-    },
-  ];
-
-  const recentSubscribe = [
-    { profileImg: testimages, nickname: "은서", subtotal: "50" },
-    { profileImg: testimages, nickname: "차누", subtotal: "50" },
-    { profileImg: testimages, nickname: "재민", subtotal: "70" },
-    { profileImg: testimages, nickname: "준식", subtotal: "100" },
-  ];
-
   const [active, setactive] = useState();
 
   return (
@@ -112,7 +36,7 @@ const StudioDashbord = () => {
                     <div>일반적인 실적 대비 처음 165일 1시간</div>
                   </div>
 
-                  {analysisdata.map((x, i) => {
+                  {StudioDashboardData.analysisdata.map((x, i) => {
                     return (
                       <div className="detail_low" key={i}>
                         <div className="rank">{x.title}</div>
@@ -138,7 +62,7 @@ const StudioDashbord = () => {
             <div className="released_video">
               <div className="card_header">게시된 동영상</div>
               <div className="video_column">
-                {releasedData.map((x, i) => {
+                {StudioDashboardData.releasedData.map((x, i) => {
                   return (
                     <div key={i} className="column_row">
                       <img
@@ -217,7 +141,7 @@ const StudioDashbord = () => {
                 <div className="description">지난 28일</div>
 
                 <div className="summary_annalysis_box">
-                  {ChannelAnalysis.summary.map((x, i) => {
+                  {StudioDashboardData.ChannelAnalysis.summary.map((x, i) => {
                     return (
                       <div className="detail_low" key={i}>
                         <div className="rank">{x.title}</div>
@@ -241,16 +165,18 @@ const StudioDashbord = () => {
                 <div className="description">지난 48시간, 조회수</div>
 
                 <div className="video_annalysis_box">
-                  {ChannelAnalysis.popularVideos.map((x, i) => {
-                    return (
-                      <div className="detail_low" key={i}>
-                        <div className="rank">{x.title}</div>
-                        <div className="rank_detail">
-                          <span>{x.analysis}</span>
+                  {StudioDashboardData.ChannelAnalysis.popularVideos.map(
+                    (x, i) => {
+                      return (
+                        <div className="detail_low" key={i}>
+                          <div className="rank">{x.title}</div>
+                          <div className="rank_detail">
+                            <span>{x.analysis}</span>
+                          </div>
                         </div>
-                      </div>
-                    );
-                  })}
+                      );
+                    }
+                  )}
                 </div>
               </div>
               <div className="a">
@@ -263,7 +189,7 @@ const StudioDashbord = () => {
                 <div className="description">내가 응답하지 않은 채널 댓글</div>
               </div>
 
-              {RecentReveiw.map((x, i) => {
+              {StudioDashboardData.RecentReveiw.map((x, i) => {
                 return (
                   <>
                     <div className="reviewBox" key={i}>
@@ -297,7 +223,7 @@ const StudioDashbord = () => {
                 <div className="title">최근구독자</div>
                 <div className="description">지난 90일</div>
               </div>
-              {recentSubscribe.map((x, index) => {
+              {StudioDashboardData.recentSubscribe.map((x, index) => {
                 if (index < 3)
                   return (
                     <div className="subScribeMember">

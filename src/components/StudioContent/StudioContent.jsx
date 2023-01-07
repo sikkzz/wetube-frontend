@@ -2,7 +2,6 @@ import React, { useRef } from "react";
 import "./StudioContent.scss";
 import Icons from "../../constants/icon";
 import { useState } from "react";
-import { Checkbox, Radio } from "antd";
 import testimages from "../../assets/test2.jpg";
 
 const StudioContent = () => {
