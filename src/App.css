@@ -91,11 +91,6 @@ wt-button {
   line-height: 20px;
 }
 
-/* 
-wt-button.label.wt-button{
-  cursor: pointer;
-} */
-
 button.remove-default-style {
   background: none;
   border: none;
@@ -687,4 +682,39 @@ wtd-comment-replies-render {
   --wt-next-continuation-button-margin-left: -8px;
   display: block;
   margin-left: 56px;
+}
+
+wtd-guide-render {
+  --wt-endpoint-color: var(--text-primary);
+  display: block;
+}
+
+wtd-guide-section-render{
+  --paper-item-min-height: 40px;
+  display: block;
+}
+
+wtd-guide-entry-render{
+  border-radius: 10px;
+  width: calc(100% - 12px);
+  display: block;
+  position: relative;
+}
+
+wt-app-drawer{
+  --app-drawer-width: 240px;
+  z-index: 1;
+  position: fixed;
+  top: -120px;
+  right: 0;
+  bottom: -120px;
+  left: 0;
+}
+
+wtd-guide-section-entry-render{
+  display: block;
+}
+
+wtd-guide-col-entry-render{
+  display: block;
 }

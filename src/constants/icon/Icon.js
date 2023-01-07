@@ -68,9 +68,14 @@ import { MdContentCopy } from "react-icons/md";
 import { TbArrowBarUp } from "react-icons/tb";
 import { RiHdLine } from "react-icons/ri";
 import { AiOutlineCheckCircle } from "react-icons/ai";
-import {RiCheckboxMultipleBlankLine} from 'react-icons/ri'
+import { RiCheckboxMultipleBlankLine } from "react-icons/ri";
 
-import {BsBoxArrowUpRight} from 'react-icons/bs'
+import { BsBoxArrowUpRight } from "react-icons/bs";
+
+import { HiChevronDown } from "react-icons/hi";
+import { HiChevronUp } from "react-icons/hi";
+
+import { AiOutlinePlusCircle } from "react-icons/ai";
 
 const exportIcons = {
   BsSearch,
@@ -132,7 +137,10 @@ const exportIcons = {
   RiHdLine,
   AiOutlineCheckCircle,
   RiCheckboxMultipleBlankLine,
-  BsBoxArrowUpRight
+  BsBoxArrowUpRight,
+  HiChevronDown,
+  HiChevronUp,
+  AiOutlinePlusCircle,
 };
 
 export default exportIcons;
