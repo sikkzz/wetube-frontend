@@ -76,6 +76,7 @@ import { HiChevronDown } from "react-icons/hi";
 import { HiChevronUp } from "react-icons/hi";
 
 import { AiOutlinePlusCircle } from "react-icons/ai";
+import { BsPersonCircle } from "react-icons/bs";
 
 const exportIcons = {
   BsSearch,
@@ -141,6 +142,7 @@ const exportIcons = {
   HiChevronDown,
   HiChevronUp,
   AiOutlinePlusCircle,
+  BsPersonCircle,
 };
 
 export default exportIcons;

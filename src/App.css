@@ -496,6 +496,16 @@ wtd-subscribe-button-render {
   --wt-formatted-string-deemphasize-color: var(--static-brand-white);
 }
 
+wt-button-render {
+  --paper-button-ink-color: var(--wt-icon-inactive);
+  --yt-formatted-string-deemphasize-color: var(--static-brand-white);
+  vertical-align: middle;
+  white-space: nowrap;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
 wt-button-shape {
   display: flex;
   flex: 1;
@@ -524,13 +534,7 @@ wtd-toggle-button-render {
   text-transform: var(--wt-tab-system-text-transform);
 }
 
-wt-icon {
-  /* display: inline-flex; */
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  vertical-align: middle;
-}
+
 
 wt-animated-icon {
   width: 100%;
@@ -689,19 +693,19 @@ wtd-guide-render {
   display: block;
 }
 
-wtd-guide-section-render{
+wtd-guide-section-render {
   --paper-item-min-height: 40px;
   display: block;
 }
 
-wtd-guide-entry-render{
+wtd-guide-entry-render {
   border-radius: 10px;
   width: calc(100% - 12px);
   display: block;
   position: relative;
 }
 
-wt-app-drawer{
+wt-app-drawer {
   --app-drawer-width: 240px;
   z-index: 1;
   position: fixed;
@@ -711,10 +715,18 @@ wt-app-drawer{
   left: 0;
 }
 
-wtd-guide-section-entry-render{
+wtd-guide-section-entry-render {
   display: block;
 }
 
-wtd-guide-col-entry-render{
+wtd-guide-col-entry-render {
   display: block;
+}
+
+wt-icon {
+  /* display: inline-flex; */
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  vertical-align: middle;
 }
