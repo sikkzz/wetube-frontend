@@ -255,6 +255,9 @@ wt-dialog {
   --wt-general-background-b: #161616;
   --wt-general-background-c: #0d0d0d;
 
+  --wt-listbox-background-color: #282828;
+  --wt-listbox-color: #f1f1f1;
+
   --icon-standard-length: 24px;
   --icon-standard-padding: 8px;
   --icon-compact-length: 20px;
@@ -300,6 +303,9 @@ wt-dialog {
   --wt-form-fields-gap: 24px;
   --wt-form-field-horizontal-padding: 12px;
 
+  --wt-icon-width: 40px;
+  --wt-icon-height: 40px;
+
 
   --common-duration-150: 150ms;
   --common-duration-200: 200ms;
@@ -312,15 +318,39 @@ wt-dialog {
   --wt-font-caption1-baseline-top: 12px;
   --wt-font-subheading-baseline-bottom: 7px;
 
+  --wt-subheadline-font-size: 1.6rem;
+  --wt-subheadline-font-weight: 400;
+  --wt-subheadline-line-height: 2.2rem;
+
   --wt-thumbnails-border-radius: 2px;
 
 
+  --wt-margin-2x: 8px;
   --wt-margin-3x: 12px;
+  --wt-margin-4x: 16px;
+  --wt-margin-5x: 20px;
+  --wt-margin-6x: 24px;
+  --wt-margin-7x: 28px;
+  --wt-margin-8x: 32px;
+  --wt-margin-9x: 36px;
+  --wt-margin-10x: 40px;
+  --wt-margin-11x: 44px;
+  --wt-margin-12x: 48px;
+  --wt-margin-14x: 56px;
+  --wt-margin-16x: 64px;
+  --wt-margin-17x: 68px;
+  --wt-margin-24x: 96px;
+  --wt-margin-25x: 100px;
+  --wt-margin-35x: 140px;
 
 
   --wt-user-comment-font-size: 1.4rem;
   --wt-user-comment-font-weight: 400;
   --wt-user-comment-line-height: 2rem;
+  --wt-tab-system-font-size: 1.4rem;
+  --wt-tab-system-font-weight: 500;
+  --wt-tab-system-letter-spacing: 0.007px;
+  --wt-tab-system-text-transform: uppercase;
 
 
   --wt-grid-item-margin: 16px;
@@ -443,4 +473,218 @@ wtd-channel-name {
   /* z-index: 300; */
   display: flex;
   align-self: flex-start;
+}
+
+wtd-watch-flexy {
+  --wt-watch-flexy-sidebar-width: 402px;
+  --wt-watch-flexy-sidebar-min-width: 300px;
+  --wt-watch-flexy-masthead-height: 56px;
+  min-width: 0;
+  padding-top: 60px;
+}
+
+wtd-watch-metadata {
+  display: block;
+  color: var(--text-primary);
+}
+
+wtd-video-owner-render {
+  min-width: 0;
+  display: flex;
+  flex-direction: row;
+}
+
+wtd-subscribe-button-render {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  --wt-formatted-string-deemphasize-color: var(--static-brand-white);
+}
+
+wt-button-shape {
+  display: flex;
+  flex: 1;
+  flex-basis: 1e-9px;
+}
+
+wtd-menu-render {
+  display: flex;
+  flex-direction: row;
+}
+
+wtd-like-dislike-button-render {
+  display: flex;
+}
+
+wtd-toggle-button-render {
+  display: inline-block;
+  --paper-button-ink-color: var(--wt-icon-inactive);
+  --wt-button-padding: 10px 16px;
+  --wt-button-margin: 0;
+  --wt-button-padding-minus-border: 9px 15px;
+  vertical-align: middle;
+  font-size: var(--wt-tab-system-font-size);
+  font-weight: var(--wt-tab-system-font-weight);
+  letter-spacing: var(--wt-tab-system-letter-spacing);
+  text-transform: var(--wt-tab-system-text-transform);
+}
+
+wt-icon {
+  /* display: inline-flex; */
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  vertical-align: middle;
+}
+
+wt-animated-icon {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+wtd-button-render {
+  --paper-button-ink-color: var(--icon-disabled);
+  --wt-formatted-string-deemphasize-color: var(--static-brand-white);
+  vertical-align: middle;
+  white-space: nowrap;
+  font-size: var(--wt-tab-system-font-size);
+  font-weight: var(--wt-tab-system-font-weight);
+  letter-spacing: var(--wt-tab-system-letter-spacing);
+  text-transform: var(--wt-tab-system-text-transform);
+}
+
+wtd-text-inline-expander {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  contain: content;
+  color: var(--text-primary);
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.4rem;
+  font-weight: 400;
+}
+
+wtd-comments {
+  display: block;
+}
+
+wtd-comments-header {
+  --paper-input-container-input-align: baseline;
+  margin-top: 24px;
+  margin-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+}
+
+wt-dropdown-menu {
+  --paper-menu-button-content-border-radius: 8px;
+  display: inline-block;
+  max-width: 100%;
+}
+
+wt-menu-button {
+  display: inline-block;
+  position: relative;
+  outline: none;
+}
+
+wt-paper-button {
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+  background: transparent;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+wt-listbox {
+  display: block;
+  padding: 8px 0;
+  background: var(--wt-listbox-background-color);
+  color: var(--wt-listbox-color);
+}
+
+wt-paper-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-family: "Roboto", "Noto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  min-height: 48px;
+  position: relative;
+  padding: 0 16px;
+}
+
+wt-paper-item-body {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+wtd-comment-simplebox-render {
+  margin-right: 16px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+wtd-comment-thread-render {
+  display: block;
+  margin-bottom: 16px;
+}
+
+wtd-comment-render {
+  --wt-comment-thumb-dimension: 32px;
+  --wt-pinned-comment-badge-margin-left: -2px;
+  display: block;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  position: relative;
+  --wt-endpoint-word-wrap: break-word;
+  --wt-endpoint-word-break: break-word;
+}
+
+wtd-expander {
+  display: block;
+}
+
+wtd-comment-action-button-render {
+  display: block;
+  color: var(--text-secondary);
+  min-height: 16px;
+}
+
+wtd-comment-reply-dialog-render {
+  --paper-input-container-input-align: baseline;
+  --wt-basic-foreground-title-color: var(--text-secondary);
+}
+
+wtd-commentbox {
+  display: flex;
+  flex-direction: column;
+}
+
+wtd-icon-button {
+  display: inline-block;
+  position: relative;
+  width: 24px;
+  height: 24px;
+  box-sizing: border-box;
+  font-size: 0;
+}
+
+wtd-comment-replies-render {
+  --wt-next-continuation-button-margin-left: -8px;
+  display: block;
+  margin-left: 56px;
 }
