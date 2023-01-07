@@ -719,3 +719,7 @@ wt-app-drawer{
 wtd-guide-section-entry-render{
   display: block;
 }
+
+wtd-guide-col-entry-render{
+  display: block;
+}

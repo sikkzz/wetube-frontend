@@ -18,6 +18,9 @@ export const SidebarData = [
     icon: <Icons.BsFillCollectionPlayFill size={size} />,
     title: "구독",
   },
+];
+
+export const SidebarData2 = [
   {
     icon: <Icons.MdOutlineVideoLibrary size={size} />,
     title: "보관함",
@@ -37,9 +40,5 @@ export const SidebarData = [
   {
     icon: <Icons.AiOutlineLike size={size} />,
     title: "좋아요 표시한 동영상",
-  },
-  {
-    icon: <Icons.RiPlayList2Fill size={size} />,
-    title: "나중에 보기로 한 동영상 모음",
   },
 ];
