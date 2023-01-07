@@ -88,8 +88,9 @@ wtd-guide-section-entry-render.wtd-guide-section-render:not(:first-child){
     padding-top: 12px;
 }
 
-#header.wtd-guide-section-entry-render{
-    display: flex;
-    align-items: center;
-}
+// #header.wtd-guide-section-entry-render{
+//     display: flex;
+//     align-items: center;
+//     flex-direction: column;
+// }
 
