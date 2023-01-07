@@ -70,6 +70,11 @@ import { RiHdLine } from "react-icons/ri";
 import { AiOutlineCheckCircle } from "react-icons/ai";
 import {RiCheckboxMultipleBlankLine} from 'react-icons/ri'
 
+//Studio 아이콘
+import { VscListFilter } from "react-icons/vsc";
+import { BsEye } from "react-icons/bs";
+import { MdAttachMoney } from "react-icons/md";
+
 const exportIcons = {
   BsSearch,
   FaBars,
@@ -129,7 +134,10 @@ const exportIcons = {
   TbArrowBarUp,
   RiHdLine,
   AiOutlineCheckCircle,
-  RiCheckboxMultipleBlankLine
+  RiCheckboxMultipleBlankLine,
+  VscListFilter,
+  BsEye,
+  MdAttachMoney
 };
 
 export default exportIcons;
