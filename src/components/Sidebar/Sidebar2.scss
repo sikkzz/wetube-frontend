@@ -32,12 +32,16 @@ wtd-guide-render.wtd-app {
 }
 
 #sections.wtd-guide-render {
-    *.wtd-guide-render:first-child {
+    *.wtd-guide-render {
         padding: 12px;
-    }
-
-    *.wtd-guide-render:not(:last-child) {
         border-bottom: 1px solid var(--white-alpha-10);
+    }
+}
+
+wtd-guide-entry-render.wtd-guide-section-render,
+wtd-guide-entry-render.wtd-guide-col-entry-render{
+    &:hover{
+        background: var(--white-alpha-10);
     }
 }
 
@@ -89,9 +93,13 @@ wtd-guide-section-entry-render.wtd-guide-section-render:not(:first-child){
     padding-top: 12px;
 }
 
-// #header.wtd-guide-section-entry-render{
-//     display: flex;
-//     align-items: center;
-//     flex-direction: column;
-// }
-
+#guide-section-title.wtd-guide-section-render{
+    text-transform: none;
+    letter-spacing: unset;
+    padding: 6px 12px 4px;
+    font-family: "Roboto","Arial",sans-serif;
+    font-size: 1rem;
+    line-height: 1.8rem;
+    font-weight: 400;
+    color: var(--text-primary); 
+}
