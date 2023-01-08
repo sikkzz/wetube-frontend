@@ -1,36 +1,31 @@
 import React from "react";
-import { useLocation } from "react-router-dom";
-
-import { SidebarData } from "../../constants/data/SidebarData";
 
 import "./Sidebar.scss";
 
-const Sidebar = () => {
-  const location = useLocation();
+import SidebarList from "./SidebarList";
+import SidebarFooter from "./SidebarFooter";
 
+import { SidebarDataTitle } from "../../constants/data/SidebarData";
+
+const Sidebar = () => {
   return (
-    <wt-side>
-      <wt-side-list>
-        <wt-side-menu class="wt-side">
-          {SidebarData.map((item, index) => (
-            <wt-side-item
-              key={index}
-              class={`wt-side ${
-                item.link === location.pathname && "wt-side-active"
-              }`}
-            >
-              <a href={item.link}>
-                <wt-side-item-wrapper class="wt-side">
-                  {item.icon}
-                  <div>{item.title}</div>
-                </wt-side-item-wrapper>
-              </a>
-            </wt-side-item>
-          ))}
-        </wt-side-menu>
-        <hr />
-      </wt-side-list>
-    </wt-side>
+    <div id="guide" className="wtd-app">
+      <div id="guide-wrapper" className="wtd-app">
+        <div id="guide-spacer" className="wtd-app" />
+        <div id="guide-content" className="wtd-app">
+          <div id="guide-inner-content" className="wtd-app">
+            <wtd-guide-render id="guide-render" class="wtd-app">
+              <div id="sections" className="wtd-guide-render">
+                {SidebarDataTitle.map((item, index) => (
+                  <SidebarList sidebar_title={item.title} key={index} />
+                ))}
+              </div>
+              <SidebarFooter />
+            </wtd-guide-render>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
 

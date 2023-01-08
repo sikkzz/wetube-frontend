@@ -78,6 +78,17 @@ import { HiChevronUp } from "react-icons/hi";
 import { AiOutlinePlusCircle } from "react-icons/ai";
 import { BsPersonCircle } from "react-icons/bs";
 
+import { BsFillCircleFill } from "react-icons/bs";
+
+import { MdOutlineLocalFireDepartment } from "react-icons/md";
+import { RiMusicLine } from "react-icons/ri";
+import { MdMovieCreation } from "react-icons/md";
+import { FiRadio } from "react-icons/fi";
+import { FaGamepad } from "react-icons/fa";
+import { AiFillTrophy } from "react-icons/ai";
+import { FiSettings } from "react-icons/fi";
+import { BsFlag } from "react-icons/bs";
+
 const exportIcons = {
   BsSearch,
   FaBars,
@@ -143,6 +154,15 @@ const exportIcons = {
   HiChevronUp,
   AiOutlinePlusCircle,
   BsPersonCircle,
+  BsFillCircleFill,
+  MdOutlineLocalFireDepartment,
+  RiMusicLine,
+  MdMovieCreation,
+  FiRadio,
+  FaGamepad,
+  AiFillTrophy,
+  FiSettings,
+  BsFlag,
 };
 
 export default exportIcons;
