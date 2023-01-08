@@ -6,6 +6,7 @@ import Icons from "../../constants/icon";
 import Comment from "./Comment";
 
 import "./Detail2.scss";
+import DetailSecondary from "./DetailSecondary";
 
 const Detail2 = () => {
   const [isHover, setIsHover] = useState(false);
@@ -400,6 +401,7 @@ const Detail2 = () => {
             </div>
           </div>
         </div>
+        <DetailSecondary />
       </div>
     </wtd-watch-flexy>
   );

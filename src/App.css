@@ -730,3 +730,31 @@ wt-icon {
   position: relative;
   vertical-align: middle;
 }
+
+wtd-watch-secondary-result-render {
+  display: flex;
+  flex-direction: column;
+  --wt-img-shadow-placeholder-color: var(--white-alpha-10);
+  --wt-img-shadow-min-height: 100%;
+  --wt-img-shadow-min-width: 100%;
+}
+
+wtd-detail-chip-render {
+  display: block;
+}
+
+wtd-chip-render {
+  background: var(--main-bg);
+}
+
+wtd-item-section-render {
+  display: block;
+}
+
+wtd-compact-video-render {
+  --wt-button-compact-background-color: var(--white-alpha-10);
+  --wt-button-compact-text-color: var(--text-secondary);
+  --wt-shorts-compact-label-text-hidden: none;
+  display: flex;
+  flex-direction: row;
+}
