@@ -37,7 +37,6 @@ const Detail2 = () => {
                             className="video-stream"
                             src={Video}
                             type="video/mp4"
-                            // controls
                           />
                         </div>
                         <div className="video-control">
