@@ -750,3 +750,42 @@ wtd-channel-profile {
   cursor: pointer;
   margin: 0 24px 0 0;
 }
+
+wt-app-toolbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+  height: 64px;
+  padding: 0 16px;
+  font-size: 20px;
+}
+
+wt-paper-tabs {
+  display: flex;
+  align-items: center;
+  height: 48px;
+  font-size: 14px;
+  font-weight: 500;
+  overflow: hidden;
+
+}
+
+wt-paper-tab {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 0 12px;
+  overflow: hidden;
+  cursor: pointer;
+  font-family: "Roboto", "Noto", sans-serif;
+}
+
+wtd-expandable-tab-render {
+  color: var(--text-secondary);
+  width: 300px;
+  flex-direction: row;
+  align-items: center;
+  display: inline-flex;
+}
