@@ -189,13 +189,13 @@ wtd-video-meta-block.grid #channel-name.wtd-video-meta-block,
 }
 
 #container.wtd-channel-name {
-    display: var(--ytd-channel-name-container-display, inline-block);
+    display: var(--wtd-channel-name-container-display, inline-block);
     overflow: hidden;
     max-width: 100%;
 }
 
 #text-container.wtd-channel-name {
-    display: var(--ytd-channel-name-text-container-display, block);
+    display: var(--wtd-channel-name-text-container-display, block);
 }
 
 #text.wtd-channel-name {

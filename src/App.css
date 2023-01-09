@@ -730,3 +730,23 @@ wt-icon {
   position: relative;
   vertical-align: middle;
 }
+
+wtd-tab-header-render {
+  --wt-lightsource-section1-color: var(--main-bg);
+  --wt-lightsource-primary-title-color: var(--text-primary);
+  --wt-lightsource-secondary-title-color: var(--text-secondary);
+  display: block;
+}
+
+wt-app-header-layout {
+  display: block;
+  position: relative;
+  z-index: 0;
+}
+
+wtd-channel-profile {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  margin: 0 24px 0 0;
+}
