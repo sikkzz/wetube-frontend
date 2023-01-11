@@ -11,3 +11,14 @@ export function getUserInfo(dataToSubmit) {
     payload: request,
   };
 }
+
+export function postToken(dataToSubmit){
+  const request = axios
+    .get("/api/users/post_token", dataToSubmit, {
+      withCredentials: true})
+    .then((res) => res.data);
+
+    // return{
+    //   type: GET_USER
+    // }
+}
