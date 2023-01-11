@@ -12,7 +12,7 @@ import { composeWithDevTools } from "redux-devtools-extension";
 import { persistStore } from "redux-persist";
 import { PersistGate } from "redux-persist/integration/react";
 
-import rootReducer from "../src/reducers/index";
+import rootReducer from "./_reducers/index";
 
 import "./index.css";
 import App from "./App";

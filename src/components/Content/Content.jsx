@@ -1,13 +1,30 @@
 import React from "react";
+
+import { useDispatch, useSelector } from "react-redux";
+import { getPost } from "../../_actions/post_action";
+
 import Image from "../../assets/test2.jpg";
 import Image2 from "../../assets/test.jpg";
 
 import Categorybar from "../Categorybar/Categorybar";
 
 import "./Content.scss";
+import { useEffect } from "react";
 
 const Content = () => {
+  const dispatch = useDispatch();
+  const postState = useSelector((state) => state.post);
   const count = [1, 2, 3, 4];
+
+  // useEffect(() => {
+  //   dispatch(getPost()).then((res) => {
+  //     if (res.payload.success) {
+  //       console.log(res.payload);
+  //     } else {
+  //       console.log("Post 존재하지 않음");
+  //     }
+  //   });
+  // }, [dispatch]);
   return (
     <wt-grid-render style={{ "--wt-grid-item-row": "4" }}>
       <Categorybar />

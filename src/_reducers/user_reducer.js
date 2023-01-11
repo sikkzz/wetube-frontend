@@ -1,4 +1,4 @@
-import { GET_USER_INFO } from "../actions/types";
+import { GET_USER_INFO } from "../_actions/types";
 
 const initialState = null;
 
