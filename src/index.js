@@ -12,7 +12,8 @@ import { composeWithDevTools } from "redux-devtools-extension";
 import { persistStore } from "redux-persist";
 import { PersistGate } from "redux-persist/integration/react";
 
-import rootReducer from "./_reducers/index";
+// import rootReducer from "./_reducers/index";
+import rootReducer from "./modules";
 
 import "./index.css";
 import App from "./App";
@@ -25,7 +26,11 @@ import App from "./App";
 
 // const persistor = persistStore(store);
 
-const store = createStore(rootReducer);
+const store = createStore(
+  rootReducer,
+  composeWithDevTools(applyMiddleware(ReduxThunk))
+);
+console.log(store.getState());
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
