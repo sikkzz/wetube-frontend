@@ -4,33 +4,20 @@ import { BrowserRouter } from "react-router-dom";
 
 import { Provider } from "react-redux";
 import { applyMiddleware, legacy_createStore as createStore } from "redux";
-import promiseMiddleware from "redux-promise";
+import logger from "redux-logger";
 import ReduxThunk from "redux-thunk";
 
 import { composeWithDevTools } from "redux-devtools-extension";
 
-import { persistStore } from "redux-persist";
-import { PersistGate } from "redux-persist/integration/react";
-
-// import rootReducer from "./_reducers/index";
 import rootReducer from "./modules";
 
 import "./index.css";
 import App from "./App";
 
-// const createStoreWithMiddleware = applyMiddleware(
-//   promiseMiddleware,
-//   ReduxThunk
-// )(createStore);
-// const store = createStoreWithMiddleware(rootReducer, composeWithDevTools());
-
-// const persistor = persistStore(store);
-
 const store = createStore(
   rootReducer,
-  composeWithDevTools(applyMiddleware(ReduxThunk))
+  composeWithDevTools(applyMiddleware(ReduxThunk, logger))
 );
-console.log(store.getState());
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
