@@ -17,7 +17,7 @@ const Sidebar = () => {
             <wtd-guide-render id="guide-render" class="wtd-app">
               <div id="sections" className="wtd-guide-render">
                 {SidebarDataTitle.map((item, index) => (
-                  <SidebarList sidebar_title={item.title} key={index} />
+                  <SidebarList sidebarTitle={item.title} key={index} />
                 ))}
               </div>
               <SidebarFooter />
