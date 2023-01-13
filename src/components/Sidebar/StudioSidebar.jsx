@@ -99,7 +99,7 @@ const StudioSidebar = () => {
           <hr className="divider wt-side-st" />
           <ul>
             {StudioSidebarData2.map((item, index) => (
-              <li className="wt-side-st">
+              <li className="wt-side-st" key={index}>
                 <wt-ve class="wt-side-st">
                   <wt-icon-item class="wt-side-st">
                     <div id="contentIcon" className="content-icon wt-icon-item">
