@@ -1,19 +1,9 @@
-import axios from "axios";
+import request from "./index";
 
 export const getUserInfo = async () => {
-  const request = await axios
-    .get("/api/users/get_info", { withCredentials: true })
-    .then((res) => res.data);
-
-  return request;
+  return request({ url: `/users/get_info` });
 };
 
 export const postLoginToken = async (idToken) => {
-  const request = await axios
-    .post("/api/users/post_token", {
-      withCredentials: true,
-    })
-    .then((res) => res.data);
-
-  return request;
+  return request({ method: "post", url: `/users/post_token` });
 };
