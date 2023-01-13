@@ -6,21 +6,22 @@ import { DetailChipData } from "../../constants/data/DetailData";
 
 const DetailChip = () => {
   const [select, setSelect] = useState("모두");
-  const [location, setLocation] = useState(0);
+
+  const [chipLocationX, setChipLocationX] = useState(0);
 
   const onPrevClick = () => {
-    if (location < 100) {
-      setLocation(0);
+    if (chipLocationX < 100) {
+      setChipLocationX(0);
     } else {
-      setLocation(location + 160);
+      setChipLocationX(chipLocationX + 160);
     }
   };
 
   const onNextClick = () => {
-    if (location < -100) {
-      setLocation(-170);
+    if (chipLocationX < -100) {
+      setChipLocationX(-170);
     } else {
-      setLocation(location - 160);
+      setChipLocationX(chipLocationX - 160);
     }
   };
 
@@ -29,7 +30,11 @@ const DetailChip = () => {
       <div id="content" className="wtd-detail-chip-render">
         <wtd-chip-render>
           <div id="container" className="wtd-chip-render">
-            <div id="left-arrow" className="wtd-chip-render">
+            <div
+              id="left-arrow"
+              className="wtd-chip-render"
+              style={{ display: chipLocationX === 0 ? "none" : "flex" }}
+            >
               <div id="left-arrow-button" className="wtd-chip-render">
                 <wtd-button-render class="wtd-chip-render">
                   <wt-button-shape>
@@ -51,7 +56,7 @@ const DetailChip = () => {
               <iron-selector
                 id="chips"
                 class="wtd-chip-render"
-                style={{ transform: `translateX(${location}px)` }}
+                style={{ transform: `translateX(${chipLocationX}px)` }}
               >
                 {DetailChipData.map((item, index) => (
                   <wt-chip
@@ -74,7 +79,11 @@ const DetailChip = () => {
                 ))}
               </iron-selector>
             </div>
-            <div id="right-arrow" className="wtd-chip-render">
+            <div
+              id="right-arrow"
+              className="wtd-chip-render"
+              style={{ display: chipLocationX < -160 ? "none" : "flex" }}
+            >
               <div id="right-arrow-button" className="wtd-chip-render">
                 <wtd-button-render class="wtd-chip-render">
                   <wt-button-shape>
