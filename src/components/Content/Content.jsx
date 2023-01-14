@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import Image from "../../assets/test2.jpg";
 import Image2 from "../../assets/test.jpg";
@@ -7,8 +7,15 @@ import Categorybar from "../Categorybar/Categorybar";
 
 import "./Content.scss";
 
+import { getPostInfo } from "../../modules/post";
+
 const Content = () => {
   const count = [1, 2, 3, 4];
+  const [postInfo, setPostInfo] = useState([])
+
+  useEffect(() => {
+    setPostInfo(getPostInfo())
+  }, []);
 
   return (
     <wt-grid-render style={{ "--wt-grid-item-row": "4" }}>

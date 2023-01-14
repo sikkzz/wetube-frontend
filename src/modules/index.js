@@ -1,8 +1,12 @@
 import { combineReducers } from "redux";
-import userState from './user'
+import userState from "./user";
+import postState from "./post";
+import commentState from "./comment";
 
 const rootReducer = combineReducers({
-    userState
-})
+  userState,
+  postState,
+  commentState
+});
 
-export default rootReducer
+export default rootReducer;
