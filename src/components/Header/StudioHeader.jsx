@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 
 import Icons from "../../constants/icon";
-import GoogleButton from "../GoogleButton";
 import Upload from "../Upload/Upload";
 
 import "./StudioHeader.scss";
@@ -88,7 +87,6 @@ const StudioHeader = () => {
               </wt-iron-icon>
               <div className="label wt-button">만들기</div>
             </wt-button>
-            <GoogleButton />
           </div>
         </header>
       </wt-st-header>

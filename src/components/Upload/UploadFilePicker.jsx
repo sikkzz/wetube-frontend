@@ -1,49 +1,117 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState, useRef, useCallback } from "react";
 
 import Icons from "../../constants/icon";
 
+import axios from "axios";
+
+
+
 const UploadFilePicker = ({ setStep }) => {
-  const [imageFile, setImageFile] = useState(null);
   const fileInputRef = useRef(null);
 
-  // const [uploadStep, setUploadStep] = useState("DETAILS");
+  const onUploadVideo = useCallback(
+    async (e) => {
+      setStep("DETAILS")
+      const api_url = `http://localhost:8080`;
+      const file = e.target.files[0];
+      const fileName = file.name;
+      const fileSize = file.size;
+      const formData = new FormData();
 
-  //   const handleClickFileInput = () => {
-  //     fileInputRef.current?.click();
-  //   };
+      if (!file) {
+        return;
+      }
 
-  const uploadProfile = (e) => {
-    const fileList = e.target.files;
-    if (fileList && fileList[0]) {
-      const url = URL.createObjectURL(fileList[0]);
+      formData.append("video", file);
 
-      setImageFile({
-        file: fileList[0],
-        thumbnail: url,
-        type: fileList[0].type.slice(0, 5),
+      console.log(file.name);
+      console.log(file.size);
+
+      let start = new Date();
+
+      // 서버에 업로드 시작 요청
+      let res = await axios.post(`${api_url}/upload`, {
+        fileName: fileName,
       });
-    }
-  };
+      const uploadId = res.data.uploadId;
+      const newFilename = res.data.fileName;
 
-  // const showImage = useMemo(() => {
-  //   if (!imageFile && imageFile == null) {
-  //     return null;
-  //   }
-  //   return (
-  //     <img
-  //       src={imageFile.thumbnail}
-  //       alt={imageFile.type}
-  //       onClick={handleClickFileInput}
-  //       style={{ width: "100px" }}
-  //     />
-  //   );
-  // }, [imageFile]);
+      // 세션 스토리지에 정보 저장
+      sessionStorage.setItem("uploadId", uploadId);
+      sessionStorage.setItem("fileName", newFilename);
 
-  useEffect(() => {
-    if (imageFile) {
-      setStep("DETAILS");
-    }
-  }, [imageFile]);
+      const chunkSize = 10 * 1024 * 1024;
+      const chunkCount = Math.floor(fileSize / chunkSize) + 1;
+      console.log(`chunkCount: ${chunkCount}`);
+
+      let UploadArray = [];
+
+      for (let uploadCount = 1; uploadCount < chunkCount + 1; uploadCount++) {
+        // 파일 사이즈 청크 크기에 맞춰서 조정
+        let start = (uploadCount - 1) * chunkSize;
+        let end = uploadCount * chunkSize;
+        let fileBlob =
+          uploadCount < chunkCount ? file.slice(start, end) : file.slice(start);
+
+        // 서버에서 url 발급
+        let getSignedUrlRes = await axios.post(`${api_url}/upload-signed-url`, {
+          fileName: newFilename,
+          partNumber: uploadCount,
+          uploadId: uploadId,
+        });
+
+        let preSignedUrl = getSignedUrlRes.data.preSignedUrl;
+        console.log(`preSignedUrl ${uploadCount} : ${preSignedUrl}`);
+        console.log(fileBlob);
+
+        // 서버에서 발급받은 url을 이용해 서버에 청크 업로드
+        let uploadChunk = await fetch(preSignedUrl, {
+          method: "PUT",
+          body: fileBlob,
+        });
+        console.log(uploadChunk);
+
+        // 응답 헤더에 있는 Etag와 파트 번호
+        let EtagHeader = uploadChunk.headers.get("ETag").replaceAll('"', "");
+        console.log(EtagHeader);
+        let uploadPartDetails = {
+          awsETag: EtagHeader,
+          partNumber: uploadCount,
+        };
+
+        UploadArray.push(uploadPartDetails);
+      }
+
+      console.log(UploadArray);
+
+      // 청크 업로드가 완료되면 서버에 업로드 완료 요청 실행
+      // 업로드 아이디랑 part번호에 해당하는 Etag를 가진 parts도 같이 요청
+      await axios({
+        baseURL: api_url,
+        url: "/complete-upload",
+        method: "POST",
+        data: formData,
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+        fileName: newFilename,
+        parts: UploadArray,
+        uploadId: uploadId,
+      })
+        .then((res) => {
+          let end = new Date();
+          console.log("파일 업로드에 걸린 시간 : " + (end - start) + "ms");
+          console.log(res.data, "업로드 완료 응답");
+          setStep("DETAILS");
+        })
+        .catch((err) => {
+          console.error(err);
+        });
+    },
+    [setStep]
+  );
+  
+
 
   return (
     <>
@@ -81,18 +149,11 @@ const UploadFilePicker = ({ setStep }) => {
               <input
                 type="file"
                 id="file"
-                onChange={uploadProfile}
+                onChange={onUploadVideo}
                 ref={fileInputRef}
                 multiple="multiple"
                 name="Filedata"
                 style={{
-                  // position: "absolute",
-                  // overflow: "hidden",
-                  // width: "0px",
-                  // height: "0px",
-                  // opacity: "0",
-                  // left: "0px",
-                  // top: "0px",
                   display: "none",
                 }}
               />

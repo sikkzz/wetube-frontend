@@ -1,80 +1,150 @@
 import React from "react";
+import Image from "../../assets/test2.jpg";
+import Image2 from "../../assets/test.jpg";
+
+import Categorybar from "../Categorybar/Categorybar";
+
 import "./Content.scss";
-import Image from "../../assets/test.jpg";
-import Video from "../../assets/videos/test.mp4";
 
 const Content = () => {
   const count = [1, 2, 3, 4];
-  const count2 = [1, 2, 3, 4];
-
-  const handleOnMouseOver = (e) => {
-    e.currentTarget.play();
-  };
-
-  const handleOnMouseOut = (e) => {
-    e.currentTarget.pause();
-  };
-
   return (
-    <>
-      <div className="content">
-        <div className="content_container">
-          <div className="content_grid_container">
-            {count2.map((index) => (
-              <div className="content_grid_row_container" key={index}>
-                {count.map((index) => (
-                  <div className="content_grid_row_item_container" key={index}>
-                    <a href="/detail">
-                      <div className="grid_card">
-                        <a href="/detail">
-                          <video
-                            loop
-                            muted
-                            onMouseOver={handleOnMouseOver}
-                            onMouseOut={handleOnMouseOut}
-                            className="content_profile_video"
-                            src={Video}
-                          />
-                        </a>
-                        <div className="content_detail_container">
+    <wt-grid-render style={{ "--wt-grid-item-row": "4" }}>
+      <Categorybar />
+      <div id="contents" className="wt-grid-render">
+        {count.map((index) => (
+          <wt-grid-row class="wt-grid-render" key={index}>
+            <div id="contents" className="wt-grid-row">
+              {count.map((index) => (
+                <wt-item-render class="wt-grid-row" key={index}>
+                  <div id="content" className="wt-item-render">
+                    <wt-grid-media class="wt-item-render">
+                      <div id="dismissible" className="wt-grid-media">
+                        <wtd-thumbnail class="wt-grid-media">
                           <a
-                            href="/channel"
-                            className="content_detail_profile_link"
+                            id="thumbnail"
+                            className="wt-simple-endpoint wtd-thumbnail"
+                            href="/detail"
                           >
-                            <div className="content_detail_profile_container">
-                              <img src={Image} alt="detail_profile_image" />
+                            <wt-image class="wtd-thumbnail">
+                              <img
+                                className="wtd-thumbnail"
+                                alt="thumbnail"
+                                src={Image}
+                              />
+                            </wt-image>
+                            <div id="overlays" className="wtd-thumbnail">
+                              <wtd-thumbnail-overlay-progress-render class="wtd-thumbnail">
+                                <div
+                                  id="progress"
+                                  className="wtd-thumbnail-overlay-progress-render"
+                                  style={{ width: "10%" }}
+                                />
+                              </wtd-thumbnail-overlay-progress-render>
+                              <wtd-thumbnail-overlay-time-status-render class="wtd-thumbnail">
+                                <span
+                                  id="text"
+                                  className="wtd-thumbnail-overlay-time-status-render"
+                                >
+                                  5:31:05
+                                </span>
+                              </wtd-thumbnail-overlay-time-status-render>
                             </div>
                           </a>
-                          <div className="content_detail_meta_container">
-                            <div className="content_detail_meta_title">
-                              <h3>
-                                <a href="/detail">
-                                  <p>Test</p>
-                                </a>
-                              </h3>
-                            </div>
-
-                            <div className="content_detail_meta_body">
-                              <h3>
-                                <a href="/channel">김준식</a>
-                              </h3>
-                              <div className="content_detail_meta_body_data">
-                                <p>조회수 398만회</p>
-                                <p>1년전</p>
+                        </wtd-thumbnail>
+                        <div id="details" className="wt-grid-media">
+                          <a
+                            id="profile_link"
+                            className="wt-grid-media"
+                            href="#!"
+                          >
+                            <wt-img-shadow id="profile" class="wt-grid-media">
+                              <img
+                                id="img"
+                                className="wt-img-shadow"
+                                src={Image2}
+                                alt="profile_img"
+                              />
+                            </wt-img-shadow>
+                          </a>
+                          <div id="meta" className="wt-grid-media">
+                            <h3 className="wt-grid-media">
+                              <a
+                                id="video-title-link"
+                                className="wt-grid-media"
+                                href="/detail"
+                              >
+                                <wt-formatted-string
+                                  id="video-title"
+                                  class="wt-grid-media"
+                                >
+                                  🔥FLO 인기팝송 100곡 모두 해석해버리기 I
+                                  PLAYLIST
+                                </wt-formatted-string>
+                              </a>
+                            </h3>
+                            <wtd-video-meta-block class="grid wt-grid-media">
+                              <div
+                                id="metadata"
+                                className="wtd-video-meta-block"
+                              >
+                                <div
+                                  id="byline-container"
+                                  className="wtd-video-meta-block"
+                                >
+                                  <wtd-channel-name
+                                    id="channel-name"
+                                    class="wtd-video-meta-block"
+                                  >
+                                    <div
+                                      id="container"
+                                      className="wtd-channel-name"
+                                    >
+                                      <div
+                                        id="text-container"
+                                        className="wtd-channel-name"
+                                      >
+                                        <wt-formatted-string
+                                          id="text"
+                                          class="wtd-channel-name"
+                                          ellipsis-style
+                                        >
+                                          <a
+                                            className="wt-formatted-string"
+                                            href="#!"
+                                          >
+                                            user-김준식
+                                          </a>
+                                        </wt-formatted-string>
+                                      </div>
+                                    </div>
+                                  </wtd-channel-name>
+                                </div>
+                                <div
+                                  id="metadata-line"
+                                  className="wtd-video-meta-block"
+                                >
+                                  <span className="wtd-video-meta-block">
+                                    조회수 48만회
+                                  </span>
+                                  <span className="wtd-video-meta-block">
+                                    10개월 전
+                                  </span>
+                                </div>
                               </div>
-                            </div>
+                            </wtd-video-meta-block>
                           </div>
                         </div>
                       </div>
-                    </a>
+                    </wt-grid-media>
                   </div>
-                ))}
-              </div>
-            ))}
-          </div>
-        </div>
+                </wt-item-render>
+              ))}
+            </div>
+          </wt-grid-row>
+        ))}
       </div>
-    </>
+    </wt-grid-render>
   );
 };
 
