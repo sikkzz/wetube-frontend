@@ -1,7 +1,7 @@
 import React from "react";
 import StudioHeader from "../../components/Header/StudioHeader";
 import StudioSidebar from "../../components/Sidebar/StudioSidebar";
-import StudioDashbord from "../../components/StudioContent/StudioDashbord";
+import StudioDashboard from "../../components/StudioContent/StudioDashboard";
 import StudioContent from "../../components/StudioContent/StudioContent"
 
 const StudioPage = () => {
@@ -9,7 +9,7 @@ const StudioPage = () => {
     <>
       <StudioHeader />
       <StudioSidebar />
-      {/* <StudioDashbord /> */}
+      {/* <StudioDashboard /> */}
       <StudioContent />
       
 

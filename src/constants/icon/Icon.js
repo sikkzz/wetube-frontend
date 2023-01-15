@@ -156,7 +156,7 @@ const exportIcons = {
   RiCheckboxMultipleBlankLine,
   VscListFilter,
   BsEye,
-  MdAttachMoney
+  MdAttachMoney,
   BsBoxArrowUpRight,
   HiChevronDown,
   HiChevronUp,

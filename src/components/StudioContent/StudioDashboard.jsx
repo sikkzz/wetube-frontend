@@ -1,10 +1,10 @@
 import React from "react";
-import "./StudioDashbord.scss";
+import "./StudioDashboard.scss";
 import testimages from "../../assets/test2.jpg";
 import { StudioDashboardData } from "../../constants/data/StudioDashboardData";
 import { useState } from "react";
 
-const StudioDashbord = () => {
+const StudioDashboard = () => {
   const [active, setactive] = useState();
 
   return (
@@ -270,4 +270,4 @@ const StudioDashbord = () => {
   );
 };
 
-export default StudioDashbord;
+export default StudioDashboard;

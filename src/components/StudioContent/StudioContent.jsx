@@ -19,28 +19,28 @@ const StudioContent = () => {
               onClick={() => selectSet(0)}
             >
               <span className="title">동영상</span>
-              <sapn className={`selectionBar`}></sapn>
+              <span className={`selectionBar`}></span>
             </div>
             <div
               className={`tab-content ${select === 1 ? "active" : ""}`}
               onClick={() => selectSet(1)}
             >
               <span className="title">실시간 스트리밍</span>
-              <sapn className={`selectionBar`}></sapn>
+              <span className={`selectionBar`}></span>
             </div>
             <div
               className={`tab-content ${select === 2 ? "active" : ""}`}
               onClick={() => selectSet(2)}
             >
               <span className="title">게시물</span>
-              <sapn className={`selectionBar`}></sapn>
+              <span className={`selectionBar`}></span>
             </div>
             <div
               className={`tab-content ${select === 3 ? "active" : ""}`}
               onClick={() => selectSet(3)}
             >
               <span className="title">재생목록</span>
-              <sapn className={`selectionBar`}></sapn>
+              <span className={`selectionBar`}></span>
             </div>
           </div>
         </div>
@@ -80,7 +80,7 @@ const StudioContent = () => {
             <div className="video-cell">
               <div className="videoPart">
                 <div className="video-thumnail">
-                  <img className="thumnail" src={testimages}></img>
+                  <img className="thumnail" src={testimages} alt="thumbnail" />
                 </div>
                 <div className="right-section">
                   <h3 className="video-title">컴활 2급 필기 1과목 1강</h3>
