@@ -9,8 +9,8 @@ const StudioPage = () => {
     <>
       <StudioHeader />
       <StudioSidebar />
-      {/* <StudioDashbord /> */}
-      <StudioContent />
+      <StudioDashbord />
+      {/* <StudioContent /> */}
       
 
     </>

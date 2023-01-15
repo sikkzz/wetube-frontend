@@ -110,7 +110,7 @@ const StudioDashbord = () => {
             <div className="achievement">
               <div className="achievement_header">새 업적</div>
               <div className="achievement_container">
-                <img className="emoticon" src={testimages}></img>
+                <img className="emoticon" src={testimages} alt=""></img>
                 <div className="achievement_content">
                   <div className="content_title">채널의 생일을 축하합니다!</div>
                   <div className="content_description">
@@ -194,7 +194,7 @@ const StudioDashbord = () => {
                   <>
                     <div className="reviewBox" key={i}>
                       <div>
-                        <img className="profileImg" src={x.profileImg} />
+                        <img className="profileImg" src={x.profileImg} alt="" />
                       </div>
                       <div className="reivewContent">
                         <div className="nickname">
@@ -205,7 +205,7 @@ const StudioDashbord = () => {
                         <div className="reivew">{x.reivew}</div>
                       </div>
                       <div>
-                        <img className="Ssumnail" src={x.Ssunail} />
+                        <img className="Ssumnail" src={x.Ssunail} alt="" />
                       </div>
                     </div>
                     <hr className="reviewHr" />

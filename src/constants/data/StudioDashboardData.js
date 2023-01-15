@@ -1,11 +1,12 @@
 import testimages from "../../assets/test2.jpg";
+import Icons from "../../constants/icon";
 
 export const StudioDashboardData = {
   analysisdata: [
-    { title: "조회수 순위", analysis: "3/10", emoticon: "🔥" },
-    { title: "조회수", analysis: "557", emoticon: "✔️" },
-    { title: "노출 클릭률", analysis: "5.1%", emoticon: "✔️" },
-    { title: "평균 시청 지속 시간", analysis: "1:20", emoticon: "🔽" },
+    { title: "조회수 순위", analysis: "3/10", emoticon: <Icons.MdNavigateNext/> },
+    { title: "조회수", analysis: "557", emoticon: <Icons.AiOutlineCheckCircle/> },
+    { title: "노출 클릭률", analysis: "5.1%", emoticon: <Icons.AiOutlineCheckCircle/>},
+    { title: "평균 시청 지속 시간", analysis: "1:20", emoticon: <Icons.BsArrowDownCircleFill/> },
   ],
 
   releasedData: [

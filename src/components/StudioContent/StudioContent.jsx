@@ -19,28 +19,28 @@ const StudioContent = () => {
               onClick={() => selectSet(0)}
             >
               <span className="title">동영상</span>
-              <sapn className={`selectionBar`}></sapn>
+              <span className={`selectionBar`}></span>
             </div>
             <div
               className={`tab-content ${select === 1 ? "active" : ""}`}
               onClick={() => selectSet(1)}
             >
               <span className="title">실시간 스트리밍</span>
-              <sapn className={`selectionBar`}></sapn>
+              <span className={`selectionBar`}></span>
             </div>
             <div
               className={`tab-content ${select === 2 ? "active" : ""}`}
               onClick={() => selectSet(2)}
             >
               <span className="title">게시물</span>
-              <sapn className={`selectionBar`}></sapn>
+              <span className={`selectionBar`}></span>
             </div>
             <div
               className={`tab-content ${select === 3 ? "active" : ""}`}
               onClick={() => selectSet(3)}
             >
               <span className="title">재생목록</span>
-              <sapn className={`selectionBar`}></sapn>
+              <span className={`selectionBar`}></span>
             </div>
           </div>
         </div>

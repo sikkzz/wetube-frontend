@@ -74,6 +74,9 @@ import {RiCheckboxMultipleBlankLine} from 'react-icons/ri'
 import { VscListFilter } from "react-icons/vsc";
 import { BsEye } from "react-icons/bs";
 import { MdAttachMoney } from "react-icons/md";
+import {MdNavigateNext } from "react-icons/md";
+import {BsArrowDownCircleFill } from "react-icons/bs";
+
 
 const exportIcons = {
   BsSearch,
@@ -137,7 +140,9 @@ const exportIcons = {
   RiCheckboxMultipleBlankLine,
   VscListFilter,
   BsEye,
-  MdAttachMoney
+  MdAttachMoney,
+  MdNavigateNext,
+  BsArrowDownCircleFill
 };
 
 export default exportIcons;
