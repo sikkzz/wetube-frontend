@@ -80,7 +80,7 @@ const StudioContent = () => {
             <div className="video-cell">
               <div className="videoPart">
                 <div className="video-thumnail">
-                  <img className="thumnail" src={testimages}></img>
+                  <img className="thumnail" src={testimages} alt="thumbnail" />
                 </div>
                 <div className="right-section">
                   <h3 className="video-title">컴활 2급 필기 1과목 1강</h3>
