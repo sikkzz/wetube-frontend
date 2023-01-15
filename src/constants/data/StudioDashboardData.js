@@ -28,9 +28,9 @@ export const StudioDashboardData = {
       increase: 25,
     },
     summary: [
-      { title: "조회수", analysis: "2.5천", emoticon: "✔️" },
-      { title: "시청시간(단위:시간)", analysis: "98.5", emoticon: "🔽" },
-      { title: "예상수익", analysis: "3.20", emoticon: "⏹️" },
+      { title: "조회수", analysis: "2.5천", emoticon: <Icons.AiOutlineCheckCircle/> },
+      { title: "시청시간(단위:시간)", analysis: "98.5", emoticon: <Icons.BsArrowDownCircleFill/> },
+      { title: "예상수익", analysis: "3.20", emoticon: <Icons.BsArrowDownCircleFill/> },
     ],
     popularVideos: [
       { title: "은서의 vlog", analysis: "96" },

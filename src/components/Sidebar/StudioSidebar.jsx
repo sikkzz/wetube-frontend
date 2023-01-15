@@ -10,7 +10,7 @@ import {
   StudioSidebarData2,
 } from "../../constants/data/StudioSidebarData";
 
-const StudioSidebar = () => {
+const StudioSidebar = ({ setRenderLayout }) => {
   const [tab, setTab] = useState("dashboard");
   const [hover, setHover] = useState(true);
 
@@ -76,6 +76,7 @@ const StudioSidebar = () => {
                 key={index}
                 onClick={() => {
                   setTab(item.id);
+                  setRenderLayout(item.id);
                 }}
               >
                 <a className="menu-item-link wt-side-st" href="#!">

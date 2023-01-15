@@ -3,9 +3,17 @@ import "./StudioDashboard.scss";
 import testimages from "../../assets/test2.jpg";
 import { StudioDashboardData } from "../../constants/data/StudioDashboardData";
 import { useState } from "react";
+import Icons from "../../constants/icon";
+import ModalPortal from "../../Portal";
+import Upload from "../Upload/Upload";
 
 const StudioDashboard = () => {
   const [active, setactive] = useState();
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const onUploadClick = () => {
+    setModalOpen(!modalOpen);
+  };
 
   return (
     <>
@@ -13,9 +21,15 @@ const StudioDashboard = () => {
         <div className="StudioMain_Container_header">
           <div className="StudioMain_Container_header_name">채널 대시보드</div>
           <div className="StudioMain_Container_header_setting">
-            <div className="setting Upload">🚀</div>
-            <div className="setting Streming">🔼</div>
-            <div className="setting correction">📌</div>
+            <div className="setting Upload" onClick={onUploadClick}>
+              <Icons.MdUpload size={20} />
+            </div>
+            <div className="setting Streming">
+              <Icons.MdOutlineWifiTethering size={20} />
+            </div>
+            <div className="setting correction">
+              <Icons.TfiPencilAlt size={20} />
+            </div>
           </div>
         </div>
         <div className="analysis_container">
@@ -82,9 +96,15 @@ const StudioDashboard = () => {
                         >
                           <div className="title">{x.title}</div>
                           <div className="some">
-                            <div className="part view">🔼 {x.view}</div>
-                            <div className="part review">📄 {x.reivew}</div>
-                            <div className="part good">👍 {x.good}</div>
+                            <div className="part view">
+                              <Icons.FiBarChart2 /> {x.view}
+                            </div>
+                            <div className="part review">
+                              <Icons.BsChatLeftText /> {x.reivew}
+                            </div>
+                            <div className="part good">
+                              <Icons.BsHandThumbsUp /> {x.good}
+                            </div>
                           </div>
                         </div>
 
@@ -92,9 +112,15 @@ const StudioDashboard = () => {
                           className="somehover"
                           style={{ display: active === i ? "flex" : "none" }}
                         >
-                          <div className="part view">🔼 {x.view}</div>
-                          <div className="part review">📄 {x.reivew}</div>
-                          <div className="part good">👍 {x.good}</div>
+                          <div className="part view">
+                            <Icons.BsArrowDownCircleFill /> {x.view}
+                          </div>
+                          <div className="part review">
+                            <Icons.AiOutlineCheckCircle /> {x.reivew}
+                          </div>
+                          <div className="part good">
+                            <Icons.AiOutlineCheckCircle /> {x.good}
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -266,6 +292,9 @@ const StudioDashboard = () => {
           </div>
         </div>
       </div>
+      <ModalPortal>
+        <Upload modalOpen={modalOpen} setModalOpen={setModalOpen} />
+      </ModalPortal>
     </>
   );
 };
