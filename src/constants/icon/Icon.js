@@ -89,6 +89,11 @@ import { AiFillTrophy } from "react-icons/ai";
 import { FiSettings } from "react-icons/fi";
 import { BsFlag } from "react-icons/bs";
 
+//Studio 아이콘
+import { VscListFilter } from "react-icons/vsc";
+import { BsEye } from "react-icons/bs";
+import { MdAttachMoney } from "react-icons/md";
+
 const exportIcons = {
   BsSearch,
   FaBars,
@@ -149,6 +154,9 @@ const exportIcons = {
   RiHdLine,
   AiOutlineCheckCircle,
   RiCheckboxMultipleBlankLine,
+  VscListFilter,
+  BsEye,
+  MdAttachMoney
   BsBoxArrowUpRight,
   HiChevronDown,
   HiChevronUp,

@@ -1,0 +1,519 @@
+@import '../../styles/common.scss';
+
+.StudioMain_Container {
+    margin-left: 256px;
+    color: white;
+    padding-top: 66px;
+    font-size: 14px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+
+    &_header {
+        display: flex;
+        font-size: 25px;
+
+        &_name {
+            overflow: initial;
+            text-overflow: initial;
+            font-family: "YouTube Sans", "Roboto", "Arial", sans-serif;
+            font-weight: 600;
+            font-size: 25px;
+            line-height: 32px;
+            flex-shrink: 1;
+            left: 0;
+            padding-left: 32px;
+            padding-top: 23px;
+            position: sticky;
+
+        }
+
+        &_setting {
+            display: flex;
+            margin: 20px 24px 0 0;
+            position: absolute;
+            right: 0px;
+            font-size: 20px;
+
+            .setting {
+                padding: 0 0 5px 5px;
+            }
+        }
+
+    }
+
+    .analysis_container {
+        display: flex;
+        box-sizing: border-box;
+        min-width: 952px;
+        padding: 24px 24px 0 0;
+        height: 100%;
+        width: 100%;
+        color: white;
+        font-size: 7px;
+
+        .analysis_column {
+            flex: 1;
+            margin-left: 25px;
+            min-width: 293px;
+            max-width: 392px;
+        }
+
+        .recent_video {
+            padding: 23px;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 0.2rem;
+            background-color: #282828;
+            width: 100%;
+            height: 100%;
+
+
+            &_header {
+                font-size: 18px;
+                padding-bottom: 14px;
+            }
+
+            .thumnail {
+                position: relative;
+
+                .thumnail_image {
+                    width: 100%;
+                    height: 90%;
+                    margin-bottom: 10px;
+                }
+
+                .title {
+                    font-size: 15px;
+                    position: absolute;
+                    top: 82%;
+                    left: 17%;
+                    padding: 0 24px;
+                    transform: translate(-50%, -50%);
+                    max-height: 56px;
+                    font-weight: 500;
+                    font-size: 15px;
+                    line-height: 24px;
+                }
+            }
+
+            .analysis_detail {
+                .detail_low_description {
+                    color: #AAAAAA;
+                    font-size: 13px;
+                    height: 32px;
+                }
+            }
+
+            .detail_low {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                font-size: 13px;
+                height: 32px;
+
+                .rank_detail {
+                    display: flex;
+                    flex-direction: row;
+
+                    span {
+                        margin-left: 5px;
+                    }
+                }
+
+                &_button {
+                    font-size: 14px;
+                    display: flex;
+                    flex-direction: column;
+                    color: #3EA6FF;
+
+                    .button {
+                        margin-top: 8px;
+                        margin-bottom: 8px;
+                    }
+                }
+            }
+        }
+
+        .released_video {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            padding: 23px;
+            border: solid 1px white;
+            margin-top: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 0.2rem;
+            background-color: #282828;
+
+            .VideoPath {
+                font-size: 14px;
+                color: #3EA6FF;
+                margin-top: 8px;
+                margin-bottom: 8px;
+            }
+
+            .card_header {
+                font-size: 18px;
+                margin-bottom: 14px;
+            }
+
+            .video_column {
+                font-size: 13px;
+
+                .column_row {
+                    display: flex;
+                    flex-direction: row;
+                    margin-bottom: 8px;
+
+                    .released_video_thumnail {
+                        width: 56px;
+                        height: 40px;
+                    }
+
+                    .introduce_container {
+                        display: flex;
+                        flex-direction: column;
+                        margin-left: 8px;
+                        justify-content: center;
+
+                        .someout {
+                            display: flex;
+                            flex-direction: column;
+
+                            .some {
+                                display: flex;
+                                flex-direction: row;
+                                color: #AAAAAA;
+
+                                .part {
+                                    margin-right: 8px;
+                                }
+                            }
+                        }
+
+                        .somehover {
+                            display: none;
+                            flex-direction: row;
+                            justify-content: center;
+                            align-items: center;
+                            font-size: 15px;
+
+                            .part {
+                                margin-right: 8px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .achievement {
+            padding: 23px;
+            display: flex;
+            flex-direction: column;
+            border: solid 1px white;
+            border: 1px solid var(--white-alpha-10);
+            border-radius: 0.2rem;
+            background-color: #282828;
+
+            a {
+                font-size: 14px;
+                color: #3EA6FF;
+            }
+
+            &_header {
+                font-size: 18px;
+                padding-bottom: 14px;
+            }
+
+            &_container {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+
+                .emoticon {
+                    width: 50px;
+                    height: 50px;
+                    margin-right: 24px;
+                }
+
+                .achievement_content {
+                    font-size: 13px;
+
+                    .content_title {
+                        font-size: 15px;
+                        margin-bottom: 8px;
+                    }
+
+                    .content_description {
+                        color: #AAAAAA;
+                    }
+                }
+            }
+
+            .ShowAnalysis {
+                font-size: 14px;
+            }
+        }
+
+        .ChannelAnalysis_container {
+            border: 1px solid white;
+            margin-top: 20px;
+            font-size: 13px;
+            padding: 23px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 0.2rem;
+            background-color: #282828;
+
+            .box_hr {
+                border-width: 1px 0 0 0;
+                color: rgba(255, 255, 255, 0.089);
+                height: 1px;
+            }
+
+            .description {
+                font-size: 12px;
+                color: #AAAAAA;
+            }
+
+            .small_header {
+                font-size: 16px;
+                margin-bottom: 5px;
+            }
+
+            &_header {
+                font-size: 18px;
+                padding-bottom: 14px;
+            }
+
+            .Subscirbe_Analysis_box {
+                margin-bottom: 20px;
+
+                .member {
+                    font-size: 34px;
+                }
+            }
+
+            .summary_box {
+                margin-top: 13px;
+
+
+                .summary_annalysis_box {
+                    margin-top: 14px;
+
+                    .detail_low {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        margin-bottom: 12px;
+
+                        span {
+                            margin-left: 5px;
+                        }
+
+                    }
+                }
+            }
+
+            .popular_Videos {
+                margin-top: 13px;
+
+
+                .video_annalysis_box {
+                    margin-top: 14px;
+
+                    .detail_low {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        margin-bottom: 12px;
+
+                        span {
+                            margin-left: 5px;
+                        }
+
+                    }
+                }
+            }
+
+            .a {
+                font-size: 14px;
+                color: #3EA6FF;
+                padding-top: 14px; //마진겹침현상으로 인해 padding 사용
+            }
+        }
+
+        .RecentReivew {
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 0.2rem;
+            background-color: #282828;
+            margin-top: 20px;
+            padding: 23px;
+
+            &_header {
+                font-size: 18px;
+                padding-bottom: 14px;
+
+
+                .description {
+                    padding-top: 4px;
+                    font-size: 12px;
+                    color: #AAAAAA;
+                    padding-bottom: 14px;
+                }
+            }
+
+            .reviewBox {
+                display: flex;
+                flex-direction: row;
+
+                .profileImg {
+                    width: 24px;
+                    height: 24px;
+                    border-radius: 100%;
+                }
+
+                .reivewContent {
+                    display: flex;
+                    flex-direction: column;
+                    margin-left: 8px;
+                    margin-right: 8px;
+                    max-width: 100%;
+                    flex: 1;
+
+                    .nickname {
+                        display: flex;
+                        flex-direction: row;
+                        font-size: 12px;
+                        color: #AAAAAA;
+                        margin-bottom: 4px;
+
+                        div {
+                            padding-right: 5px;
+                        }
+                    }
+
+                    .reivew {
+                        font-size: 13px;
+                        font-weight: 400;
+                        max-height: 40px;
+                        overflow: hidden;
+                        line-height: 20px;
+                    }
+                }
+
+                .Ssumnail {
+                    width: 64px;
+                    height: 36px;
+                }
+            }
+
+            .reviewHr {
+                margin-top: 12px;
+                margin-bottom: 12px;
+                border-width: 1px 0 0 0;
+                color: rgba(255, 255, 255, 0.089);
+                height: 1px;
+            }
+
+            .a {
+                font-size: 14px;
+                color: #3EA6FF;
+            }
+        }
+
+        .recentSubscribe {
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 0.2rem;
+            background-color: #282828;
+            margin-top: 20px;
+            padding: 23px;
+
+            &_header {
+                font-size: 18px;
+
+                .description {
+                    padding-top: 4px;
+                    font-size: 12px;
+                    color: #AAAAAA;
+                    padding: 4px 0;
+                }
+            }
+
+            .subScribeMember {
+                display: flex;
+                flex-direction: row;
+                padding: 12px 0;
+
+                .subscribeProfile {
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 100%;
+                    margin: 0 16px 0 0;
+                }
+
+                .subScribeMemberInfo {
+                    display: flex;
+                    flex-direction: column;
+
+                    >.nickname {
+                        font-size: 13px;
+                        color: #FFFFFF;
+                    }
+
+                    >.subtotal {
+                        font-size: 12px;
+                        color: #AAAAAA;
+                        padding: 2px 0 0;
+                    }
+                }
+            }
+
+            .a {
+                font-size: 14px;
+                color: #3EA6FF;
+                padding: 8px 0;
+            }
+        }
+
+        .newsBox {
+            padding: 23px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 0.2rem;
+            background-color: #282828;
+            font-size: 13px;
+
+
+            .newsHeader {
+                font-size: 18px;
+                padding-bottom: 14px;
+            }
+
+            .newsTumnail {
+                width: 100%;
+
+            }
+
+            .newstitle {
+                font-size: 15px;
+                color: #FFFFFF;
+                padding-top: 11px;
+            }
+
+            .newsdescription {
+                color: #AAAAAA;
+                padding-top: 5px;
+                padding-bottom: 14px;
+            }
+
+            a {
+                font-size: 14px;
+                color: #3EA6FF;
+                padding-top: 8px;
+                display: inline-block;
+            }
+        }
+    }
+}
