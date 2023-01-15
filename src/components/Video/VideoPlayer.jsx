@@ -26,7 +26,7 @@ const VideoPlayer = () => {
 
   const videoProps = {
     ref: videoRef,
-    autofocus: true,
+    autoFocus: true,
     onTimeUpdate: () => {
       if (controllerRef.current) controllerRef.current.handleTimeUpdate();
     },
