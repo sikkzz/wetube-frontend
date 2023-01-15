@@ -11,13 +11,13 @@ import { getPostInfo } from "../../modules/post";
 
 const Content = () => {
   const count = [1, 2, 3, 4];
-
+  
   const [postInfo, setPostInfo] = useState([
     {
       postId: "1",
       postTitle: "비디오 포스트 제목",
-      postView: "22만회",
-      postDate: "2주전",
+      postView: "11만회",
+      postDate: "1주전",
       postVideoThumbnail:
         "https://i.ytimg.com/vi/hUM_v2B2Vpo/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDWU5gZxe5fYEo-baUeZYOB8426tw",
       postVideoTime: "5:31:05",
@@ -40,8 +40,8 @@ const Content = () => {
     {
       postId: "3",
       postTitle: "비디오 포스트 제목",
-      postView: "22만회",
-      postDate: "2주전",
+      postView: "33만회",
+      postDate: "3주전",
       postVideoThumbnail:
         "https://i.ytimg.com/vi/hUM_v2B2Vpo/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDWU5gZxe5fYEo-baUeZYOB8426tw",
       postVideoTime: "5:31:05",
@@ -52,8 +52,8 @@ const Content = () => {
     {
       postId: "4",
       postTitle: "비디오 포스트 제목",
-      postView: "22만회",
-      postDate: "2주전",
+      postView: "44만회",
+      postDate: "4주전",
       postVideoThumbnail:
         "https://i.ytimg.com/vi/hUM_v2B2Vpo/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDWU5gZxe5fYEo-baUeZYOB8426tw",
       postVideoTime: "5:31:05",
@@ -142,10 +142,7 @@ const Content = () => {
                                 </wt-formatted-string>
                               </a>
                             </h3>
-                            <wtd-video-meta-block
-                              class="grid wt-grid-media"
-                              main
-                            >
+                            <wtd-video-meta-block class="grid wt-grid-media">
                               <div
                                 id="metadata"
                                 className="wtd-video-meta-block"

@@ -1,10 +1,73 @@
-import React from "react";
+import React, { useState } from "react";
+import { useParams } from "react-router-dom";
 
 import Icons from "../../constants/icon";
 import Comment from "../Detail/Comment";
 import Img from "../../assets/test.jpg";
 
 const VideoDetail = () => {
+  const [postInfo, setPostInfo] = useState([
+    {
+      postId: "1",
+      postTitle: "비디오 포스트 제목",
+      postView: "11만회",
+      postDate: "1주 전",
+      postVideoThumbnail:
+        "https://i.ytimg.com/vi/hUM_v2B2Vpo/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDWU5gZxe5fYEo-baUeZYOB8426tw",
+      postVideoTime: "5:31:05",
+      postOwnerChannel: "비디오 포스트 채널",
+      postOwnerThumbnail:
+        "https://yt3.ggpht.com/JvXwi2zyrNnKLdVjp5MIYEakcH5RHWKDIajrPAcCHYjeWFsgNS3az_eX8BT8a8YhjbXiDX-UJQ=s68-c-k-c0x00ffffff-no-rj",
+      postOwnerSubCount: "11.1만명",
+      postLikeCount: "1.1천",
+    },
+    {
+      postId: "2",
+      postTitle: "비디오 포스트 제목",
+      postView: "22만회",
+      postDate: "2주 전",
+      postVideoThumbnail:
+        "https://i.ytimg.com/vi/hUM_v2B2Vpo/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDWU5gZxe5fYEo-baUeZYOB8426tw",
+      postVideoTime: "5:31:05",
+      postOwnerChannel: "비디오 포스트 채널",
+      postOwnerThumbnail:
+        "https://yt3.ggpht.com/JvXwi2zyrNnKLdVjp5MIYEakcH5RHWKDIajrPAcCHYjeWFsgNS3az_eX8BT8a8YhjbXiDX-UJQ=s68-c-k-c0x00ffffff-no-rj",
+      postOwnerSubCount: "22.2만명",
+      postLikeCount: "2.2천",
+    },
+    {
+      postId: "3",
+      postTitle: "비디오 포스트 제목",
+      postView: "33만회",
+      postDate: "3주 전",
+      postVideoThumbnail:
+        "https://i.ytimg.com/vi/hUM_v2B2Vpo/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDWU5gZxe5fYEo-baUeZYOB8426tw",
+      postVideoTime: "5:31:05",
+      postOwnerChannel: "비디오 포스트 채널",
+      postOwnerThumbnail:
+        "https://yt3.ggpht.com/JvXwi2zyrNnKLdVjp5MIYEakcH5RHWKDIajrPAcCHYjeWFsgNS3az_eX8BT8a8YhjbXiDX-UJQ=s68-c-k-c0x00ffffff-no-rj",
+      postOwnerSubCount: "33.3만명",
+      postLikeCount: "3.3천",
+    },
+    {
+      postId: "4",
+      postTitle: "비디오 포스트 제목",
+      postView: "44만회",
+      postDate: "4주 전",
+      postVideoThumbnail:
+        "https://i.ytimg.com/vi/hUM_v2B2Vpo/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDWU5gZxe5fYEo-baUeZYOB8426tw",
+      postVideoTime: "5:31:05",
+      postOwnerChannel: "비디오 포스트 채널",
+      postOwnerThumbnail:
+        "https://yt3.ggpht.com/JvXwi2zyrNnKLdVjp5MIYEakcH5RHWKDIajrPAcCHYjeWFsgNS3az_eX8BT8a8YhjbXiDX-UJQ=s68-c-k-c0x00ffffff-no-rj",
+      postOwnerSubCount: "44.4만명",
+      postLikeCount: "4.4천",
+    },
+  ]);
+
+  let params = useParams();
+  const postId = params.id - 1;
+
   return (
     <div id="below" className="wtd-watch-flexy">
       <wtd-watch-metadata class="wtd-watch-flexy">
@@ -12,7 +75,7 @@ const VideoDetail = () => {
           <div id="title" className="wtd-watch-metadata">
             <h1 className="wtd-watch-metadata">
               <wt-formatted-string class="wtd-watch-metadata">
-                🔥FLO 인기팝송 100곡 모두 해석해버리기 I PLAYLIST
+                {postInfo[postId].postTitle}
               </wt-formatted-string>
             </h1>
           </div>
@@ -24,7 +87,7 @@ const VideoDetail = () => {
                     <img
                       id="img"
                       className="wt-img-shadow"
-                      src={Img}
+                      src={postInfo[postId].postOwnerThumbnail}
                       alt="profile_img"
                     />
                   </wt-img-shadow>
@@ -42,7 +105,7 @@ const VideoDetail = () => {
                           ellipsis-style
                         >
                           <a className="wt-formatted-string" href="#!">
-                            user-김준식
+                            {postInfo[postId].postOwnerChannel}
                           </a>
                         </wt-formatted-string>
                       </div>
@@ -52,7 +115,7 @@ const VideoDetail = () => {
                     id="owner-sub-count"
                     class="wtd-video-owner-render"
                   >
-                    구독자 56.7만명
+                    구독자 {postInfo[postId].postOwnerSubCount}
                   </wt-formatted-string>
                 </div>
               </wtd-video-owner-render>
@@ -97,7 +160,7 @@ const VideoDetail = () => {
                                   </wt-icon>
                                 </div>
                                 <div className="cbox wt-button-shape">
-                                  <span>4.6천</span>
+                                  <span>{postInfo[postId].postLikeCount}</span>
                                 </div>
                               </button>
                             </wt-button-shape>
@@ -174,9 +237,13 @@ const VideoDetail = () => {
               <div id="description-inner" className="wtd-watch-metadata">
                 <div id="info-container" className="wtd-watch-metadata">
                   <wt-formatted-string id="info" class="wtd-watch-metadata">
-                    <span className="wt-formatted-string">조회수 48만회</span>
+                    <span className="wt-formatted-string">
+                      조회수 {postInfo[postId].postView}
+                    </span>
                     <span className="wt-formatted-string"> </span>
-                    <span className="wt-formatted-string">10개월 전</span>
+                    <span className="wt-formatted-string">
+                      {postInfo[postId].postDate}
+                    </span>
                   </wt-formatted-string>
                 </div>
                 <wtd-text-inline-expander
