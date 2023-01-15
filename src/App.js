@@ -19,6 +19,7 @@ function App() {
         <Route exact path="/upload" element={<Upload />} />
         <Route exact path="/upload_setting" element={<UploadSetting />} />
         <Route exact path="/detail" element={<DetailPage />} />
+        <Route exact path="/detail/:id" element={<DetailPage />} />
       </Routes>
     </>
   );

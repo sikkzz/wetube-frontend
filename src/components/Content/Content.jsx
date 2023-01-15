@@ -11,11 +11,62 @@ import { getPostInfo } from "../../modules/post";
 
 const Content = () => {
   const count = [1, 2, 3, 4];
-  const [postInfo, setPostInfo] = useState([])
 
-  useEffect(() => {
-    setPostInfo(getPostInfo())
-  }, []);
+  const [postInfo, setPostInfo] = useState([
+    {
+      postId: "1",
+      postTitle: "비디오 포스트 제목",
+      postView: "22만회",
+      postDate: "2주전",
+      postVideoThumbnail:
+        "https://i.ytimg.com/vi/hUM_v2B2Vpo/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDWU5gZxe5fYEo-baUeZYOB8426tw",
+      postVideoTime: "5:31:05",
+      postOwnerChannel: "비디오 포스트 채널",
+      postOwnerThumbnail:
+        "https://yt3.ggpht.com/JvXwi2zyrNnKLdVjp5MIYEakcH5RHWKDIajrPAcCHYjeWFsgNS3az_eX8BT8a8YhjbXiDX-UJQ=s68-c-k-c0x00ffffff-no-rj",
+    },
+    {
+      postId: "2",
+      postTitle: "비디오 포스트 제목",
+      postView: "22만회",
+      postDate: "2주전",
+      postVideoThumbnail:
+        "https://i.ytimg.com/vi/hUM_v2B2Vpo/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDWU5gZxe5fYEo-baUeZYOB8426tw",
+      postVideoTime: "5:31:05",
+      postOwnerChannel: "비디오 포스트 채널",
+      postOwnerThumbnail:
+        "https://yt3.ggpht.com/JvXwi2zyrNnKLdVjp5MIYEakcH5RHWKDIajrPAcCHYjeWFsgNS3az_eX8BT8a8YhjbXiDX-UJQ=s68-c-k-c0x00ffffff-no-rj",
+    },
+    {
+      postId: "3",
+      postTitle: "비디오 포스트 제목",
+      postView: "22만회",
+      postDate: "2주전",
+      postVideoThumbnail:
+        "https://i.ytimg.com/vi/hUM_v2B2Vpo/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDWU5gZxe5fYEo-baUeZYOB8426tw",
+      postVideoTime: "5:31:05",
+      postOwnerChannel: "비디오 포스트 채널",
+      postOwnerThumbnail:
+        "https://yt3.ggpht.com/JvXwi2zyrNnKLdVjp5MIYEakcH5RHWKDIajrPAcCHYjeWFsgNS3az_eX8BT8a8YhjbXiDX-UJQ=s68-c-k-c0x00ffffff-no-rj",
+    },
+    {
+      postId: "4",
+      postTitle: "비디오 포스트 제목",
+      postView: "22만회",
+      postDate: "2주전",
+      postVideoThumbnail:
+        "https://i.ytimg.com/vi/hUM_v2B2Vpo/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDWU5gZxe5fYEo-baUeZYOB8426tw",
+      postVideoTime: "5:31:05",
+      postOwnerChannel: "비디오 포스트 채널",
+      postOwnerThumbnail:
+        "https://yt3.ggpht.com/JvXwi2zyrNnKLdVjp5MIYEakcH5RHWKDIajrPAcCHYjeWFsgNS3az_eX8BT8a8YhjbXiDX-UJQ=s68-c-k-c0x00ffffff-no-rj",
+    },
+  ]);
+
+  // useEffect(() => {
+  //   setPostInfo(getPostInfo());
+  // }, []);
+
 
   return (
     <wt-grid-render style={{ "--wt-grid-item-row": "4" }}>
@@ -24,7 +75,7 @@ const Content = () => {
         {count.map((index) => (
           <wt-grid-row class="wt-grid-render" key={index}>
             <div id="contents" className="wt-grid-row">
-              {count.map((index) => (
+              {postInfo.map((item, index) => (
                 <wt-item-render class="wt-grid-row" key={index}>
                   <div id="content" className="wt-item-render">
                     <wt-grid-media class="wt-item-render">
@@ -33,13 +84,13 @@ const Content = () => {
                           <a
                             id="thumbnail"
                             className="wt-simple-endpoint wtd-thumbnail"
-                            href="/detail"
+                            href={`/detail/${item.postId}`}
                           >
                             <wt-image class="wtd-thumbnail">
                               <img
                                 className="wtd-thumbnail"
                                 alt="thumbnail"
-                                src={Image}
+                                src={item.postVideoThumbnail}
                               />
                             </wt-image>
                             <div id="overlays" className="wtd-thumbnail">
@@ -55,7 +106,7 @@ const Content = () => {
                                   id="text"
                                   className="wtd-thumbnail-overlay-time-status-render"
                                 >
-                                  5:31:05
+                                  {item.postVideoTime}
                                 </span>
                               </wtd-thumbnail-overlay-time-status-render>
                             </div>
@@ -71,7 +122,7 @@ const Content = () => {
                               <img
                                 id="img"
                                 className="wt-img-shadow"
-                                src={Image2}
+                                src={item.postOwnerThumbnail}
                                 alt="profile_img"
                               />
                             </wt-img-shadow>
@@ -81,14 +132,13 @@ const Content = () => {
                               <a
                                 id="video-title-link"
                                 className="wt-grid-media"
-                                href="/detail"
+                                href={`/detail/${item.postId}`}
                               >
                                 <wt-formatted-string
                                   id="video-title"
                                   class="wt-grid-media"
                                 >
-                                  🔥FLO 인기팝송 100곡 모두 해석해버리기 I
-                                  PLAYLIST
+                                  {item.postTitle}
                                 </wt-formatted-string>
                               </a>
                             </h3>
@@ -122,7 +172,7 @@ const Content = () => {
                                             className="wt-formatted-string"
                                             href="#!"
                                           >
-                                            user-김준식
+                                            {item.postOwnerChannel}
                                           </a>
                                         </wt-formatted-string>
                                       </div>
@@ -134,10 +184,10 @@ const Content = () => {
                                   className="wtd-video-meta-block"
                                 >
                                   <span className="wtd-video-meta-block">
-                                    조회수 48만회
+                                    조회수 {item.postView}
                                   </span>
                                   <span className="wtd-video-meta-block">
-                                    10개월 전
+                                    {item.postDate}
                                   </span>
                                 </div>
                               </div>
