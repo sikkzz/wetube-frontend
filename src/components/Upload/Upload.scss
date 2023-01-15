@@ -114,7 +114,7 @@
         margin-bottom: 4px;
     }
 
-    a{
+    a {
         color: var(--text-sub-blue);
     }
 }
@@ -126,6 +126,7 @@ wt-dialog.wt-upload-dialog> {
     }
 }
 
-wt-upload-dialog[workflow-step=SELECT_FILES] #scrollable-content.wt-upload-dialog, wt-upload-dialog[workflow-step=SELECT_FILES] .button-area.wt-upload-dialog {
+wt-upload-dialog[workflow-step=SELECT_FILES] #scrollable-content.wt-upload-dialog,
+wt-upload-dialog[workflow-step=SELECT_FILES] .button-area.wt-upload-dialog {
     display: none;
 }

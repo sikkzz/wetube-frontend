@@ -91,7 +91,8 @@ wt-radio-button.wt-video-visibility-select {
 }
 
 
-wt-radio-button wt-radio-button .wt-radio-button[style-target=container], .wt-radio-button[style-target=container] {
+wt-radio-button wt-radio-button .wt-radio-button[style-target=container],
+.wt-radio-button[style-target=container] {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -498,4 +499,3 @@ wt-img-with-fallback {
         margin-right: 8px;
     }
 }
-

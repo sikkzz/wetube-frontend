@@ -1,44 +1,56 @@
 @import '../../styles/common.scss';
 
 
-wt-chips {
-    position: fixed;
-    width: 85.3972%;
-    height: 56px;
-    background-color: var(--main-bg);
-    margin: 60px 0 0 250px;
-    z-index: 100;
-
-    #container {
-        width: 70%;
-        height: 56px;
-    }
-
-}
-
-wt-chips-wrapper {
-    white-space: nowrap;
-    font-size: 0.8rem;
-    margin: 8px;
-    height: 32px;
-    padding: 0 15px;
-    border-radius: 8px;
-    overflow: hidden;
-    cursor: pointer;
-    background: var(--category-bt-bg);
-    color: var(--text-primary);
-
-    .wt-chips-wrapper {
-        max-width: 20rem;
-        display: block;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        white-space: nowrap;
-    }
-}
-
-.wt-chips {
+#header.wt-grid-render {
+    width: 100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    z-index: 100;
+}
+
+#chips-wrapper.wt-chip-bar {
+    background-color: var(--main-bg);
+    border-top: none;
+    border-bottom: none;
+    position: fixed;
+    // top: var(--wt-grid-chip-bar-top);
+    width: var(--wt-grid-chip-bar-width);
+    display: flex;
+    justify-content: flex-start;
+    flex: none;
+}
+
+#scroll-container.wt-chip-bar {
+    position: relative;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+wt-chip.wt-chip-bar:first-of-type {
+    margin-left: 24px;
+}
+
+
+
+wt-chip.wt-chip-bar.selected {
+    background-color: var(--text-primary);
+    color: var(--text-primary-inverse);
+
+    &:hover {
+        background-color: var(--text-primary);
+    }
+}
+
+wt-chip.wt-chip-bar {
+    margin: 12px;
+    margin-left: 0;
+    padding: 0 var(--wt-margin-3x);
+
+    &:hover {
+        background-color: var(--white-alpha-20);
+    }
+}
+
+
+#text.wt-chip {
+    max-width: 20rem;
 }

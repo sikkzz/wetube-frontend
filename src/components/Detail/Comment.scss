@@ -1,0 +1,191 @@
+#header.wtd-item-section {
+    --wt-feed-filter-chip-bar-margin: 0;
+    --wt-feed-filter-chip-bar-padding-left: 36px;
+    --wt-feed-filter-chip-bar-margin-left-first-item: 0;
+}
+
+#title.wtd-comments-header {
+    margin-bottom: 24px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#count.wtd-comments-header {
+    display: inline-block;
+    margin: 0 32px 0 0;
+    align-self: flex-start;
+}
+
+.count-text.wtd-comments-header {
+    vertical-align: middle;
+    font-family: "Roboto", "Arial", sans-serif;
+    font-size: 1rem;
+    line-height: 2.2rem;
+    font-weight: 400;
+}
+
+wt-formatted-string.wtd-comments-header {
+    color: var(--text-primary);
+}
+
+wt-menu-button.wt-dropdown-menu {
+    padding: 0;
+    color: var(--text-secondary);
+    --paper-menu-button-dropdown-background: transparent;
+}
+
+#label.wt-dropdown-menu {
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    min-width: 0;
+    font-size: var(--wt-subheadline-font-size);
+    font-weight: var(--wt-subheadline-font-weight);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#label-icon.wt-dropdown-menu {
+    margin-right: var(--wt-margin-2x);
+    flex-shrink: 0;
+    color: var(--text-primary);
+}
+
+#icon-label.wt-dropdown-menu {
+    color: var(--text-primary);
+    font-size: 0.9rem;
+    font-weight: var(--wt-tab-system-font-weight);
+}
+
+#dropdown.wt-menu-button {
+    outline: none;
+    position: fixed;
+    left: 322.562px;
+    top: 298.984px;
+    z-index: 2202;
+}
+
+.dropdown-content.wt-menu-button {
+    box-sizing: border-box;
+    max-width: 97.2188px;
+    max-height: 122px;
+    margin-bottom: 20px;
+    margin-top: -10px;
+    top: 10px;
+    position: relative;
+    border-radius: var(--paper-menu-button-content-border-radius);
+}
+
+#menu.wt-dropdown-menu {
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: var(--comment-sort-bg);
+}
+
+wt-listbox.wt-dropdown-menu a.wt-dropdown-menu.iron-selected {
+    background-color: var(--white-alpha-10);
+}
+
+wt-listbox.wt-dropdown-menu a.wt-dropdown-menu {
+    display: block;
+    color: var(--text-primary);
+    cursor: pointer;
+    outline: none;
+}
+
+wt-paper-item-body.wt-dropdown-menu {
+    max-width: 100%;
+    flex: none
+}
+
+.item.wt-dropdown-menu {
+    font-size: 14px;
+    font-weight: var(--wt-user-comment-font-weight);
+    line-height: var(--wt-user-comment-line-height);
+}
+
+#author-thumbnail.wtd-comment-simplebox-render {
+    width: 40px;
+    height: 40px;
+    margin-right: 16px;
+    flex: none;
+    border-radius: 50%;
+    background-color: transparent;
+    overflow: hidden;
+    opacity: 1;
+    transition: none;
+}
+
+#placeholder-area.wtd-comment-simplebox-render {
+    cursor: text;
+    padding-bottom: 4px;
+    // border-bottom: 1px solid var(--white-alpha-10);
+    flex: 1;
+    flex-basis: 1e-9px;
+}
+
+#input-box.wtd-comment-simplebox-render {
+    padding-bottom: 8px;
+
+    input {
+        width: 100%;
+        background: transparent;
+        border: none;
+        outline: none;
+        height: 24px;
+        border-bottom: 1px solid var(--comment-bt-text-disabled);
+        color: var(--text-primary);
+
+        &:focus {
+            border-bottom: 1px solid var(--bg-primary);
+        }
+    }
+
+    input::placeholder {
+        color: rgb(128, 128, 128);
+        font-size: 14px;
+    }
+}
+
+#footer.wtd-comment-simplebox-render {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#buttons.wtd-comment-simplebox-render {
+    display: flex;
+    flex-direction: row;
+}
+
+#cancel-button.wtd-comment-simplebox-render,
+#submit-button.wtd-comment-simplebox-render {
+    margin-left: 8px;
+}
+
+wtd-button-render.wtd-comment-simplebox-render {
+    --wt-button-icon-size: 36px;
+    display: inline-block;
+}
+
+.wt-button-shape-next.cancel-button {
+    color: var(--text-primary);
+    background: transparent;
+
+    &:hover{
+        background: var(--white-alpha-10);
+    }
+}
+
+.wt-button-shape-next.submit-button {
+    color: var(--wt-text-disabled);
+    background-color: var(--white-alpha-10);
+
+    &:hover{
+        color: var(--text-primary-inverse);
+        background-color: var(--bg-sub-blue);
+    }
+}
