@@ -2,18 +2,22 @@
 export const ChannelTabData = [
   {
     title: "홈",
-    id: "home"
+    id: "tab-home"
+  },
+  {
+    title: "동영상",
+    id: "tab-video"
   },
   {
     title: "재생목록",
-    id: "playlist"
+    id: "tab-playlist"
   },
   {
     title: "채널",
-    id: "channel"
+    id: "tab-channel"
   },
   {
     title: "정보",
-    id: "info"
+    id: "tab-info"
   }
 ];
