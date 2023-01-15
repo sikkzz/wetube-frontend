@@ -1,11 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Img from "../../assets/test2.jpg";
 
 import Icons from "../../constants/icon";
 
 import "./StudioSidebar.scss";
 
-import { StudioSidebarData } from "../../constants/data/StudioSidebarData";
+import {
+  StudioSidebarData,
+  StudioSidebarData2,
+} from "../../constants/data/StudioSidebarData";
 
 const StudioSidebar = () => {
   const [tab, setTab] = useState("dashboard");
@@ -92,6 +95,25 @@ const StudioSidebar = () => {
             ))}
           </ul>
         </wt-animatable>
+        <div id="bottom-section" className="wt-side-st">
+          <hr className="divider wt-side-st" />
+          <ul>
+            {StudioSidebarData2.map((item, index) => (
+              <li className="wt-side-st" key={index}>
+                <wt-ve class="wt-side-st">
+                  <wt-icon-item class="wt-side-st">
+                    <div id="contentIcon" className="content-icon wt-icon-item">
+                      <wt-iron-icon class="wt-side-st">
+                        {item.icon}
+                      </wt-iron-icon>
+                    </div>
+                    <div className="nav-item-text wt-side-st">{item.title}</div>
+                  </wt-icon-item>
+                </wt-ve>
+              </li>
+            ))}
+          </ul>
+        </div>
       </nav>
     </wt-side-st>
   );
