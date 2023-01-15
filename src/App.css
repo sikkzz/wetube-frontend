@@ -758,3 +758,62 @@ wtd-compact-video-render {
   display: flex;
   flex-direction: row;
 }
+
+wtd-tab-header-render {
+  --wt-lightsource-section1-color: var(--main-bg);
+  --wt-lightsource-primary-title-color: var(--text-primary);
+  --wt-lightsource-secondary-title-color: var(--text-secondary);
+  display: block;
+}
+
+wt-app-header-layout {
+  display: block;
+  position: relative;
+  z-index: 0;
+}
+
+wtd-channel-profile {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  margin: 0 24px 0 0;
+}
+
+wt-app-toolbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+  height: 64px;
+  padding: 0 16px;
+  font-size: 20px;
+}
+
+wt-paper-tabs {
+  display: flex;
+  align-items: center;
+  height: 48px;
+  font-size: 14px;
+  font-weight: 500;
+  overflow: hidden;
+
+}
+
+wt-paper-tab {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 0 12px;
+  overflow: hidden;
+  cursor: pointer;
+  font-family: "Roboto", "Noto", sans-serif;
+}
+
+wtd-expandable-tab-render {
+  color: var(--text-secondary);
+  width: 300px;
+  flex-direction: row;
+  align-items: center;
+  display: inline-flex;
+}

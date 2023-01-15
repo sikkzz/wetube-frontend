@@ -11,14 +11,14 @@ import {
 import SidebarListItem from "./SidebarListItem";
 import SidebarListSubItem from "./SidebarListSubItem";
 
-const SidebarList = ({ sidebar_title }) => {
+const SidebarList = ({ sidebarTitle }) => {
   return (
     <wtd-guide-section-render class="wtd-guide-render">
       <h3
         className="wtd-guide-section-render"
         style={{
           display:
-            sidebar_title === "타이틀" || sidebar_title === "옵션"
+            sidebarTitle === "타이틀" || sidebarTitle === "옵션"
               ? "none"
               : "block",
         }}
@@ -27,7 +27,7 @@ const SidebarList = ({ sidebar_title }) => {
           id="guide-section-title"
           class="wtd-guide-section-render"
         >
-          {sidebar_title}
+          {sidebarTitle}
         </wt-formatted-string>
       </h3>
       <div id="items" className="wtd-guide-section-render">
@@ -90,7 +90,7 @@ const SidebarList = ({ sidebar_title }) => {
                 ))}
               </>
             ),
-          }[sidebar_title]
+          }[sidebarTitle]
         }
       </div>
     </wtd-guide-section-render>

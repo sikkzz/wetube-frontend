@@ -3,7 +3,8 @@
 wt-side-st.wt-page {
     flex: none;
     background-color: var(--wt-brand-background-solid);
-    padding-top: 68px;
+    padding-top: 64px;
+    height: 872px;
 }
 
 wt-side-st {
@@ -270,4 +271,18 @@ wt-icon-item.wt-side-st::after {
     width: 4px;
     background-color: var(--wt-theme-red);
     opacity: 0;
+}
+
+#bottom-section.wt-side-st {
+    overflow: hidden;
+    flex: 0 0 auto;
+    padding-bottom: 8px;
+}
+
+.divider.wt-side-st {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 8px;
+    border: 0;
+    border-bottom: 1px solid var(--wt-line-divider);
 }

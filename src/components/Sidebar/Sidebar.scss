@@ -1,72 +1,151 @@
-@import '../../styles/common.scss';
-
-wt-side {
-    background-color: var(--main-bg);
-    width: 250px;
+#guide.wtd-app {
     position: fixed;
+    width: var(--app-drawer-width, 256px);
+    height: 100%;
+    overflow-y: auto;
+}
+
+#guide.wtd-app::-webkit-scrollbar {
+    display: none;
+}
+
+#guide-wrapper.wtd-app {
+    display: flex;
+    flex-direction: column;
+    width: 240px;
+}
+
+#guide-spacer.wtd-app {
     margin-top: 60px;
 }
 
-wt-side-list {
-    margin: 0;
-    padding: 0;
-    width: 100%;
+#guide-inner-content.wtd-app {
+    flex: 1;
+}
 
+wtd-guide-render.wtd-app {
+    width: 240px;
+}
 
-    hr {
-        border: none;
-        width: 250px;
+#sections.wtd-guide-render {
+    position: relative;
+
+}
+
+#sections.wtd-guide-render {
+    *.wtd-guide-render {
+        padding: 12px;
         border-bottom: 1px solid var(--white-alpha-10);
-        margin: 14px 0;
     }
 }
 
-wt-side-menu {
-    padding: 0 10px;
-    flex-direction: column;
+wtd-guide-entry-render.wtd-guide-section-render,
+wtd-guide-entry-render.wtd-guide-col-entry-render {
+    &:hover {
+        background: var(--white-alpha-10);
+    }
+}
+
+wtd-guide-entry-render.wtd-active {
+    background: var(--white-alpha-10);
+}
+
+#endpoint.wtd-guide-entry-render {
+    min-height: var(--paper-item-min-height, 48px);
+    cursor: pointer;
+    box-sizing: border-box;
+    outline: none;
+    color: var(--text-primary);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+}
+
+wt-paper-item.wtd-guide-entry-render {
+    padding: 0 12px;
+    min-width: 0;
+    height: var(--paper-item-min-height, 48px);
+    width: 100%;
+    min-height: 40px;
+}
+
+.guide-icon.wtd-guide-entry-render {
+    --iron-icon-height: 24px;
+    --iron-icon-width: 24px;
+    margin-right: 24px;
+    color: var(--static-brand-white);
+    width: 24px;
+    height: 24px;
+    display: inline-flex;
+}
+
+.title.wtd-guide-entry-render {
+    color: var(--text-primary);
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-family: "Roboto", "Arial", sans-serif;
+    font-size: 0.9rem;
+    font-weight: 400;
+    flex: 1;
+    flex-basis: 1e-9px;
+}
+
+wtd-guide-section-entry-render.wtd-guide-section-render:not(:first-child) {
+    border-top: 1px solid var(--white-alpha-10);
+    margin-top: 12px;
+    padding-top: 12px;
+}
+
+#guide-section-title.wtd-guide-section-render {
+    text-transform: none;
+    letter-spacing: unset;
+    padding: 6px 12px 4px;
+    font-family: "Roboto", "Arial", sans-serif;
+    font-size: 1rem;
+    line-height: 1.8rem;
+    font-weight: 400;
+    color: var(--text-primary);
+}
+
+#guide-links-primary.wtd-guide-render {
+    padding: 16px 24px 0;
+    border-top: 1px solid var(--white-alpha-10);
+
 
 }
 
-wt-side-item {
-    justify-content: flex-start;
-    list-style: none;
-    color: var(--white);
-    font-size: 12px;
-    font-weight: 400;
-    padding: 0 12px;
+#guide-links-primary.wtd-guide-render,
+#guide-links-secondary.wtd-guide-render {
+    a:not(:last-child) {
+        margin-right: 8px;
+    }
 
     a {
+        display: inline-block;
         text-decoration: none;
-        color: inherit;
-    }
-
-    &:hover {
-        border-radius: 10px;
-        background: var(--sidebar-bt-bg);
+        color: var(--text-secondary);
+        font-size: 0.86rem;
+        font-weight: 500;
+        line-height: 1.3rem;
     }
 }
 
-wt-side-item-wrapper {
-    align-items: center;
-    height: 40px;
+#guide-links-secondary.wtd-guide-render {
+    padding: 12px 24px 0;
+}
 
-    div {
-        width: 132px;
-        margin-left: 25px;
-        font-size: 0.9rem;
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
+#copyright.wtd-guide-render {
+    display: block;
+    padding: 16px 24px;
+    color: var(--text-disabled);
+    font-family: "Roboto", "Arial", sans-serif;
+    font-size: 0.78rem;
+    line-height: 1.3rem;
+    font-weight: 400;
+
+    a {
+        color: var(--text-sub-blue);
     }
-}
-
-.wt-side {
-    display: flex;
-    // justify-content: center;
-    // align-items: center;
-}
-
-.wt-side-active {
-    border-radius: 10px;
-    background: var(--sidebar-bt-bg);
 }
