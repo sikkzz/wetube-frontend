@@ -154,11 +154,16 @@ wtd-video-meta-block.compact #metadata.wtd-video-meta-block,
     flex-direction: column;
 }
 
-wtd-video-meta-block #byline-container.wtd-video-meta-block {
+wtd-video-meta-block[main] #byline-container.wtd-video-meta-block {
     font-family: "Roboto", "Arial", sans-serif;
     font-size: 0.9rem;
     line-height: 1.5rem;
     font-weight: 400;
+}
+
+wtd-video-meta-block:not([main]) #byline-container.wtd-video-meta-block {
+    font-size: 0.8rem;
+    line-height: 1.4rem;
 }
 
 #byline-container.wtd-video-meta-block {
@@ -189,20 +194,20 @@ wtd-video-meta-block.grid #channel-name.wtd-video-meta-block,
 }
 
 #container.wtd-channel-name {
-    display: var(--ytd-channel-name-container-display, inline-block);
+    display: var(--wtd-channel-name-container-display, inline-block);
     overflow: hidden;
     max-width: 100%;
 }
 
 #text-container.wtd-channel-name {
-    display: var(--ytd-channel-name-text-container-display, block);
+    display: var(--wtd-channel-name-text-container-display, block);
 }
 
 #text.wtd-channel-name {
     display: flex;
 }
 
-wtd-video-meta-block #metadata-line.wtd-video-meta-block {
+wtd-video-meta-block[main] #metadata-line.wtd-video-meta-block {
     font-family: "Roboto", "Arial", sans-serif;
     font-size: 0.9rem;
     font-weight: 400;
@@ -212,6 +217,10 @@ wtd-video-meta-block #metadata-line.wtd-video-meta-block {
     text-overflow: ellipsis;
     white-space: normal;
     display: flex;
+}
+
+wtd-video-meta-block:not([main]) #metadata-line.wtd-video-meta-block {
+    font-size: 0.8rem;
 }
 
 #metadata-line.wtd-video-meta-block {

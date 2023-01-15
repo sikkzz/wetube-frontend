@@ -142,7 +142,10 @@ const Content = () => {
                                 </wt-formatted-string>
                               </a>
                             </h3>
-                            <wtd-video-meta-block class="grid wt-grid-media">
+                            <wtd-video-meta-block
+                              class="grid wt-grid-media"
+                              main
+                            >
                               <div
                                 id="metadata"
                                 className="wtd-video-meta-block"

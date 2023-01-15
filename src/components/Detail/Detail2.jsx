@@ -87,32 +87,32 @@ const Detail2 = () => {
                           </div>
                           <div className="wt-controls">
                             <div className="wt-left-controls">
-                              <button className="wt-button">
+                              <button className="wt-control-button">
                                 <Icons.BsSkipStart size={36} color="#fff" />
                               </button>
-                              <button className="wt-button">
+                              <button className="wt-control-button">
                                 <Icons.TbPlayerTrackPrev
                                   size={30}
                                   color="#fff"
                                 />
                               </button>
-                              <button className="wt-button">
+                              <button className="wt-control-button">
                                 <Icons.BsPlay size={40} color="#fff" />
                               </button>
-                              <button className="wt-button">
+                              <button className="wt-control-button">
                                 <Icons.TbPlayerTrackNext
                                   size={30}
                                   color="#fff"
                                 />
                               </button>
-                              <button className="wt-button">
+                              <button className="wt-control-button">
                                 <Icons.BsSkipEnd size={38} color="#fff" />
                               </button>
                               <div className="wt-control-time">0:00 / 0:30</div>
                             </div>
                             <div className="wt-right-controls">
                               <div className="wt-control-sound-container">
-                                <button className="wt-button">
+                                <button className="wt-control-button">
                                   {isSound ? (
                                     <Icons.GiSpeaker size={30} color="#fff" />
                                   ) : (
@@ -139,7 +139,7 @@ const Detail2 = () => {
                                   </div>
                                 )}
                               </div>
-                              <button className="wt-button">
+                              <button className="wt-control-button">
                                 {isFull ? (
                                   <Icons.AiOutlineFullscreenExit
                                     size={20}
@@ -219,15 +219,15 @@ const Detail2 = () => {
                       </wtd-video-owner-render>
                       <div id="subscribe-button" className="wtd-watch-metadata">
                         <wtd-subscribe-button-render class="wtd-watch-metadata">
-                          <wt-button-shape class="wtd-subscribe-button-render">
-                            <button className="wt-button-shape-next">
-                              <div className="cbox wt-button-shape">
-                                <span className="wt-button-shape-text">
+                          <wt-control-button-shape class="wtd-subscribe-button-render">
+                            <button className="wt-control-button-shape-next">
+                              <div className="cbox wt-control-button-shape">
+                                <span className="wt-control-button-shape-text">
                                   구독
                                 </span>
                               </div>
                             </button>
-                          </wt-button-shape>
+                          </wt-control-button-shape>
                         </wtd-subscribe-button-render>
                       </div>
                     </div>
@@ -245,9 +245,9 @@ const Detail2 = () => {
                                   className="wtd-like-dislike-button-render"
                                 >
                                   <wtd-toggle-button-render class="wtd-like-dislike-button-render">
-                                    <wt-button-shape>
-                                      <button className="wt-button-shape-next like-button">
-                                        <div className="wt-button-shape-next-icon">
+                                    <wt-control-button-shape>
+                                      <button className="wt-control-button-shape-next like-button">
+                                        <div className="wt-control-button-shape-next-icon">
                                           <wt-icon
                                             style={{
                                               width: "24px",
@@ -262,11 +262,11 @@ const Detail2 = () => {
                                             </wt-animated-icon>
                                           </wt-icon>
                                         </div>
-                                        <div className="cbox wt-button-shape">
+                                        <div className="cbox wt-control-button-shape">
                                           <span>4.6천</span>
                                         </div>
                                       </button>
-                                    </wt-button-shape>
+                                    </wt-control-button-shape>
                                   </wtd-toggle-button-render>
                                 </div>
                                 <div
@@ -274,9 +274,9 @@ const Detail2 = () => {
                                   className="wtd-like-dislike-button-render"
                                 >
                                   <wtd-toggle-button-render class="wtd-like-dislike-button-render">
-                                    <wt-button-shape>
-                                      <button className="wt-button-shape-next dislike-button">
-                                        <div className="wt-button-shape-next-icon">
+                                    <wt-control-button-shape>
+                                      <button className="wt-control-button-shape-next dislike-button">
+                                        <div className="wt-control-button-shape-next-icon">
                                           <wt-icon
                                             style={{
                                               width: "24px",
@@ -292,14 +292,14 @@ const Detail2 = () => {
                                           </wt-icon>
                                         </div>
                                       </button>
-                                    </wt-button-shape>
+                                    </wt-control-button-shape>
                                   </wtd-toggle-button-render>
                                 </div>
                               </wtd-like-dislike-button-render>
                               <wtd-button-render class="wtd-menu-render">
-                                <wt-button-shape>
-                                  <button className="wt-button-shape-next share-button">
-                                    <div className="wt-button-shape-next-icon">
+                                <wt-control-button-shape>
+                                  <button className="wt-control-button-shape-next share-button">
+                                    <div className="wt-control-button-shape-next-icon">
                                       <wt-icon
                                         style={{
                                           width: "24px",
@@ -312,19 +312,19 @@ const Detail2 = () => {
                                         />
                                       </wt-icon>
                                     </div>
-                                    <div className="cbox wt-button-shape">
+                                    <div className="cbox wt-control-button-shape">
                                       <span>공유</span>
                                     </div>
                                   </button>
-                                </wt-button-shape>
+                                </wt-control-button-shape>
                               </wtd-button-render>
                             </div>
-                            <wt-button-shape
+                            <wt-control-button-shape
                               id="button-shape"
                               class="wtd-menu-render"
                             >
-                              <button className="wt-button-shape-next more-button">
-                                <div className="wt-button-shape-next-icon">
+                              <button className="wt-control-button-shape-next more-button">
+                                <div className="wt-control-button-shape-next-icon">
                                   <wt-icon
                                     style={{
                                       width: "24px",
@@ -338,7 +338,7 @@ const Detail2 = () => {
                                   </wt-icon>
                                 </div>
                               </button>
-                            </wt-button-shape>
+                            </wt-control-button-shape>
                           </wtd-menu-render>
                         </div>
                       </div>
