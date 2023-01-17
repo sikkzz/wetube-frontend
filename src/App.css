@@ -817,3 +817,27 @@ wtd-expandable-tab-render {
   align-items: center;
   display: inline-flex;
 }
+
+wtd-section-list-render{
+  display: flex;
+  flex-direction: column;
+  width: 1284px;
+}
+
+wtd-item-section-render{
+  display: block;
+}
+
+wtd-self-render{
+  display: flex;
+  flex-direction: column;
+}
+
+wtd-expanded-self-contents-render{
+  display: block;
+  margin-bottom: 24px;
+}
+
+wtd-channel-render{
+  display: block;
+}
