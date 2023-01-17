@@ -4,7 +4,7 @@ import FeedChannelRender from "./FeedChannelRender";
 
 import "./Feed.scss";
 
-const Feed = () => {
+const FeedChannel = () => {
   return (
     <wtd-section-list-render>
       <div id="contents" className="wtd-section-list-render">
@@ -32,4 +32,4 @@ const Feed = () => {
   );
 };
 
-export default Feed;
+export default FeedChannel;

@@ -17,6 +17,7 @@ export const SidebarData = [
   {
     icon: <Icons.BsFillCollectionPlayFill size={size} />,
     title: "구독",
+    link: "/feed"
   },
 ];
 
