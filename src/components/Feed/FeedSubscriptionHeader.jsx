@@ -13,9 +13,13 @@ const FeedSubscriptionHeader = () => {
         <div id="subscribe-button" className="wtd-self-render">
           <wtd-button-render class="wtd-self-render">
             <wt-button-shape>
-              <a id="self-render" className="wt-button-shape-next" href="#!">
+              <a
+                id="self-render"
+                className="wt-button-shape-next"
+                href="/feed/channel"
+              >
                 <div className="cbox wt-button-shape">
-                  <span>관리</span>
+                  <span>채널 관리</span>
                 </div>
               </a>
             </wt-button-shape>

@@ -8,7 +8,8 @@ const FeedSubscription = () => {
   return (
     <wtd-section-list-render>
       <div id="contents" className="wtd-section-list-render">
-        <wtd-item-section-render class="wtd-section-list-render">
+        <wtd-item-section-render
+        id="sub" class="wtd-section-list-render">
           <div id="contents" className="wtd-item-section-render">
             <wtd-self-render class="wtd-item-section-render">
               <div id="dismissible" className="wtd-self-render">

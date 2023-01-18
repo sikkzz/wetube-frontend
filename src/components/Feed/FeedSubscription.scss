@@ -74,3 +74,101 @@ wtd-thumbnail.wtd-grid-video-render {
     height: 100%;
     object-fit: cover;
 }
+
+#details.wtd-grid-video-render {
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+}
+
+#meta.wtd-grid-video-render {
+    padding-right: 24px;
+}
+
+h3.wtd-grid-video-render {
+    color: var(--text-primary);
+    margin: 8px 0 8px;
+}
+
+#video-title.wtd-grid-video-render {
+    font-family: "Roboto", "Arial", sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.3rem;
+    font-weight: 500;
+    overflow: hidden;
+    max-height: 4rem;
+    -webkit-line-clamp: 2;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    white-space: normal;
+}
+
+#metadata-container.wtd-grid-video-render {
+    display: flex;
+    flex-direction: column;
+}
+
+#metadata.wtd-grid-video-render {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+#byline-container.wtd-grid-video-render {
+    font-family: "Roboto", "Arial", sans-serif;
+    font-size: 0.8rem;
+    line-height: 1.2rem;
+    font-weight: 400;
+    overflow: hidden;
+    max-height: 1.8rem;
+    -webkit-line-clamp: 1;
+    display: flex;
+    max-width: 100%;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+}
+
+#channel-name.wtd-gird-video-render {
+    --ytd-channel-name-badges-margin-right: 8px;
+    --ytd-channel-name-text-display: block;
+    --ytd-channel-name-text-complex-display: flex;
+    --yt-endpoint-color: var(--yt-spec-text-secondary);
+    --yt-endpoint-visited-color: var(--text-secondary);
+    color: var(--text-secondary);
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#text.wtd-channel-name a.wt-formatted-string {
+    color: var(--text-secondary);
+}
+
+#metadata-line.wtd-grid-video-render {
+    font-family: "Roboto", "Arial", sans-serif;
+    font-size: 0.8rem;
+    line-height: 1.2rem;
+    font-weight: 400;
+    overflow: hidden;
+    max-height: 3.6rem;
+    -webkit-line-clamp: 2;
+    display: flex;
+    color: var(--text-secondary);
+}
+
+span.wtd-grid-video-render {
+    display: inline-block;
+}
+
+span.wtd-grid-video-render:not(:first-of-type)::before {
+    content: "•";
+    margin: 0 4px;
+}
+
+#sub.wtd-section-list-render{
+    border-bottom: 1px solid var(--white-alpha-10);
+}
