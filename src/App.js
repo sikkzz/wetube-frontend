@@ -7,6 +7,8 @@ import Upload from "./components/Upload/Upload";
 import UploadSetting from "./components/Upload/UploadSetting";
 import DetailPage from "./pages/DetailPage/DetailPage";
 import ShortsPage from "./pages/ShortsPage/ShortsPage";
+import FeedSubPage from "./pages/FeedPage/FeedSubPage";
+import FeedChannelPage from "./pages/FeedPage/FeedChannelPage";
 
 function App() {
   return (
@@ -20,6 +22,8 @@ function App() {
         <Route exact path="/upload_setting" element={<UploadSetting />} />
         <Route exact path="/detail" element={<DetailPage />} />
         <Route exact path="/detail/:id" element={<DetailPage />} />
+        <Route exact path="/feed/subscription" element={<FeedSubPage />} />
+        <Route exact path="/feed/channel" element={<FeedChannelPage />} />
       </Routes>
     </>
   );

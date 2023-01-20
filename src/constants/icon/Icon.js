@@ -94,6 +94,8 @@ import { VscListFilter } from "react-icons/vsc";
 import { BsEye } from "react-icons/bs";
 import { MdAttachMoney } from "react-icons/md";
 
+import { BsBell } from "react-icons/bs";
+
 const exportIcons = {
   BsSearch,
   FaBars,
@@ -171,6 +173,7 @@ const exportIcons = {
   AiFillTrophy,
   FiSettings,
   BsFlag,
+  BsBell,
 };
 
 export default exportIcons;
