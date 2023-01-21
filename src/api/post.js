@@ -1,9 +1,13 @@
 import request from "./index";
 
 export const getPostInfo = async () => {
-  return request({ url: `/posts/get_info` });
+  return request({ url: `/post` });
 };
 
-export const likePost = async () => {
-  return request({ method: "post", url: `/posts/like_post` });
+export const getPostDetailInfo = async (postId) => {
+  return request({ url: `/post/${postId}` });
+};
+
+export const likePost = async (postId) => {
+  return request({ method: "post", url: `/post/${postId}` });
 };
