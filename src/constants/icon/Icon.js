@@ -95,6 +95,7 @@ import { BsEye } from "react-icons/bs";
 import { MdAttachMoney } from "react-icons/md";
 
 import { BsBell } from "react-icons/bs";
+import { BiSortDown } from "react-icons/bi";
 
 const exportIcons = {
   BsSearch,
@@ -174,6 +175,7 @@ const exportIcons = {
   FiSettings,
   BsFlag,
   BsBell,
+  BiSortDown
 };
 
 export default exportIcons;

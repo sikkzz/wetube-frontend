@@ -8,6 +8,7 @@ const Header = () => {
   const navigate = useNavigate();
   const [isLogin, setIsLogin] = useState(false);
   const [userImg, setUserImg] = useState();
+  const [searchValue, setSearchValue] = useState("");
 
   const onLogoClick = () => {
     navigate("/");
@@ -19,6 +20,14 @@ const Header = () => {
 
   const onChannelClick = () => {
     navigate("/channel");
+  };
+
+  const onSearchClick = (e) => {
+    e.preventDefault();
+
+    if (searchValue) {
+      navigate(`/search/${searchValue}`);
+    }
   };
 
   return (
@@ -35,11 +44,20 @@ const Header = () => {
           <div id="center" className="wt-head">
             <wt-searchbox class="wt-head">
               <wt-searchbox id="search" class="wt-head">
-                <form>
-                  <input type="text" placeholder="검색" />
+                <form onSubmit={onSearchClick}>
+                  <input
+                    type="text"
+                    placeholder="검색"
+                    value={searchValue}
+                    onChange={(e) => setSearchValue(e.target.value)}
+                  />
                 </form>
               </wt-searchbox>
-              <wt-icon-button id="search-icon" class="wt-head">
+              <wt-icon-button
+                id="search-icon"
+                class="wt-head"
+                onClick={onSearchClick}
+              >
                 <Icons.BsSearch size={18} />
               </wt-icon-button>
             </wt-searchbox>

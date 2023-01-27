@@ -9,6 +9,7 @@ import DetailPage from "./pages/DetailPage/DetailPage";
 import ShortsPage from "./pages/ShortsPage/ShortsPage";
 import FeedSubPage from "./pages/FeedPage/FeedSubPage";
 import FeedChannelPage from "./pages/FeedPage/FeedChannelPage";
+import SearchPage from "./pages/SearchPage";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route exact path="/detail/:id" element={<DetailPage />} />
         <Route exact path="/feed/subscription" element={<FeedSubPage />} />
         <Route exact path="/feed/channel" element={<FeedChannelPage />} />
+        <Route exact path="/search/:searchValue" element={<SearchPage />} />
       </Routes>
     </>
   );
