@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 
 import Image from "../../assets/test2.jpg";
 import Image2 from "../../assets/test.jpg";
+
+import { timeFormat } from "../../utils/timeformating";
 
 import Categorybar from "../Categorybar/Categorybar";
 
@@ -11,62 +14,77 @@ import { getPostInfo } from "../../modules/post";
 
 const Content = () => {
   const count = [1, 2, 3, 4];
-  
+
+  // const postState = useSelector((state) => state.post)
+
+
   const [postInfo, setPostInfo] = useState([
     {
-      postId: "1",
-      postTitle: "비디오 포스트 제목",
-      postView: "11만회",
-      postDate: "1주전",
-      postVideoThumbnail:
+      postId: 1,
+      author: {
+        userId: 1,
+        username: "김준식",
+        profileUrl:
+          "https://yt3.ggpht.com/JvXwi2zyrNnKLdVjp5MIYEakcH5RHWKDIajrPAcCHYjeWFsgNS3az_eX8BT8a8YhjbXiDX-UJQ=s68-c-k-c0x00ffffff-no-rj",
+      },
+      title: "비디오 포스트 제목",
+      view: "11만회",
+      createAt: "1주전",
+      thumbnailImg:
         "https://i.ytimg.com/vi/hUM_v2B2Vpo/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDWU5gZxe5fYEo-baUeZYOB8426tw",
-      postVideoTime: "5:31:05",
-      postOwnerChannel: "비디오 포스트 채널",
-      postOwnerThumbnail:
-        "https://yt3.ggpht.com/JvXwi2zyrNnKLdVjp5MIYEakcH5RHWKDIajrPAcCHYjeWFsgNS3az_eX8BT8a8YhjbXiDX-UJQ=s68-c-k-c0x00ffffff-no-rj",
+      videoLength: timeFormat(19865), // second
     },
     {
-      postId: "2",
-      postTitle: "비디오 포스트 제목",
-      postView: "22만회",
-      postDate: "2주전",
-      postVideoThumbnail:
+      postId: 2,
+      author: {
+        userId: 2,
+        username: "김준식",
+        profileUrl:
+          "https://yt3.ggpht.com/JvXwi2zyrNnKLdVjp5MIYEakcH5RHWKDIajrPAcCHYjeWFsgNS3az_eX8BT8a8YhjbXiDX-UJQ=s68-c-k-c0x00ffffff-no-rj",
+      },
+      title: "비디오 포스트 제목",
+      view: "22만회",
+      createAt: "2주전",
+      thumbnailImg:
         "https://i.ytimg.com/vi/hUM_v2B2Vpo/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDWU5gZxe5fYEo-baUeZYOB8426tw",
-      postVideoTime: "5:31:05",
-      postOwnerChannel: "비디오 포스트 채널",
-      postOwnerThumbnail:
-        "https://yt3.ggpht.com/JvXwi2zyrNnKLdVjp5MIYEakcH5RHWKDIajrPAcCHYjeWFsgNS3az_eX8BT8a8YhjbXiDX-UJQ=s68-c-k-c0x00ffffff-no-rj",
+      videoLength: timeFormat(21865), // second
     },
     {
-      postId: "3",
-      postTitle: "비디오 포스트 제목",
-      postView: "33만회",
-      postDate: "3주전",
-      postVideoThumbnail:
+      postId: 3,
+      author: {
+        userId: 3,
+        username: "김준식",
+        profileUrl:
+          "https://yt3.ggpht.com/JvXwi2zyrNnKLdVjp5MIYEakcH5RHWKDIajrPAcCHYjeWFsgNS3az_eX8BT8a8YhjbXiDX-UJQ=s68-c-k-c0x00ffffff-no-rj",
+      },
+      title: "비디오 포스트 제목",
+      view: "33만회",
+      createAt: "3주전",
+      thumbnailImg:
         "https://i.ytimg.com/vi/hUM_v2B2Vpo/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDWU5gZxe5fYEo-baUeZYOB8426tw",
-      postVideoTime: "5:31:05",
-      postOwnerChannel: "비디오 포스트 채널",
-      postOwnerThumbnail:
-        "https://yt3.ggpht.com/JvXwi2zyrNnKLdVjp5MIYEakcH5RHWKDIajrPAcCHYjeWFsgNS3az_eX8BT8a8YhjbXiDX-UJQ=s68-c-k-c0x00ffffff-no-rj",
+      videoLength: timeFormat(27865), // second
     },
     {
-      postId: "4",
-      postTitle: "비디오 포스트 제목",
-      postView: "44만회",
-      postDate: "4주전",
-      postVideoThumbnail:
+      postId: 4,
+      author: {
+        userId: 4,
+        username: "김준식",
+        profileUrl:
+          "https://yt3.ggpht.com/JvXwi2zyrNnKLdVjp5MIYEakcH5RHWKDIajrPAcCHYjeWFsgNS3az_eX8BT8a8YhjbXiDX-UJQ=s68-c-k-c0x00ffffff-no-rj",
+      },
+      title: "비디오 포스트 제목",
+      view: "44만회",
+      createAt: "4주전",
+      thumbnailImg:
         "https://i.ytimg.com/vi/hUM_v2B2Vpo/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDWU5gZxe5fYEo-baUeZYOB8426tw",
-      postVideoTime: "5:31:05",
-      postOwnerChannel: "비디오 포스트 채널",
-      postOwnerThumbnail:
-        "https://yt3.ggpht.com/JvXwi2zyrNnKLdVjp5MIYEakcH5RHWKDIajrPAcCHYjeWFsgNS3az_eX8BT8a8YhjbXiDX-UJQ=s68-c-k-c0x00ffffff-no-rj",
+      videoLength: timeFormat(10865), // second
     },
   ]);
 
   // useEffect(() => {
-  //   setPostInfo(getPostInfo());
+  //   getPostInfo()
+  //   setPostInfo(postState)
   // }, []);
-
 
   return (
     <wt-grid-render style={{ "--wt-grid-item-row": "4" }}>
@@ -90,7 +108,7 @@ const Content = () => {
                               <img
                                 className="wtd-thumbnail"
                                 alt="thumbnail"
-                                src={item.postVideoThumbnail}
+                                src={item.thumbnailImg}
                               />
                             </wt-image>
                             <div id="overlays" className="wtd-thumbnail">
@@ -106,7 +124,7 @@ const Content = () => {
                                   id="text"
                                   className="wtd-thumbnail-overlay-time-status-render"
                                 >
-                                  {item.postVideoTime}
+                                  {item.videoLength}
                                 </span>
                               </wtd-thumbnail-overlay-time-status-render>
                             </div>
@@ -122,7 +140,7 @@ const Content = () => {
                               <img
                                 id="img"
                                 className="wt-img-shadow"
-                                src={item.postOwnerThumbnail}
+                                src={item.author.profileUrl}
                                 alt="profile_img"
                               />
                             </wt-img-shadow>
@@ -138,7 +156,7 @@ const Content = () => {
                                   id="video-title"
                                   class="wt-grid-media"
                                 >
-                                  {item.postTitle}
+                                  {item.title}
                                 </wt-formatted-string>
                               </a>
                             </h3>
@@ -172,7 +190,7 @@ const Content = () => {
                                             className="wt-formatted-string"
                                             href="#!"
                                           >
-                                            {item.postOwnerChannel}
+                                            {item.author.username}
                                           </a>
                                         </wt-formatted-string>
                                       </div>
@@ -184,10 +202,10 @@ const Content = () => {
                                   className="wtd-video-meta-block"
                                 >
                                   <span className="wtd-video-meta-block">
-                                    조회수 {item.postView}
+                                    조회수 {item.view}
                                   </span>
                                   <span className="wtd-video-meta-block">
-                                    {item.postDate}
+                                    {item.createAt}
                                   </span>
                                 </div>
                               </div>

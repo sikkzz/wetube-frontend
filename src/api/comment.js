@@ -1,7 +1,7 @@
 import request from "./index";
 
-export const getComment = async () => {
-  return request({ url: `/comments/get_comment` });
+export const getComment = async (postId) => {
+  return request({ url: `/post/${postId}/comments` });
 };
 
 export const addComment = async () => {
