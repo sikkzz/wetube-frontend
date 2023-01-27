@@ -5,7 +5,7 @@ import Icons from "../../constants/icon";
 import Comment from "../Detail/Comment";
 import Img from "../../assets/test.jpg";
 
-import { getPostDetailInfo, likePost } from "../../modules/post";
+import { getPostDetailInfo } from "../../modules/post";
 
 import { timeFormat } from "../../utils/timeformating";
 
@@ -97,7 +97,6 @@ const VideoDetail = () => {
   const postId = params.id - 1;
 
   const onLikeClick = () => {
-    likePost(postId);
   };
 
   // useEffect(() => {

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 
 import Image from "../../assets/test2.jpg";
 import Image2 from "../../assets/test.jpg";
@@ -13,6 +14,9 @@ import { getPostInfo } from "../../modules/post";
 
 const Content = () => {
   const count = [1, 2, 3, 4];
+
+  // const postState = useSelector((state) => state.post)
+
 
   const [postInfo, setPostInfo] = useState([
     {
@@ -78,7 +82,8 @@ const Content = () => {
   ]);
 
   // useEffect(() => {
-  //   setPostInfo(getPostInfo());
+  //   getPostInfo()
+  //   setPostInfo(postState)
   // }, []);
 
   return (
