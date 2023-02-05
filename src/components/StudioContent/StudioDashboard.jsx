@@ -2,10 +2,25 @@ import React from "react";
 import "./StudioDashboard.scss";
 import testimages from "../../assets/test2.jpg";
 import { StudioDashboardData } from "../../constants/data/StudioDashboardData";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import Icons from "../../constants/icon";
+import ModalPortal from "../../Portal";
+import Upload from "../Upload/Upload";
+import { getVideoInfo } from "../../api/studiopost";
 
 const StudioDashboard = () => {
+  const [VideoInfo, setVideoInfo] = useState({});
   const [active, setactive] = useState();
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const onUploadClick = () => {
+    setModalOpen(!modalOpen);
+  };
+
+  useEffect(() => {
+    const data = getVideoInfo(1);
+    setVideoInfo(data);
+  }, []);
 
   return (
     <>
@@ -13,9 +28,15 @@ const StudioDashboard = () => {
         <div className="StudioMain_Container_header">
           <div className="StudioMain_Container_header_name">채널 대시보드</div>
           <div className="StudioMain_Container_header_setting">
-            <div className="setting Upload">🚀</div>
-            <div className="setting Streming">🔼</div>
-            <div className="setting correction">📌</div>
+            <div className="setting Upload" onClick={onUploadClick}>
+              <Icons.MdUpload size={20} />
+            </div>
+            <div className="setting Streming">
+              <Icons.MdOutlineWifiTethering size={20} />
+            </div>
+            <div className="setting correction">
+              <Icons.TfiPencilAlt size={20} />
+            </div>
           </div>
         </div>
         <div className="analysis_container">
@@ -29,24 +50,52 @@ const StudioDashboard = () => {
                     alt="이미지 없어"
                     className="thumnail_image"
                   ></img>
-                  <div className="title">찬우의 Vlog</div>
+                  <div className="title">{VideoInfo.title}</div>
                 </div>
                 <div className="analysis_detail">
                   <div className="detail_low_description">
                     <div>일반적인 실적 대비 처음 165일 1시간</div>
                   </div>
 
-                  {StudioDashboardData.analysisdata.map((x, i) => {
-                    return (
-                      <div className="detail_low" key={i}>
-                        <div className="rank">{x.title}</div>
-                        <div className="rank_detail">
-                          <span>{x.analysis}</span>
-                          <span>{x.emoticon}</span>
-                        </div>
-                      </div>
-                    );
-                  })}
+                  <div className="detail_low">
+                    <div className="rank">조회수 순위</div>
+                    <div className="rank_detail">
+                      <span>3/10</span>
+                      <span>
+                        <Icons.MdNavigateNext />
+                      </span>
+                    </div>
+                  </div>
+
+                  <div className="detail_low">
+                    <div className="rank">조회수</div>
+                    <div className="rank_detail">
+                      <span>{VideoInfo.view}</span>
+                      <span>
+                        <Icons.AiOutlineCheckCircle />
+                      </span>
+                    </div>
+                  </div>
+
+                  <div className="detail_low">
+                    <div className="rank">노출 클릭률</div>
+                    <div className="rank_detail">
+                      <span>5.1%</span>
+                      <span>
+                        <Icons.AiOutlineCheckCircle />
+                      </span>
+                    </div>
+                  </div>
+
+                  <div className="detail_low">
+                    <div className="rank">평균시청 지속시간</div>
+                    <div className="rank_detail">
+                      <span>1:20</span>
+                      <span>
+                        <Icons.BsArrowDownCircleFill />
+                      </span>
+                    </div>
+                  </div>
 
                   <div className="detail_low_button">
                     <div className="button">
@@ -82,9 +131,15 @@ const StudioDashboard = () => {
                         >
                           <div className="title">{x.title}</div>
                           <div className="some">
-                            <div className="part view">🔼 {x.view}</div>
-                            <div className="part review">📄 {x.reivew}</div>
-                            <div className="part good">👍 {x.good}</div>
+                            <div className="part view">
+                              <Icons.FiBarChart2 /> {x.view}
+                            </div>
+                            <div className="part review">
+                              <Icons.BsChatLeftText /> {x.reivew}
+                            </div>
+                            <div className="part good">
+                              <Icons.BsHandThumbsUp /> {x.good}
+                            </div>
                           </div>
                         </div>
 
@@ -92,9 +147,15 @@ const StudioDashboard = () => {
                           className="somehover"
                           style={{ display: active === i ? "flex" : "none" }}
                         >
-                          <div className="part view">🔼 {x.view}</div>
-                          <div className="part review">📄 {x.reivew}</div>
-                          <div className="part good">👍 {x.good}</div>
+                          <div className="part view">
+                            <Icons.BsArrowDownCircleFill /> {x.view}
+                          </div>
+                          <div className="part review">
+                            <Icons.AiOutlineCheckCircle /> {x.reivew}
+                          </div>
+                          <div className="part good">
+                            <Icons.AiOutlineCheckCircle /> {x.good}
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -110,7 +171,7 @@ const StudioDashboard = () => {
             <div className="achievement">
               <div className="achievement_header">새 업적</div>
               <div className="achievement_container">
-                <img className="emoticon" src={testimages}></img>
+                <img className="emoticon" src={testimages} alt=""></img>
                 <div className="achievement_content">
                   <div className="content_title">채널의 생일을 축하합니다!</div>
                   <div className="content_description">
@@ -194,7 +255,7 @@ const StudioDashboard = () => {
                   <>
                     <div className="reviewBox" key={i}>
                       <div>
-                        <img className="profileImg" src={x.profileImg} />
+                        <img className="profileImg" src={x.profileImg} alt="" />
                       </div>
                       <div className="reivewContent">
                         <div className="nickname">
@@ -205,7 +266,7 @@ const StudioDashboard = () => {
                         <div className="reivew">{x.reivew}</div>
                       </div>
                       <div>
-                        <img className="Ssumnail" src={x.Ssunail} />
+                        <img className="Ssumnail" src={x.Ssunail} alt="" />
                       </div>
                     </div>
                     <hr className="reviewHr" />
@@ -226,7 +287,7 @@ const StudioDashboard = () => {
               {StudioDashboardData.recentSubscribe.map((x, index) => {
                 if (index < 3)
                   return (
-                    <div className="subScribeMember">
+                    <div className="subScribeMember" key={index}>
                       <div>
                         <img
                           className="subscribeProfile"
@@ -242,7 +303,7 @@ const StudioDashboard = () => {
                   );
               })}
               <div className="a">
-                <a>더보기</a>
+                <a href="/">더보기</a>
               </div>
             </div>
           </div>
@@ -266,6 +327,9 @@ const StudioDashboard = () => {
           </div>
         </div>
       </div>
+      <ModalPortal>
+        <Upload modalOpen={modalOpen} setModalOpen={setModalOpen} />
+      </ModalPortal>
     </>
   );
 };

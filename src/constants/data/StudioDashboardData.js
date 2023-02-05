@@ -1,11 +1,12 @@
 import testimages from "../../assets/test2.jpg";
+import Icons from "../../constants/icon";
 
 export const StudioDashboardData = {
   analysisdata: [
-    { title: "조회수 순위", analysis: "3/10", emoticon: "🔥" },
-    { title: "조회수", analysis: "557", emoticon: "✔️" },
-    { title: "노출 클릭률", analysis: "5.1%", emoticon: "✔️" },
-    { title: "평균 시청 지속 시간", analysis: "1:20", emoticon: "🔽" },
+    { title: "조회수 순위", analysis: "3/10", emoticon: <Icons.MdNavigateNext/> },
+    { title: "조회수", analysis: "557", emoticon: <Icons.AiOutlineCheckCircle/> },
+    { title: "노출 클릭률", analysis: "5.1%", emoticon: <Icons.AiOutlineCheckCircle/>},
+    { title: "평균 시청 지속 시간", analysis: "1:20", emoticon: <Icons.BsArrowDownCircleFill/> },
   ],
 
   releasedData: [
@@ -27,9 +28,9 @@ export const StudioDashboardData = {
       increase: 25,
     },
     summary: [
-      { title: "조회수", analysis: "2.5천", emoticon: "✔️" },
-      { title: "시청시간(단위:시간)", analysis: "98.5", emoticon: "🔽" },
-      { title: "예상수익", analysis: "3.20", emoticon: "⏹️" },
+      { title: "조회수", analysis: "2.5천", emoticon: <Icons.AiOutlineCheckCircle/> },
+      { title: "시청시간(단위:시간)", analysis: "98.5", emoticon: <Icons.BsArrowDownCircleFill/> },
+      { title: "예상수익", analysis: "3.20", emoticon: <Icons.BsArrowDownCircleFill/> },
     ],
     popularVideos: [
       { title: "은서의 vlog", analysis: "96" },

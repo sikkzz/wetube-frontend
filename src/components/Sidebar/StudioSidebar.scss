@@ -4,6 +4,7 @@ wt-side-st.wt-page {
     flex: none;
     background-color: var(--wt-brand-background-solid);
     padding-top: 64px;
+    width: var(--app-drawer-width, 256px);
     height: 872px;
 }
 

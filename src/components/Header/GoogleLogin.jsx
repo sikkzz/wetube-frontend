@@ -1,4 +1,4 @@
-import { useRef} from "react";
+import { useRef } from "react";
 import useScript from "../../hooks/useScript";
 import jwt_decode from "jwt-decode";
 import { postLoginToken } from "../../utils/postLoginToken";

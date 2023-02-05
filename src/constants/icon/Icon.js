@@ -93,6 +93,13 @@ import { BsFlag } from "react-icons/bs";
 import { VscListFilter } from "react-icons/vsc";
 import { BsEye } from "react-icons/bs";
 import { MdAttachMoney } from "react-icons/md";
+import { MdNavigateNext } from "react-icons/md";
+import { BsArrowDownCircleFill } from "react-icons/bs";
+import { FiBarChart2 } from "react-icons/fi";
+import { BsChatLeftText } from "react-icons/bs";
+import { BsHandThumbsUp } from "react-icons/bs";
+import { MdOutlineWifiTethering } from "react-icons/md";
+import { TfiPencilAlt } from "react-icons/tfi";
 
 import { BsBell } from "react-icons/bs";
 
@@ -173,6 +180,13 @@ const exportIcons = {
   AiFillTrophy,
   FiSettings,
   BsFlag,
+  MdNavigateNext,
+  BsArrowDownCircleFill,
+  FiBarChart2,
+  BsChatLeftText,
+  BsHandThumbsUp,
+  MdOutlineWifiTethering,
+  TfiPencilAlt,
   BsBell,
 };
 
