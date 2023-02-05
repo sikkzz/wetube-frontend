@@ -46,7 +46,6 @@ export default function postState(state = initialState, action) {
     case GET_POST_INFO_SUCCESS:
     case GET_POST_INFO_ERROR:
       return handleAsyncActions(GET_POST_INFO, "post", true)(state.action);
-    
     case GET_POST_DETAIL_INFO:
     case GET_POST_DETAIL_INFO_SUCCESS:
     case GET_POST_DETAIL_INFO_ERROR:

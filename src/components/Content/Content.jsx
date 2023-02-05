@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+
 
 import Image from "../../assets/test2.jpg";
 import Image2 from "../../assets/test.jpg";
@@ -15,76 +16,85 @@ import { getPostInfo } from "../../modules/post";
 const Content = () => {
   const count = [1, 2, 3, 4];
 
-  // const postState = useSelector((state) => state.post)
+  const postState = useSelector((state) => state.post)
+  const dispatch = useDispatch()
+
+  const [postInfo, setPostInfo] = useState([])
+
+  useEffect(() => {
+    dispatch(getPostInfo())
+  }) 
+
+  // dispatch(getPostInfo())
 
 
-  const [postInfo, setPostInfo] = useState([
-    {
-      postId: 1,
-      author: {
-        userId: 1,
-        username: "김준식",
-        profileUrl:
-          "https://yt3.ggpht.com/JvXwi2zyrNnKLdVjp5MIYEakcH5RHWKDIajrPAcCHYjeWFsgNS3az_eX8BT8a8YhjbXiDX-UJQ=s68-c-k-c0x00ffffff-no-rj",
-      },
-      title: "비디오 포스트 제목",
-      view: "11만회",
-      createAt: "1주전",
-      thumbnailImg:
-        "https://i.ytimg.com/vi/hUM_v2B2Vpo/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDWU5gZxe5fYEo-baUeZYOB8426tw",
-      videoLength: timeFormat(19865), // second
-    },
-    {
-      postId: 2,
-      author: {
-        userId: 2,
-        username: "김준식",
-        profileUrl:
-          "https://yt3.ggpht.com/JvXwi2zyrNnKLdVjp5MIYEakcH5RHWKDIajrPAcCHYjeWFsgNS3az_eX8BT8a8YhjbXiDX-UJQ=s68-c-k-c0x00ffffff-no-rj",
-      },
-      title: "비디오 포스트 제목",
-      view: "22만회",
-      createAt: "2주전",
-      thumbnailImg:
-        "https://i.ytimg.com/vi/hUM_v2B2Vpo/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDWU5gZxe5fYEo-baUeZYOB8426tw",
-      videoLength: timeFormat(21865), // second
-    },
-    {
-      postId: 3,
-      author: {
-        userId: 3,
-        username: "김준식",
-        profileUrl:
-          "https://yt3.ggpht.com/JvXwi2zyrNnKLdVjp5MIYEakcH5RHWKDIajrPAcCHYjeWFsgNS3az_eX8BT8a8YhjbXiDX-UJQ=s68-c-k-c0x00ffffff-no-rj",
-      },
-      title: "비디오 포스트 제목",
-      view: "33만회",
-      createAt: "3주전",
-      thumbnailImg:
-        "https://i.ytimg.com/vi/hUM_v2B2Vpo/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDWU5gZxe5fYEo-baUeZYOB8426tw",
-      videoLength: timeFormat(27865), // second
-    },
-    {
-      postId: 4,
-      author: {
-        userId: 4,
-        username: "김준식",
-        profileUrl:
-          "https://yt3.ggpht.com/JvXwi2zyrNnKLdVjp5MIYEakcH5RHWKDIajrPAcCHYjeWFsgNS3az_eX8BT8a8YhjbXiDX-UJQ=s68-c-k-c0x00ffffff-no-rj",
-      },
-      title: "비디오 포스트 제목",
-      view: "44만회",
-      createAt: "4주전",
-      thumbnailImg:
-        "https://i.ytimg.com/vi/hUM_v2B2Vpo/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDWU5gZxe5fYEo-baUeZYOB8426tw",
-      videoLength: timeFormat(10865), // second
-    },
-  ]);
+  // const [postInfo, setPostInfo] = useState([
+  //   {
+  //     postId: 1,
+  //     author: {
+  //       userId: 1,
+  //       username: "김준식",
+  //       profileUrl:
+  //         "https://yt3.ggpht.com/JvXwi2zyrNnKLdVjp5MIYEakcH5RHWKDIajrPAcCHYjeWFsgNS3az_eX8BT8a8YhjbXiDX-UJQ=s68-c-k-c0x00ffffff-no-rj",
+  //     },
+  //     title: "비디오 포스트 제목",
+  //     view: "11만회",
+  //     createAt: "1주전",
+  //     thumbnailImg:
+  //       "https://i.ytimg.com/vi/hUM_v2B2Vpo/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDWU5gZxe5fYEo-baUeZYOB8426tw",
+  //     videoLength: timeFormat(19865), // second
+  //   },
+  //   {
+  //     postId: 2,
+  //     author: {
+  //       userId: 2,
+  //       username: "김준식",
+  //       profileUrl:
+  //         "https://yt3.ggpht.com/JvXwi2zyrNnKLdVjp5MIYEakcH5RHWKDIajrPAcCHYjeWFsgNS3az_eX8BT8a8YhjbXiDX-UJQ=s68-c-k-c0x00ffffff-no-rj",
+  //     },
+  //     title: "비디오 포스트 제목",
+  //     view: "22만회",
+  //     createAt: "2주전",
+  //     thumbnailImg:
+  //       "https://i.ytimg.com/vi/hUM_v2B2Vpo/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDWU5gZxe5fYEo-baUeZYOB8426tw",
+  //     videoLength: timeFormat(21865), // second
+  //   },
+  //   {
+  //     postId: 3,
+  //     author: {
+  //       userId: 3,
+  //       username: "김준식",
+  //       profileUrl:
+  //         "https://yt3.ggpht.com/JvXwi2zyrNnKLdVjp5MIYEakcH5RHWKDIajrPAcCHYjeWFsgNS3az_eX8BT8a8YhjbXiDX-UJQ=s68-c-k-c0x00ffffff-no-rj",
+  //     },
+  //     title: "비디오 포스트 제목",
+  //     view: "33만회",
+  //     createAt: "3주전",
+  //     thumbnailImg:
+  //       "https://i.ytimg.com/vi/hUM_v2B2Vpo/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDWU5gZxe5fYEo-baUeZYOB8426tw",
+  //     videoLength: timeFormat(27865), // second
+  //   },
+  //   {
+  //     postId: 4,
+  //     author: {
+  //       userId: 4,
+  //       username: "김준식",
+  //       profileUrl:
+  //         "https://yt3.ggpht.com/JvXwi2zyrNnKLdVjp5MIYEakcH5RHWKDIajrPAcCHYjeWFsgNS3az_eX8BT8a8YhjbXiDX-UJQ=s68-c-k-c0x00ffffff-no-rj",
+  //     },
+  //     title: "비디오 포스트 제목",
+  //     view: "44만회",
+  //     createAt: "4주전",
+  //     thumbnailImg:
+  //       "https://i.ytimg.com/vi/hUM_v2B2Vpo/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDWU5gZxe5fYEo-baUeZYOB8426tw",
+  //     videoLength: timeFormat(10865), // second
+  //   },
+  // ]);
 
   // useEffect(() => {
   //   getPostInfo()
   //   setPostInfo(postState)
-  // }, []);
+  // }, [postState]);
 
   return (
     <wt-grid-render style={{ "--wt-grid-item-row": "4" }}>
