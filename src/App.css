@@ -235,7 +235,7 @@ wt-dialog {
   --wt-static-overlay-text-secondary: rgba(255, 255, 255, 0.7);
   --wt-static-overlay-text-disabled: rgba(255, 255, 255, 0.3);
 
-  --player-control-time-text: #ddd;
+  --player-control-time-text: #fff;
 
   --setting-button-hover: rgb(50, 65, 82);
   --icon-disabled: #606060;
@@ -731,6 +731,34 @@ wt-icon {
   vertical-align: middle;
 }
 
+wtd-watch-secondary-result-render {
+  display: flex;
+  flex-direction: column;
+  --wt-img-shadow-placeholder-color: var(--white-alpha-10);
+  --wt-img-shadow-min-height: 100%;
+  --wt-img-shadow-min-width: 100%;
+}
+
+wtd-detail-chip-render {
+  display: block;
+}
+
+wtd-chip-render {
+  background: var(--main-bg);
+}
+
+wtd-item-section-render {
+  display: block;
+}
+
+wtd-compact-video-render {
+  --wt-button-compact-background-color: var(--white-alpha-10);
+  --wt-button-compact-text-color: var(--text-secondary);
+  --wt-shorts-compact-label-text-hidden: none;
+  display: flex;
+  flex-direction: row;
+}
+
 wtd-tab-header-render {
   --wt-lightsource-section1-color: var(--main-bg);
   --wt-lightsource-primary-title-color: var(--text-primary);
@@ -788,4 +816,47 @@ wtd-expandable-tab-render {
   flex-direction: row;
   align-items: center;
   display: inline-flex;
+}
+
+wtd-section-list-render {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  max-width: 1284px;
+  /* width: 100%; */
+  left: 256px;
+  top: 60px;
+  margin-left: 90px;
+}
+
+wtd-item-section-render {
+  display: block;
+}
+
+wtd-self-render {
+  display: flex;
+  flex-direction: column;
+}
+
+wtd-expanded-self-contents-render {
+  display: block;
+  margin-bottom: 24px;
+}
+
+wtd-channel-render {
+  display: block;
+}
+
+wtd-grid-render {
+  display: flex;
+  flex-direction: column;
+}
+
+wtd-grid-video-render {
+  --yt-button-compact-background-color: var(--white-alpha-10);
+  --yt-button-compact-text-color: var(--text-secondary);
+  --yt-shorts-compact-label-text-hidden: none;
+  display: inline-block;
+  width: 210px;
+  position: relative;
 }

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import "./Comment.scss";
 
@@ -7,12 +7,26 @@ import Icons from "../../constants/icon";
 import CommentContent from "./CommentContent";
 import CommentInput from "./CommentInput";
 
+import { getComment } from "../../api/comment";
+
 const Comment = () => {
   const [sortActive, setSortActive] = useState(false);
+
+  const [postComment, setPostComment] = useState([
+    {
+      commentOwnerChannel: "user-김준식",
+      commentOwnerThumbnail: "https://yt3.ggpht.com/JvXwi2zyrNnKLdVjp5MIYEakcH5RHWKDIajrPAcCHYjeWFsgNS3az_eX8BT8a8YhjbXiDX-UJQ=s68-c-k-c0x00ffffff-no-rj",
+      commentCreateAt: "1주 전",
+    }
+  ])
 
   const onSortClick = () => {
     setSortActive(!sortActive);
   };
+
+  // useEffect(() => {
+  //   setPostComment(getComment())
+  // }, [])
 
   return (
     <wtd-comments id="comments" class="wtd-watch-flexy">

@@ -1,0 +1,196 @@
+#secondary.wtd-watch-flexy {
+    padding-top: var(--wt-margin-6x);
+    position: relative;
+    padding-right: var(--wt-margin-6x);
+    width: var(--wt-watch-flexy-sidebar-width);
+    min-width: var(--wt-watch-flexy-sidebar-min-width);
+}
+
+#items.wtd-watch-secondary-result-render {
+    display: flex;
+    flex-direction: column;
+}
+
+#container.wtd-chip-render {
+    overflow: hidden;
+    position: relative;
+    align-items: center;
+    display: flex;
+}
+
+#left-arrow.wtd-chip-render,
+#right-arrow.wtd-chip-render {
+    z-index: 200;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#left-arrow.wtd-chip-render,
+#right-arrow.wtd-chip-render {
+    display: flex;
+}
+
+#left-arrow-button.wtd-chip-render,
+#right-arrow-button.wtd-chip-render {
+    background: var(--main-bg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+// #left-arrow.wtd-chip-render:after,
+// #right-arrow.wtd-chip-render:before {
+//     position: absolute;
+//     height: 100%;
+//     height: 40px;
+//     width: 32px;
+//     content: "";
+//     background: linear-gradient(to right, var(--bg-black) 10%, rgba(24, 24, 24, 0) 90%);
+// }
+
+// #left-arrow.wtd-chip-render:after{
+//     left: 56px;
+// }
+
+// #right-arrow.wtd-chip-render:before{
+//     right: 56px;
+// }
+
+wtd-button-render.wtd-chip-render {
+    --wt-button-color: var(--static-brand-white);
+    --wt-button-icon-size: 32px;
+    border-radius: 20px;
+    height: 40px;
+    padding: 0 8px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wt-button-shape-next.prev-button,
+.wt-button-shape-next.next-button {
+    color: var(--text-primary);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    background: none;
+
+    &:hover {
+        background: var(--white-alpha-10);
+    }
+
+    .wt-button-shape-next-icon {
+        margin: 0;
+
+        wt-icon {
+            display: inline-flex;
+            display: flex;
+            width: 24px;
+            height: 24px;
+        }
+    }
+}
+
+#scroll-container.wtd-chip-render {
+    white-space: nowrap;
+    overflow: hidden;
+    padding-top: 5px;
+}
+
+#chips.wtd-chip-render {
+    transition-duration: 0.15s;
+    transition-timing-function: cubic-bezier(0.05, 0, 0, 1);
+    will-change: transform;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+iron-selector.wtd-chip-render {
+    margin-right: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    display: block;
+}
+
+wt-chip.wtd-chip-render {
+    margin: 8px;
+    margin-left: 0;
+    padding: 0 var(--wt-margin-3x);
+    transition: background-color 0.5s cubic-bezier(0.05, 0, 0, 1);
+
+    &:hover {
+        background: rgb(63, 63, 63);
+    }
+}
+
+wt-chip.wtd-chip-select {
+    background: var(--bg-primary);
+    color: var(--text-black);
+}
+
+#text.wtd-chip {
+    max-width: 20rem;
+}
+
+wtd-item-section-render.wtd-watch-secondary-result-render {
+    --wtd-item-section-margin: 8px;
+    --wtd-reel-item-width: calc(var(--wt-watch-flexy-sidebar-width) / 3);
+}
+
+wtd-compact-video-render.wtd-item-section-render {
+    margin-top: var(--wtd-item-section-margin, 16px);
+}
+
+#dismissible.wtd-compact-video-render {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+
+    #thumbnail.wtd-thumbnail {
+        height: 100%;
+        border-radius: 8px;
+    }
+}
+
+wtd-thumbnail.wtd-compact-video-render {
+    margin-right: 8px;
+    height: 94px;
+    width: 168px;
+}
+
+.details.wtd-compact-video-render {
+    width: 100%;
+    min-width: 0;
+}
+
+.metadata.wtd-compact-video-render {
+    min-width: 0;
+    width: 100%;
+    padding-right: 24px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+h3.wtd-compact-video-render {
+    color: var(--text-primary);
+}
+
+#video-title.wtd-compact-video-render {
+    margin: 0 0 4px 0;
+    font-family: "Roboto", "Arial", sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.4rem;
+    font-weight: 500;
+    overflow: hidden;
+    max-height: 4rem;
+    -webkit-line-clamp: 2;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    white-space: normal;
+}
