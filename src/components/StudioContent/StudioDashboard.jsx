@@ -2,18 +2,25 @@ import React from "react";
 import "./StudioDashboard.scss";
 import testimages from "../../assets/test2.jpg";
 import { StudioDashboardData } from "../../constants/data/StudioDashboardData";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Icons from "../../constants/icon";
 import ModalPortal from "../../Portal";
 import Upload from "../Upload/Upload";
+import { getVideoInfo } from "../../api/studiopost";
 
 const StudioDashboard = () => {
+  const [VideoInfo, setVideoInfo] = useState({});
   const [active, setactive] = useState();
   const [modalOpen, setModalOpen] = useState(false);
 
   const onUploadClick = () => {
     setModalOpen(!modalOpen);
   };
+
+  useEffect(() => {
+    const data = getVideoInfo(1);
+    setVideoInfo(data);
+  }, []);
 
   return (
     <>
@@ -43,24 +50,52 @@ const StudioDashboard = () => {
                     alt="이미지 없어"
                     className="thumnail_image"
                   ></img>
-                  <div className="title">찬우의 Vlog</div>
+                  <div className="title">{VideoInfo.title}</div>
                 </div>
                 <div className="analysis_detail">
                   <div className="detail_low_description">
                     <div>일반적인 실적 대비 처음 165일 1시간</div>
                   </div>
 
-                  {StudioDashboardData.analysisdata.map((x, i) => {
-                    return (
-                      <div className="detail_low" key={i}>
-                        <div className="rank">{x.title}</div>
-                        <div className="rank_detail">
-                          <span>{x.analysis}</span>
-                          <span>{x.emoticon}</span>
-                        </div>
-                      </div>
-                    );
-                  })}
+                  <div className="detail_low">
+                    <div className="rank">조회수 순위</div>
+                    <div className="rank_detail">
+                      <span>3/10</span>
+                      <span>
+                        <Icons.MdNavigateNext />
+                      </span>
+                    </div>
+                  </div>
+
+                  <div className="detail_low">
+                    <div className="rank">조회수</div>
+                    <div className="rank_detail">
+                      <span>{VideoInfo.view}</span>
+                      <span>
+                        <Icons.AiOutlineCheckCircle />
+                      </span>
+                    </div>
+                  </div>
+
+                  <div className="detail_low">
+                    <div className="rank">노출 클릭률</div>
+                    <div className="rank_detail">
+                      <span>5.1%</span>
+                      <span>
+                        <Icons.AiOutlineCheckCircle />
+                      </span>
+                    </div>
+                  </div>
+
+                  <div className="detail_low">
+                    <div className="rank">평균시청 지속시간</div>
+                    <div className="rank_detail">
+                      <span>1:20</span>
+                      <span>
+                        <Icons.BsArrowDownCircleFill />
+                      </span>
+                    </div>
+                  </div>
 
                   <div className="detail_low_button">
                     <div className="button">
@@ -252,7 +287,7 @@ const StudioDashboard = () => {
               {StudioDashboardData.recentSubscribe.map((x, index) => {
                 if (index < 3)
                   return (
-                    <div className="subScribeMember">
+                    <div className="subScribeMember" key={index}>
                       <div>
                         <img
                           className="subscribeProfile"
@@ -268,7 +303,7 @@ const StudioDashboard = () => {
                   );
               })}
               <div className="a">
-                <a>더보기</a>
+                <a href="/">더보기</a>
               </div>
             </div>
           </div>
