@@ -1,4 +1,4 @@
-import { useRef} from "react";
+import { useRef } from "react";
 import useScript from "../../hooks/useScript";
 import jwt_decode from "jwt-decode";
 import { postLoginToken } from "../../utils/postLoginToken";
@@ -9,7 +9,7 @@ const GoogleLogin = ({ isLogin, setIsLogin, userImg, setUserImg }) => {
     const { credential } = res;
     const results = await postLoginToken(credential, setIsLogin);
     setIsLogin(results);
-    var userObject = jwt_decode(res.credential);
+    let userObject = jwt_decode(res.credential);
     setUserImg(userObject.picture);
   };
 
